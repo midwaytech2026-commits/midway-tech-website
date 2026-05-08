@@ -1,0 +1,10 @@
+{
+  "name": "midway-tech-app",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "install:all": "cd client && npm install && cd ../server && npm install"
+  }
+}
