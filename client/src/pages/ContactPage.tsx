@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { ChangeEvent, FormEvent } from 'react'
+import type { ChangeEvent } from 'react'
 import './ContactPage.css'
 
 const serviceChips = ['iOS App', 'Android App', 'React Native', 'Flutter', 'MVP Build', 'UI/UX Design']
@@ -45,6 +45,7 @@ export default function ContactPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
 
   function toggleService(s: string) {
     setSelectedServices(prev => prev.includes(s) ? prev.filter(x => x !== s) : [...prev, s])
@@ -54,9 +55,10 @@ export default function ContactPage() {
     setForm(f => ({ ...f, [e.target.name]: e.target.value }))
   }
 
-  async function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: { preventDefault(): void }) {
     e.preventDefault()
     setSubmitting(true)
+    setError('')
     try {
       const res = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/contact`, {
         method: 'POST',
@@ -69,11 +71,12 @@ export default function ContactPage() {
         }),
       })
       if (!res.ok) throw new Error()
+      setSubmitted(true)
     } catch {
-      // submit anyway
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setSubmitting(false)
     }
-    setSubmitting(false)
-    setSubmitted(true)
   }
 
   return (
@@ -215,6 +218,7 @@ export default function ContactPage() {
                   {submitting ? 'Sending…' : 'Send Project Brief →'}
                 </button>
 
+                {error && <p className="cp-error">{error}</p>}
                 <p className="cp-disclaimer">No spam, no obligations. We reply within 24 hours.</p>
               </form>
             )}

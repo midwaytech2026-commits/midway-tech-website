@@ -7,7 +7,7 @@ export interface Service {
 }
 
 export interface ContactForm {
-  name: string
+  name?: string
   email: string
   phone?: string
   message: string

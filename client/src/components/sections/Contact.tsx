@@ -6,17 +6,19 @@ export default function Contact() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setLoading(true)
+    setError('')
     try {
-      await api.submitContact({ name: '', email, message: 'Discovery call request' })
+      await api.submitContact({ email, message: 'Discovery call request' })
+      setSubmitted(true)
     } catch {
-      // proceed regardless — user intent is captured
+      setError('Something went wrong. Please try again.')
     } finally {
       setLoading(false)
-      setSubmitted(true)
     }
   }
 
@@ -39,6 +41,7 @@ export default function Contact() {
           <button type="submit" className="cta-submit" disabled={loading}>
             {loading ? 'Sending...' : 'Book free call →'}
           </button>
+          {error && <p className="cta-error">{error}</p>}
         </form>
       )}
     </section>
