@@ -1,0 +1,66 @@
+.cta-strip {
+  background: var(--accent);
+  padding: 5rem 4rem;
+}
+
+.cta-strip-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cta-strip-text h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.cta-strip-text p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 300;
+}
+
+.cta-strip-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.cta-strip .btn-primary {
+  background: var(--white);
+  color: var(--accent);
+  padding: 0.875rem 2rem;
+  border-radius: 100px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.2s, transform 0.2s;
+  display: inline-block;
+}
+.cta-strip .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+
+.cta-strip .btn-outline {
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.5);
+  padding: 0.875rem 2rem;
+  border-radius: 100px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, transform 0.2s;
+  display: inline-block;
+}
+.cta-strip .btn-outline:hover { border-color: var(--white); transform: translateY(-2px); }
+
+@media (max-width: 768px) {
+  .cta-strip { padding: 3rem 1.5rem; }
+  .cta-strip-inner { flex-direction: column; align-items: flex-start; }
+  .cta-strip-actions { flex-wrap: wrap; }
+}

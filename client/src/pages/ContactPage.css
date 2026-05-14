@@ -1,0 +1,234 @@
+.contact-page { padding-top: 80px; background: var(--black); }
+
+.cp-hero {
+  padding: 6rem 4rem 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.cp-hero-inner { max-width: 700px; }
+.cp-hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.1;
+  margin: 0.75rem 0 1rem;
+}
+.cp-hero h1 em { font-style: italic; color: var(--accent); }
+.cp-hero p { font-size: 1.1rem; color: var(--gray); font-weight: 300; }
+
+.cp-body { padding: 5rem 4rem; }
+.cp-body-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.cp-info-block { margin-bottom: 3rem; }
+.cp-info-block h3,
+.cp-faq h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.cp-steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem; }
+.cp-steps li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.cp-steps li span {
+  width: 28px;
+  height: 28px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--white);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.cp-steps li div strong { display: block; font-size: 0.875rem; color: var(--white); margin-bottom: 0.2rem; }
+.cp-steps li div p { font-size: 0.8rem; color: var(--gray); margin: 0; font-weight: 300; }
+
+.cp-contact-links { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 3rem; }
+.cp-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: border-color 0.2s;
+}
+.cp-contact-item:hover { border-color: rgba(255,77,28,0.4); }
+.cp-contact-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,77,28,0.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.cp-contact-item strong { display: block; font-size: 0.8rem; color: var(--white); }
+.cp-contact-item span { font-size: 0.75rem; color: var(--gray); font-weight: 300; }
+
+.cp-faq { margin-top: 0.5rem; }
+.cp-faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); }
+.cp-faq-item button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: left;
+}
+.cp-faq-item button svg {
+  flex-shrink: 0;
+  color: var(--gray);
+  transition: transform 0.25s;
+}
+.cp-faq-item.open button svg { transform: rotate(180deg); }
+.cp-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.cp-faq-item.open .cp-faq-answer { max-height: 120px; }
+.cp-faq-answer p { padding-bottom: 1rem; font-size: 0.82rem; color: var(--gray); font-weight: 300; line-height: 1.7; margin: 0; }
+
+.cp-form-wrap {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 2.5rem;
+}
+.cp-form h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.cp-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.cp-field { margin-bottom: 1.5rem; }
+.cp-field label { display: block; font-size: 0.8rem; color: rgba(250,250,247,0.5); font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.cp-field label strong { color: var(--white); }
+.cp-field input,
+.cp-field textarea,
+.cp-field select {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  color: var(--white);
+  font-size: 0.875rem;
+  font-family: 'DM Sans', sans-serif;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.cp-field input:focus,
+.cp-field textarea:focus,
+.cp-field select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.cp-field select { appearance: none; cursor: pointer; }
+.cp-field input::placeholder,
+.cp-field textarea::placeholder { color: rgba(250,250,247,0.25); }
+
+.cp-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.cp-chip {
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: 1.5px solid rgba(255,255,255,0.12);
+  background: none;
+  color: rgba(250,250,247,0.55);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+.cp-chip:hover { border-color: rgba(255,77,28,0.5); color: var(--white); }
+.cp-chip.selected { border-color: var(--accent); background: rgba(255,77,28,0.12); color: var(--white); }
+
+.cp-slider {
+  width: 100%;
+  margin: 0.75rem 0 0.5rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.cp-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--gray);
+}
+
+.cp-submit {
+  width: 100%;
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  font-family: 'DM Sans', sans-serif;
+  margin-top: 0.5rem;
+}
+.cp-submit:hover:not(:disabled) { opacity: 0.88; transform: translateY(-2px); }
+.cp-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.cp-disclaimer { font-size: 0.75rem; color: var(--gray); text-align: center; margin-top: 1rem; }
+
+.cp-success {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.cp-success-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(255,77,28,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin: 0 auto 1.5rem;
+}
+.cp-success h2 { font-family: 'Syne', sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
+.cp-success p { color: var(--gray); font-size: 0.95rem; font-weight: 300; }
+
+@media (max-width: 900px) {
+  .cp-hero { padding: 4rem 1.5rem 2.5rem; }
+  .cp-body { padding: 3rem 1.5rem; }
+  .cp-body-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .cp-field-row { grid-template-columns: 1fr; }
+}

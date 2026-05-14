@@ -1,11 +1,11 @@
 import { useState } from 'react'
+import { NavLink, Link } from 'react-router-dom'
 import './Navbar.css'
 
 const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'Process', href: '#process' },
-  { label: 'Technologies', href: '#tech' },
-  { label: 'Reviews', href: '#testimonials' },
+  { label: 'Services', to: '/services' },
+  { label: 'Portfolio', to: '/portfolio' },
+  { label: 'About', to: '/about' },
 ]
 
 export default function Navbar() {
@@ -13,20 +13,24 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <a href="#" className="logo">Midway<span>.</span>Tech</a>
+      <Link to="/" className="logo">Midway<span>.</span>Tech</Link>
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         {navLinks.map(link => (
           <li key={link.label}>
-            <a href={link.href} onClick={() => setMenuOpen(false)}>
+            <NavLink
+              to={link.to}
+              className={({ isActive }) => isActive ? 'active' : ''}
+              onClick={() => setMenuOpen(false)}
+            >
               {link.label}
-            </a>
+            </NavLink>
           </li>
         ))}
         <li>
-          <a href="#contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
+          <Link to="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
             Get a Quote
-          </a>
+          </Link>
         </li>
       </ul>
 

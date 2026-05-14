@@ -12,11 +12,10 @@
   --gray: #8A8A82;
   --gray-light: #F0EFE9;
   --gray-mid: #2A2A28;
-  font-family: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
 
@@ -24,6 +23,9 @@ body {
   background: var(--black);
   color: var(--white);
   overflow-x: hidden;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #root {
@@ -34,8 +36,8 @@ body {
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Syne', sans-serif;
+h1, h2, h3 {
+  font-family: var(--font-display);
 }
 
 p { margin: 0; }
