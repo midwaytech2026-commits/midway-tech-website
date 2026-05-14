@@ -1,20 +1,29 @@
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --black: #0A0A0A;
+  --white: #FAFAF7;
+  --accent: #FF4D1C;
+  --accent2: #FFB800;
+  --gray: #8A8A82;
+  --gray-light: #F0EFE9;
+  --gray-mid: #2A2A28;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: #fff;
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
 }
 
 #root {
@@ -23,15 +32,12 @@ body {
   flex-direction: column;
   width: 100%;
   max-width: 100%;
-  border: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Syne', sans-serif;
 }
 
 p { margin: 0; }
 
-main {
-  flex: 1;
-}
+main { flex: 1; }

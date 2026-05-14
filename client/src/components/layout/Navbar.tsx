@@ -2,11 +2,10 @@ import { useState } from 'react'
 import './Navbar.css'
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
-  { label: 'Industries', href: '#industries' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Process', href: '#process' },
+  { label: 'Technologies', href: '#tech' },
+  { label: 'Reviews', href: '#testimonials' },
 ]
 
 export default function Navbar() {
@@ -14,10 +13,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <a href="#home" className="navbar-brand">
-        <span className="brand-mid">Midway</span>
-        <span className="brand-tech">Tech</span>
-      </a>
+      <a href="#" className="logo">Midway<span>.</span>Tech</a>
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         {navLinks.map(link => (

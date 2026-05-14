@@ -1,0 +1,31 @@
+.ticker {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 1rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--gray-mid);
+}
+
+.ticker-inner {
+  display: inline-flex;
+  animation: ticker 24s linear infinite;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(250,250,247,0.45);
+  padding: 0 2.5rem;
+}
+.ticker-item span { color: var(--accent); font-size: 1rem; }
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
