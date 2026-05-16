@@ -211,6 +211,23 @@
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
+.pp-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 5rem 2rem;
+  text-align: center;
+  border: 1px dashed rgba(255,255,255,0.1);
+  border-radius: 20px;
+}
+.pp-empty p {
+  font-size: 0.95rem;
+  color: var(--gray);
+  font-weight: 300;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .pp-hero, .pp-work, .pp-stats { padding: 3rem 1.5rem; }
   .pp-grid { grid-template-columns: 1fr; }

@@ -52,9 +52,9 @@ const faqItems = [
 ]
 
 const relatedServices = [
-  { title: 'Android Development', slug: '/services', icon: '🤖' },
-  { title: 'React Native', slug: '/services', icon: '⚛️' },
-  { title: 'UI/UX Design', slug: '/services', icon: '🎨' },
+  { title: 'Android Development', slug: '/services/android',      icon: '🤖' },
+  { title: 'React Native',        slug: '/services/react-native', icon: '⚛️' },
+  { title: 'UI/UX Design',        slug: '/services/ui-ux',        icon: '🎨' },
 ]
 
 export default function ServiceIosPage() {

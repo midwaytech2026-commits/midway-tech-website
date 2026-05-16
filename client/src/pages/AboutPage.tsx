@@ -2,10 +2,10 @@ import CtaStrip from '../components/common/CtaStrip'
 import './AboutPage.css'
 
 const stats = [
-  { value: '40+', label: 'Apps shipped' },
-  { value: '6+', label: 'Years building' },
-  { value: '98%', label: 'Client retention' },
-  { value: '$50M+', label: 'Raised by clients' },
+  { value: '40+',  label: 'Apps Shipped' },
+  { value: '12+',  label: 'Industries Served' },
+  { value: '98%',  label: 'Client Satisfaction' },
+  { value: '3',    label: 'Global Markets' },
 ]
 
 const values = [

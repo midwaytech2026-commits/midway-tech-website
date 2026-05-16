@@ -3,20 +3,18 @@ import { api } from '../../services/api'
 import type { Service } from '../../types'
 import './Services.css'
 
-const fallbackServices = [
+const fallbackServices: Service[] = [
   { _id: '1', icon: '📱', title: 'iOS App Development', description: 'Native Swift apps built for performance, Apple HIG compliance, and App Store approval on the first submission.', tags: ['Swift', 'SwiftUI', 'Xcode'], order: 1 },
   { _id: '2', icon: '🤖', title: 'Android App Development', description: 'Kotlin-first Android apps optimised for Google Play, covering phones, tablets, and wearables.', tags: ['Kotlin', 'Jetpack', 'Material 3'], order: 2 },
-  { _id: '3', icon: '⚡', title: 'React Native & Flutter', description: 'One codebase, both platforms. Ideal for startups that need speed to market without sacrificing quality.', tags: ['React Native', 'Flutter', 'Expo'], order: 3 },
-  { _id: '4', icon: '🚀', title: 'MVP Development', description: 'Validate your idea in 8–12 weeks with a lean, investor-ready MVP. Built to test, iterate, and grow.', tags: ['Rapid build', 'User testing', 'Investor deck'], order: 4 },
-  { _id: '5', icon: '🎨', title: 'UI/UX Design', description: 'Wireframes, prototypes, and pixel-perfect Figma designs that feel great and convert users into fans.', tags: ['Figma', 'Prototyping', 'User research'], order: 5 },
-  { _id: '6', icon: '🔧', title: 'App Maintenance & Support', description: "OS updates, bug fixes, performance monitoring, and feature iterations — we don't disappear after launch.", tags: ['24/7 support', 'SLA', 'Monthly retainer'], order: 6 },
+  { _id: '3', icon: '⚛️', title: 'React Native Development', description: 'One codebase, both platforms. Ideal for startups that need speed to market without sacrificing quality.', tags: ['React Native', 'Expo', 'TypeScript'], order: 3 },
+  { _id: '4', icon: '🐦', title: 'Flutter Development', description: "Google's UI toolkit for pixel-perfect apps on iOS and Android from a single codebase.", tags: ['Flutter', 'Dart', 'BLoC'], order: 4 },
+  { _id: '5', icon: '🚀', title: 'MVP Development', description: 'Validate your idea in 8–12 weeks with a lean, investor-ready MVP. Built to test, iterate, and grow.', tags: ['Rapid build', 'User testing', 'Investor deck'], order: 5 },
+  { _id: '6', icon: '🎨', title: 'UI/UX Design', description: 'Wireframes, prototypes, and pixel-perfect Figma designs that feel great and convert users into fans.', tags: ['Figma', 'Prototyping', 'User research'], order: 6 },
 ]
-
-type ServiceWithTags = Service & { tags?: string[] }
 
 export default function Services() {
   const { data, loading } = useApi<{ success: boolean; data: Service[] }>(api.getServices)
-  const services: ServiceWithTags[] = data?.data?.length ? data.data : fallbackServices
+  const services: Service[] = data?.data?.length ? data.data : fallbackServices
 
   return (
     <section id="services" className="services-section">

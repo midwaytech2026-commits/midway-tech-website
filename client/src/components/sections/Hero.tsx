@@ -23,12 +23,12 @@ export default function Hero() {
 
       <div className="hero-stats">
         <div className="stat-item">
-          <div className="stat-num">50+</div>
-          <div className="stat-label">Apps delivered</div>
+          <div className="stat-num">40+</div>
+          <div className="stat-label">Apps Shipped</div>
         </div>
         <div className="stat-item">
           <div className="stat-num">98%</div>
-          <div className="stat-label">Client satisfaction</div>
+          <div className="stat-label">Client Satisfaction</div>
         </div>
         <div className="stat-item">
           <div className="stat-num">12w</div>

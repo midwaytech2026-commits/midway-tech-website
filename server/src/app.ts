@@ -1,10 +1,7 @@
 import express from 'express'
 import cors from 'cors'
-import dotenv from 'dotenv'
 import serviceRoutes from './routes/service.routes'
 import contactRoutes from './routes/contact.routes'
-
-dotenv.config()
 
 const app = express()
 

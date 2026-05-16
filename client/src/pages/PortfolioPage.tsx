@@ -5,7 +5,7 @@ import './PortfolioPage.css'
 
 const filters = ['All', 'iOS', 'Android', 'React Native', 'MVP']
 
-const projects = [
+const projects: Project[] = [
   {
     id: 'fittrack',
     title: 'FitTrack Pro',
@@ -41,6 +41,24 @@ const projects = [
     solution: 'React Native with Expo allowed us to share 85% of the codebase. Custom native modules handled biometric auth and Plaid bank linking on each platform.',
     results: ['4.9 App Store rating', '4.8 Play Store rating', 'iOS + Android in 14 weeks', '10,000 beta sign-ups before launch'],
     techStack: ['React Native', 'Expo', 'TypeScript', 'Plaid API', 'Node.js', 'PostgreSQL'],
+  },
+  {
+    id: 'haulio',
+    title: 'Haulio Fleet',
+    category: 'Android',
+    tags: ['Android'],
+    tagline: 'Real-time fleet tracking for last-mile delivery',
+    color: '#1A8C6A',
+    emoji: '🚚',
+    client: 'Haulio Pty Ltd',
+    timeline: '14 weeks',
+    platform: 'Android 8.0+',
+    result: '35% faster delivery cycles',
+    overview: 'Haulio Fleet is a native Android app for delivery fleet operators — giving dispatchers live driver tracking, automated route optimisation, and a structured delivery management interface for drivers in the field.',
+    challenge: "Haulio's 60-driver fleet was coordinated entirely via WhatsApp groups and shared spreadsheets. Dispatchers had no real-time visibility; drivers had no structured way to confirm deliveries or flag issues. The team was losing 3–4 hours per day to coordination overhead.",
+    solution: 'We built a dual-interface Android app — a dispatcher dashboard and a driver delivery list — using Kotlin and Jetpack Compose. Firebase Realtime Database provides sub-second location updates. Room database ensures the driver interface works fully offline when connectivity drops in warehouses.',
+    results: ['35% reduction in average delivery cycle time', '4.7 Google Play rating across 600+ drivers', 'Replaced 3 WhatsApp groups and 2 spreadsheets', 'Zero unplanned downtime in first 6 months of production'],
+    techStack: ['Kotlin', 'Jetpack Compose', 'Firebase RTDB', 'Google Maps SDK', 'Retrofit', 'Room', 'WorkManager'],
   },
 ]
 
@@ -150,44 +168,53 @@ export default function PortfolioPage() {
             ))}
           </div>
 
-          <div className="pp-grid">
-            {filtered.map(p => (
-              <div key={p.id} className="pp-card" onClick={() => setOpenProject(p)}>
-                <div className="pp-card-visual" style={{ background: p.color }}>
-                  <span>{p.emoji}</span>
-                </div>
-                <div className="pp-card-body">
-                  <div className="pp-card-tags">
-                    {p.tags.map(t => <span key={t}>{t}</span>)}
+          {filtered.length === 0 ? (
+            <div className="pp-empty">
+              <p>No case studies in this category yet — more coming soon.</p>
+              <button className="pp-filter active" onClick={() => setActiveFilter('All')}>
+                View all projects
+              </button>
+            </div>
+          ) : (
+            <div className="pp-grid">
+              {filtered.map(p => (
+                <div key={p.id} className="pp-card" onClick={() => setOpenProject(p)}>
+                  <div className="pp-card-visual" style={{ background: p.color }}>
+                    <span>{p.emoji}</span>
                   </div>
-                  <h3>{p.title}</h3>
-                  <p>{p.tagline}</p>
-                  <div className="pp-card-result">
-                    <strong>{p.result}</strong>
+                  <div className="pp-card-body">
+                    <div className="pp-card-tags">
+                      {p.tags.map(t => <span key={t}>{t}</span>)}
+                    </div>
+                    <h3>{p.title}</h3>
+                    <p>{p.tagline}</p>
+                    <div className="pp-card-result">
+                      <strong>{p.result}</strong>
+                    </div>
+                    <button className="pp-view-case">View Case Study →</button>
                   </div>
-                  <button className="pp-view-case">View Case Study →</button>
                 </div>
-              </div>
-            ))}
-            {filtered.length > 0 && placeholders.map(ph => (
-              <div key={ph.label} className="pp-card pp-placeholder">
-                <div className="pp-card-visual pp-card-visual--muted">
-                  <span>{ph.emoji}</span>
+              ))}
+              {placeholders.map(ph => (
+                <div key={ph.label} className="pp-card pp-placeholder">
+                  <div className="pp-card-visual pp-card-visual--muted">
+                    <span>{ph.emoji}</span>
+                  </div>
+                  <div className="pp-card-body">
+                    <h3>{ph.label}</h3>
+                    <p className="pp-placeholder-sub">{ph.sublabel}</p>
+                  </div>
                 </div>
-                <div className="pp-card-body">
-                  <h3>{ph.label}</h3>
-                  <p className="pp-placeholder-sub">{ph.sublabel}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
       <section className="pp-stats">
         <div className="pp-container">
           <div className="pp-stats-grid">
-            <div><strong>40+</strong><span>Apps shipped</span></div>
+            <div><strong>40+</strong><span>Apps Shipped</span></div>
             <div><strong>4.8★</strong><span>Avg App Store rating</span></div>
             <div><strong>8 weeks</strong><span>Fastest MVP</span></div>
             <div><strong>$50M+</strong><span>Raised by our clients</span></div>
