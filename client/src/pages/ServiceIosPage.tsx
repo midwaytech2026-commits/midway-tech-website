@@ -1,31 +1,35 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import {
+  Palette, Zap, Link2, Bell, CreditCard, CheckCircle, Shield,
+  Bot, Code2, Smartphone
+} from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceIosPage.css'
 
 const included = [
-  { icon: '🎨', title: 'Custom UI/UX Design', desc: 'Figma designs following Apple HIG, tailored to your brand.' },
-  { icon: '⚡', title: 'Swift & SwiftUI', desc: 'Modern, performant code using Apple\'s latest frameworks.' },
-  { icon: '🔗', title: 'API & Backend Integration', desc: 'REST, GraphQL, WebSocket — we connect to any backend.' },
-  { icon: '🔔', title: 'Push Notifications', desc: 'APNs integration for transactional and marketing messages.' },
-  { icon: '💳', title: 'In-App Purchases', desc: 'Subscriptions, consumables, and StoreKit 2 setup.' },
-  { icon: '✅', title: 'App Store Submission', desc: 'Full App Store review handling and TestFlight QA setup.' },
-  { icon: '🛡', title: '3-Month Support', desc: 'Bug fixes and minor updates after launch, included.' },
+  { Icon: Palette,      title: 'Custom UI/UX Design',        desc: 'Figma designs following Apple HIG, tailored to your brand.' },
+  { Icon: Zap,          title: 'Swift & SwiftUI',            desc: "Modern, performant code using Apple's latest frameworks." },
+  { Icon: Link2,        title: 'API & Backend Integration',  desc: 'REST, GraphQL, WebSocket — we connect to any backend.' },
+  { Icon: Bell,         title: 'Push Notifications',         desc: 'APNs integration for transactional and marketing messages.' },
+  { Icon: CreditCard,   title: 'In-App Purchases',           desc: 'Subscriptions, consumables, and StoreKit 2 setup.' },
+  { Icon: CheckCircle,  title: 'App Store Submission',       desc: 'Full App Store review handling and TestFlight QA setup.' },
+  { Icon: Shield,       title: '3-Month Support',            desc: 'Bug fixes and minor updates after launch, included.' },
 ]
 
 const techStack = {
-  'Language & UI': ['Swift 5.9', 'SwiftUI', 'UIKit'],
+  'Language & UI':     ['Swift 5.9', 'SwiftUI', 'UIKit'],
   'Data & Networking': ['URLSession', 'Alamofire', 'Combine', 'Core Data'],
-  'Auth & Payments': ['Sign in with Apple', 'StoreKit 2', 'Stripe SDK'],
-  'Quality': ['XCTest', 'TestFlight', 'Instruments', 'Firebase Crashlytics'],
+  'Auth & Payments':   ['Sign in with Apple', 'StoreKit 2', 'Stripe SDK'],
+  'Quality':           ['XCTest', 'TestFlight', 'Instruments', 'Firebase Crashlytics'],
 }
 
 const processSteps = [
-  { step: '01', title: 'Discovery', duration: '1 week', desc: 'Define scope, user flows, and technical requirements.' },
-  { step: '02', title: 'Design', duration: '2 weeks', desc: 'Wireframes, high-fidelity Figma designs, prototype review.' },
-  { step: '03', title: 'Development', duration: '6–10 weeks', desc: 'Sprint-based build with weekly demos and feedback loops.' },
-  { step: '04', title: 'QA & Testing', duration: '1–2 weeks', desc: 'Device testing, TestFlight beta, performance profiling.' },
-  { step: '05', title: 'Launch', duration: '1 week', desc: 'App Store submission, release management, and handover.' },
+  { step: '01', title: 'Discovery',    duration: '1 week',     desc: 'Define scope, user flows, and technical requirements.' },
+  { step: '02', title: 'Design',       duration: '2 weeks',    desc: 'Wireframes, high-fidelity Figma designs, prototype review.' },
+  { step: '03', title: 'Development',  duration: '6–10 weeks', desc: 'Sprint-based build with weekly demos and feedback loops.' },
+  { step: '04', title: 'QA & Testing', duration: '1–2 weeks',  desc: 'Device testing, TestFlight beta, performance profiling.' },
+  { step: '05', title: 'Launch',       duration: '1 week',     desc: 'App Store submission, release management, and handover.' },
 ]
 
 const faqItems = [
@@ -43,7 +47,7 @@ const faqItems = [
   },
   {
     q: 'Can you work with our existing backend?',
-    a: 'Absolutely. We integrate with any REST or GraphQL API. If you don\'t have a backend yet, we can build one alongside the app.',
+    a: "Absolutely. We integrate with any REST or GraphQL API. If you don't have a backend yet, we can build one alongside the app.",
   },
   {
     q: 'What is the minimum engagement size?',
@@ -52,9 +56,9 @@ const faqItems = [
 ]
 
 const relatedServices = [
-  { title: 'Android Development', slug: '/services/android',      icon: '🤖' },
-  { title: 'React Native',        slug: '/services/react-native', icon: '⚛️' },
-  { title: 'UI/UX Design',        slug: '/services/ui-ux',        icon: '🎨' },
+  { title: 'Android Development', slug: '/services/android',      Icon: Bot },
+  { title: 'React Native',        slug: '/services/react-native', Icon: Code2 },
+  { title: 'UI/UX Design',        slug: '/services/ui-ux',        Icon: Palette },
 ]
 
 export default function ServiceIosPage() {
@@ -90,11 +94,11 @@ export default function ServiceIosPage() {
           <span className="section-eyebrow">What's Included</span>
           <h2>Everything your iOS app needs, <em>in one engagement</em></h2>
           <div className="ios-included-grid">
-            {included.map(item => (
-              <div key={item.title} className="ios-included-card">
-                <div className="ios-included-icon">{item.icon}</div>
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
+            {included.map(({ Icon, title, desc }) => (
+              <div key={title} className="ios-included-card">
+                <div className="ios-included-icon-wrap"><Icon size={20} strokeWidth={1.5} /></div>
+                <h3>{title}</h3>
+                <p>{desc}</p>
               </div>
             ))}
           </div>
@@ -163,10 +167,10 @@ export default function ServiceIosPage() {
         <div className="ios-container">
           <h3>Related Services</h3>
           <div className="ios-related-grid">
-            {relatedServices.map(s => (
-              <Link key={s.title} to={s.slug} className="ios-related-card">
-                <span>{s.icon}</span>
-                <p>{s.title}</p>
+            {relatedServices.map(({ Icon, title, slug }) => (
+              <Link key={title} to={slug} className="ios-related-card">
+                <Icon size={18} strokeWidth={1.5} />
+                <p>{title}</p>
                 <span className="ios-related-arrow">→</span>
               </Link>
             ))}

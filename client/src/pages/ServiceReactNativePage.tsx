@@ -1,31 +1,35 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import {
+  Palette, Code2, Wrench, Bell, RefreshCw, CheckCircle, Shield,
+  Smartphone, Bot, Wind
+} from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceDetailPage.css'
 
 const included = [
-  { icon: '🎨', title: 'Cross-Platform UI Design',    desc: 'Figma designs with platform-specific adaptations — iOS Human Interface and Android Material 3.' },
-  { icon: '⚛️', title: 'React Native + TypeScript',   desc: 'Type-safe cross-platform code using Expo or bare workflow, chosen to fit your project needs.' },
-  { icon: '🔧', title: 'Native Module Integration',   desc: 'Camera, GPS, biometrics, Bluetooth — we bridge any native device API your app requires.' },
-  { icon: '🔔', title: 'Push Notifications',          desc: 'APNs + FCM setup for both platforms in a single codebase, with rich notification support.' },
-  { icon: '🚀', title: 'OTA Updates',                 desc: 'Expo EAS Update for instant bug fixes and content changes without an App Store review cycle.' },
-  { icon: '✅', title: 'Dual Store Submission',        desc: 'App Store + Google Play submission handled end-to-end, including screenshots and metadata.' },
-  { icon: '🛡', title: '3-Month Support',              desc: 'Bug fixes and minor updates after launch, included in every engagement.' },
+  { Icon: Palette,     title: 'Cross-Platform UI Design',  desc: 'Figma designs with platform-specific adaptations — iOS Human Interface and Android Material 3.' },
+  { Icon: Code2,       title: 'React Native + TypeScript', desc: 'Type-safe cross-platform code using Expo or bare workflow, chosen to fit your project needs.' },
+  { Icon: Wrench,      title: 'Native Module Integration', desc: 'Camera, GPS, biometrics, Bluetooth — we bridge any native device API your app requires.' },
+  { Icon: Bell,        title: 'Push Notifications',        desc: 'APNs + FCM setup for both platforms in a single codebase, with rich notification support.' },
+  { Icon: RefreshCw,   title: 'OTA Updates',               desc: 'Expo EAS Update for instant bug fixes and content changes without an App Store review cycle.' },
+  { Icon: CheckCircle, title: 'Dual Store Submission',     desc: 'App Store + Google Play submission handled end-to-end, including screenshots and metadata.' },
+  { Icon: Shield,      title: '3-Month Support',           desc: 'Bug fixes and minor updates after launch, included in every engagement.' },
 ]
 
 const techStack = {
-  'Core':                ['React Native', 'TypeScript', 'Expo EAS', 'React 18'],
-  'Navigation & State':  ['React Navigation', 'Zustand', 'Redux Toolkit', 'React Query'],
-  'Backend & APIs':      ['REST', 'GraphQL', 'WebSocket', 'Axios'],
-  'Quality':             ['Jest', 'Detox', 'Firebase Crashlytics', 'Sentry'],
+  'Core':               ['React Native', 'TypeScript', 'Expo EAS', 'React 18'],
+  'Navigation & State': ['React Navigation', 'Zustand', 'Redux Toolkit', 'React Query'],
+  'Backend & APIs':     ['REST', 'GraphQL', 'WebSocket', 'Axios'],
+  'Quality':            ['Jest', 'Detox', 'Firebase Crashlytics', 'Sentry'],
 }
 
 const processSteps = [
-  { step: '01', title: 'Discovery',    duration: '1 week',    desc: 'Define scope, user flows, and choose Expo managed vs bare workflow.' },
-  { step: '02', title: 'Design',       duration: '2 weeks',   desc: 'Platform-aware Figma designs — one layout, two platform adaptations.' },
+  { step: '01', title: 'Discovery',    duration: '1 week',     desc: 'Define scope, user flows, and choose Expo managed vs bare workflow.' },
+  { step: '02', title: 'Design',       duration: '2 weeks',    desc: 'Platform-aware Figma designs — one layout, two platform adaptations.' },
   { step: '03', title: 'Development',  duration: '6–10 weeks', desc: 'Sprint-based build. You test on real iOS and Android devices every week.' },
-  { step: '04', title: 'QA & Testing', duration: '1–2 weeks', desc: 'Device matrix QA, Detox automation, and cross-platform performance profiling.' },
-  { step: '05', title: 'Launch',       duration: '1 week',    desc: 'Simultaneous App Store and Play Store submission with release management.' },
+  { step: '04', title: 'QA & Testing', duration: '1–2 weeks',  desc: 'Device matrix QA, Detox automation, and cross-platform performance profiling.' },
+  { step: '05', title: 'Launch',       duration: '1 week',     desc: 'Simultaneous App Store and Play Store submission with release management.' },
 ]
 
 const faqItems = [
@@ -52,9 +56,9 @@ const faqItems = [
 ]
 
 const relatedServices = [
-  { title: 'iOS Development',     slug: '/services/ios',     icon: '📱' },
-  { title: 'Android Development', slug: '/services/android', icon: '🤖' },
-  { title: 'Flutter',             slug: '/services/flutter', icon: '🐦' },
+  { title: 'iOS Development',     slug: '/services/ios',     Icon: Smartphone },
+  { title: 'Android Development', slug: '/services/android', Icon: Bot },
+  { title: 'Flutter',             slug: '/services/flutter', Icon: Wind },
 ]
 
 export default function ServiceReactNativePage() {
@@ -90,11 +94,11 @@ export default function ServiceReactNativePage() {
           <span className="section-eyebrow">What's Included</span>
           <h2>Everything your cross-platform app needs, <em>in one engagement</em></h2>
           <div className="svc-included-grid">
-            {included.map(item => (
-              <div key={item.title} className="svc-included-card">
-                <div className="svc-included-icon">{item.icon}</div>
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
+            {included.map(({ Icon, title, desc }) => (
+              <div key={title} className="svc-included-card">
+                <div className="svc-included-icon-wrap"><Icon size={20} strokeWidth={1.5} /></div>
+                <h3>{title}</h3>
+                <p>{desc}</p>
               </div>
             ))}
           </div>
@@ -163,10 +167,10 @@ export default function ServiceReactNativePage() {
         <div className="svc-container">
           <h3>Related Services</h3>
           <div className="svc-related-grid">
-            {relatedServices.map(s => (
-              <Link key={s.title} to={s.slug} className="svc-related-card">
-                <span>{s.icon}</span>
-                <p>{s.title}</p>
+            {relatedServices.map(({ Icon, title, slug }) => (
+              <Link key={title} to={slug} className="svc-related-card">
+                <Icon size={18} strokeWidth={1.5} />
+                <p>{title}</p>
                 <span className="svc-related-arrow">→</span>
               </Link>
             ))}

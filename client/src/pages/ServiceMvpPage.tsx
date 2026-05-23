@@ -1,16 +1,20 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import {
+  Target, Palette, Zap, Link2, Rocket, FileText, Shield,
+  Smartphone, Bot
+} from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceDetailPage.css'
 
 const included = [
-  { icon: '🔭', title: 'Scope Workshop',            desc: 'Half-day session to define features, cut scope to the essential, and align on success metrics.' },
-  { icon: '🎨', title: 'UI/UX Design Sprint',       desc: 'Wireframes, high-fidelity screens, and a clickable prototype — completed in 2 weeks.' },
-  { icon: '⚡', title: 'Core Feature Development',   desc: 'Lean, focused build with only the features your MVP hypothesis needs to validate.' },
-  { icon: '🔗', title: 'Backend API',               desc: 'Node.js REST API with authentication, database, and core endpoints — built to scale.' },
-  { icon: '🚀', title: 'App Store / Play Store Launch', desc: 'Full submission process handled by our team — screenshots, metadata, review management.' },
-  { icon: '📄', title: 'Investor-Ready Handover',   desc: 'Source code, architecture documentation, and a project summary slide deck for your investors.' },
-  { icon: '🛡', title: '60-Day Post-Launch Support', desc: 'Bug fixes and monitoring for 60 days after launch — because most issues appear in week one.' },
+  { Icon: Target,    title: 'Scope Workshop',              desc: 'Half-day session to define features, cut scope to the essential, and align on success metrics.' },
+  { Icon: Palette,   title: 'UI/UX Design Sprint',         desc: 'Wireframes, high-fidelity screens, and a clickable prototype — completed in 2 weeks.' },
+  { Icon: Zap,       title: 'Core Feature Development',    desc: 'Lean, focused build with only the features your MVP hypothesis needs to validate.' },
+  { Icon: Link2,     title: 'Backend API',                 desc: 'Node.js REST API with authentication, database, and core endpoints — built to scale.' },
+  { Icon: Rocket,    title: 'App Store / Play Store Launch', desc: 'Full submission process handled by our team — screenshots, metadata, review management.' },
+  { Icon: FileText,  title: 'Investor-Ready Handover',     desc: 'Source code, architecture documentation, and a project summary slide deck for your investors.' },
+  { Icon: Shield,    title: '60-Day Post-Launch Support',  desc: 'Bug fixes and monitoring for 60 days after launch — because most issues appear in week one.' },
 ]
 
 const techStack = {
@@ -21,21 +25,21 @@ const techStack = {
 }
 
 const processSteps = [
-  { step: '01', title: 'Scope Workshop',   duration: '1 week',  desc: 'We facilitate a structured session to define your MVP feature set, user personas, and success KPIs.' },
-  { step: '02', title: 'Design Sprint',    duration: '2 weeks', desc: 'Wireframes, high-fidelity Figma designs, and a prototype you can share with early users.' },
-  { step: '03', title: 'Development',      duration: '4–6 weeks', desc: '2-week sprints. You test on your device every Friday. Feedback goes in the following sprint.' },
-  { step: '04', title: 'QA & Testing',     duration: '1 week',  desc: 'Functional testing, crash reporting setup, and TestFlight / internal testing track distribution.' },
-  { step: '05', title: 'Launch & Handover', duration: '1 week', desc: 'App Store / Play Store submission, source code handover, and investor documentation delivery.' },
+  { step: '01', title: 'Scope Workshop',    duration: '1 week',    desc: 'We facilitate a structured session to define your MVP feature set, user personas, and success KPIs.' },
+  { step: '02', title: 'Design Sprint',     duration: '2 weeks',   desc: 'Wireframes, high-fidelity Figma designs, and a prototype you can share with early users.' },
+  { step: '03', title: 'Development',       duration: '4–6 weeks', desc: '2-week sprints. You test on your device every Friday. Feedback goes in the following sprint.' },
+  { step: '04', title: 'QA & Testing',      duration: '1 week',    desc: 'Functional testing, crash reporting setup, and TestFlight / internal testing track distribution.' },
+  { step: '05', title: 'Launch & Handover', duration: '1 week',    desc: 'App Store / Play Store submission, source code handover, and investor documentation delivery.' },
 ]
 
 const faqItems = [
   {
     q: 'What exactly counts as an MVP?',
-    a: "An MVP (Minimum Viable Product) is the smallest version of your app that lets real users accomplish the core task. It's NOT a rough prototype — it's a fully functional, App Store–ready product with only the essential features. No nice-to-haves, no admin panels, no version 2 features.",
+    a: "An MVP (Minimum Viable Product) is the smallest version of your app that lets real users accomplish the core task. It's NOT a rough prototype — it's a fully functional, App Store-ready product with only the essential features. No nice-to-haves, no admin panels, no version 2 features.",
   },
   {
     q: 'How do you decide what to include and what to cut?',
-    a: 'In the Scope Workshop, we map every feature request to a user problem and a business hypothesis. If a feature can\'t be tied to a testable hypothesis, it goes to the backlog. This keeps the build lean and the timeline on track.',
+    a: "In the Scope Workshop, we map every feature request to a user problem and a business hypothesis. If a feature can't be tied to a testable hypothesis, it goes to the backlog. This keeps the build lean and the timeline on track.",
   },
   {
     q: 'Can you build for both iOS and Android?',
@@ -52,9 +56,9 @@ const faqItems = [
 ]
 
 const relatedServices = [
-  { title: 'iOS Development',     slug: '/services/ios',          icon: '📱' },
-  { title: 'Android Development', slug: '/services/android',      icon: '🤖' },
-  { title: 'UI/UX Design',        slug: '/services/ui-ux',        icon: '🎨' },
+  { title: 'iOS Development',     slug: '/services/ios',     Icon: Smartphone },
+  { title: 'Android Development', slug: '/services/android', Icon: Bot },
+  { title: 'UI/UX Design',        slug: '/services/ui-ux',   Icon: Palette },
 ]
 
 export default function ServiceMvpPage() {
@@ -90,11 +94,11 @@ export default function ServiceMvpPage() {
           <span className="section-eyebrow">What's Included</span>
           <h2>Everything to go from zero to <em>live product</em></h2>
           <div className="svc-included-grid">
-            {included.map(item => (
-              <div key={item.title} className="svc-included-card">
-                <div className="svc-included-icon">{item.icon}</div>
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
+            {included.map(({ Icon, title, desc }) => (
+              <div key={title} className="svc-included-card">
+                <div className="svc-included-icon-wrap"><Icon size={20} strokeWidth={1.5} /></div>
+                <h3>{title}</h3>
+                <p>{desc}</p>
               </div>
             ))}
           </div>
@@ -163,10 +167,10 @@ export default function ServiceMvpPage() {
         <div className="svc-container">
           <h3>Related Services</h3>
           <div className="svc-related-grid">
-            {relatedServices.map(s => (
-              <Link key={s.title} to={s.slug} className="svc-related-card">
-                <span>{s.icon}</span>
-                <p>{s.title}</p>
+            {relatedServices.map(({ Icon, title, slug }) => (
+              <Link key={title} to={slug} className="svc-related-card">
+                <Icon size={18} strokeWidth={1.5} />
+                <p>{title}</p>
                 <span className="svc-related-arrow">→</span>
               </Link>
             ))}

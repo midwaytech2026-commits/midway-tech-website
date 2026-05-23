@@ -1,48 +1,72 @@
 import './WhyUs.css'
 
-const reasons = [
+const problems = [
   {
-    num: '01',
-    title: 'Fixed-scope, fixed-price projects',
-    desc: 'No surprise invoices. We scope your project in detail upfront, agree on a price, and stick to it. Every time.',
+    num: '✗',
+    title: 'They work for their invoice',
+    desc: 'Services get added. Budgets inflate. You pay for what they need, not what you need.',
+    type: 'problem',
   },
   {
-    num: '02',
-    title: 'You own everything, always',
-    desc: 'Full source code, IP, and asset ownership transferred to you on day one of payment. No lock-in, ever.',
+    num: '✗',
+    title: 'They disappear mid-project',
+    desc: "Weekly updates become monthly ones. Emails go unanswered. You're left chasing.",
+    type: 'problem',
   },
   {
-    num: '03',
-    title: 'Weekly demos, not monthly surprises',
-    desc: "Every Friday you see exactly what's been built. Async Loom updates + a live demo call — your choice.",
+    num: '✗',
+    title: 'They separate dev and marketing',
+    desc: 'One agency builds it. Another markets it. Nobody takes responsibility for the full result.',
+    type: 'problem',
   },
   {
-    num: '04',
-    title: 'Timezone-friendly communication',
-    desc: 'Dedicated Slack channel with 4-hour response SLA. We overlap with US/UK/AU business hours every day.',
+    num: '✗',
+    title: "They don't understand your business",
+    desc: "They know their tools. They don't know your business. There's a difference — and it costs you.",
+    type: 'problem',
   },
 ]
 
-const metrics = [
-  { label: 'Average delivery time', value: '12 weeks', type: 'accent' },
-  { label: 'On-time delivery rate', value: '94%', type: '' },
-  { label: 'Client retention rate', value: '87%', type: 'accent2' },
-  { label: 'Avg. cost vs US agency', value: '60% less', type: 'accent' },
-  { label: 'Clutch rating', value: '4.9 ★', type: '' },
+const solutions = [
+  {
+    num: '✓',
+    title: 'Development and marketing in one place',
+    desc: 'Your product and your growth strategy built together — not bolted together after the fact.',
+    type: 'solution',
+  },
+  {
+    num: '✓',
+    title: 'Budget protected from day one',
+    desc: "We map exactly what's needed before anything starts. No padding. No surprises.",
+    type: 'solution',
+  },
+  {
+    num: '✓',
+    title: 'You hear from us every day',
+    desc: 'Daily updates. Real insights. Not just status reports — actual strategic thinking across both build and growth.',
+    type: 'solution',
+  },
+  {
+    num: '✓',
+    title: 'Founded by a marketer, not just a builder',
+    desc: 'Our founder spent 7 years inside real businesses understanding what actually drives growth. That perspective lives in every project.',
+    type: 'solution',
+  },
 ]
 
 export default function WhyUs() {
   return (
     <section className="why-section" id="why">
       <p className="why-eyebrow">Why Midway Tech</p>
-      <h2 className="why-title">Built for startups who<br />can't afford to get it wrong.</h2>
-      <p className="why-sub">We know what's at stake when you're spending your runway on an app. Here's why founders trust us.</p>
+      <h2 className="why-title">Build it right. Grow it right.<br />Both under one roof.</h2>
+      <p className="why-sub">Most businesses hire one agency to build and another to market. The result? No one owns the full picture. No one is accountable for real growth.</p>
 
       <div className="why-grid">
-        <div className="why-list">
-          {reasons.map(r => (
-            <div key={r.num} className="why-item">
-              <div className="why-num">{r.num}</div>
+        <div className="why-col">
+          <div className="why-col-label why-col-label--problem">Why most agencies fail you</div>
+          {problems.map(r => (
+            <div key={r.title} className="why-item why-item--problem">
+              <div className="why-num why-num--problem">{r.num}</div>
               <div className="why-content">
                 <h3>{r.title}</h3>
                 <p>{r.desc}</p>
@@ -51,11 +75,15 @@ export default function WhyUs() {
           ))}
         </div>
 
-        <div className="why-visual">
-          {metrics.map(m => (
-            <div key={m.label} className="metric-row">
-              <span className="metric-label">{m.label}</span>
-              <span className={`metric-val ${m.type}`}>{m.value}</span>
+        <div className="why-col">
+          <div className="why-col-label why-col-label--solution">The Midway Tech difference</div>
+          {solutions.map(r => (
+            <div key={r.title} className="why-item why-item--solution">
+              <div className="why-num why-num--solution">{r.num}</div>
+              <div className="why-content">
+                <h3>{r.title}</h3>
+                <p>{r.desc}</p>
+              </div>
             </div>
           ))}
         </div>

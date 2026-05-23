@@ -1,32 +1,41 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import type { ChangeEvent } from 'react'
 import { api } from '../services/api'
 import './ContactPage.css'
 
-const serviceChips = ['iOS App', 'Android App', 'React Native', 'Flutter', 'MVP Build', 'UI/UX Design']
+const serviceChips = [
+  'Web Development', 'Mobile App', 'Ecommerce', 'AI Integrations',
+  'Website Revamp', 'MVP Build',
+  'SEO', 'PPC / Paid Ads', 'Content Marketing', 'Social Media',
+  'Email Marketing', 'Growth Marketing',
+]
 const budgetLabels = ['< $5k', '$5k–$15k', '$15k–$50k', '$50k+']
 const timelines = ['ASAP', '1–3 months', '3–6 months', '6+ months']
 
 const faqItems = [
   {
-    q: 'How long does it take to build an app?',
-    a: 'A typical MVP takes 8–14 weeks. Full-featured apps take 3–6 months. We provide a detailed timeline after our discovery call.'
+    q: 'How long does a typical project take?',
+    a: 'A simple website: 3–5 weeks. An MVP: 8–14 weeks. A full app: 14–24 weeks. SEO shows meaningful results in 3–6 months; PPC can return results within weeks. We give you a specific timeline in your proposal.',
+  },
+  {
+    q: 'Can you handle both development and marketing?',
+    a: 'Yes — and for most clients, this is the recommended approach. When both come from the same team, the results are faster and more consistent. We plan both strategies from the same brief.',
+  },
+  {
+    q: 'Do you work with EU, US and UK clients?',
+    a: 'Yes. Most of our clients are in the EU, US, and UK. We are based in Jaipur, India and our offshore model means you get premium quality at a significantly lower cost than a local agency.',
   },
   {
     q: 'Do you sign NDAs?',
-    a: 'Yes, absolutely. We sign NDAs before any project discussion and take IP protection seriously.'
+    a: 'Yes, absolutely. We sign NDAs before any project discussion and take IP protection seriously.',
   },
   {
-    q: 'What information do I need to get started?',
-    a: 'Just a basic idea of what you want to build. We help you structure the scope, define features, and plan the build.'
+    q: 'What does the discovery call actually involve?',
+    a: 'A 45–60 minute conversation where you tell us what you\'re building or where you want to grow. We ask the right questions. No pitch, no pressure — just an honest conversation about whether we\'re the right fit.',
   },
   {
-    q: 'Do you work with US/UK/Australian clients?',
-    a: 'Yes — most of our clients are in the US, UK, and Australia. We overlap with US EST mornings and UK afternoons.'
-  },
-  {
-    q: 'What happens after the app is launched?',
-    a: 'We offer 3-month post-launch support on all projects, plus optional retainer packages for ongoing feature work.'
+    q: 'What is your minimum engagement size?',
+    a: 'Development projects start from $2,500. Marketing retainers from $1,200/month. For a clear quote based on your specific needs, book a discovery call.',
   },
 ]
 
@@ -39,7 +48,28 @@ interface FormData {
   timeline: string
 }
 
+function CalendlyEmbed() {
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://assets.calendly.com/assets/external/widget.js'
+    script.async = true
+    document.body.appendChild(script)
+    return () => { document.body.removeChild(script) }
+  }, [])
+
+  return (
+    <div className="calendly-wrap">
+      <div
+        className="calendly-inline-widget"
+        data-url="https://calendly.com/midwaytech/discovery-call?hide_gdpr_banner=1&background_color=0a0a09&text_color=fafaf7&primary_color=ff4d1c"
+        style={{ minWidth: '320px', height: '700px' }}
+      />
+    </div>
+  )
+}
+
 export default function ContactPage() {
+  const [tab, setTab] = useState<'calendly' | 'form'>('calendly')
   const [selectedServices, setSelectedServices] = useState<string[]>([])
   const [budgetIndex, setBudgetIndex] = useState(1)
   const [form, setForm] = useState<FormData>({ name: '', email: '', phone: '', company: '', brief: '', timeline: '' })
@@ -80,8 +110,8 @@ export default function ContactPage() {
       <section className="cp-hero">
         <div className="cp-hero-inner">
           <span className="section-eyebrow">Contact Us</span>
-          <h1>Let's Build Something<br /><em>Together</em></h1>
-          <p>Tell us about your project and we'll get back to you within 24 hours with a detailed proposal.</p>
+          <h1>Let's talk about what<br />you're building — and how to <em>grow it</em></h1>
+          <p>No pitch. No hard sell. Just an honest conversation about your business and whether we're the right team to help — with development, marketing, or both.</p>
         </div>
       </section>
 
@@ -91,9 +121,9 @@ export default function ContactPage() {
             <div className="cp-info-block">
               <h3>What happens next?</h3>
               <ol className="cp-steps">
-                <li><span>1</span><div><strong>Discovery call</strong><p>30-min call to understand your goals and constraints.</p></div></li>
-                <li><span>2</span><div><strong>Proposal</strong><p>We send a detailed scope, timeline, and cost breakdown within 48 hours.</p></div></li>
-                <li><span>3</span><div><strong>Kickoff</strong><p>Sign contracts, onboard to tools, and sprint planning starts.</p></div></li>
+                <li><span>1</span><div><strong>Discovery call</strong><p>45–60 min. We listen, ask the right questions, and understand your goals — across development, marketing, or both.</p></div></li>
+                <li><span>2</span><div><strong>Strategy & Proposal</strong><p>We come back with the right services, an honest timeline, and a clear budget within 2–4 business days.</p></div></li>
+                <li><span>3</span><div><strong>Kickoff</strong><p>One team, one brief. Development and marketing planned together from day one.</p></div></li>
               </ol>
             </div>
 
@@ -102,14 +132,20 @@ export default function ContactPage() {
                 <div className="cp-contact-icon">✉</div>
                 <div><strong>Email us</strong><span>hello@midwaytech.co</span></div>
               </a>
-              <a href="#" className="cp-contact-item">
+              <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="cp-contact-item">
                 <div className="cp-contact-icon">💬</div>
                 <div><strong>WhatsApp</strong><span>Quick questions welcome</span></div>
               </a>
-              <a href="#" className="cp-contact-item">
+              <a href="https://linkedin.com/in/nilesh-midwaytech" target="_blank" rel="noopener noreferrer" className="cp-contact-item">
                 <div className="cp-contact-icon">in</div>
-                <div><strong>LinkedIn</strong><span>Connect with our team</span></div>
+                <div><strong>LinkedIn</strong><span>Connect with Nilesh</span></div>
               </a>
+            </div>
+
+            <div className="cp-location">
+              <div className="cp-location-item">📍 Based in Jaipur, Rajasthan, India</div>
+              <div className="cp-location-item">🌍 Serving EU · US · UK · Global</div>
+              <div className="cp-location-item">⏱ We respond within 24 hours. Always.</div>
             </div>
 
             <div className="cp-faq">
@@ -129,11 +165,28 @@ export default function ContactPage() {
           </div>
 
           <div className="cp-form-wrap">
-            {submitted ? (
+            <div className="cp-tabs">
+              <button
+                className={`cp-tab ${tab === 'calendly' ? 'active' : ''}`}
+                onClick={() => setTab('calendly')}
+              >
+                📅 Book a Call Directly
+              </button>
+              <button
+                className={`cp-tab ${tab === 'form' ? 'active' : ''}`}
+                onClick={() => setTab('form')}
+              >
+                ✉ Send a Message
+              </button>
+            </div>
+
+            {tab === 'calendly' ? (
+              <CalendlyEmbed />
+            ) : submitted ? (
               <div className="cp-success">
                 <div className="cp-success-icon">✓</div>
                 <h2>Message received!</h2>
-                <p>We'll review your project details and get back to you within 24 hours.</p>
+                <p>We will review your project details and get back to you within 24 hours.</p>
               </div>
             ) : (
               <form className="cp-form" onSubmit={handleSubmit}>
@@ -156,13 +209,13 @@ export default function ContactPage() {
                     <input name="phone" value={form.phone} onChange={handleChange} placeholder="+1 555 000 0000" />
                   </div>
                   <div className="cp-field">
-                    <label>Company</label>
+                    <label>Company / Project</label>
                     <input name="company" value={form.company} onChange={handleChange} placeholder="Acme Inc." />
                   </div>
                 </div>
 
                 <div className="cp-field">
-                  <label>What are you building?</label>
+                  <label>What are you looking for help with?</label>
                   <div className="cp-chips">
                     {serviceChips.map(s => (
                       <button
@@ -192,7 +245,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="cp-field">
-                  <label>Timeline</label>
+                  <label>Rough timeline</label>
                   <select name="timeline" value={form.timeline} onChange={handleChange}>
                     <option value="">Select timeline…</option>
                     {timelines.map(t => <option key={t} value={t}>{t}</option>)}
@@ -200,22 +253,22 @@ export default function ContactPage() {
                 </div>
 
                 <div className="cp-field">
-                  <label>Project brief</label>
+                  <label>Tell us about your project or goal</label>
                   <textarea
                     name="brief"
                     value={form.brief}
                     onChange={handleChange}
                     rows={5}
-                    placeholder="Describe your idea, goals, and any specific requirements…"
+                    placeholder="Describe your idea, where you want to grow, or what problem you're trying to solve…"
                   />
                 </div>
 
                 <button type="submit" className="cp-submit" disabled={submitting}>
-                  {submitting ? 'Sending…' : 'Send Project Brief →'}
+                  {submitting ? 'Sending…' : 'Send Message — We Reply Within 24 Hours →'}
                 </button>
 
                 {error && <p className="cp-error">{error}</p>}
-                <p className="cp-disclaimer">No spam, no obligations. We reply within 24 hours.</p>
+                <p className="cp-disclaimer">No spam, no obligations. No pressure to move forward.</p>
               </form>
             )}
           </div>

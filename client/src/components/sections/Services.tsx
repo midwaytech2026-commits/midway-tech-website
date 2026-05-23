@@ -1,45 +1,69 @@
-import { useApi } from '../../hooks/useApi'
-import { api } from '../../services/api'
-import type { Service } from '../../types'
+import {
+  Globe, Smartphone, ShoppingCart, Bot, RefreshCw, Rocket,
+  Search, Target, PenTool, Share2, Mail, TrendingUp, Megaphone, Users
+} from 'lucide-react'
 import './Services.css'
 
-const fallbackServices: Service[] = [
-  { _id: '1', icon: '📱', title: 'iOS App Development', description: 'Native Swift apps built for performance, Apple HIG compliance, and App Store approval on the first submission.', tags: ['Swift', 'SwiftUI', 'Xcode'], order: 1 },
-  { _id: '2', icon: '🤖', title: 'Android App Development', description: 'Kotlin-first Android apps optimised for Google Play, covering phones, tablets, and wearables.', tags: ['Kotlin', 'Jetpack', 'Material 3'], order: 2 },
-  { _id: '3', icon: '⚛️', title: 'React Native Development', description: 'One codebase, both platforms. Ideal for startups that need speed to market without sacrificing quality.', tags: ['React Native', 'Expo', 'TypeScript'], order: 3 },
-  { _id: '4', icon: '🐦', title: 'Flutter Development', description: "Google's UI toolkit for pixel-perfect apps on iOS and Android from a single codebase.", tags: ['Flutter', 'Dart', 'BLoC'], order: 4 },
-  { _id: '5', icon: '🚀', title: 'MVP Development', description: 'Validate your idea in 8–12 weeks with a lean, investor-ready MVP. Built to test, iterate, and grow.', tags: ['Rapid build', 'User testing', 'Investor deck'], order: 5 },
-  { _id: '6', icon: '🎨', title: 'UI/UX Design', description: 'Wireframes, prototypes, and pixel-perfect Figma designs that feel great and convert users into fans.', tags: ['Figma', 'Prototyping', 'User research'], order: 6 },
+const devServices = [
+  { Icon: Globe,        title: 'Web Development',         description: 'Fast, clean websites built to convert visitors into customers.' },
+  { Icon: Smartphone,   title: 'Mobile App Development',  description: 'iOS and Android apps your users will actually want to use.' },
+  { Icon: ShoppingCart, title: 'Ecommerce Development',   description: 'Online stores built to sell — not just to look good.' },
+  { Icon: Bot,          title: 'AI Integrations',         description: 'Practical AI features that save time and create real competitive advantage.' },
+  { Icon: RefreshCw,    title: 'Website Revamps',         description: 'Modernise what you have without starting from scratch unnecessarily.' },
+  { Icon: Rocket,       title: 'Startup MVP Development', description: 'From idea to working product — fast, lean, and fundable.' },
+]
+
+const marketingServices = [
+  { Icon: Search,      title: 'SEO',                     description: 'Visibility that compounds month after month. Traffic that actually converts.' },
+  { Icon: Target,      title: 'PPC & Paid Advertising',  description: 'Ad spend that returns more than it costs — every time.' },
+  { Icon: PenTool,     title: 'Content Marketing',       description: 'Content that builds authority and drives real business decisions.' },
+  { Icon: Share2,      title: 'Social Media Marketing',  description: 'Presence that means something to your audience — not just your follower count.' },
+  { Icon: Mail,        title: 'Email Marketing',         description: 'The highest-ROI channel available when done properly.' },
+  { Icon: Users,       title: 'Influencer Marketing',    description: 'The right voices, speaking to the right audiences, for your product.' },
+  { Icon: Megaphone,   title: 'PR & Brand Visibility',   description: 'Be known in the rooms that matter for your industry.' },
+  { Icon: TrendingUp,  title: 'Growth Marketing',        description: 'Systematic, data-led growth across every channel — not just one.' },
 ]
 
 export default function Services() {
-  const { data, loading } = useApi<{ success: boolean; data: Service[] }>(api.getServices)
-  const services: Service[] = data?.data?.length ? data.data : fallbackServices
-
   return (
     <section id="services" className="services-section">
-      <p className="section-eyebrow">What we build</p>
-      <h2 className="section-title">Every app type.<br />One trusted team.</h2>
-      <p className="section-sub">From lean MVPs to full-scale consumer apps — we've got the stack, the team, and the process to get you live.</p>
+      <p className="section-eyebrow">What We Do</p>
+      <h2 className="section-title">From idea to live product.<br />From live product to growing business.</h2>
+      <p className="section-sub">We only recommend what your business actually needs — whether that's development, marketing, or both.</p>
 
-      {loading ? (
-        <div className="services-loading">Loading services...</div>
-      ) : (
+      <div className="services-group">
+        <div className="services-group-label">
+          <span className="group-tag">Development & Product</span>
+        </div>
         <div className="services-grid">
-          {services.map(service => (
-            <div key={service._id} className="service-card">
-              <div className="service-icon">{service.icon}</div>
-              <div className="service-name">{service.title}</div>
-              <div className="service-desc">{service.description}</div>
-              {service.tags && (
-                <div className="service-tags">
-                  {service.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
-                </div>
-              )}
+          {devServices.map(({ Icon, title, description }) => (
+            <div key={title} className="service-card">
+              <div className="service-icon"><Icon size={20} strokeWidth={1.5} /></div>
+              <div className="service-name">{title}</div>
+              <div className="service-desc">{description}</div>
             </div>
           ))}
         </div>
-      )}
+      </div>
+
+      <div className="services-group">
+        <div className="services-group-label">
+          <span className="group-tag group-tag--marketing">Growth & Marketing</span>
+        </div>
+        <div className="services-grid">
+          {marketingServices.map(({ Icon, title, description }) => (
+            <div key={title} className="service-card">
+              <div className="service-icon service-icon--marketing"><Icon size={20} strokeWidth={1.5} /></div>
+              <div className="service-name">{title}</div>
+              <div className="service-desc">{description}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="services-cta">
+        <a href="/services" className="btn-ghost-dark">See All Services →</a>
+      </div>
     </section>
   )
 }

@@ -2,30 +2,37 @@ import './Testimonials.css'
 
 const testimonials = [
   {
-    text: "Midway Tech delivered our MVP in 10 weeks and it looked better than apps from agencies charging 4x more. The weekly demos kept us in control the whole time.",
-    initials: 'JK',
-    name: 'James K.',
-    role: 'Founder, FitTrack App · Austin, TX',
+    text: "I'd worked with two agencies before Midway Tech. Both times I ended up paying more than agreed and getting less than promised. With Nilesh's team it was the opposite — they flagged things I hadn't even thought of, the product came in on budget, and then they helped us market it properly from day one.",
+    initials: 'JR',
+    name: 'James R.',
+    role: 'Founder, SaaS Startup · United Kingdom',
   },
   {
-    text: "We'd worked with two other agencies before Midway. Night and day difference — clear communication, no scope creep, and they actually replied on Slack within the hour.",
-    initials: 'SR',
-    name: 'Sophie R.',
-    role: 'CTO, Lumi · London, UK',
+    text: "What I appreciated most was the honesty. They told me upfront which features weren't necessary yet and which marketing channels to ignore for now. That early advice alone saved us a significant amount. Six months later, we're scaling the right way.",
+    initials: 'SM',
+    name: 'Sophie M.',
+    role: 'Co-founder, D2C Brand · Netherlands',
   },
   {
-    text: "Our React Native app launched on time, passed App Store review first try, and has a 4.8-star rating with 2,000+ downloads in the first month. Incredible team.",
-    initials: 'MB',
-    name: 'Matt B.',
-    role: 'CEO, Parkable · Sydney, AU',
+    text: "The daily updates were something I didn't expect to matter so much — but they did. Not just on the build, but on the SEO work too. I always knew exactly where we were. No chasing. No wondering. Clear, consistent communication from start to finish.",
+    initials: 'AP',
+    name: 'Arjun P.',
+    role: 'CEO, Logistics Platform · United States',
+  },
+  {
+    text: "We came to Midway Tech needing both a revamped website and a marketing strategy to support it. They handled everything as one project, which meant the copy, design, and SEO were all aligned from the start. Our organic traffic doubled within four months.",
+    initials: 'DK',
+    name: 'David K.',
+    role: 'Managing Director, Export Business · Germany',
   },
 ]
 
 export default function Testimonials() {
   return (
     <section id="testimonials" className="testimonials-section">
-      <p className="section-eyebrow">Client reviews</p>
+      <p className="section-eyebrow">Client Reviews</p>
       <h2 className="section-title">Don't take our word for it.</h2>
+      <p className="section-sub">Real feedback from founders and business owners across the EU, US & UK.</p>
 
       <div className="testimonials-grid">
         {testimonials.map(t => (

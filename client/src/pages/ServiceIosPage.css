@@ -103,6 +103,17 @@
 }
 .ios-included-card:hover { border-color: rgba(255,77,28,0.3); transform: translateY(-3px); }
 .ios-included-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+.ios-included-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,77,28,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
 .ios-included-card h3 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
 .ios-included-card p { font-size: 0.8rem; color: var(--gray); font-weight: 300; line-height: 1.6; margin: 0; }
 

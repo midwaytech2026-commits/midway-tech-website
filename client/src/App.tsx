@@ -10,6 +10,9 @@ import ServiceReactNativePage from './pages/ServiceReactNativePage'
 import ServiceFlutterPage from './pages/ServiceFlutterPage'
 import ServiceMvpPage from './pages/ServiceMvpPage'
 import ServiceUiUxPage from './pages/ServiceUiUxPage'
+import ServiceSEOPage from './pages/ServiceSEOPage'
+import ServiceWebDevPage from './pages/ServiceWebDevPage'
+import ServiceEcommercePage from './pages/ServiceEcommercePage'
 import PortfolioPage from './pages/PortfolioPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
@@ -30,6 +33,9 @@ function App() {
           <Route path="/services/flutter" element={<ServiceFlutterPage />} />
           <Route path="/services/mvp" element={<ServiceMvpPage />} />
           <Route path="/services/ui-ux" element={<ServiceUiUxPage />} />
+          <Route path="/services/seo" element={<ServiceSEOPage />} />
+          <Route path="/services/web-development" element={<ServiceWebDevPage />} />
+          <Route path="/services/ecommerce" element={<ServiceEcommercePage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />

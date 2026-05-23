@@ -1,8 +1,10 @@
 import './Ticker.css'
 
 const items = [
-  'iOS Development', 'Android Development', 'React Native', 'Flutter',
-  'UI/UX Design', 'MVP Builds', 'App Store Launch', 'Post-launch Support',
+  'Web Development', 'Mobile App Development', 'MVP Builds', 'Ecommerce Development',
+  'AI Integrations', 'Website Revamps', 'SEO', 'PPC & Paid Advertising',
+  'Content Marketing', 'Social Media Marketing', 'Email Marketing', 'Growth Marketing',
+  'PR & Brand Visibility', 'Influencer Marketing',
 ]
 
 export default function Ticker() {

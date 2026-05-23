@@ -98,6 +98,17 @@
 }
 .ap-value-card:hover { border-color: rgba(255,77,28,0.3); }
 .ap-value-icon { font-size: 1.75rem; margin-bottom: 1rem; }
+.ap-value-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(255,77,28,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
 .ap-value-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
 .ap-value-card p { font-size: 0.85rem; color: var(--gray); font-weight: 300; line-height: 1.7; margin: 0; }
 

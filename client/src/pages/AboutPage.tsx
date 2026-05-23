@@ -1,44 +1,42 @@
+import { MessageSquare, Shield, Link2, Radio, Sprout } from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './AboutPage.css'
 
-const stats = [
-  { value: '40+',  label: 'Apps Shipped' },
-  { value: '12+',  label: 'Industries Served' },
-  { value: '98%',  label: 'Client Satisfaction' },
-  { value: '3',    label: 'Global Markets' },
-]
-
 const values = [
-  { icon: '🎯', title: 'Outcome-first', desc: 'We measure success by what your users do, not the code we ship. Every decision traces back to your business goals.' },
-  { icon: '🔍', title: 'Transparent', desc: 'Weekly updates, shared boards, honest timelines. No surprises. You always know exactly where your project stands.' },
-  { icon: '⚡', title: 'Move fast', desc: "MVPs in 8 weeks. Demos every Friday. Decisions same day. We've built our process around speed without shortcuts." },
-  { icon: '🤝', title: 'Long-term partners', desc: "68% of our revenue is from returning clients. We're not project vendors — we're your product team." },
+  {
+    Icon: MessageSquare,
+    title: 'Honesty over comfort',
+    desc: "We will tell you when a service isn't necessary — whether that's a development feature or a marketing channel. Even when saying yes would be more profitable for us.",
+  },
+  {
+    Icon: Shield,
+    title: 'Your budget is not our target',
+    desc: "We treat your money like it's ours. Development and marketing both. Because your growth is tied directly to ours.",
+  },
+  {
+    Icon: Link2,
+    title: 'Build and market as one',
+    desc: 'A product built without a growth strategy is a product nobody finds. A campaign run without understanding the product is money wasted. We refuse to separate the two.',
+  },
+  {
+    Icon: Radio,
+    title: 'Communication is not optional',
+    desc: "Daily updates aren't a feature we offer. They're just how we work. You should always know exactly where your project — and your marketing — stands.",
+  },
+  {
+    Icon: Sprout,
+    title: 'Long-term over transactional',
+    desc: "We're not here to close a deal and move on. We grow when our clients grow. That single fact changes how every decision gets made.",
+  },
 ]
 
-const team = [
-  { name: 'Arjun Mehta', role: 'Founder & iOS Lead', emoji: '👨‍💻', bio: '10 years building iOS apps. Previously at Swiggy and Zomato.' },
-  { name: 'Priya Sharma', role: 'Head of Design', emoji: '👩‍🎨', bio: 'Ex-Flipkart design lead. Obsessed with interaction design and conversion.' },
-  { name: 'Rahul Verma', role: 'Android & RN Lead', emoji: '👨‍💻', bio: 'Google Developer Expert. Built apps with 10M+ downloads.' },
-  { name: 'Sneha Patel', role: 'Project Lead', emoji: '👩‍💼', bio: 'Certified Scrum Master. Keeps projects on time and clients happy.' },
-  { name: 'Karan Singh', role: 'Backend Lead', emoji: '👨‍💻', bio: 'Node.js + cloud infrastructure. Designed APIs handling 100k req/s.' },
-]
-
-const principles = [
-  { num: '01', title: 'Discovery before delivery', desc: "Every project starts with a scope workshop. We don't write a line of code until we agree on what success looks like." },
-  { num: '02', title: 'Weekly demos, not month-end reports', desc: 'You see the app every Friday. Feedback goes in next sprint. No big bang reveals.' },
-  { num: '03', title: 'One point of contact', desc: 'Your PM is your single point of contact. No inbox chaos from 5 different people.' },
-  { num: '04', title: 'You own everything', desc: 'Code, IP, App Store account — it all belongs to you from day one, always.' },
-  { num: '05', title: "We don't disappear at launch", desc: '3-month post-launch support is included in every project. Most bugs show up in week 1.' },
-  { num: '06', title: 'Honest estimates', desc: "We'd rather tell you the real budget upfront than come back for more money halfway through." },
-]
-
-const milestones = [
-  { year: '2018', event: 'Founded in Bangalore with a team of 3' },
-  { year: '2019', event: 'First US client — a NYC-based health startup' },
-  { year: '2020', event: 'Grew to 12-person team through COVID; fully remote first' },
-  { year: '2021', event: 'First app hits 1M downloads' },
-  { year: '2023', event: 'Expanded to Flutter and React Native practices' },
-  { year: '2024', event: '40+ apps shipped across 12 countries' },
+const comparison = [
+  { them: 'Build OR market — rarely both', us: 'Development and marketing under one roof' },
+  { them: 'Junior teams after the pitch', us: 'Founder involved on every project' },
+  { them: 'Separate strategies for build and growth', us: 'One brief, one team, one direction' },
+  { them: 'Upsell first, optimise later', us: 'Recommend only what\'s needed, always' },
+  { them: 'Disappear between milestones', us: 'Daily updates across everything' },
+  { them: 'Measure vanity metrics', us: 'Measure what actually grows your business' },
 ]
 
 export default function AboutPage() {
@@ -47,16 +45,8 @@ export default function AboutPage() {
       <section className="ap-hero">
         <div className="ap-hero-inner">
           <span className="section-eyebrow">About Midway Tech</span>
-          <h1>We build mobile apps<br />for <em>startups that ship</em></h1>
-          <p>A 15-person product studio based in Bangalore, India. We've spent 6 years helping founders from the US, UK, and Australia turn ideas into products.</p>
-        </div>
-        <div className="ap-hero-stats">
-          {stats.map(s => (
-            <div key={s.label} className="ap-stat">
-              <strong>{s.value}</strong>
-              <span>{s.label}</span>
-            </div>
-          ))}
+          <h1>Built by a marketer who got tired of watching agencies fail the businesses he worked inside.</h1>
+          <p>7 years. Multiple industries. One recurring problem. Midway Tech is the answer.</p>
         </div>
       </section>
 
@@ -64,28 +54,30 @@ export default function AboutPage() {
         <div className="ap-container">
           <div className="ap-story-inner">
             <div className="ap-story-text">
-              <span className="section-eyebrow">Our Story</span>
-              <h2>Started as a two-person shop.<br />Still feel like one.</h2>
-              <p>Midway Tech started in 2018 when our founder Arjun left a senior iOS role at Swiggy to build apps for founders who couldn't afford big agency rates but needed big agency quality.</p>
-              <p>We've stayed small on purpose. Every project gets senior attention, not junior handoffs. Our team of 15 includes iOS, Android, React Native, Flutter, design, and backend — everything you need to ship, under one roof.</p>
-              <p>We call ourselves "midway" because we sit at the intersection of product thinking and technical execution. We're not just coders — we'll push back on a feature if it won't help your users.</p>
+              <span className="section-eyebrow">Founder Story</span>
+              <h2>My name is Nilesh.<br />This is why I built Midway Tech.</h2>
+              <p>I spent seven years in marketing — not agency marketing, but the kind that happens inside real businesses with real stakes.</p>
+              <p>I worked across industries most tech founders have never stepped inside. Clothing. Jewellery. Exports. Manufacturing. FMCG. Each one taught me something different about how business actually works — how decisions get made, where money quietly disappears, and what companies genuinely need versus what vendors convince them they need.</p>
+              <p>Marketing was my world. But the longer I spent inside these businesses, the more I saw how deeply technology and marketing are connected. A bad website loses customers no amount of marketing can recover. A brilliant app nobody knows about grows nothing. The two have to work together — and most agencies treat them as separate problems.</p>
+              <p>Then I started looking at the agencies these businesses were hiring. And I kept seeing the same failures repeat. Budgets that kept climbing with no accountability. Projects handed off to junior teams after the pitch. Marketing campaigns with no connection to the actual product.</p>
+              <p>I couldn't unsee it. So I stopped waiting for someone else to fix it. I built the agency I kept wishing these businesses had access to — one where development and marketing are treated as one discipline, not two separate invoices. That's Midway Tech.</p>
             </div>
             <div className="ap-story-aside">
               <div className="ap-aside-card">
                 <h4>Based in</h4>
-                <p>Bangalore, India</p>
+                <p>Jaipur, Rajasthan, India</p>
               </div>
               <div className="ap-aside-card">
-                <h4>Clients in</h4>
-                <p>US, UK, Australia, Canada, Singapore</p>
+                <h4>Serving</h4>
+                <p>EU · US · UK · Global</p>
               </div>
               <div className="ap-aside-card">
-                <h4>Time zone overlap</h4>
-                <p>US EST mornings<br />UK afternoons</p>
+                <h4>Founder background</h4>
+                <p>7 years in marketing across clothing, jewellery, exports, manufacturing & FMCG</p>
               </div>
               <div className="ap-aside-card">
-                <h4>Team size</h4>
-                <p>15 (intentionally small)</p>
+                <h4>Contact</h4>
+                <p>hello@midwaytech.co</p>
               </div>
             </div>
           </div>
@@ -95,69 +87,36 @@ export default function AboutPage() {
       <section className="ap-values">
         <div className="ap-container">
           <span className="section-eyebrow">Our Values</span>
-          <h2>How we think about work</h2>
+          <h2>What we believe.</h2>
           <div className="ap-values-grid">
-            {values.map(v => (
-              <div key={v.title} className="ap-value-card">
-                <div className="ap-value-icon">{v.icon}</div>
-                <h3>{v.title}</h3>
-                <p>{v.desc}</p>
+            {values.map(({ Icon, title, desc }) => (
+              <div key={title} className="ap-value-card">
+                <div className="ap-value-icon-wrap"><Icon size={22} strokeWidth={1.5} /></div>
+                <h3>{title}</h3>
+                <p>{desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="ap-team">
+      <section className="ap-comparison">
         <div className="ap-container">
-          <span className="section-eyebrow">The Team</span>
-          <h2>People who will actually work on your project</h2>
-          <div className="ap-team-grid">
-            {team.map(t => (
-              <div key={t.name} className="ap-team-card">
-                <div className="ap-team-avatar">{t.emoji}</div>
-                <h3>{t.name}</h3>
-                <div className="ap-team-role">{t.role}</div>
-                <p>{t.bio}</p>
-              </div>
-            ))}
-            <div className="ap-team-card ap-hiring">
-              <div className="ap-team-avatar">+</div>
-              <h3>We're hiring</h3>
-              <div className="ap-team-role">iOS · Android · Design</div>
-              <p>Want to build apps for ambitious startups? We'd love to hear from you.</p>
-              <a href="mailto:careers@midwaytech.co" className="ap-hiring-link">Send your CV →</a>
+          <span className="section-eyebrow">What Makes Us Different</span>
+          <h2>One agency. Two disciplines. Full accountability.</h2>
+          <div className="ap-comparison-table">
+            <div className="ap-comparison-head">
+              <div className="ap-comparison-col ap-comparison-col--them">Most Agencies</div>
+              <div className="ap-comparison-col ap-comparison-col--us">Midway Tech</div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="ap-how">
-        <div className="ap-container">
-          <span className="section-eyebrow">How We Work</span>
-          <h2>Principles that make projects go smoothly</h2>
-          <div className="ap-how-grid">
-            {principles.map(p => (
-              <div key={p.num} className="ap-how-item">
-                <div className="ap-how-num">{p.num}</div>
-                <h3>{p.title}</h3>
-                <p>{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="ap-milestones">
-        <div className="ap-container">
-          <span className="section-eyebrow">Milestones</span>
-          <h2>6 years of shipping</h2>
-          <div className="ap-timeline">
-            {milestones.map((m, i) => (
-              <div key={m.year} className={`ap-milestone ${i % 2 === 0 ? 'left' : 'right'}`}>
-                <div className="ap-milestone-year">{m.year}</div>
-                <div className="ap-milestone-dot" />
-                <div className="ap-milestone-event">{m.event}</div>
+            {comparison.map((row, i) => (
+              <div key={i} className="ap-comparison-row">
+                <div className="ap-comparison-col ap-comparison-col--them">
+                  <span className="ap-x">✗</span> {row.them}
+                </div>
+                <div className="ap-comparison-col ap-comparison-col--us">
+                  <span className="ap-check">✓</span> {row.us}
+                </div>
               </div>
             ))}
           </div>
@@ -165,10 +124,10 @@ export default function AboutPage() {
       </section>
 
       <CtaStrip
-        title="Let's build something together"
-        subtitle="We have capacity for 2 new projects this quarter. Discovery calls are free."
-        primaryBtn={{ label: 'Book a Call', to: '/contact' }}
-        secondaryBtn={{ label: 'See Our Work', to: '/portfolio' }}
+        title="If you've been burned before, we understand."
+        subtitle="Take your time. Ask us hard questions. That's exactly the kind of client relationship we're built for."
+        primaryBtn={{ label: 'Book a Free Discovery Call', to: '/contact' }}
+        secondaryBtn={{ label: 'See Our Services', to: '/services' }}
       />
     </div>
   )

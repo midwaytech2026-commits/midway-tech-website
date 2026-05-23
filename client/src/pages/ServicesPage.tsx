@@ -1,82 +1,120 @@
-import { Link } from 'react-router-dom'
+import {
+  Globe, Smartphone, ShoppingCart, Bot, RefreshCw, Rocket, Wrench,
+  LayoutDashboard, Search, Target, PenTool, Share2, Mail, Users,
+  Megaphone, TrendingUp, Zap, Building2, Store, Laptop, Package
+} from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServicesPage.css'
 
-const services = [
+const devServices = [
   {
-    icon: '📱',
-    title: 'iOS App Development',
-    slug: '/services/ios',
-    desc: 'Swift & SwiftUI native apps built for performance and App Store approval.',
-    bullets: ['Swift & SwiftUI', 'App Store submission', 'TestFlight QA', 'App Clips', 'In-app purchases'],
+    Icon: Globe,
+    title: 'Web Development',
+    desc: 'Fast, conversion-optimised websites built to last and perform.',
+    bullets: ['Responsive & mobile-first', 'Performance optimised', 'CMS integration', 'SEO-ready structure', 'Conversion focused'],
   },
   {
-    icon: '🤖',
-    title: 'Android App Development',
-    slug: '/services/android',
-    desc: 'Kotlin-first Android apps for phones, tablets, and wearables.',
-    bullets: ['Kotlin & Jetpack Compose', 'Google Play submission', 'Material You design', 'Wear OS support', 'Firebase integration'],
+    Icon: LayoutDashboard,
+    title: 'Web App Development',
+    desc: 'Complex applications made simple for the people who use them.',
+    bullets: ['Custom SaaS platforms', 'Dashboard & admin tools', 'API integrations', 'Authentication & security', 'Scalable architecture'],
   },
   {
-    icon: '⚛️',
-    title: 'React Native',
-    slug: '/services/react-native',
-    desc: 'One codebase, two stores. Ship faster without sacrificing native feel.',
-    bullets: ['Expo managed workflow', 'Custom native modules', 'OTA updates', 'Navigation & deep links', 'Push notifications'],
+    Icon: Smartphone,
+    title: 'Mobile App Development',
+    desc: 'iOS and Android apps — built for the users you actually have.',
+    bullets: ['iOS (Swift / SwiftUI)', 'Android (Kotlin)', 'React Native / Flutter', 'App Store submission', 'Push notifications'],
   },
   {
-    icon: '🦋',
-    title: 'Flutter',
-    slug: '/services/flutter',
-    desc: "Google's cross-platform UI toolkit for pixel-perfect apps on every device.",
-    bullets: ['Dart & Flutter 3', 'iOS + Android + Web', 'Custom animations', 'Platform channels', 'BLoC state management'],
+    Icon: ShoppingCart,
+    title: 'Ecommerce Development',
+    desc: 'Stores built to sell, not just to showcase.',
+    bullets: ['Shopify & WooCommerce', 'Custom checkout flows', 'Payment integration', 'Inventory management', 'Conversion optimisation'],
   },
   {
-    icon: '🚀',
-    title: 'MVP Build',
-    slug: '/services/mvp',
-    desc: 'Launch in 8–12 weeks with a focused product ready for real users and investors.',
-    bullets: ['Scope workshop included', 'Design + dev in one team', 'Investor-ready output', 'Backend API included', 'Handover documentation'],
+    Icon: Bot,
+    title: 'AI Integrations',
+    desc: 'Practical AI that saves your team time and creates a real edge over competitors.',
+    bullets: ['Chatbots & support AI', 'LLM integrations (OpenAI, Anthropic)', 'Document processing', 'Recommendation engines', 'AI workflow automation'],
   },
   {
-    icon: '🎨',
-    title: 'UI/UX Design',
-    slug: '/services/ui-ux',
-    desc: 'Research-backed design that converts and delights — from wireframe to prototype.',
-    bullets: ['User research', 'Figma prototypes', 'Design system', 'Interaction design', 'Handoff to dev'],
+    Icon: RefreshCw,
+    title: 'Website Revamps',
+    desc: 'Modernise your existing site without unnecessary full rebuilds.',
+    bullets: ['Design refresh', 'Performance audit & fix', 'CMS migration', 'Mobile optimisation', 'SEO preservation'],
+  },
+  {
+    Icon: Rocket,
+    title: 'Startup MVP Development',
+    desc: 'Launch lean. Validate fast. Build what matters first.',
+    bullets: ['Scope workshop included', 'Design + dev in one team', 'Investor-ready output', 'Backend API included', 'Post-launch review'],
+  },
+  {
+    Icon: Wrench,
+    title: 'Maintenance & Scaling',
+    desc: 'We stay involved after launch. Your product grows with your business.',
+    bullets: ['Bug fixes & updates', 'Performance monitoring', 'Feature additions', 'Security patches', 'Hosting & infrastructure'],
   },
 ]
 
-const industries = [
-  { icon: '💪', name: 'Health & Fitness' },
-  { icon: '💳', name: 'Fintech' },
-  { icon: '🛒', name: 'E-commerce' },
-  { icon: '📚', name: 'EdTech' },
-  { icon: '🚚', name: 'Logistics' },
-  { icon: '🏠', name: 'PropTech' },
-  { icon: '🍔', name: 'Food & Delivery' },
-  { icon: '🎮', name: 'Gaming & Social' },
+const marketingServices = [
+  {
+    Icon: Search,
+    title: 'SEO',
+    desc: 'Organic visibility that compounds month on month. Traffic that converts.',
+    bullets: ['Technical SEO audit', 'On-page optimisation', 'Content strategy', 'Link building', 'Monthly reporting'],
+  },
+  {
+    Icon: Target,
+    title: 'PPC & Paid Advertising',
+    desc: 'Every pound or dollar of ad spend tracked and accountable to real returns.',
+    bullets: ['Google Ads management', 'Meta (Facebook/Instagram) Ads', 'Landing page optimisation', 'A/B testing', 'ROAS tracking'],
+  },
+  {
+    Icon: PenTool,
+    title: 'Content Marketing',
+    desc: 'Content that builds genuine authority and drives real business decisions.',
+    bullets: ['Content strategy', 'Blog & article writing', 'Lead magnets', 'Case study creation', 'Distribution planning'],
+  },
+  {
+    Icon: Share2,
+    title: 'Social Media Marketing',
+    desc: 'A social presence that means something to your actual audience.',
+    bullets: ['Platform strategy', 'Content creation', 'Community management', 'Paid social', 'Analytics reporting'],
+  },
+  {
+    Icon: Mail,
+    title: 'Email Marketing',
+    desc: 'The highest-ROI channel available when treated as a strategy.',
+    bullets: ['List building strategy', 'Campaign design & copy', 'Automation flows', 'Segmentation', 'A/B testing'],
+  },
+  {
+    Icon: Users,
+    title: 'Influencer Marketing',
+    desc: 'The right voices, reaching the right audiences, for your product.',
+    bullets: ['Influencer sourcing', 'Campaign brief creation', 'Contract & delivery', 'Performance tracking', 'ROI reporting'],
+  },
+  {
+    Icon: Megaphone,
+    title: 'PR & Brand Visibility',
+    desc: 'Be known in the right rooms. Build credibility before your competitors do.',
+    bullets: ['Press release writing', 'Media outreach', 'Publication placement', 'Brand positioning', 'Crisis communication'],
+  },
+  {
+    Icon: TrendingUp,
+    title: 'Growth Marketing',
+    desc: 'Systematic, data-led growth across every relevant channel.',
+    bullets: ['Full-funnel strategy', 'Channel mix planning', 'Experiment framework', 'CRO (conversion rate)', 'Growth analytics'],
+  },
 ]
 
-const engagements = [
-  {
-    title: 'Fixed Price',
-    best: 'MVPs & defined scope',
-    desc: 'Agree the spec, agree the price. No surprises. Best when you have a clear feature set.',
-    icon: '🎯',
-  },
-  {
-    title: 'Time & Materials',
-    best: 'Evolving products',
-    desc: 'Pay for what we build. Ideal for products where scope evolves based on user feedback.',
-    icon: '⏱',
-  },
-  {
-    title: 'Dedicated Team',
-    best: 'Long-term builds',
-    desc: 'A full team embedded into your product. Scales up or down as your roadmap demands.',
-    icon: '🤝',
-  },
+const clients = [
+  { Icon: Rocket,    name: 'Startups building their first product', desc: "You have funding, an idea, and need a partner who won't drain your runway." },
+  { Icon: Store,     name: 'Ecommerce brands', desc: 'You need a store that performs and marketing that drives consistent, trackable revenue.' },
+  { Icon: Laptop,    name: 'SaaS companies', desc: "Product development and growth marketing working together — because in SaaS, they can't be separated." },
+  { Icon: Building2, name: 'Local businesses going digital', desc: 'A website and marketing strategy that brings real customers through real doors.' },
+  { Icon: RefreshCw, name: 'Businesses with an outdated digital presence', desc: "Your product or site no longer reflects where you're going. We fix that." },
+  { Icon: Package,   name: 'Funded startups', desc: 'You have budget and ambition. You need an agency that spends both wisely.' },
 ]
 
 export default function ServicesPage() {
@@ -85,55 +123,65 @@ export default function ServicesPage() {
       <section className="sp-hero">
         <div className="sp-hero-inner">
           <span className="section-eyebrow">Our Services</span>
-          <h1>Mobile development,<br /><em>end to end</em></h1>
-          <p>From idea to App Store — we handle design, development, QA, and launch for iOS and Android.</p>
+          <h1>Build it. Launch it.<br /><em>Grow it.</em> All in one place.</h1>
+          <p>Technology development and growth marketing services — working together from day one. We'll only recommend what your business actually needs.</p>
         </div>
       </section>
 
       <section className="sp-services">
         <div className="sp-container">
+          <div className="sp-group-header">
+            <span className="sp-group-tag sp-group-tag--dev">Development & Product</span>
+            <h2>We build products people actually want to use.</h2>
+            <p>From your first MVP to a fully scaled platform — we scope exactly what's needed and build it right. No unnecessary complexity.</p>
+          </div>
           <div className="sp-services-grid">
-            {services.map(s => (
-              <div key={s.title} className="sp-service-card">
-                <div className="sp-service-icon">{s.icon}</div>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
+            {devServices.map(({ Icon, title, desc, bullets }) => (
+              <div key={title} className="sp-service-card">
+                <div className="sp-service-icon sp-service-icon--dev"><Icon size={22} strokeWidth={1.5} /></div>
+                <h3>{title}</h3>
+                <p>{desc}</p>
                 <ul>
-                  {s.bullets.map(b => <li key={b}>{b}</li>)}
+                  {bullets.map(b => <li key={b}>{b}</li>)}
                 </ul>
-                <Link to={s.slug} className="sp-service-link">Learn more →</Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="sp-industries">
+      <section className="sp-services sp-services--marketing">
         <div className="sp-container">
-          <span className="section-eyebrow">Industries</span>
-          <h2>We've built apps across <em>every</em> vertical</h2>
-          <div className="sp-industries-grid">
-            {industries.map(i => (
-              <div key={i.name} className="sp-industry-card">
-                <span>{i.icon}</span>
-                <p>{i.name}</p>
+          <div className="sp-group-header">
+            <span className="sp-group-tag sp-group-tag--marketing">Growth & Marketing</span>
+            <h2>We grow the products we build — and the ones you already have.</h2>
+            <p>Marketing without understanding your product is guesswork. We don't do guesswork. We market from a position of real understanding.</p>
+          </div>
+          <div className="sp-services-grid">
+            {marketingServices.map(({ Icon, title, desc, bullets }) => (
+              <div key={title} className="sp-service-card sp-service-card--marketing">
+                <div className="sp-service-icon sp-service-icon--marketing"><Icon size={22} strokeWidth={1.5} /></div>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+                <ul>
+                  {bullets.map(b => <li key={b}>{b}</li>)}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="sp-engagement">
+      <section className="sp-clients">
         <div className="sp-container">
-          <span className="section-eyebrow">Engagement Models</span>
-          <h2>Work with us the way that fits your project</h2>
-          <div className="sp-engagement-grid">
-            {engagements.map(e => (
-              <div key={e.title} className="sp-engagement-card">
-                <div className="sp-engagement-icon">{e.icon}</div>
-                <div className="sp-engagement-best">Best for: {e.best}</div>
-                <h3>{e.title}</h3>
-                <p>{e.desc}</p>
+          <span className="section-eyebrow">Who We Work With</span>
+          <h2>Built for businesses that are serious about growth.</h2>
+          <div className="sp-clients-grid">
+            {clients.map(({ Icon, name, desc }) => (
+              <div key={name} className="sp-client-card">
+                <div className="sp-client-icon-wrap"><Icon size={20} strokeWidth={1.5} /></div>
+                <h4>{name}</h4>
+                <p>{desc}</p>
               </div>
             ))}
           </div>
@@ -141,10 +189,10 @@ export default function ServicesPage() {
       </section>
 
       <CtaStrip
-        title="Ready to start building?"
-        subtitle="Book a free 30-minute discovery call and get a scope estimate within 48 hours."
-        primaryBtn={{ label: 'Book Discovery Call', to: '/contact' }}
-        secondaryBtn={{ label: 'View Our Work', to: '/portfolio' }}
+        title="Not sure which services you need? That's what the discovery call is for."
+        subtitle="We'll listen to what you're trying to achieve and tell you honestly which combination of services will actually get you there."
+        primaryBtn={{ label: 'Book a Free Discovery Call', to: '/contact' }}
+        secondaryBtn={{ label: 'See Our Work', to: '/portfolio' }}
       />
     </div>
   )

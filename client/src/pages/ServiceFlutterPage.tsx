@@ -1,31 +1,35 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import {
+  Palette, Wind, Wrench, Bell, CreditCard, CheckCircle, Shield,
+  Code2, Smartphone, Bot
+} from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceDetailPage.css'
 
 const included = [
-  { icon: '🎨', title: 'Custom Flutter UI Design',  desc: 'Pixel-perfect Figma designs with Flutter component specs, ready for dev handoff.' },
-  { icon: '🐦', title: 'Dart & Flutter 3',          desc: "Latest stable Flutter using Material 3 and Cupertino widgets for a native look on both platforms." },
-  { icon: '🔧', title: 'Platform Channels',         desc: 'Native Swift/Kotlin integrations via platform channels for any API Flutter cannot reach natively.' },
-  { icon: '🔔', title: 'Push Notifications',        desc: 'Firebase Cloud Messaging with rich notification support across iOS and Android.' },
-  { icon: '💳', title: 'In-App Purchases',          desc: 'StoreKit 2 + Google Play Billing integration for subscriptions and one-time purchases.' },
-  { icon: '✅', title: 'Dual Store Submission',      desc: 'App Store + Google Play submission handled end-to-end by our team.' },
-  { icon: '🛡', title: '3-Month Support',            desc: 'Bug fixes and minor updates after launch, included in every engagement.' },
+  { Icon: Palette,     title: 'Custom Flutter UI Design', desc: 'Pixel-perfect Figma designs with Flutter component specs, ready for dev handoff.' },
+  { Icon: Wind,        title: 'Dart & Flutter 3',         desc: "Latest stable Flutter using Material 3 and Cupertino widgets for a native look on both platforms." },
+  { Icon: Wrench,      title: 'Platform Channels',        desc: 'Native Swift/Kotlin integrations via platform channels for any API Flutter cannot reach natively.' },
+  { Icon: Bell,        title: 'Push Notifications',       desc: 'Firebase Cloud Messaging with rich notification support across iOS and Android.' },
+  { Icon: CreditCard,  title: 'In-App Purchases',         desc: 'StoreKit 2 + Google Play Billing integration for subscriptions and one-time purchases.' },
+  { Icon: CheckCircle, title: 'Dual Store Submission',    desc: 'App Store + Google Play submission handled end-to-end by our team.' },
+  { Icon: Shield,      title: '3-Month Support',          desc: 'Bug fixes and minor updates after launch, included in every engagement.' },
 ]
 
 const techStack = {
-  'Core':                 ['Flutter 3', 'Dart', 'Material 3', 'Cupertino'],
-  'State Management':     ['BLoC', 'Riverpod', 'Provider', 'GetX'],
-  'Backend & APIs':       ['Dio', 'GraphQL Flutter', 'WebSocket', 'Supabase'],
-  'Quality':              ['Flutter Test', 'Integration Tests', 'Firebase Crashlytics', 'Very Good Analysis'],
+  'Core':             ['Flutter 3', 'Dart', 'Material 3', 'Cupertino'],
+  'State Management': ['BLoC', 'Riverpod', 'Provider', 'GetX'],
+  'Backend & APIs':   ['Dio', 'GraphQL Flutter', 'WebSocket', 'Supabase'],
+  'Quality':          ['Flutter Test', 'Integration Tests', 'Firebase Crashlytics', 'Very Good Analysis'],
 }
 
 const processSteps = [
-  { step: '01', title: 'Discovery',    duration: '1 week',    desc: 'Define scope, user flows, and select the right state management approach for your app.' },
-  { step: '02', title: 'Design',       duration: '2 weeks',   desc: 'Flutter-native Figma designs with component specs for each target platform.' },
+  { step: '01', title: 'Discovery',    duration: '1 week',     desc: 'Define scope, user flows, and select the right state management approach for your app.' },
+  { step: '02', title: 'Design',       duration: '2 weeks',    desc: 'Flutter-native Figma designs with component specs for each target platform.' },
   { step: '03', title: 'Development',  duration: '6–10 weeks', desc: 'Sprint-based build with weekly device demos on both iOS and Android simulators.' },
-  { step: '04', title: 'QA & Testing', duration: '1–2 weeks', desc: 'Integration testing, device matrix QA, and performance profiling on real hardware.' },
-  { step: '05', title: 'Launch',       duration: '1 week',    desc: 'Simultaneous App Store and Play Store submission with release notes and metadata.' },
+  { step: '04', title: 'QA & Testing', duration: '1–2 weeks',  desc: 'Integration testing, device matrix QA, and performance profiling on real hardware.' },
+  { step: '05', title: 'Launch',       duration: '1 week',     desc: 'Simultaneous App Store and Play Store submission with release notes and metadata.' },
 ]
 
 const faqItems = [
@@ -52,9 +56,9 @@ const faqItems = [
 ]
 
 const relatedServices = [
-  { title: 'React Native',        slug: '/services/react-native', icon: '⚛️' },
-  { title: 'iOS Development',     slug: '/services/ios',          icon: '📱' },
-  { title: 'Android Development', slug: '/services/android',      icon: '🤖' },
+  { title: 'React Native',        slug: '/services/react-native', Icon: Code2 },
+  { title: 'iOS Development',     slug: '/services/ios',          Icon: Smartphone },
+  { title: 'Android Development', slug: '/services/android',      Icon: Bot },
 ]
 
 export default function ServiceFlutterPage() {
@@ -90,11 +94,11 @@ export default function ServiceFlutterPage() {
           <span className="section-eyebrow">What's Included</span>
           <h2>Everything your Flutter app needs, <em>in one engagement</em></h2>
           <div className="svc-included-grid">
-            {included.map(item => (
-              <div key={item.title} className="svc-included-card">
-                <div className="svc-included-icon">{item.icon}</div>
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
+            {included.map(({ Icon, title, desc }) => (
+              <div key={title} className="svc-included-card">
+                <div className="svc-included-icon-wrap"><Icon size={20} strokeWidth={1.5} /></div>
+                <h3>{title}</h3>
+                <p>{desc}</p>
               </div>
             ))}
           </div>
@@ -163,10 +167,10 @@ export default function ServiceFlutterPage() {
         <div className="svc-container">
           <h3>Related Services</h3>
           <div className="svc-related-grid">
-            {relatedServices.map(s => (
-              <Link key={s.title} to={s.slug} className="svc-related-card">
-                <span>{s.icon}</span>
-                <p>{s.title}</p>
+            {relatedServices.map(({ Icon, title, slug }) => (
+              <Link key={title} to={slug} className="svc-related-card">
+                <Icon size={18} strokeWidth={1.5} />
+                <p>{title}</p>
                 <span className="svc-related-arrow">→</span>
               </Link>
             ))}

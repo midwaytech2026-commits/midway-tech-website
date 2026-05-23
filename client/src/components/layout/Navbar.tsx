@@ -29,7 +29,7 @@ export default function Navbar() {
         ))}
         <li>
           <Link to="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
-            Get a Quote
+            Book a Free Discovery Call
           </Link>
         </li>
       </ul>
