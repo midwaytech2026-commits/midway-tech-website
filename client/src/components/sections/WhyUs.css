@@ -25,7 +25,7 @@
 }
 
 .why-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 800;
   line-height: 1.1;
@@ -62,7 +62,7 @@
 .why-item:first-child { border-top: 1px solid rgba(10,10,10,0.08); }
 
 .why-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 0.75rem;
   font-weight: 800;
   color: var(--accent);
@@ -71,7 +71,7 @@
 }
 
 .why-content h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--black);
@@ -108,7 +108,7 @@
   font-weight: 400;
 }
 .metric-val {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--white);

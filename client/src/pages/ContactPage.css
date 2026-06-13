@@ -6,7 +6,7 @@
 }
 .cp-hero-inner { max-width: 700px; }
 .cp-hero h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   color: var(--white);
@@ -29,7 +29,7 @@
 .cp-info-block { margin-bottom: 3rem; }
 .cp-info-block h3,
 .cp-faq h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--white);
@@ -125,7 +125,7 @@
   padding: 2.5rem;
 }
 .cp-form h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--white);
@@ -146,7 +146,7 @@
   padding: 0.8rem 1rem;
   color: var(--white);
   font-size: 0.875rem;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   transition: border-color 0.2s;
   box-sizing: border-box;
 }
@@ -170,7 +170,7 @@
   font-size: 0.8rem;
   cursor: pointer;
   transition: all 0.2s;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 .cp-chip:hover { border-color: rgba(255,77,28,0.5); color: var(--white); }
 .cp-chip.selected { border-color: var(--accent); background: rgba(255,77,28,0.12); color: var(--white); }
@@ -199,7 +199,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: opacity 0.2s, transform 0.2s;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   margin-top: 0.5rem;
 }
 .cp-submit:hover:not(:disabled) { opacity: 0.88; transform: translateY(-2px); }
@@ -223,7 +223,7 @@
   color: var(--accent);
   margin: 0 auto 1.5rem;
 }
-.cp-success h2 { font-family: 'Syne', sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
+.cp-success h2 { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
 .cp-success p { color: var(--gray); font-size: 0.95rem; font-weight: 300; }
 
 @media (max-width: 900px) {

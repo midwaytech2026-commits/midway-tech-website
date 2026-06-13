@@ -8,7 +8,7 @@
 }
 .sp-hero-inner { max-width: 700px; }
 .sp-hero h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   color: var(--white);
@@ -38,7 +38,7 @@
 
 .sp-service-icon { font-size: 2rem; margin-bottom: 1rem; }
 .sp-service-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--white);
@@ -89,7 +89,7 @@
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .sp-industries h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
   color: var(--white);
@@ -115,7 +115,7 @@
 
 .sp-engagement { padding: 5rem 4rem; }
 .sp-engagement h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
   color: var(--white);
@@ -143,7 +143,7 @@
   margin-bottom: 0.75rem;
 }
 .sp-engagement-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--white);

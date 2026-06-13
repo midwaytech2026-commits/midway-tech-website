@@ -56,11 +56,11 @@
 }
 
 .hero-title {
-  font-family: 'Exo 2', system-ui, sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(2.8rem, 6.5vw, 6rem);
   font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
   max-width: 900px;
   position: relative;
   margin-bottom: 1.75rem;

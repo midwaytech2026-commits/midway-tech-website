@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -23,7 +23,7 @@
   --text-main:  #F0F0F1;
   --text-muted: #89929C;
 
-  /* Legacy aliases — keep for backward compat with un-touched inner pages */
+  /* Legacy aliases — keep for backward compat */
   --black:     #01040B;
   --white:     #F0F0F1;
   --accent:    #11D6D9;
@@ -33,7 +33,7 @@
   --gray-mid:  #020812;
 
   /* Fonts */
-  --font-display: 'Exo 2', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
   --font-kicker:  'Orbitron', system-ui, sans-serif;
 
@@ -42,11 +42,21 @@
   scroll-behavior: smooth;
 }
 
+body,
+p,
+li,
+input,
+textarea,
+select,
+button,
+a {
+  font-family: var(--font-body);
+}
+
 body {
   background: var(--bg-main);
   color: var(--text-main);
   overflow-x: hidden;
-  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -59,14 +69,20 @@ body {
   max-width: 100%;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3,
+.hero-title,
+.section-title {
   font-family: var(--font-display);
 }
 
 .eyebrow,
 .label,
 .tag-kicker,
-.section-kicker {
+.section-kicker,
+.hero-eyebrow,
+.section-eyebrow {
   font-family: var(--font-kicker);
   letter-spacing: 0.12em;
   text-transform: uppercase;

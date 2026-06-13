@@ -25,10 +25,10 @@
 }
 
 .section-title {
-  font-family: 'Exo 2', system-ui, sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.1;
+  font-weight: 700;
+  line-height: 1.05;
   letter-spacing: -0.03em;
   margin-bottom: 1.25rem;
   max-width: 700px;
@@ -94,7 +94,7 @@
 }
 
 .service-name {
-  font-family: 'Exo 2', system-ui, sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.65rem;

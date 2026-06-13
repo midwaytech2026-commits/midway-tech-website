@@ -30,7 +30,7 @@
 }
 
 .cta-title {
-  font-family: 'Exo 2', system-ui, sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 800;
   color: var(--text-main);

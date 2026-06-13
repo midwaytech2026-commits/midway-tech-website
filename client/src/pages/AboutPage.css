@@ -7,7 +7,7 @@
 }
 .ap-hero-inner { max-width: 700px; margin-bottom: 4rem; }
 .ap-hero h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
   color: var(--white);
@@ -30,7 +30,7 @@
 }
 .ap-stat strong {
   display: block;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 2rem;
   font-weight: 800;
   color: var(--white);
@@ -49,7 +49,7 @@
   align-items: start;
 }
 .ap-story-text h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
   color: var(--white);
@@ -79,7 +79,7 @@
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .ap-values h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
   color: var(--white);
@@ -98,7 +98,7 @@
 }
 .ap-value-card:hover { border-color: rgba(255,77,28,0.3); }
 .ap-value-icon { font-size: 1.75rem; margin-bottom: 1rem; }
-.ap-value-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
+.ap-value-card h3 { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
 .ap-value-card p { font-size: 0.85rem; color: var(--gray); font-weight: 300; line-height: 1.7; margin: 0; }
 
 .ap-team {
@@ -106,7 +106,7 @@
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .ap-team h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
   color: var(--white);
@@ -142,7 +142,7 @@
   font-weight: 700;
   color: var(--accent);
 }
-.ap-team-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.25rem; }
+.ap-team-card h3 { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.25rem; }
 .ap-team-role { font-size: 0.75rem; color: var(--accent); font-weight: 500; margin-bottom: 0.75rem; }
 .ap-team-card p { font-size: 0.82rem; color: var(--gray); font-weight: 300; line-height: 1.6; margin: 0; }
 .ap-hiring-link {
@@ -161,7 +161,7 @@
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .ap-how h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
   color: var(--white);
@@ -178,19 +178,19 @@
 }
 .ap-how-item:nth-child(-n+3) { border-top-color: var(--accent); }
 .ap-how-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: 0.1em;
   margin-bottom: 0.75rem;
 }
-.ap-how-item h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
+.ap-how-item h3 { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
 .ap-how-item p { font-size: 0.85rem; color: var(--gray); font-weight: 300; line-height: 1.7; margin: 0; }
 
 .ap-milestones { padding: 5rem 4rem; }
 .ap-milestones h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
   color: var(--white);
@@ -220,7 +220,7 @@
   border: 2px solid var(--black);
 }
 .ap-milestone-year {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--accent);
