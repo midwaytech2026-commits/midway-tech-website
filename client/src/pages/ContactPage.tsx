@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { ChangeEvent } from 'react'
 import { api } from '../services/api'
+import ComingSoonModal from '../components/common/ComingSoonModal'
 import './ContactPage.css'
 
 const serviceChips = ['iOS App', 'Android App', 'React Native', 'Flutter', 'MVP Build', 'UI/UX Design']
@@ -47,6 +48,7 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
+  const [comingSoon, setComingSoon] = useState<string | null>(null)
 
   function toggleService(s: string) {
     setSelectedServices(prev => prev.includes(s) ? prev.filter(x => x !== s) : [...prev, s])
@@ -77,6 +79,11 @@ export default function ContactPage() {
 
   return (
     <div className="contact-page">
+      <ComingSoonModal
+        open={Boolean(comingSoon)}
+        message={`${comingSoon} is being prepared and will be available soon.`}
+        onClose={() => setComingSoon(null)}
+      />
       <section className="cp-hero">
         <div className="cp-hero-inner">
           <span className="section-eyebrow">Contact Us</span>
@@ -102,14 +109,14 @@ export default function ContactPage() {
                 <div className="cp-contact-icon">✉</div>
                 <div><strong>Email us</strong><span>hello@midwaytech.co</span></div>
               </a>
-              <a href="#" className="cp-contact-item">
+              <button type="button" className="cp-contact-item" onClick={() => setComingSoon('WhatsApp')}>
                 <div className="cp-contact-icon">💬</div>
                 <div><strong>WhatsApp</strong><span>Quick questions welcome</span></div>
-              </a>
-              <a href="#" className="cp-contact-item">
+              </button>
+              <button type="button" className="cp-contact-item" onClick={() => setComingSoon('LinkedIn')}>
                 <div className="cp-contact-icon">in</div>
                 <div><strong>LinkedIn</strong><span>Connect with our team</span></div>
-              </a>
+              </button>
             </div>
 
             <div className="cp-faq">
