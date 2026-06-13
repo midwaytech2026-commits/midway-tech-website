@@ -1,0 +1,112 @@
+.delivery-section {
+  background: var(--bg-panel);
+  padding: 110px 24px;
+  border-top: 1px solid rgba(17, 214, 217, 0.08);
+}
+
+.delivery-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.delivery-section .section-sub {
+  max-width: 580px;
+}
+
+/* 3 × 2 grid */
+.delivery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 56px;
+  background: rgba(54, 231, 192, 0.07);
+  border: 1px solid rgba(54, 231, 192, 0.1);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* Card */
+.delivery-card {
+  background: var(--bg-dark);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: background 0.25s ease;
+}
+.delivery-card:hover {
+  background: radial-gradient(circle at 20% 20%, rgba(54, 231, 192, 0.07), transparent 65%), var(--bg-dark);
+}
+
+/* Top row — step number + icon */
+.delivery-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delivery-num {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--accent-cyan);
+  opacity: 0.6;
+}
+
+.delivery-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(54, 231, 192, 0.06);
+  border: 1px solid rgba(54, 231, 192, 0.15);
+  color: var(--accent-teal);
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.delivery-card:hover .delivery-icon-wrap {
+  color: var(--accent-mint);
+  border-color: rgba(129, 242, 165, 0.35);
+  background: rgba(129, 242, 165, 0.07);
+}
+
+.delivery-icon {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.7;
+}
+
+/* Title */
+.delivery-card h3 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+/* Description */
+.delivery-card p {
+  font-size: 0.858rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .delivery-section { padding: 80px 24px; }
+  .delivery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .delivery-section { padding: 72px 20px; }
+}
+
+@media (max-width: 560px) {
+  .delivery-grid { grid-template-columns: 1fr; }
+  .delivery-card { padding: 28px 24px; }
+}
