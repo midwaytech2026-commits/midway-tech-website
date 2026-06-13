@@ -1,151 +1,166 @@
 import { Link } from 'react-router-dom'
-import CtaStrip from '../components/common/CtaStrip'
+import {
+  Smartphone,
+  Globe2,
+  BrainCircuit,
+  Rocket,
+  PenTool,
+  Server,
+  Megaphone,
+  Lightbulb,
+  Target,
+  Clock,
+  Users,
+  ArrowRight,
+} from 'lucide-react'
 import './ServicesPage.css'
 
 const services = [
   {
-    icon: '📱',
-    title: 'iOS App Development',
-    slug: '/services/ios',
-    desc: 'Swift & SwiftUI native apps built for performance and App Store approval.',
-    bullets: ['Swift & SwiftUI', 'App Store submission', 'TestFlight QA', 'App Clips', 'In-app purchases'],
+    Icon: Smartphone,
+    title: 'Mobile App Development',
+    desc: 'Launch fast, scalable mobile apps with clean UI, smooth flows, and React Native execution built for both iOS and Android.',
+    tags: ['iOS', 'Android', 'React Native', 'Flutter'],
   },
   {
-    icon: '🤖',
-    title: 'Android App Development',
-    slug: '/services/android',
-    desc: 'Kotlin-first Android apps for phones, tablets, and wearables.',
-    bullets: ['Kotlin & Jetpack Compose', 'Google Play submission', 'Material You design', 'Wear OS support', 'Firebase integration'],
+    Icon: Globe2,
+    title: 'Website Development',
+    desc: 'High-performance websites designed for trust, conversion, speed, and modern brand presence.',
+    tags: ['React', 'Next.js', 'TypeScript'],
   },
   {
-    icon: '⚛️',
-    title: 'React Native',
-    slug: '/services/react-native',
-    desc: 'One codebase, two stores. Ship faster without sacrificing native feel.',
-    bullets: ['Expo managed workflow', 'Custom native modules', 'OTA updates', 'Navigation & deep links', 'Push notifications'],
+    Icon: BrainCircuit,
+    title: 'AI Automation',
+    desc: 'Automate repetitive workflows, lead handling, customer journeys, internal operations, and business processes with AI-first systems.',
+    tags: ['LLM Integration', 'Workflow AI', 'Smart Agents'],
   },
   {
-    icon: '🦋',
-    title: 'Flutter',
-    slug: '/services/flutter',
-    desc: "Google's cross-platform UI toolkit for pixel-perfect apps on every device.",
-    bullets: ['Dart & Flutter 3', 'iOS + Android + Web', 'Custom animations', 'Platform channels', 'BLoC state management'],
+    Icon: Rocket,
+    title: 'MVP Development',
+    desc: 'Validate your product idea with structured MVP sprints, focused feature scope, and fast launch-ready execution.',
+    tags: ['Rapid Build', 'User Testing', 'Product Strategy'],
   },
   {
-    icon: '🚀',
-    title: 'MVP Build',
-    slug: '/services/mvp',
-    desc: 'Launch in 8–12 weeks with a focused product ready for real users and investors.',
-    bullets: ['Scope workshop included', 'Design + dev in one team', 'Investor-ready output', 'Backend API included', 'Handover documentation'],
-  },
-  {
-    icon: '🎨',
+    Icon: PenTool,
     title: 'UI/UX Design',
-    slug: '/services/ui-ux',
-    desc: 'Research-backed design that converts and delights — from wireframe to prototype.',
-    bullets: ['User research', 'Figma prototypes', 'Design system', 'Interaction design', 'Handoff to dev'],
+    desc: 'Clean product design, user flows, wireframes, and interfaces built for clarity, trust, and conversion.',
+    tags: ['Figma', 'Prototyping', 'User Research'],
   },
-]
-
-const industries = [
-  { icon: '💪', name: 'Health & Fitness' },
-  { icon: '💳', name: 'Fintech' },
-  { icon: '🛒', name: 'E-commerce' },
-  { icon: '📚', name: 'EdTech' },
-  { icon: '🚚', name: 'Logistics' },
-  { icon: '🏠', name: 'PropTech' },
-  { icon: '🍔', name: 'Food & Delivery' },
-  { icon: '🎮', name: 'Gaming & Social' },
+  {
+    Icon: Server,
+    title: 'Backend & API Development',
+    desc: 'Scalable backend systems, APIs, authentication, dashboards, and integrations built for future growth.',
+    tags: ['Node.js', 'PostgreSQL', 'AWS / GCP'],
+  },
+  {
+    Icon: Megaphone,
+    title: 'Digital Marketing Systems',
+    desc: 'Conversion-focused digital systems for funnels, campaigns, analytics, lead capture, and growth operations.',
+    tags: ['SEO', 'Performance Ads', 'Growth Strategy'],
+  },
+  {
+    Icon: Lightbulb,
+    title: 'Brand & Product Strategy',
+    desc: 'Product positioning, feature planning, brand direction, and launch strategy for businesses that want clarity before execution.',
+    tags: ['Product Roadmap', 'Brand Positioning', 'GTM Planning'],
+  },
 ]
 
 const engagements = [
   {
+    Icon: Target,
     title: 'Fixed Price',
     best: 'MVPs & defined scope',
-    desc: 'Agree the spec, agree the price. No surprises. Best when you have a clear feature set.',
-    icon: '🎯',
+    desc: 'Agree the spec, agree the price. No surprises. Best when you have a clear feature set and timeline.',
   },
   {
+    Icon: Clock,
     title: 'Time & Materials',
     best: 'Evolving products',
-    desc: 'Pay for what we build. Ideal for products where scope evolves based on user feedback.',
-    icon: '⏱',
+    desc: 'Pay for what we build. Ideal for products where scope evolves based on user feedback and market signals.',
   },
   {
+    Icon: Users,
     title: 'Dedicated Team',
     best: 'Long-term builds',
-    desc: 'A full team embedded into your product. Scales up or down as your roadmap demands.',
-    icon: '🤝',
+    desc: 'A focused team embedded into your product. Scales up or down as your roadmap and priorities demand.',
   },
 ]
 
 export default function ServicesPage() {
   return (
     <div className="services-page">
+
       <section className="sp-hero">
         <div className="sp-hero-inner">
-          <span className="section-eyebrow">Our Services</span>
-          <h1>Mobile development,<br /><em>end to end</em></h1>
-          <p>From idea to App Store — we handle design, development, QA, and launch for iOS and Android.</p>
+          <p className="section-eyebrow">Services</p>
+          <h1>AI-First Services Built for<br /><em>Modern Businesses</em></h1>
+          <p>From mobile apps and websites to AI automation and scalable backend systems, MidwayTech helps startups and growing businesses launch faster and scale smarter.</p>
+          <Link to="/contact" className="btn-primary sp-hero-cta">
+            Book a Discovery Call
+            <ArrowRight className="sp-cta-icon" aria-hidden="true" />
+          </Link>
         </div>
       </section>
 
       <section className="sp-services">
         <div className="sp-container">
           <div className="sp-services-grid">
-            {services.map(s => (
-              <div key={s.title} className="sp-service-card">
-                <div className="sp-service-icon">{s.icon}</div>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
-                <ul>
-                  {s.bullets.map(b => <li key={b}>{b}</li>)}
-                </ul>
-                <Link to={s.slug} className="sp-service-link">Learn more →</Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="sp-industries">
-        <div className="sp-container">
-          <span className="section-eyebrow">Industries</span>
-          <h2>We've built apps across <em>every</em> vertical</h2>
-          <div className="sp-industries-grid">
-            {industries.map(i => (
-              <div key={i.name} className="sp-industry-card">
-                <span>{i.icon}</span>
-                <p>{i.name}</p>
-              </div>
-            ))}
+            {services.map(s => {
+              const Icon = s.Icon
+              return (
+                <div key={s.title} className="sp-service-card">
+                  <div className="sp-service-icon-wrap">
+                    <Icon className="sp-service-icon" aria-hidden="true" />
+                  </div>
+                  <h3>{s.title}</h3>
+                  <p>{s.desc}</p>
+                  <div className="sp-service-tags">
+                    {s.tags.map(t => <span key={t}>{t}</span>)}
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
 
       <section className="sp-engagement">
         <div className="sp-container">
-          <span className="section-eyebrow">Engagement Models</span>
+          <p className="section-eyebrow">Engagement Models</p>
           <h2>Work with us the way that fits your project</h2>
           <div className="sp-engagement-grid">
-            {engagements.map(e => (
-              <div key={e.title} className="sp-engagement-card">
-                <div className="sp-engagement-icon">{e.icon}</div>
-                <div className="sp-engagement-best">Best for: {e.best}</div>
-                <h3>{e.title}</h3>
-                <p>{e.desc}</p>
-              </div>
-            ))}
+            {engagements.map(e => {
+              const Icon = e.Icon
+              return (
+                <div key={e.title} className="sp-engagement-card">
+                  <div className="sp-engagement-icon-wrap">
+                    <Icon className="sp-engagement-icon" aria-hidden="true" />
+                  </div>
+                  <div className="sp-engagement-best">Best for: {e.best}</div>
+                  <h3>{e.title}</h3>
+                  <p>{e.desc}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      <CtaStrip
-        title="Ready to start building?"
-        subtitle="Book a free 30-minute discovery call and get a scope estimate within 48 hours."
-        primaryBtn={{ label: 'Book Discovery Call', to: '/contact' }}
-        secondaryBtn={{ label: 'View Our Work', to: '/portfolio' }}
-      />
+      <section className="sp-cta-section">
+        <div className="sp-container">
+          <h2>Ready to start building?</h2>
+          <p>Book a free 30-minute discovery call and get a scope estimate within 48 hours.</p>
+          <div className="sp-cta-actions">
+            <Link to="/contact" className="btn-primary">
+              Book Discovery Call
+              <ArrowRight className="sp-cta-icon" aria-hidden="true" />
+            </Link>
+            <Link to="/portfolio" className="btn-ghost">View Our Work</Link>
+          </div>
+        </div>
+      </section>
+
     </div>
   )
 }
