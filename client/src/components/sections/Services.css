@@ -80,17 +80,33 @@
 }
 .service-card:hover::after { transform: scaleX(1); }
 
-.service-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: rgba(17,214,217,0.10);
-  border: 1px solid rgba(17,214,217,0.15);
+.service-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.25rem;
-  font-size: 1.2rem;
+  color: var(--accent-teal);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(129,242,165,0.18), transparent 55%),
+    rgba(54,231,192,0.08);
+  border: 1px solid rgba(54,231,192,0.22);
+  box-shadow: 0 0 24px rgba(54,231,192,0.08);
+  margin-bottom: 22px;
+  transition: color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.service-icon {
+  width: 34px;
+  height: 34px;
+  stroke-width: 1.8;
+}
+
+.service-card:hover .service-icon-wrap {
+  color: var(--accent-mint);
+  border-color: rgba(129,242,165,0.45);
+  box-shadow: 0 0 32px rgba(54,231,192,0.18);
 }
 
 .service-name {

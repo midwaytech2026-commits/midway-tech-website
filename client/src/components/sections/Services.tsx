@@ -1,58 +1,68 @@
+import {
+  Smartphone,
+  Globe2,
+  PenTool,
+  Rocket,
+  Bot,
+  Megaphone,
+  Database,
+  Lightbulb,
+} from 'lucide-react'
 import './Services.css'
 
 const services = [
   {
     id: '1',
-    icon: '📱',
+    Icon: Smartphone,
     title: 'Mobile App Development',
     description: 'Native and cross-platform iOS and Android apps built for performance, scalability, and App Store approval.',
     tags: ['iOS', 'Android', 'React Native', 'Flutter'],
   },
   {
     id: '2',
-    icon: '🌐',
+    Icon: Globe2,
     title: 'Website Development',
     description: 'Custom websites and web applications built for speed, SEO, and conversion — from landing pages to full platforms.',
     tags: ['React', 'Next.js', 'TypeScript'],
   },
   {
     id: '3',
-    icon: '🎨',
+    Icon: PenTool,
     title: 'UI/UX Design',
     description: 'Wireframes, prototypes, and pixel-perfect Figma designs that feel intuitive and convert users into loyal customers.',
     tags: ['Figma', 'Prototyping', 'User Research'],
   },
   {
     id: '4',
-    icon: '🚀',
+    Icon: Rocket,
     title: 'MVP Development',
     description: 'Validate your idea in 8–12 weeks with a lean, investor-ready MVP — built to test, iterate, and grow fast.',
     tags: ['Rapid Build', 'User Testing', 'Product Strategy'],
   },
   {
     id: '5',
-    icon: '🤖',
+    Icon: Bot,
     title: 'AI Automation',
     description: 'Intelligent workflows, AI integrations, and automation systems that reduce manual work and unlock new capabilities.',
     tags: ['LLM Integration', 'Workflow AI', 'Smart Agents'],
   },
   {
     id: '6',
-    icon: '📈',
+    Icon: Megaphone,
     title: 'Digital Marketing',
     description: 'Growth-focused SEO, performance ads, and content strategy that brings the right audience to your product.',
     tags: ['SEO', 'Performance Ads', 'Growth Strategy'],
   },
   {
     id: '7',
-    icon: '⚙️',
+    Icon: Database,
     title: 'Backend Development',
     description: 'Robust APIs, databases, and cloud infrastructure designed for scale, security, and seamless integrations.',
     tags: ['Node.js', 'PostgreSQL', 'AWS / GCP'],
   },
   {
     id: '8',
-    icon: '💡',
+    Icon: Lightbulb,
     title: 'Brand & Product Strategy',
     description: 'Positioning, product roadmaps, and go-to-market planning that align your vision with what the market actually needs.',
     tags: ['Product Roadmap', 'Brand Positioning', 'GTM Planning'],
@@ -67,16 +77,21 @@ export default function Services() {
       <p className="section-sub">From lean MVPs to full-scale digital products — we bring the strategy, design, and engineering to get you there.</p>
 
       <div className="services-grid">
-        {services.map(service => (
-          <div key={service.id} className="service-card">
-            <div className="service-icon">{service.icon}</div>
-            <div className="service-name">{service.title}</div>
-            <div className="service-desc">{service.description}</div>
-            <div className="service-tags">
-              {service.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
+        {services.map(service => {
+          const Icon = service.Icon
+          return (
+            <div key={service.id} className="service-card">
+              <div className="service-icon-wrap">
+                <Icon className="service-icon" aria-hidden="true" />
+              </div>
+              <div className="service-name">{service.title}</div>
+              <div className="service-desc">{service.description}</div>
+              <div className="service-tags">
+                {service.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </section>
   )

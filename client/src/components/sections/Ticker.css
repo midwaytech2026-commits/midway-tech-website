@@ -23,7 +23,13 @@
   color: rgba(250,250,247,0.45);
   padding: 0 2.5rem;
 }
-.ticker-item span { color: var(--accent); font-size: 1rem; }
+.trust-icon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.8;
+  color: var(--accent-teal);
+  flex-shrink: 0;
+}
 
 @keyframes ticker {
   from { transform: translateX(0); }

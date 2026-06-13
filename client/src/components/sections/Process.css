@@ -38,20 +38,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 1rem;
-  font-weight: 800;
   margin-bottom: 1.5rem;
 }
 .step-num.active {
-  background: var(--accent);
-  color: var(--white);
-  box-shadow: 0 0 0 6px rgba(255,77,28,0.15);
+  background: var(--brand-gradient);
+  color: #01040B;
+  box-shadow: 0 0 0 6px rgba(17,214,217,0.15);
 }
 .step-num.inactive {
   background: var(--gray-mid);
-  color: rgba(250,250,247,0.4);
-  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--accent-teal);
+  border: 1px solid rgba(17,214,217,0.12);
+}
+
+.step-icon {
+  width: 26px;
+  height: 26px;
+  stroke-width: 1.8;
 }
 
 .step-title {
