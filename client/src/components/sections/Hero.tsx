@@ -12,20 +12,19 @@ export default function Hero() {
     <section className="hero">
       <p className="hero-eyebrow">AI-Powered Digital Solutions</p>
       <h1 className="hero-title">
-        Transforming Businesses<br />With <em>AI-Powered</em><br />Digital Solutions
+        <em>AI-First</em> Digital Products<br />Built for Startups and<br />Growing Businesses
       </h1>
       <p className="hero-sub">
-        MidwayTech builds intelligent apps, websites, automation systems, and digital
-        experiences that help businesses launch, scale, and grow.
+        MidwayTech builds mobile apps, websites, AI automation systems, and scalable digital platforms with fast execution and strong product precision.
       </p>
       <div className="hero-actions">
         <a href="/contact" className="btn-primary">
-          Start Your Project
+          Book a Discovery Call
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </a>
-        <a href="/portfolio" className="btn-ghost">View Our Work</a>
+        <a href="/services" className="btn-ghost">View Services</a>
       </div>
 
       <div className="hero-trust">

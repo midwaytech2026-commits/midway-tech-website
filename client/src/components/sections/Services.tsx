@@ -72,9 +72,9 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="services-section">
-      <p className="section-eyebrow">What We Can Do</p>
-      <h2 className="section-title">Built for growing<br />businesses.</h2>
-      <p className="section-sub">From lean MVPs to full-scale digital products — we bring the strategy, design, and engineering to get you there.</p>
+      <p className="section-eyebrow">What We Build</p>
+      <h2 className="section-title">AI-First Products for Startups and Growing Businesses</h2>
+      <p className="section-sub">We combine speed, design, automation, and engineering precision to help businesses launch faster and scale smarter.</p>
 
       <div className="services-grid">
         {services.map(service => {

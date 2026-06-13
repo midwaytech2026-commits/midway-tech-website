@@ -1,3 +1,4 @@
+import { BrainCircuit, Rocket, Layers, Network } from 'lucide-react'
 import './WhyUs.css'
 
 const reasons = [
@@ -23,20 +24,35 @@ const reasons = [
   },
 ]
 
-const metrics = [
-  { label: 'Average delivery time', value: '12 weeks', type: 'accent' },
-  { label: 'On-time delivery rate', value: '94%', type: '' },
-  { label: 'Client retention rate', value: '87%', type: 'accent2' },
-  { label: 'Avg. cost vs US agency', value: '60% less', type: 'accent' },
-  { label: 'Clutch rating', value: '4.9 ★', type: '' },
+const differentiators = [
+  {
+    Icon: BrainCircuit,
+    title: 'AI-first thinking',
+    desc: 'We look for automation opportunities from day one, not after the product is already built.',
+  },
+  {
+    Icon: Rocket,
+    title: 'Speed with structure',
+    desc: 'Fast delivery does not mean random execution. We work with clear scope, milestones, and approval points.',
+  },
+  {
+    Icon: Layers,
+    title: 'Product-level precision',
+    desc: 'We focus on user flows, scalable architecture, clean UI, and business outcomes — not just screens.',
+  },
+  {
+    Icon: Network,
+    title: 'Built for growth',
+    desc: 'Every product is planned with future features, integrations, analytics, and scale in mind.',
+  },
 ]
 
 export default function WhyUs() {
   return (
     <section className="why-section" id="why">
-      <p className="why-eyebrow">Why Midway Tech</p>
-      <h2 className="why-title">Built for startups who<br />can't afford to get it wrong.</h2>
-      <p className="why-sub">We know what's at stake when you're spending your runway on an app. Here's why founders trust us.</p>
+      <p className="why-eyebrow">Why MidwayTech</p>
+      <h2 className="why-title">Why Growing Businesses Choose MidwayTech</h2>
+      <p className="why-sub">We work like a product partner — combining strategy, design, engineering, AI automation, and execution speed to help businesses build systems that can actually scale.</p>
 
       <div className="why-grid">
         <div className="why-list">
@@ -51,13 +67,19 @@ export default function WhyUs() {
           ))}
         </div>
 
-        <div className="why-visual">
-          {metrics.map(m => (
-            <div key={m.label} className="metric-row">
-              <span className="metric-label">{m.label}</span>
-              <span className={`metric-val ${m.type}`}>{m.value}</span>
-            </div>
-          ))}
+        <div className="why-diff-grid">
+          {differentiators.map(d => {
+            const Icon = d.Icon
+            return (
+              <div key={d.title} className="why-diff-card">
+                <div className="why-diff-icon-wrap">
+                  <Icon className="why-diff-icon" aria-hidden="true" />
+                </div>
+                <h3>{d.title}</h3>
+                <p>{d.desc}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

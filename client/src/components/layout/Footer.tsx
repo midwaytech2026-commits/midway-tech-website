@@ -11,17 +11,9 @@ const footerServices = [
 ]
 
 const companyLinks = [
-  { label: 'About Us',   to: '/about' },
-  { label: 'Portfolio',  to: '/portfolio' },
-  { label: 'Careers',    to: '/contact' },  // no careers page yet — contact is closest
-  { label: 'Blog',       to: '/' },         // no blog page yet — home is closest
-]
-
-const contactLinks = [
-  { label: 'hello@midwaytech.co', href: 'mailto:hello@midwaytech.co', external: false },
-  { label: 'WhatsApp us',         href: '#',                           external: true },  // TODO: replace with https://wa.me/YOURPHONE
-  { label: 'LinkedIn',            href: '#',                           external: true },  // TODO: replace with https://linkedin.com/company/midway-tech
-  { label: 'Clutch profile',      href: '#',                           external: true },  // TODO: replace with your Clutch profile URL
+  { label: 'About Us',  to: '/about' },
+  { label: 'Portfolio', to: '/portfolio' },
+  { label: 'Contact',   to: '/contact' },
 ]
 
 export default function Footer() {
@@ -30,7 +22,7 @@ export default function Footer() {
       <div className="footer-top">
         <div className="footer-brand">
           <Link to="/"><img src={logo} alt="MidwayTech" className="site-logo footer-logo" /></Link>
-          <p>Mobile app development for startups and growing businesses. Based in India, serving the US, UK &amp; Australia.</p>
+          <p>MidwayTech builds AI-first mobile apps, websites, automation systems, backend platforms, and digital growth systems for startups and growing businesses.</p>
         </div>
 
         <div className="footer-col">
@@ -58,26 +50,16 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Contact</h4>
           <ul>
-            {contactLinks.map(l => (
-              <li key={l.label}>
-                <a
-                  href={l.href}
-                  {...(l.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                >
-                  {l.label}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a href="mailto:hello@midwaytech.co">hello@midwaytech.co</a>
+            </li>
           </ul>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Midway Tech. All rights reserved.</span>
-        <span>
-          <a href="#">Privacy Policy</a> · <a href="#">Terms</a>
-          {/* TODO: replace with /privacy and /terms pages, or link to an external legal doc */}
-        </span>
+        <span>© {new Date().getFullYear()} MidwayTech. All rights reserved.</span>
+        <span className="footer-legal">Privacy Policy · Terms of Service</span>
       </div>
     </footer>
   )

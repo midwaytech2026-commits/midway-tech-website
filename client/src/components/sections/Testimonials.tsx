@@ -1,46 +1,49 @@
+import { ClipboardList, Cpu, Eye, Rocket } from 'lucide-react'
 import './Testimonials.css'
 
-const testimonials = [
+const cards = [
   {
-    text: "Midway Tech delivered our MVP in 10 weeks and it looked better than apps from agencies charging 4x more. The weekly demos kept us in control the whole time.",
-    initials: 'JK',
-    name: 'James K.',
-    role: 'Founder, FitTrack App · Austin, TX',
+    Icon: ClipboardList,
+    title: 'Clear scope before development',
+    desc: 'We define app flow, features, accounts, integrations, content, and approvals before sprint execution.',
   },
   {
-    text: "We'd worked with two other agencies before Midway. Night and day difference — clear communication, no scope creep, and they actually replied on Slack within the hour.",
-    initials: 'SR',
-    name: 'Sophie R.',
-    role: 'CTO, Lumi · London, UK',
+    Icon: Cpu,
+    title: 'Modern AI-ready delivery',
+    desc: 'We build with current product expectations — automation, scalable backend systems, responsive UI, and clean user experience.',
   },
   {
-    text: "Our React Native app launched on time, passed App Store review first try, and has a 4.8-star rating with 2,000+ downloads in the first month. Incredible team.",
-    initials: 'MB',
-    name: 'Matt B.',
-    role: 'CEO, Parkable · Sydney, AU',
+    Icon: Eye,
+    title: 'Transparent execution',
+    desc: 'Clients get milestone-based updates, practical recommendations, and honest delivery expectations.',
+  },
+  {
+    Icon: Rocket,
+    title: 'Launch-focused mindset',
+    desc: 'We design and develop with deployment, testing, analytics, and future growth in mind.',
   },
 ]
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="testimonials-section">
-      <p className="section-eyebrow">Client reviews</p>
-      <h2 className="section-title">Don't take our word for it.</h2>
+    <section id="how-we-work" className="clarity-section">
+      <p className="section-eyebrow">How We Work</p>
+      <h2 className="section-title">Built on Clarity, Speed, and Product Thinking</h2>
+      <p className="section-sub">Until we publish verified case studies, we prefer to show how we work instead of making claims we can't back up yet.</p>
 
-      <div className="testimonials-grid">
-        {testimonials.map(t => (
-          <div key={t.name} className="testimonial-card">
-            <div className="stars">★★★★★</div>
-            <p className="testimonial-text">{t.text}</p>
-            <div className="testimonial-author">
-              <div className="author-avatar">{t.initials}</div>
-              <div>
-                <div className="author-name">{t.name}</div>
-                <div className="author-role">{t.role}</div>
+      <div className="clarity-grid">
+        {cards.map(card => {
+          const Icon = card.Icon
+          return (
+            <div key={card.title} className="clarity-card">
+              <div className="clarity-icon-wrap">
+                <Icon className="clarity-icon" aria-hidden="true" />
               </div>
+              <h3>{card.title}</h3>
+              <p>{card.desc}</p>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </section>
   )
