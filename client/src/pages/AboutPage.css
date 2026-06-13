@@ -96,7 +96,7 @@
   padding: 2rem;
   transition: border-color 0.25s;
 }
-.ap-value-card:hover { border-color: rgba(255,77,28,0.3); }
+.ap-value-card:hover { border-color: rgba(54,231,192,0.3); }
 .ap-value-icon { font-size: 1.75rem; margin-bottom: 1rem; }
 .ap-value-card h3 { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
 .ap-value-card p { font-size: 0.85rem; color: var(--gray); font-weight: 300; line-height: 1.7; margin: 0; }
@@ -124,11 +124,11 @@
   padding: 2rem;
   transition: border-color 0.25s;
 }
-.ap-team-card:hover { border-color: rgba(255,77,28,0.3); }
+.ap-team-card:hover { border-color: rgba(54,231,192,0.3); }
 .ap-team-avatar {
   width: 52px;
   height: 52px;
-  background: rgba(255,77,28,0.1);
+  background: rgba(54,231,192,0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;

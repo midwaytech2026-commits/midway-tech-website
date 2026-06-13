@@ -95,7 +95,7 @@
   padding: 1.5rem;
   transition: border-color 0.25s, transform 0.25s;
 }
-.svc-included-card:hover { border-color: rgba(255,77,28,0.3); transform: translateY(-3px); }
+.svc-included-card:hover { border-color: rgba(54,231,192,0.3); transform: translateY(-3px); }
 .svc-included-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
 .svc-included-card h3 {
   font-family: 'Space Grotesk', system-ui, sans-serif;
@@ -167,7 +167,7 @@
   font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
-  color: rgba(255,77,28,0.15);
+  color: rgba(54,231,192,0.15);
   width: 80px;
   flex-shrink: 0;
   line-height: 1;
@@ -183,7 +183,7 @@
 .svc-process-meta span {
   font-size: 0.72rem;
   color: var(--accent);
-  background: rgba(255,77,28,0.1);
+  background: rgba(54,231,192,0.1);
   padding: 0.2rem 0.6rem;
   border-radius: 100px;
   font-weight: 600;
@@ -267,7 +267,7 @@
   text-decoration: none;
   transition: border-color 0.2s, transform 0.2s;
 }
-.svc-related-card:hover { border-color: rgba(255,77,28,0.35); transform: translateY(-2px); }
+.svc-related-card:hover { border-color: rgba(54,231,192,0.35); transform: translateY(-2px); }
 .svc-related-card > span:first-child { font-size: 1.25rem; }
 .svc-related-card p { flex: 1; color: var(--white); font-size: 0.875rem; font-weight: 500; margin: 0; }
 .svc-related-arrow { color: var(--accent); font-size: 1rem; }

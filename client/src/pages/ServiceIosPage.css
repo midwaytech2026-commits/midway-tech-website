@@ -101,7 +101,7 @@
   padding: 1.5rem;
   transition: border-color 0.25s, transform 0.25s;
 }
-.ios-included-card:hover { border-color: rgba(255,77,28,0.3); transform: translateY(-3px); }
+.ios-included-card:hover { border-color: rgba(54,231,192,0.3); transform: translateY(-3px); }
 .ios-included-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
 .ios-included-card h3 { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
 .ios-included-card p { font-size: 0.8rem; color: var(--gray); font-weight: 300; line-height: 1.6; margin: 0; }
@@ -159,7 +159,7 @@
   font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
-  color: rgba(255,77,28,0.15);
+  color: rgba(54,231,192,0.15);
   width: 80px;
   flex-shrink: 0;
   line-height: 1;
@@ -169,7 +169,7 @@
 .ios-process-meta span {
   font-size: 0.72rem;
   color: var(--accent);
-  background: rgba(255,77,28,0.1);
+  background: rgba(54,231,192,0.1);
   padding: 0.2rem 0.6rem;
   border-radius: 100px;
   font-weight: 600;
@@ -235,7 +235,7 @@
   text-decoration: none;
   transition: border-color 0.2s, transform 0.2s;
 }
-.ios-related-card:hover { border-color: rgba(255,77,28,0.35); transform: translateY(-2px); }
+.ios-related-card:hover { border-color: rgba(54,231,192,0.35); transform: translateY(-2px); }
 .ios-related-card > span:first-child { font-size: 1.25rem; }
 .ios-related-card p { flex: 1; color: var(--white); font-size: 0.875rem; font-weight: 500; margin: 0; }
 .ios-related-arrow { color: var(--accent); font-size: 1rem; }
