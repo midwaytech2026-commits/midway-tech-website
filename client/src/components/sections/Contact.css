@@ -55,54 +55,110 @@
   position: relative;
 }
 
-.cta-form {
+.cta-email-form {
+  width: min(100%, 760px);
+  margin: 48px auto 0;
   display: flex;
-  gap: 0;
-  max-width: 480px;
-  margin: 0 auto;
-  position: relative;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.cta-input {
-  flex: 1;
-  padding: 1rem 1.25rem;
-  font-size: 0.95rem;
-  font-family: 'Inter', system-ui, sans-serif;
-  border: 1px solid rgba(17,214,217,0.2);
-  border-right: none;
-  border-radius: 100px 0 0 100px;
-  background: rgba(17,214,217,0.05);
+.cta-email-input {
+  width: 100%;
+  height: 78px;
+  border-radius: 999px;
+  border: 1px solid rgba(54, 231, 192, 0.35);
+  background: rgba(1, 11, 16, 0.72);
   color: var(--text-main);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 500;
+  padding: 0 34px;
   outline: none;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    0 0 24px rgba(54, 231, 192, 0.06);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-sizing: border-box;
 }
-.cta-input::placeholder { color: var(--text-muted); }
-.cta-input:focus { border-color: rgba(17,214,217,0.45); }
 
-.cta-submit {
-  padding: 1rem 1.75rem;
+.cta-email-input::placeholder {
+  color: rgba(240, 240, 241, 0.48);
+}
+
+.cta-email-input:focus {
+  border-color: rgba(129, 242, 165, 0.75);
+  background: rgba(1, 11, 16, 0.9);
+  box-shadow:
+    0 0 0 4px rgba(54, 231, 192, 0.1),
+    0 0 34px rgba(54, 231, 192, 0.15);
+}
+
+.cta-email-button {
+  width: 100%;
+  min-height: 76px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
   background: var(--brand-gradient);
   color: #01040B;
-  border: none;
-  border-radius: 0 100px 100px 0;
-  font-size: 0.9rem;
-  font-weight: 600;
   font-family: 'Inter', system-ui, sans-serif;
-  cursor: pointer;
-  transition: opacity 0.2s;
-  white-space: nowrap;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow:
+    0 18px 45px rgba(54, 231, 192, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
-.cta-submit:hover { opacity: 0.88; }
-.cta-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.cta-email-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow:
+    0 24px 60px rgba(54, 231, 192, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+.cta-email-button:active {
+  transform: translateY(0);
+}
+
+.cta-email-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  filter: none;
+}
 
 .cta-error {
   color: #ff6b6b;
   font-size: 0.85rem;
-  margin-top: 0.75rem;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
   .cta-section { padding: 5rem 1.5rem; }
-  .cta-form { flex-direction: column; }
-  .cta-input { border-right: 1px solid rgba(17,214,217,0.2); border-radius: 100px; }
-  .cta-submit { border-radius: 100px; }
+}
+
+@media (max-width: 640px) {
+  .cta-email-form {
+    margin-top: 34px;
+    gap: 14px;
+  }
+
+  .cta-email-input,
+  .cta-email-button {
+    height: 62px;
+    min-height: 62px;
+    font-size: 1rem;
+  }
+
+  .cta-email-input {
+    padding: 0 22px;
+  }
 }

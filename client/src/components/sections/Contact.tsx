@@ -29,17 +29,18 @@ export default function Contact() {
       {submitted ? (
         <p className="cta-success">Thanks! We'll be in touch shortly ✓</p>
       ) : (
-        <form className="cta-form" onSubmit={handleSubmit}>
+        <form className="cta-email-form" onSubmit={handleSubmit}>
           <input
             type="email"
-            className="cta-input"
+            className="cta-email-input"
             placeholder="your@email.com"
+            aria-label="Email address"
             value={email}
             onChange={e => setEmail(e.target.value)}
             required
           />
-          <button type="submit" className="cta-submit" disabled={loading}>
-            {loading ? 'Sending...' : 'Book free call →'}
+          <button type="submit" className="cta-email-button" disabled={loading}>
+            {loading ? 'Sending...' : <><span>Book free call</span><span aria-hidden="true">→</span></>}
           </button>
           {error && <p className="cta-error">{error}</p>}
         </form>
