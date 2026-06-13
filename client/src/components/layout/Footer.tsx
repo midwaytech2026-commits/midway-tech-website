@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import logo from '../../assets/icons/logo.svg'
 import './Footer.css'
 
 const footerServices = [
@@ -28,7 +29,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-brand">
-          <Link to="/" className="footer-logo">Midway<span>.</span>Tech</Link>
+          <Link to="/"><img src={logo} alt="MidwayTech" className="site-logo footer-logo" /></Link>
           <p>Mobile app development for startups and growing businesses. Based in India, serving the US, UK &amp; Australia.</p>
         </div>
 

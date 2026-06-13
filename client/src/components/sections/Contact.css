@@ -1,5 +1,6 @@
 .cta-section {
-  background: var(--accent);
+  background: var(--bg-panel);
+  border-top: 1px solid rgba(17,214,217,0.12);
   padding: 7rem 4rem;
   text-align: center;
   position: relative;
@@ -10,34 +11,46 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+    linear-gradient(rgba(17,214,217,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17,214,217,0.03) 1px, transparent 1px);
   background-size: 40px 40px;
+  pointer-events: none;
+}
+.cta-section::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(17,214,217,0.08) 0%, transparent 70%);
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
   pointer-events: none;
 }
 
 .cta-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Exo 2', system-ui, sans-serif;
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 800;
-  color: var(--white);
+  color: var(--text-main);
   line-height: 1.05;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   margin-bottom: 1.25rem;
   position: relative;
 }
 
 .cta-sub {
   font-size: 1.05rem;
-  color: rgba(255,255,255,0.75);
+  color: var(--text-muted);
   margin-bottom: 2.5rem;
   position: relative;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .cta-success {
   font-size: 1.1rem;
-  color: var(--white);
+  color: var(--accent-teal);
   font-weight: 500;
   position: relative;
 }
@@ -54,35 +67,42 @@
   flex: 1;
   padding: 1rem 1.25rem;
   font-size: 0.95rem;
-  font-family: 'DM Sans', sans-serif;
-  border: none;
+  font-family: 'Inter', system-ui, sans-serif;
+  border: 1px solid rgba(17,214,217,0.2);
+  border-right: none;
   border-radius: 100px 0 0 100px;
-  background: rgba(255,255,255,0.15);
-  color: var(--white);
+  background: rgba(17,214,217,0.05);
+  color: var(--text-main);
   outline: none;
-  backdrop-filter: blur(10px);
 }
-.cta-input::placeholder { color: rgba(255,255,255,0.55); }
+.cta-input::placeholder { color: var(--text-muted); }
+.cta-input:focus { border-color: rgba(17,214,217,0.45); }
 
 .cta-submit {
   padding: 1rem 1.75rem;
-  background: var(--black);
-  color: var(--white);
+  background: var(--brand-gradient);
+  color: #01040B;
   border: none;
   border-radius: 0 100px 100px 0;
   font-size: 0.9rem;
-  font-weight: 500;
-  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-family: 'Inter', system-ui, sans-serif;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: opacity 0.2s;
   white-space: nowrap;
 }
-.cta-submit:hover { background: #1a1a1a; }
-.cta-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+.cta-submit:hover { opacity: 0.88; }
+.cta-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.cta-error {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+}
 
 @media (max-width: 900px) {
   .cta-section { padding: 5rem 1.5rem; }
   .cta-form { flex-direction: column; }
-  .cta-input { border-radius: 100px; }
+  .cta-input { border-right: 1px solid rgba(17,214,217,0.2); border-radius: 100px; }
   .cta-submit { border-radius: 100px; }
 }

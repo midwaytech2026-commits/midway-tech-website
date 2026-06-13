@@ -1,8 +1,8 @@
 import './Ticker.css'
 
 const items = [
-  'iOS Development', 'Android Development', 'React Native', 'Flutter',
-  'UI/UX Design', 'MVP Builds', 'App Store Launch', 'Post-launch Support',
+  'Mobile-First Builds', 'AI-First Solutions', 'Fast MVP Delivery', 'Scalable Systems',
+  'Custom Software', 'Digital Transformation', 'Full-Stack Development', 'Smart Automation',
 ]
 
 export default function Ticker() {

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
+import logo from '../../assets/icons/logo.svg'
 import './Navbar.css'
 
 const navLinks = [
@@ -13,7 +14,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="logo">Midway<span>.</span>Tech</Link>
+      <Link to="/"><img src={logo} alt="MidwayTech" className="site-logo" /></Link>
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         {navLinks.map(link => (

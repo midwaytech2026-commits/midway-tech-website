@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -5,23 +7,44 @@
 }
 
 :root {
-  --black: #0A0A0A;
-  --white: #FAFAF7;
-  --accent: #FF4D1C;
-  --accent2: #FFB800;
-  --gray: #8A8A82;
-  --gray-light: #F0EFE9;
-  --gray-mid: #2A2A28;
-  --font-display: 'Syne', sans-serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
+  /* Brand backgrounds */
+  --bg-main:  #01040B;
+  --bg-dark:  #020812;
+  --bg-panel: #010B10;
+  --card-bg:  #101716;
+
+  /* Brand accents */
+  --accent-cyan:  #11D6D9;
+  --accent-teal:  #36E7C0;
+  --accent-mint:  #81F2A5;
+  --brand-gradient: linear-gradient(135deg, #11D6D9 0%, #36E7C0 45%, #81F2A5 100%);
+
+  /* Typography */
+  --text-main:  #F0F0F1;
+  --text-muted: #89929C;
+
+  /* Legacy aliases — keep for backward compat with un-touched inner pages */
+  --black:     #01040B;
+  --white:     #F0F0F1;
+  --accent:    #11D6D9;
+  --accent2:   #36E7C0;
+  --gray:      #89929C;
+  --gray-light:#E8E8EA;
+  --gray-mid:  #020812;
+
+  /* Fonts */
+  --font-display: 'Exo 2', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-kicker:  'Orbitron', system-ui, sans-serif;
+
   font-size: 16px;
   line-height: 1.6;
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--black);
-  color: var(--white);
+  background: var(--bg-main);
+  color: var(--text-main);
   overflow-x: hidden;
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
@@ -38,6 +61,15 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-display);
+}
+
+.eyebrow,
+.label,
+.tag-kicker,
+.section-kicker {
+  font-family: var(--font-kicker);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 p { margin: 0; }
