@@ -36,7 +36,7 @@ const services = [
     id: '4',
     Icon: Rocket,
     title: 'MVP Development',
-    description: 'Validate your idea in 8–12 weeks with a lean, investor-ready MVP — built to test, iterate, and grow fast.',
+    description: 'Validate your product idea with structured MVP sprints, focused feature scope, and fast launch-ready execution.',
     tags: ['Rapid Build', 'User Testing', 'Product Strategy'],
   },
   {

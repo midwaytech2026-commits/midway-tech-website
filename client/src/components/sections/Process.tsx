@@ -19,7 +19,7 @@ export default function Process() {
   return (
     <section id="process" className="process-section">
       <p className="section-eyebrow">How it works</p>
-      <h2 className="section-title">From idea to App Store<br />in 5 clear steps.</h2>
+      <h2 className="section-title">From idea to launch<br />in 5 clear steps.</h2>
       <p className="section-sub">No confusion, no bottlenecks. You always know exactly what's happening and what comes next.</p>
 
       <div className="process-steps">

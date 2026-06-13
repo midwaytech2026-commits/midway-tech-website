@@ -1,5 +1,5 @@
 .mvp-offer-section {
-  background: var(--bg-dark);
+  background: var(--bg-panel);
   padding: 110px 24px;
   border-top: 1px solid rgba(17, 214, 217, 0.08);
 }
