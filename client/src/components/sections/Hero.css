@@ -96,36 +96,61 @@
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 30px;
+  border-radius: 999px;
+  border: 0;
   background: var(--brand-gradient);
   color: #01040B;
-  font-weight: 600;
-  padding: 1rem 2rem;
-  border-radius: 100px;
-  font-size: 0.95rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
   text-decoration: none;
-  transition: transform 0.2s, opacity 0.2s;
+  cursor: pointer;
+  box-shadow:
+    0 16px 42px rgba(54, 231, 192, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
-.btn-primary:hover { transform: translateY(-2px); opacity: 0.9; }
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow:
+    0 22px 56px rgba(54, 231, 192, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+.btn-primary:active { transform: translateY(0); }
 .btn-primary svg { transition: transform 0.2s; }
 .btn-primary:hover svg { transform: translateX(3px); }
 
 .btn-ghost {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  border: 1px solid rgba(17,214,217,0.25);
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: rgba(1, 11, 16, 0.45);
   color: var(--text-main);
-  padding: 1rem 2rem;
-  border-radius: 100px;
-  font-weight: 500;
-  font-size: 0.95rem;
+  border: 1px solid rgba(54, 231, 192, 0.35);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
   text-decoration: none;
-  transition: border-color 0.2s, background 0.2s;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease,
+              box-shadow 0.25s ease, background 0.25s ease;
 }
 .btn-ghost:hover {
-  border-color: rgba(17,214,217,0.55);
-  background: rgba(17,214,217,0.05);
+  transform: translateY(-2px);
+  color: var(--accent-mint);
+  border-color: rgba(129, 242, 165, 0.55);
+  background: rgba(54, 231, 192, 0.06);
+  box-shadow: 0 18px 42px rgba(54, 231, 192, 0.14);
 }
 
 .hero-trust {
