@@ -1,5 +1,5 @@
 .cta-strip {
-  background: var(--accent);
+  background: var(--theme-bg-dark);
   padding: 5rem 4rem;
 }
 
@@ -13,17 +13,17 @@
 }
 
 .cta-strip-text h2 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
-  color: var(--white);
+  color: var(--theme-text-light);
   margin-bottom: 0.5rem;
 }
 
 .cta-strip-text p {
   font-size: 1rem;
-  color: rgba(255,255,255,0.8);
-  font-weight: 300;
+  color: var(--theme-text-light-muted);
+  font-weight: 400;
 }
 
 .cta-strip-actions {
@@ -34,30 +34,28 @@
 }
 
 .cta-strip .btn-primary {
-  background: var(--white);
-  color: var(--accent);
   padding: 0.875rem 2rem;
-  border-radius: 100px;
-  font-weight: 600;
-  text-decoration: none;
   font-size: 0.9rem;
-  transition: opacity 0.2s, transform 0.2s;
+  text-decoration: none;
   display: inline-block;
 }
-.cta-strip .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
 
 .cta-strip .btn-outline {
-  color: var(--white);
-  border: 1.5px solid rgba(255,255,255,0.5);
+  color: var(--theme-text-light);
+  border: 1.5px solid var(--theme-border-dark);
   padding: 0.875rem 2rem;
-  border-radius: 100px;
-  font-weight: 500;
+  border-radius: 999px;
+  font-weight: 700;
   text-decoration: none;
   font-size: 0.9rem;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, color 0.2s;
   display: inline-block;
 }
-.cta-strip .btn-outline:hover { border-color: var(--white); transform: translateY(-2px); }
+.cta-strip .btn-outline:hover {
+  border-color: var(--theme-accent-orange);
+  color: var(--theme-accent-orange);
+  transform: translateY(-1px);
+}
 
 @media (max-width: 768px) {
   .cta-strip { padding: 3rem 1.5rem; }

@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Search, Map, Palette, Zap, Component, Handshake, RefreshCcw, Rocket, Smartphone, Bot } from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceDetailPage.css'
 
 const included = [
-  { icon: '🔍', title: 'User Research & Discovery', desc: 'User interviews, competitor analysis, and journey mapping to ground every design decision in real behaviour.' },
-  { icon: '🗺️', title: 'Wireframes & User Flows',   desc: 'Low-fidelity wireframes covering every key user journey — before a single colour is chosen.' },
-  { icon: '🎨', title: 'High-Fidelity Figma Designs', desc: 'Pixel-perfect screens for every state: empty, loading, error, and success.' },
-  { icon: '⚡', title: 'Interactive Prototype',      desc: 'Clickable Figma prototype for stakeholder review, investor demos, and early user testing.' },
-  { icon: '🔠', title: 'Design System',              desc: 'Reusable component library with tokens, typography scale, colour palette, and spacing rules.' },
-  { icon: '🤝', title: 'Developer Handoff',          desc: 'Figma Dev Mode specs with precise measurements, exportable assets, and code-ready annotations.' },
-  { icon: '🔄', title: '2 Revision Rounds',          desc: 'Two full rounds of design revisions are included before final delivery — no hidden revision fees.' },
+  { Icon: Search, title: 'User Research & Discovery', desc: 'User interviews, competitor analysis, and journey mapping to ground every design decision in real behaviour.' },
+  { Icon: Map, title: 'Wireframes & User Flows',   desc: 'Low-fidelity wireframes covering every key user journey — before a single colour is chosen.' },
+  { Icon: Palette, title: 'High-Fidelity Figma Designs', desc: 'Pixel-perfect screens for every state: empty, loading, error, and success.' },
+  { Icon: Zap, title: 'Interactive Prototype',      desc: 'Clickable Figma prototype for stakeholder review, investor demos, and early user testing.' },
+  { Icon: Component, title: 'Design System',              desc: 'Reusable component library with tokens, typography scale, colour palette, and spacing rules.' },
+  { Icon: Handshake, title: 'Developer Handoff',          desc: 'Figma Dev Mode specs with precise measurements, exportable assets, and code-ready annotations.' },
+  { Icon: RefreshCcw, title: '2 Revision Rounds',          desc: 'Two full rounds of design revisions are included before final delivery — no hidden revision fees.' },
 ]
 
 const techStack = {
@@ -52,9 +53,9 @@ const faqItems = [
 ]
 
 const relatedServices = [
-  { title: 'MVP Development',     slug: '/services/mvp',          icon: '🚀' },
-  { title: 'iOS Development',     slug: '/services/ios',          icon: '📱' },
-  { title: 'Android Development', slug: '/services/android',      icon: '🤖' },
+  { title: 'MVP Development',     slug: '/services/mvp',          Icon: Rocket },
+  { title: 'iOS Development',     slug: '/services/ios',          Icon: Smartphone },
+  { title: 'Android Development', slug: '/services/android',      Icon: Bot },
 ]
 
 export default function ServiceUiUxPage() {
@@ -92,7 +93,7 @@ export default function ServiceUiUxPage() {
           <div className="svc-included-grid">
             {included.map(item => (
               <div key={item.title} className="svc-included-card">
-                <div className="svc-included-icon">{item.icon}</div>
+                <div className="svc-included-icon"><item.Icon aria-hidden="true" /></div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -165,7 +166,7 @@ export default function ServiceUiUxPage() {
           <div className="svc-related-grid">
             {relatedServices.map(s => (
               <Link key={s.title} to={s.slug} className="svc-related-card">
-                <span>{s.icon}</span>
+                <s.Icon className="svc-related-icon" aria-hidden="true" />
                 <p>{s.title}</p>
                 <span className="svc-related-arrow">→</span>
               </Link>

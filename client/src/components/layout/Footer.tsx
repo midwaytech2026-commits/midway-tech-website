@@ -4,19 +4,57 @@ import logo from '../../assets/icons/logo.svg'
 import ComingSoonModal from '../common/ComingSoonModal'
 import './Footer.css'
 
-const footerServices = [
-  { label: 'iOS Development',     to: '/services/ios' },
-  { label: 'Android Development', to: '/services/android' },
-  { label: 'React Native',        to: '/services/react-native' },
-  { label: 'Flutter',             to: '/services/flutter' },
-  { label: 'MVP Build',           to: '/services/mvp' },
+type FooterLink = { label: string; to: string } | { label: string; comingSoon: true }
+
+const companyLinks: FooterLink[] = [
+  { label: 'About Us', to: '/about' },
+  { label: 'Contact Us', to: '/contact' },
+  { label: 'Get a Quote', to: '/contact' },
+  { label: 'Case Studies / Portfolio', to: '/portfolio' },
+  { label: 'Blog', comingSoon: true },
 ]
 
-const companyLinks = [
-  { label: 'About Us',  to: '/about' },
-  { label: 'Portfolio', to: '/portfolio' },
-  { label: 'Contact',   to: '/contact' },
+const productLinks: FooterLink[] = [
+  { label: 'Website Development', to: '/services' },
+  { label: 'Ecommerce / Shopify', comingSoon: true },
+  { label: 'Mobile Apps', to: '/services' },
+  { label: 'Custom Software', to: '/services' },
+  { label: 'SaaS Development', to: '/services' },
+  { label: 'UI/UX Design', to: '/services/ui-ux' },
+  { label: 'API Integrations', comingSoon: true },
 ]
+
+const marketingLinks: FooterLink[] = [
+  { label: 'Performance Marketing', comingSoon: true },
+  { label: 'SEO', comingSoon: true },
+  { label: 'Social Media', comingSoon: true },
+  { label: 'Email Marketing', comingSoon: true },
+  { label: 'Branding', comingSoon: true },
+  { label: 'Lead Generation', comingSoon: true },
+  { label: 'LinkedIn Marketing', comingSoon: true },
+]
+
+const aiLinks: FooterLink[] = [
+  { label: 'AI Chatbots', comingSoon: true },
+  { label: 'Workflow Automation', comingSoon: true },
+  { label: 'CRM Automation', comingSoon: true },
+  { label: 'AI Content Systems', comingSoon: true },
+  { label: 'Lead Qualification AI', comingSoon: true },
+  { label: 'AI Customer Support', comingSoon: true },
+]
+
+function FooterLinkItem({ link, onComingSoon }: { link: FooterLink; onComingSoon: (label: string) => void }) {
+  if ('to' in link) {
+    return <li><Link to={link.to}>{link.label}</Link></li>
+  }
+  return (
+    <li>
+      <button type="button" className="footer-link-btn" onClick={() => onComingSoon(link.label)}>
+        {link.label}
+      </button>
+    </li>
+  )
+}
 
 export default function Footer() {
   const [comingSoon, setComingSoon] = useState<string | null>(null)
@@ -28,40 +66,48 @@ export default function Footer() {
         message={`${comingSoon} is being prepared and will be available soon.`}
         onClose={() => setComingSoon(null)}
       />
+
+      <div className="footer-cta">
+        <div className="footer-cta-inner">
+          <div>
+            <h2>Ready to grow your business?</h2>
+            <p>Get a free quote — response within 24 hours, no obligation.</p>
+          </div>
+          <Link to="/contact" className="btn-primary">Get a Free Quote</Link>
+        </div>
+      </div>
+
       <div className="footer-top">
         <div className="footer-brand">
           <Link to="/"><img src={logo} alt="MidwayTech" className="site-logo footer-logo" /></Link>
-          <p>MidwayTech builds AI-first mobile apps, websites, automation systems, backend platforms, and digital growth systems for startups and growing businesses.</p>
-        </div>
-
-        <div className="footer-col">
-          <h4>Services</h4>
-          <ul>
-            {footerServices.map(l => (
-              <li key={l.label}>
-                <Link to={l.to}>{l.label}</Link>
-              </li>
-            ))}
-          </ul>
+          <p>Growth and technology partner for modern businesses. Marketing, technology, and AI — one team, one invoice.</p>
         </div>
 
         <div className="footer-col">
           <h4>Company</h4>
           <ul>
-            {companyLinks.map(l => (
-              <li key={l.label}>
-                <Link to={l.to}>{l.label}</Link>
-              </li>
-            ))}
+            {companyLinks.map(l => <FooterLinkItem key={l.label} link={l} onComingSoon={setComingSoon} />)}
           </ul>
         </div>
 
         <div className="footer-col">
-          <h4>Contact</h4>
+          <h4>Product Development</h4>
           <ul>
-            <li>
-              <a href="mailto:hello@midwaytech.co">hello@midwaytech.co</a>
-            </li>
+            {productLinks.map(l => <FooterLinkItem key={l.label} link={l} onComingSoon={setComingSoon} />)}
+          </ul>
+        </div>
+
+        <div className="footer-col">
+          <h4>Marketing</h4>
+          <ul>
+            {marketingLinks.map(l => <FooterLinkItem key={l.label} link={l} onComingSoon={setComingSoon} />)}
+          </ul>
+        </div>
+
+        <div className="footer-col">
+          <h4>AI Solutions</h4>
+          <ul>
+            {aiLinks.map(l => <FooterLinkItem key={l.label} link={l} onComingSoon={setComingSoon} />)}
           </ul>
         </div>
       </div>
@@ -71,7 +117,7 @@ export default function Footer() {
         <span className="footer-legal">
           <button type="button" className="footer-legal-btn" onClick={() => setComingSoon('Privacy Policy')}>Privacy Policy</button>
           <span className="footer-legal-sep">·</span>
-          <button type="button" className="footer-legal-btn" onClick={() => setComingSoon('Terms of Service')}>Terms of Service</button>
+          <button type="button" className="footer-legal-btn" onClick={() => setComingSoon('Terms & Conditions')}>Terms & Conditions</button>
         </span>
       </div>
     </footer>

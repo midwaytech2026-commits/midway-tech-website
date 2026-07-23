@@ -1,7 +1,6 @@
 .faq-section {
-  background: var(--bg-dark);
+  background: var(--theme-bg-main);
   padding: 110px 24px;
-  border-top: 1px solid rgba(17, 214, 217, 0.08);
 }
 
 .faq-container {
@@ -9,7 +8,24 @@
   margin: 0 auto;
 }
 
-.faq-section .section-title {
+.faq-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  color: var(--theme-accent-orange);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.faq-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--theme-text-main);
+  text-align: center;
   margin-bottom: 48px;
 }
 
@@ -18,19 +34,19 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  border: 1px solid rgba(54, 231, 192, 0.1);
+  border: 1px solid var(--theme-border-light);
   border-radius: 20px;
   overflow: hidden;
 }
 
 /* Item */
 .faq-item {
-  border-bottom: 1px solid rgba(54, 231, 192, 0.08);
-  background: var(--bg-panel);
+  border-bottom: 1px solid var(--theme-border-light);
+  background: var(--theme-bg-white);
   transition: background 0.2s ease;
 }
 .faq-item:last-child { border-bottom: none; }
-.faq-item-open { background: rgba(17, 214, 217, 0.03); }
+.faq-item-open { background: var(--theme-bg-soft); }
 
 /* Trigger button */
 .faq-trigger {
@@ -44,23 +60,23 @@
   border: none;
   cursor: pointer;
   text-align: left;
-  color: var(--text-main);
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  color: var(--theme-text-main);
+  font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: -0.015em;
   line-height: 1.4;
   transition: color 0.2s ease;
 }
-.faq-trigger:hover { color: var(--accent-teal); }
-.faq-item-open .faq-trigger { color: var(--accent-teal); }
+.faq-trigger:hover { color: var(--theme-accent-orange); }
+.faq-item-open .faq-trigger { color: var(--theme-accent-orange); }
 
 /* Plus / Minus toggle icon */
 .faq-toggle-icon {
   width: 18px;
   height: 18px;
   stroke-width: 2;
-  color: var(--accent-teal);
+  color: var(--theme-accent-orange);
   flex-shrink: 0;
   transition: transform 0.25s ease, opacity 0.2s ease;
 }
@@ -81,7 +97,7 @@
 
 .faq-body p {
   font-size: 0.925rem;
-  color: var(--text-muted);
+  color: var(--theme-text-muted);
   line-height: 1.75;
   font-weight: 400;
 }

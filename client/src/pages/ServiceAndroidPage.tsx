@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Palette, Zap, Link2, Bell, CreditCard, CheckCircle2, ShieldCheck, Smartphone, Atom, PenTool } from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceDetailPage.css'
 
 const included = [
-  { icon: '🎨', title: 'Material You Design',      desc: 'Figma designs following Material 3 guidelines, adapted to your brand identity.' },
-  { icon: '⚡', title: 'Kotlin & Jetpack Compose', desc: "Google's modern declarative UI toolkit for fast, maintainable Android code." },
-  { icon: '🔗', title: 'API & Backend Integration', desc: 'REST, GraphQL, WebSocket — we connect to any backend stack you already have.' },
-  { icon: '🔔', title: 'Push Notifications',        desc: 'Firebase Cloud Messaging (FCM) for transactional and marketing push messages.' },
-  { icon: '💳', title: 'In-App Purchases',          desc: 'Google Play Billing Library for subscriptions, consumables, and one-time purchases.' },
-  { icon: '✅', title: 'Google Play Submission',    desc: 'Full Play Store review handling, release track setup, and internal testing.' },
-  { icon: '🛡', title: '3-Month Support',            desc: 'Bug fixes and minor updates after launch, included in every engagement.' },
+  { Icon: Palette, title: 'Material You Design',      desc: 'Figma designs following Material 3 guidelines, adapted to your brand identity.' },
+  { Icon: Zap, title: 'Kotlin & Jetpack Compose', desc: "Google's modern declarative UI toolkit for fast, maintainable Android code." },
+  { Icon: Link2, title: 'API & Backend Integration', desc: 'REST, GraphQL, WebSocket — we connect to any backend stack you already have.' },
+  { Icon: Bell, title: 'Push Notifications',        desc: 'Firebase Cloud Messaging (FCM) for transactional and marketing push messages.' },
+  { Icon: CreditCard, title: 'In-App Purchases',          desc: 'Google Play Billing Library for subscriptions, consumables, and one-time purchases.' },
+  { Icon: CheckCircle2, title: 'Google Play Submission',    desc: 'Full Play Store review handling, release track setup, and internal testing.' },
+  { Icon: ShieldCheck, title: '3-Month Support',            desc: 'Bug fixes and minor updates after launch, included in every engagement.' },
 ]
 
 const techStack = {
@@ -52,9 +53,9 @@ const faqItems = [
 ]
 
 const relatedServices = [
-  { title: 'iOS Development',    slug: '/services/ios',          icon: '📱' },
-  { title: 'React Native',       slug: '/services/react-native', icon: '⚛️' },
-  { title: 'UI/UX Design',       slug: '/services/ui-ux',        icon: '🎨' },
+  { title: 'iOS Development',    slug: '/services/ios',          Icon: Smartphone },
+  { title: 'React Native',       slug: '/services/react-native', Icon: Atom },
+  { title: 'UI/UX Design',       slug: '/services/ui-ux',        Icon: PenTool },
 ]
 
 export default function ServiceAndroidPage() {
@@ -92,7 +93,7 @@ export default function ServiceAndroidPage() {
           <div className="svc-included-grid">
             {included.map(item => (
               <div key={item.title} className="svc-included-card">
-                <div className="svc-included-icon">{item.icon}</div>
+                <div className="svc-included-icon"><item.Icon aria-hidden="true" /></div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -165,7 +166,7 @@ export default function ServiceAndroidPage() {
           <div className="svc-related-grid">
             {relatedServices.map(s => (
               <Link key={s.title} to={s.slug} className="svc-related-card">
-                <span>{s.icon}</span>
+                <s.Icon className="svc-related-icon" aria-hidden="true" />
                 <p>{s.title}</p>
                 <span className="svc-related-arrow">→</span>
               </Link>

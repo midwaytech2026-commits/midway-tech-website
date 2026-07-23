@@ -11,9 +11,31 @@ import {
   Target,
   Clock,
   Users,
+  Layers,
   ArrowRight,
 } from 'lucide-react'
 import './ServicesPage.css'
+
+const disciplines = [
+  {
+    Icon: Layers,
+    accent: 'orange',
+    title: 'Product & Technology',
+    desc: 'Websites, mobile apps, Shopify stores, SaaS platforms, and custom software built with clean design and scalable engineering.',
+  },
+  {
+    Icon: Megaphone,
+    accent: 'orange',
+    title: 'Growth Marketing',
+    desc: 'Performance marketing, SEO, content, email, social, and lead systems built to create measurable business growth.',
+  },
+  {
+    Icon: BrainCircuit,
+    accent: 'green',
+    title: 'AI & Automation',
+    desc: 'AI chatbots, workflow automation, CRM automation, lead qualification, and content systems that reduce manual work.',
+  },
+]
 
 const services = [
   {
@@ -94,17 +116,38 @@ export default function ServicesPage() {
       <section className="sp-hero">
         <div className="sp-hero-inner">
           <p className="section-eyebrow">Services</p>
-          <h1>AI-First Services Built for<br /><em>Modern Businesses</em></h1>
-          <p>From mobile apps and websites to AI automation and scalable backend systems, MidwayTech helps startups and growing businesses launch faster and scale smarter.</p>
-          <Link to="/contact" className="btn-primary sp-hero-cta">
-            Book a Discovery Call
-            <ArrowRight className="sp-cta-icon" aria-hidden="true" />
-          </Link>
+          <h1>Growth, Technology, and AI Services Under One Roof</h1>
+          <p>From websites and mobile apps to marketing systems and AI automation, MidwayTech helps modern businesses launch, grow, and scale without managing separate agencies.</p>
+          <div className="sp-hero-actions">
+            <Link to="/contact" className="btn-primary">Get a Free Quote</Link>
+            <Link to="/portfolio" className="btn-ghost">See Our Work</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="sp-disciplines">
+        <div className="sp-container">
+          <div className="sp-disciplines-grid">
+            {disciplines.map(d => {
+              const Icon = d.Icon
+              return (
+                <div key={d.title} className="sp-discipline-card">
+                  <div className={`sp-discipline-icon-wrap sp-discipline-${d.accent}`}>
+                    <Icon className="sp-discipline-icon" aria-hidden="true" />
+                  </div>
+                  <h3>{d.title}</h3>
+                  <p>{d.desc}</p>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </section>
 
       <section className="sp-services">
         <div className="sp-container">
+          <p className="section-eyebrow">Detailed Services</p>
+          <h2>Everything We Offer</h2>
           <div className="sp-services-grid">
             {services.map(s => {
               const Icon = s.Icon

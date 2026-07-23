@@ -1,17 +1,16 @@
 .why-section {
-  background: var(--bg-dark);
+  background: var(--theme-bg-dark);
   padding: 7rem 4rem;
-  border-top: 1px solid rgba(17, 214, 217, 0.08);
 }
 
 .why-eyebrow {
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-family: 'Orbitron', system-ui, sans-serif;
-  color: var(--accent-cyan);
-  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  color: var(--theme-accent-orange);
+  margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -20,144 +19,85 @@
   content: '';
   width: 20px;
   height: 2px;
-  background: var(--accent-cyan);
+  background: var(--theme-accent-orange);
   border-radius: 2px;
   flex-shrink: 0;
 }
 
-.why-title {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  color: var(--text-main);
-  margin-bottom: 1.25rem;
-  max-width: 700px;
+.why-quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--theme-text-light);
+  max-width: 900px;
+  margin: 0 0 1.75rem;
 }
 
 .why-sub {
-  font-size: 1rem;
-  color: var(--text-muted);
-  max-width: 580px;
+  font-size: 1.02rem;
+  color: var(--theme-text-light-muted);
+  max-width: 640px;
   line-height: 1.75;
   font-weight: 400;
 }
 
 .why-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin-top: 4rem;
-  align-items: start;
-}
-
-/* Left — commitment reasons */
-.why-list { display: flex; flex-direction: column; gap: 0; }
-
-.why-item {
-  display: flex;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  padding: 1.75rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-.why-item:first-child { border-top: 1px solid rgba(255, 255, 255, 0.06); }
-
-.why-num {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--accent-cyan);
-  min-width: 28px;
-  padding-top: 3px;
+  margin-top: 3.5rem;
 }
 
-.why-content h3 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 0.4rem;
-  letter-spacing: -0.02em;
+.why-card {
+  background: var(--theme-bg-dark-panel);
+  border: 1px solid var(--theme-border-dark);
+  border-radius: 18px;
+  padding: 1.75rem;
+  transition: border-color 0.25s ease;
 }
-.why-content p {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  line-height: 1.65;
-  font-weight: 400;
-}
+.why-card:hover { border-color: rgba(233, 90, 42, 0.35); }
 
-/* Right — differentiator cards */
-.why-diff-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: rgba(54, 231, 192, 0.08);
-  border: 1px solid rgba(54, 231, 192, 0.12);
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.why-diff-card {
-  background: var(--bg-panel);
-  padding: 2rem;
+.why-card-top {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  transition: background 0.25s ease;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
 }
-.why-diff-card:hover {
-  background: radial-gradient(circle at 30% 20%, rgba(54, 231, 192, 0.07), transparent 60%), var(--bg-panel);
+.why-card-num {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--theme-text-light-muted);
 }
-
-.why-diff-icon-wrap {
-  width: 44px;
-  height: 44px;
+.why-card-icon-wrap {
+  width: 42px;
+  height: 42px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(54, 231, 192, 0.06);
-  border: 1px solid rgba(54, 231, 192, 0.16);
-  color: var(--accent-teal);
-  flex-shrink: 0;
-  transition: color 0.25s, border-color 0.25s;
+  background: rgba(233, 90, 42, 0.14);
+  color: var(--theme-accent-orange);
 }
-.why-diff-card:hover .why-diff-icon-wrap {
-  color: var(--accent-mint);
-  border-color: rgba(129, 242, 165, 0.35);
-}
+.why-card-icon { width: 21px; height: 21px; stroke-width: 1.8; }
 
-.why-diff-icon {
-  width: 22px;
-  height: 22px;
-  stroke-width: 1.7;
-}
-
-.why-diff-card h3 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 0.95rem;
+.why-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: var(--theme-text-light);
   letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
 }
-
-.why-diff-card p {
-  font-size: 0.82rem;
-  color: var(--text-muted);
+.why-card p {
+  font-size: 0.88rem;
+  color: var(--theme-text-light-muted);
   line-height: 1.65;
-  font-weight: 400;
-}
-
-@media (max-width: 1100px) {
-  .why-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .why-diff-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 900px) {
   .why-section { padding: 5rem 1.5rem; }
-}
-
-@media (max-width: 600px) {
-  .why-diff-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; gap: 1.25rem; margin-top: 2.75rem; }
 }

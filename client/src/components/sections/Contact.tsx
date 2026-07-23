@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { CheckCircle2 } from 'lucide-react'
 import { api } from '../../services/api'
 import './Contact.css'
 
@@ -27,7 +28,7 @@ export default function Contact() {
       <h2 className="cta-title">Ready to build<br />your app?</h2>
       <p className="cta-sub">Drop your email and we'll set up a free 30-minute discovery call. No pitch. Just a conversation.</p>
       {submitted ? (
-        <p className="cta-success">Thanks! We'll be in touch shortly ✓</p>
+        <p className="cta-success"><CheckCircle2 size={18} aria-hidden="true" /> Thanks! We'll be in touch shortly</p>
       ) : (
         <form className="cta-email-form" onSubmit={handleSubmit}>
           <input

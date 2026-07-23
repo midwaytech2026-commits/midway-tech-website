@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { PenTool, Atom, Wrench, Bell, Rocket, CheckCircle2, ShieldCheck, Smartphone, Bot, Bird } from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceDetailPage.css'
 
 const included = [
-  { icon: '🎨', title: 'Cross-Platform UI Design',    desc: 'Figma designs with platform-specific adaptations — iOS Human Interface and Android Material 3.' },
-  { icon: '⚛️', title: 'React Native + TypeScript',   desc: 'Type-safe cross-platform code using Expo or bare workflow, chosen to fit your project needs.' },
-  { icon: '🔧', title: 'Native Module Integration',   desc: 'Camera, GPS, biometrics, Bluetooth — we bridge any native device API your app requires.' },
-  { icon: '🔔', title: 'Push Notifications',          desc: 'APNs + FCM setup for both platforms in a single codebase, with rich notification support.' },
-  { icon: '🚀', title: 'OTA Updates',                 desc: 'Expo EAS Update for instant bug fixes and content changes without an App Store review cycle.' },
-  { icon: '✅', title: 'Dual Store Submission',        desc: 'App Store + Google Play submission handled end-to-end, including screenshots and metadata.' },
-  { icon: '🛡', title: '3-Month Support',              desc: 'Bug fixes and minor updates after launch, included in every engagement.' },
+  { Icon: PenTool, title: 'Cross-Platform UI Design',    desc: 'Figma designs with platform-specific adaptations — iOS Human Interface and Android Material 3.' },
+  { Icon: Atom, title: 'React Native + TypeScript',   desc: 'Type-safe cross-platform code using Expo or bare workflow, chosen to fit your project needs.' },
+  { Icon: Wrench, title: 'Native Module Integration',   desc: 'Camera, GPS, biometrics, Bluetooth — we bridge any native device API your app requires.' },
+  { Icon: Bell, title: 'Push Notifications',          desc: 'APNs + FCM setup for both platforms in a single codebase, with rich notification support.' },
+  { Icon: Rocket, title: 'OTA Updates',                 desc: 'Expo EAS Update for instant bug fixes and content changes without an App Store review cycle.' },
+  { Icon: CheckCircle2, title: 'Dual Store Submission',        desc: 'App Store + Google Play submission handled end-to-end, including screenshots and metadata.' },
+  { Icon: ShieldCheck, title: '3-Month Support',              desc: 'Bug fixes and minor updates after launch, included in every engagement.' },
 ]
 
 const techStack = {
@@ -52,9 +53,9 @@ const faqItems = [
 ]
 
 const relatedServices = [
-  { title: 'iOS Development',     slug: '/services/ios',     icon: '📱' },
-  { title: 'Android Development', slug: '/services/android', icon: '🤖' },
-  { title: 'Flutter',             slug: '/services/flutter', icon: '🐦' },
+  { title: 'iOS Development',     slug: '/services/ios',     Icon: Smartphone },
+  { title: 'Android Development', slug: '/services/android', Icon: Bot },
+  { title: 'Flutter',             slug: '/services/flutter', Icon: Bird },
 ]
 
 export default function ServiceReactNativePage() {
@@ -92,7 +93,7 @@ export default function ServiceReactNativePage() {
           <div className="svc-included-grid">
             {included.map(item => (
               <div key={item.title} className="svc-included-card">
-                <div className="svc-included-icon">{item.icon}</div>
+                <div className="svc-included-icon"><item.Icon aria-hidden="true" /></div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -165,7 +166,7 @@ export default function ServiceReactNativePage() {
           <div className="svc-related-grid">
             {relatedServices.map(s => (
               <Link key={s.title} to={s.slug} className="svc-related-card">
-                <span>{s.icon}</span>
+                <s.Icon className="svc-related-icon" aria-hidden="true" />
                 <p>{s.title}</p>
                 <span className="svc-related-arrow">→</span>
               </Link>

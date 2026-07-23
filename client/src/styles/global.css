@@ -37,6 +37,31 @@
   --font-body:    'Inter', system-ui, sans-serif;
   --font-kicker:  'Orbitron', system-ui, sans-serif;
 
+  /* New brand direction (rolling out phase by phase — see theme-* tokens).
+     Kept separate from the legacy tokens above so pages not yet migrated
+     don't break; each phase migrates its own files onto these. */
+  --theme-bg-main:            #FAF7F2;
+  --theme-bg-soft:       #F4EFE8;
+  --theme-bg-white:            #FFFFFF;
+  --theme-bg-dark:             #18130F;
+  --theme-bg-dark-panel:       #241E1A;
+
+  --theme-text-main:              #17120E;
+  --theme-text-muted:        #746D66;
+  --theme-text-light:        #F7F2EC;
+  --theme-text-light-muted:  #A9A09A;
+
+  --theme-accent-orange:           #E95A2A;
+  --theme-accent-orange-dark:      #C9471F;
+  --theme-accent-green:            #2F8F5B;
+  --theme-accent-green-soft:       #E8F6ED;
+
+  --theme-border-light:     rgba(23, 18, 14, 0.12);
+  --theme-border-dark:      rgba(247, 242, 236, 0.14);
+
+  --theme-shadow-soft:      0 24px 70px rgba(23, 18, 14, 0.08);
+  --theme-shadow-card:      0 14px 40px rgba(23, 18, 14, 0.06);
+
   font-size: 16px;
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -91,3 +116,61 @@ h3,
 p { margin: 0; }
 
 main { flex: 1; }
+
+/* Shared buttons — new orange brand direction. Centralized here (rather than
+   left duplicated per-section) so every page picks up the same primary/
+   secondary button regardless of which component CSS happens to load. */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 30px;
+  border-radius: 999px;
+  border: 1px solid var(--theme-accent-orange);
+  background: var(--theme-accent-orange);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.btn-primary:hover {
+  background: var(--theme-accent-orange-dark);
+  border-color: var(--theme-accent-orange-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(233, 90, 42, 0.22);
+}
+.btn-primary:active { transform: translateY(0); }
+.btn-primary svg { transition: transform 0.2s; }
+.btn-primary:hover svg { transform: translateX(3px); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 30px;
+  border-radius: 999px;
+  background: var(--theme-bg-white);
+  color: var(--theme-text-main);
+  border: 1px solid var(--theme-border-light);
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease,
+              background 0.25s ease;
+}
+.btn-ghost:hover {
+  transform: translateY(-1px);
+  color: var(--theme-accent-orange-dark);
+  border-color: rgba(233, 90, 42, 0.4);
+  background: var(--theme-bg-soft);
+}

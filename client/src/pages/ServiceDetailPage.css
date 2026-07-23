@@ -2,31 +2,48 @@
    Mirrors ServiceIosPage.css structure with .svc-* prefix.
    iOS page keeps its own .ios-* CSS — this file does NOT affect it. */
 
-.svc-page { padding-top: 80px; background: var(--black); }
+.svc-page { padding-top: 80px; background: var(--theme-bg-main); }
 .svc-container { max-width: 1100px; margin: 0 auto; }
+
+.svc-page .section-eyebrow {
+  color: var(--theme-accent-orange);
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.svc-page .section-eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: var(--theme-accent-orange);
+  border-radius: 2px;
+}
 
 /* ── Hero ─────────────────────────────────────────────────────── */
 .svc-hero {
-  padding: 5rem 4rem;
+  padding: 7rem 4rem 5rem;
   display: grid;
   grid-template-columns: 1fr 380px;
   gap: 4rem;
   align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: var(--theme-bg-main);
 }
 .svc-hero h1 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
-  font-weight: 800;
-  color: var(--white);
-  line-height: 1.1;
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+  font-weight: 700;
+  color: var(--theme-text-main);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   margin: 0.75rem 0 1rem;
 }
-.svc-hero h1 em { font-style: italic; color: var(--accent); }
+.svc-hero h1 em { font-style: normal; color: var(--theme-accent-orange); }
 .svc-hero-content > p {
   font-size: 1.05rem;
-  color: var(--gray);
-  font-weight: 300;
+  color: var(--theme-text-muted);
+  font-weight: 400;
   margin-bottom: 2rem;
   max-width: 480px;
   line-height: 1.7;
@@ -35,15 +52,16 @@
 
 /* ── Snapshot panel ───────────────────────────────────────────── */
 .svc-snapshot {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--theme-bg-white);
+  border: 1px solid var(--theme-border-light);
   border-radius: 20px;
   padding: 2rem;
+  box-shadow: var(--theme-shadow-soft);
 }
 .svc-snapshot-header {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--theme-accent-orange);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1.5rem;
@@ -53,11 +71,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid var(--theme-border-light);
   font-size: 0.875rem;
 }
-.svc-snapshot-row span { color: var(--gray); }
-.svc-snapshot-row strong { color: var(--white); font-weight: 500; }
+.svc-snapshot-row span { color: var(--theme-text-muted); }
+.svc-snapshot-row strong { color: var(--theme-text-main); font-weight: 600; }
 .svc-snapshot-cta {
   display: inline-flex;
   align-items: center;
@@ -66,60 +84,71 @@
   min-height: 54px;
   padding: 0 24px;
   border-radius: 999px;
-  border: 0;
-  background: var(--brand-gradient);
-  color: #01040B;
+  border: 1px solid var(--theme-accent-orange);
+  background: var(--theme-accent-orange);
+  color: #fff;
   text-decoration: none;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--font-body);
   font-weight: 800;
   font-size: 0.95rem;
   letter-spacing: -0.01em;
   margin-top: 1.5rem;
-  box-shadow: 0 14px 36px rgba(54, 231, 192, 0.18);
-  transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 .svc-snapshot-cta:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.04);
-  box-shadow: 0 20px 50px rgba(54, 231, 192, 0.26);
+  transform: translateY(-1px);
+  background: var(--theme-accent-orange-dark);
+  border-color: var(--theme-accent-orange-dark);
 }
 .svc-snapshot-cta:active { transform: translateY(0); }
 
 /* ── What's included ──────────────────────────────────────────── */
-.svc-included { padding: 5rem 4rem; }
+.svc-included { padding: 5rem 4rem; background: var(--theme-bg-soft); }
 .svc-included h2 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 800;
-  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+  font-weight: 700;
+  color: var(--theme-text-main);
   margin: 0.75rem 0 3rem;
 }
-.svc-included h2 em { font-style: italic; color: var(--accent); }
+.svc-included h2 em { font-style: normal; color: var(--theme-accent-orange); }
 .svc-included-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
 }
 .svc-included-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 14px;
+  background: var(--theme-bg-white);
+  border: 1px solid var(--theme-border-light);
+  border-radius: 16px;
   padding: 1.5rem;
-  transition: border-color 0.25s, transform 0.25s;
+  box-shadow: var(--theme-shadow-card);
+  transition: transform 0.25s;
 }
-.svc-included-card:hover { border-color: rgba(54,231,192,0.3); transform: translateY(-3px); }
-.svc-included-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+.svc-included-card:hover { transform: translateY(-3px); }
+.svc-included-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(233, 90, 42, 0.1);
+  color: var(--theme-accent-orange);
+  margin-bottom: 0.9rem;
+}
+.svc-included-icon svg { width: 20px; height: 20px; stroke-width: 1.8; }
 .svc-included-card h3 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--theme-text-main);
   margin-bottom: 0.5rem;
 }
 .svc-included-card p {
   font-size: 0.8rem;
-  color: var(--gray);
-  font-weight: 300;
+  color: var(--theme-text-muted);
+  font-weight: 400;
   line-height: 1.6;
   margin: 0;
 }
@@ -127,43 +156,41 @@
 /* ── Tech stack ───────────────────────────────────────────────── */
 .svc-tech {
   padding: 5rem 4rem;
-  background: rgba(255,255,255,0.02);
-  border-top: 1px solid rgba(255,255,255,0.06);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: var(--theme-bg-main);
 }
 .svc-tech h2 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--theme-text-main);
   margin: 0.75rem 0 3rem;
 }
 .svc-tech-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
 .svc-tech-group h4 {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  color: rgba(250,250,247,0.3);
+  color: var(--theme-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
 }
 .svc-tech-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .svc-tech-pill {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--theme-bg-soft);
+  border: 1px solid var(--theme-border-light);
   border-radius: 100px;
   padding: 0.35rem 0.85rem;
   font-size: 0.78rem;
-  color: rgba(250,250,247,0.7);
+  color: var(--theme-text-main);
 }
 
 /* ── Process ──────────────────────────────────────────────────── */
-.svc-process { padding: 5rem 4rem; }
+.svc-process { padding: 5rem 4rem; background: var(--theme-bg-dark); }
 .svc-process h2 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--theme-text-light);
   margin: 0.75rem 0 3rem;
 }
 .svc-process-list { display: flex; flex-direction: column; gap: 0; }
@@ -172,38 +199,38 @@
   gap: 2rem;
   align-items: flex-start;
   padding: 2rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid var(--theme-border-dark);
 }
 .svc-process-item:last-child { border-bottom: none; }
 .svc-process-step {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 2.5rem;
   font-weight: 800;
-  color: rgba(54,231,192,0.15);
+  color: rgba(233, 90, 42, 0.28);
   width: 80px;
   flex-shrink: 0;
   line-height: 1;
 }
 .svc-process-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
 .svc-process-meta h3 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--theme-text-light);
   margin: 0;
 }
 .svc-process-meta span {
   font-size: 0.72rem;
-  color: var(--accent);
-  background: rgba(54,231,192,0.1);
+  color: var(--theme-accent-orange);
+  background: rgba(233, 90, 42, 0.14);
   padding: 0.2rem 0.6rem;
   border-radius: 100px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .svc-process-body p {
   font-size: 0.875rem;
-  color: var(--gray);
-  font-weight: 300;
+  color: var(--theme-text-light-muted);
+  font-weight: 400;
   line-height: 1.6;
   margin: 0;
 }
@@ -211,18 +238,17 @@
 /* ── FAQ ──────────────────────────────────────────────────────── */
 .svc-faq {
   padding: 5rem 4rem;
-  background: rgba(255,255,255,0.02);
-  border-top: 1px solid rgba(255,255,255,0.06);
+  background: var(--theme-bg-main);
 }
 .svc-faq h2 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--theme-text-main);
   margin: 0.75rem 0 2.5rem;
 }
 .svc-faq-list { max-width: 800px; }
-.svc-faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
+.svc-faq-item { border-bottom: 1px solid var(--theme-border-light); }
 .svc-faq-item button {
   width: 100%;
   background: none;
@@ -233,35 +259,35 @@
   align-items: center;
   gap: 1rem;
   cursor: pointer;
-  color: var(--white);
+  color: var(--theme-text-main);
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   text-align: left;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: var(--font-body);
 }
-.svc-faq-item button svg { flex-shrink: 0; color: var(--gray); transition: transform 0.25s; }
-.svc-faq-item.open button svg { transform: rotate(180deg); }
+.svc-faq-item button svg { flex-shrink: 0; color: var(--theme-text-muted); transition: transform 0.25s; }
+.svc-faq-item.open button svg { transform: rotate(180deg); color: var(--theme-accent-orange); }
 .svc-faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
 .svc-faq-item.open .svc-faq-answer { max-height: 200px; }
 .svc-faq-answer p {
   padding-bottom: 1.25rem;
-  color: var(--gray);
+  color: var(--theme-text-muted);
   font-size: 0.875rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.7;
   margin: 0;
 }
 
 /* ── Related services ─────────────────────────────────────────── */
 .svc-related {
-  padding: 4rem 4rem;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 4rem 4rem 5rem;
+  background: var(--theme-bg-soft);
 }
 .svc-related h3 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 1rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
   font-weight: 700;
-  color: rgba(250,250,247,0.3);
+  color: var(--theme-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1.5rem;
@@ -273,16 +299,16 @@
   align-items: center;
   gap: 0.75rem;
   padding: 1.25rem 1.5rem;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
+  background: var(--theme-bg-white);
+  border: 1px solid var(--theme-border-light);
+  border-radius: 14px;
   text-decoration: none;
   transition: border-color 0.2s, transform 0.2s;
 }
-.svc-related-card:hover { border-color: rgba(54,231,192,0.35); transform: translateY(-2px); }
-.svc-related-card > span:first-child { font-size: 1.25rem; }
-.svc-related-card p { flex: 1; color: var(--white); font-size: 0.875rem; font-weight: 500; margin: 0; }
-.svc-related-arrow { color: var(--accent); font-size: 1rem; }
+.svc-related-card:hover { border-color: rgba(233, 90, 42, 0.35); transform: translateY(-2px); }
+.svc-related-icon { width: 20px; height: 20px; color: var(--theme-accent-orange); stroke-width: 1.8; flex-shrink: 0; }
+.svc-related-card p { flex: 1; color: var(--theme-text-main); font-size: 0.875rem; font-weight: 600; margin: 0; }
+.svc-related-arrow { color: var(--theme-accent-orange); font-size: 1rem; }
 
 /* ── Responsive ───────────────────────────────────────────────── */
 @media (max-width: 1024px) {

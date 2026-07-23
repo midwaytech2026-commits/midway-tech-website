@@ -7,11 +7,12 @@ import {
   Server,
   Rocket,
   PenTool,
+  Megaphone,
   ArrowRight,
 } from 'lucide-react'
 import './PortfolioPage.css'
 
-const filters = ['All', 'Mobile Apps', 'Websites', 'AI Automation', 'MVP', 'Backend Systems']
+const filters = ['All', 'Websites', 'Mobile Apps', 'AI Automation', 'MVP', 'Growth Systems', 'Backend Systems']
 
 interface Capability {
   id: string
@@ -60,6 +61,17 @@ const capabilities: Capability[] = [
     timeline: '3–8 weeks',
   },
   {
+    id: 'growth',
+    Icon: Megaphone,
+    title: 'Growth & Marketing Systems',
+    tagline: 'Systems built to drive measurable revenue',
+    category: 'Growth Systems',
+    tags: ['Growth Systems'],
+    desc: 'Performance marketing, SEO, lead capture funnels, and email/CRM systems connected to real business outcomes — not vanity metrics.',
+    techStack: ['Meta Ads', 'Google Ads', 'SEO', 'Email Automation', 'CRM Integration', 'Analytics'],
+    timeline: 'Ongoing / 4+ weeks',
+  },
+  {
     id: 'mvp',
     Icon: Rocket,
     title: 'MVP Development',
@@ -106,9 +118,9 @@ export default function PortfolioPage() {
 
       <section className="pp-hero">
         <div className="pp-hero-inner">
-          <span className="section-eyebrow">Our Work</span>
-          <h1>What We're <em>Built to Ship</em></h1>
-          <p>We're a focused team with a short track record and high standards. Here's what we build and how we build it.</p>
+          <span className="section-eyebrow">Case Studies / Portfolio</span>
+          <h1>Work, Concepts, and Product Systems Built to Scale</h1>
+          <p>A look at the types of websites, apps, AI systems, and growth platforms MidwayTech is built to deliver.</p>
         </div>
       </section>
 
@@ -141,6 +153,7 @@ export default function PortfolioPage() {
                       <Icon className="pp-card-icon" aria-hidden="true" />
                     </div>
                     <div className="pp-card-body">
+                      <span className="pp-card-badge">BUILD CAPABILITY</span>
                       <div className="pp-card-tags">
                         {cap.tags.map(t => <span key={t}>{t}</span>)}
                       </div>

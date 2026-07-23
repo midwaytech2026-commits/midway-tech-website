@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { ChangeEvent } from 'react'
+import { Mail, MessageCircle, Link2, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { api } from '../services/api'
 import ComingSoonModal from '../components/common/ComingSoonModal'
 import './ContactPage.css'
@@ -86,9 +87,9 @@ export default function ContactPage() {
       />
       <section className="cp-hero">
         <div className="cp-hero-inner">
-          <span className="section-eyebrow">Contact Us</span>
-          <h1>Let's Build Something<br /><em>Together</em></h1>
-          <p>Tell us about your project and we'll get back to you within 24 hours with a detailed proposal.</p>
+          <span className="section-eyebrow">Contact</span>
+          <h1>Let&apos;s Build Your Next Growth System</h1>
+          <p>Tell us what you are building. We&apos;ll help you understand the right next step, scope, timeline, and budget.</p>
         </div>
       </section>
 
@@ -106,15 +107,15 @@ export default function ContactPage() {
 
             <div className="cp-contact-links">
               <a href="mailto:hello@midwaytech.co" className="cp-contact-item">
-                <div className="cp-contact-icon">✉</div>
+                <div className="cp-contact-icon"><Mail size={18} aria-hidden="true" /></div>
                 <div><strong>Email us</strong><span>hello@midwaytech.co</span></div>
               </a>
               <button type="button" className="cp-contact-item" onClick={() => setComingSoon('WhatsApp')}>
-                <div className="cp-contact-icon">💬</div>
+                <div className="cp-contact-icon"><MessageCircle size={18} aria-hidden="true" /></div>
                 <div><strong>WhatsApp</strong><span>Quick questions welcome</span></div>
               </button>
               <button type="button" className="cp-contact-item" onClick={() => setComingSoon('LinkedIn')}>
-                <div className="cp-contact-icon">in</div>
+                <div className="cp-contact-icon"><Link2 size={18} aria-hidden="true" /></div>
                 <div><strong>LinkedIn</strong><span>Connect with our team</span></div>
               </button>
             </div>
@@ -138,7 +139,7 @@ export default function ContactPage() {
           <div className="cp-form-wrap">
             {submitted ? (
               <div className="cp-success">
-                <div className="cp-success-icon">✓</div>
+                <div className="cp-success-icon"><CheckCircle2 aria-hidden="true" /></div>
                 <h2>Message received!</h2>
                 <p>We'll review your project details and get back to you within 24 hours.</p>
               </div>
@@ -218,7 +219,7 @@ export default function ContactPage() {
                 </div>
 
                 <button type="submit" className="cp-submit" disabled={submitting}>
-                  {submitting ? 'Sending…' : 'Send Project Brief →'}
+                  {submitting ? 'Sending…' : <>Send Message <ArrowRight size={16} aria-hidden="true" /></>}
                 </button>
 
                 {error && <p className="cp-error">{error}</p>}

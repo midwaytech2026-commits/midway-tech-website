@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { PenTool, Bird, Wrench, Bell, CreditCard, CheckCircle2, ShieldCheck, Atom, Smartphone, Bot } from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceDetailPage.css'
 
 const included = [
-  { icon: '🎨', title: 'Custom Flutter UI Design',  desc: 'Pixel-perfect Figma designs with Flutter component specs, ready for dev handoff.' },
-  { icon: '🐦', title: 'Dart & Flutter 3',          desc: "Latest stable Flutter using Material 3 and Cupertino widgets for a native look on both platforms." },
-  { icon: '🔧', title: 'Platform Channels',         desc: 'Native Swift/Kotlin integrations via platform channels for any API Flutter cannot reach natively.' },
-  { icon: '🔔', title: 'Push Notifications',        desc: 'Firebase Cloud Messaging with rich notification support across iOS and Android.' },
-  { icon: '💳', title: 'In-App Purchases',          desc: 'StoreKit 2 + Google Play Billing integration for subscriptions and one-time purchases.' },
-  { icon: '✅', title: 'Dual Store Submission',      desc: 'App Store + Google Play submission handled end-to-end by our team.' },
-  { icon: '🛡', title: '3-Month Support',            desc: 'Bug fixes and minor updates after launch, included in every engagement.' },
+  { Icon: PenTool, title: 'Custom Flutter UI Design',  desc: 'Pixel-perfect Figma designs with Flutter component specs, ready for dev handoff.' },
+  { Icon: Bird, title: 'Dart & Flutter 3',          desc: "Latest stable Flutter using Material 3 and Cupertino widgets for a native look on both platforms." },
+  { Icon: Wrench, title: 'Platform Channels',         desc: 'Native Swift/Kotlin integrations via platform channels for any API Flutter cannot reach natively.' },
+  { Icon: Bell, title: 'Push Notifications',        desc: 'Firebase Cloud Messaging with rich notification support across iOS and Android.' },
+  { Icon: CreditCard, title: 'In-App Purchases',          desc: 'StoreKit 2 + Google Play Billing integration for subscriptions and one-time purchases.' },
+  { Icon: CheckCircle2, title: 'Dual Store Submission',      desc: 'App Store + Google Play submission handled end-to-end by our team.' },
+  { Icon: ShieldCheck, title: '3-Month Support',            desc: 'Bug fixes and minor updates after launch, included in every engagement.' },
 ]
 
 const techStack = {
@@ -52,9 +53,9 @@ const faqItems = [
 ]
 
 const relatedServices = [
-  { title: 'React Native',        slug: '/services/react-native', icon: '⚛️' },
-  { title: 'iOS Development',     slug: '/services/ios',          icon: '📱' },
-  { title: 'Android Development', slug: '/services/android',      icon: '🤖' },
+  { title: 'React Native',        slug: '/services/react-native', Icon: Atom },
+  { title: 'iOS Development',     slug: '/services/ios',          Icon: Smartphone },
+  { title: 'Android Development', slug: '/services/android',      Icon: Bot },
 ]
 
 export default function ServiceFlutterPage() {
@@ -92,7 +93,7 @@ export default function ServiceFlutterPage() {
           <div className="svc-included-grid">
             {included.map(item => (
               <div key={item.title} className="svc-included-card">
-                <div className="svc-included-icon">{item.icon}</div>
+                <div className="svc-included-icon"><item.Icon aria-hidden="true" /></div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -165,7 +166,7 @@ export default function ServiceFlutterPage() {
           <div className="svc-related-grid">
             {relatedServices.map(s => (
               <Link key={s.title} to={s.slug} className="svc-related-card">
-                <span>{s.icon}</span>
+                <s.Icon className="svc-related-icon" aria-hidden="true" />
                 <p>{s.title}</p>
                 <span className="svc-related-arrow">→</span>
               </Link>

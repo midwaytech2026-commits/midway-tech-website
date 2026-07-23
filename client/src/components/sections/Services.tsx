@@ -1,97 +1,61 @@
-import {
-  Smartphone,
-  Globe2,
-  PenTool,
-  Rocket,
-  Bot,
-  Megaphone,
-  Database,
-  Lightbulb,
-} from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Layers, Megaphone, Bot } from 'lucide-react'
 import './Services.css'
 
-const services = [
+const disciplines = [
   {
-    id: '1',
-    Icon: Smartphone,
-    title: 'Mobile App Development',
-    description: 'Native and cross-platform iOS and Android apps built for performance, scalability, and App Store approval.',
-    tags: ['iOS', 'Android', 'React Native', 'Flutter'],
+    id: 'product',
+    Icon: Layers,
+    accent: 'orange',
+    title: 'Product & Technology',
+    description: 'Websites, apps, Shopify stores, and custom software built to global standards — engineered for scale from the start.',
+    tags: ['Web Apps', 'Mobile', 'SaaS', 'UI/UX', 'Shopify'],
   },
   {
-    id: '2',
-    Icon: Globe2,
-    title: 'Website Development',
-    description: 'Custom websites and web applications built for speed, SEO, and conversion — from landing pages to full platforms.',
-    tags: ['React', 'Next.js', 'TypeScript'],
-  },
-  {
-    id: '3',
-    Icon: PenTool,
-    title: 'UI/UX Design',
-    description: 'Wireframes, prototypes, and pixel-perfect Figma designs that feel intuitive and convert users into loyal customers.',
-    tags: ['Figma', 'Prototyping', 'User Research'],
-  },
-  {
-    id: '4',
-    Icon: Rocket,
-    title: 'MVP Development',
-    description: 'Validate your product idea with structured MVP sprints, focused feature scope, and fast launch-ready execution.',
-    tags: ['Rapid Build', 'User Testing', 'Product Strategy'],
-  },
-  {
-    id: '5',
-    Icon: Bot,
-    title: 'AI Automation',
-    description: 'Intelligent workflows, AI integrations, and automation systems that reduce manual work and unlock new capabilities.',
-    tags: ['LLM Integration', 'Workflow AI', 'Smart Agents'],
-  },
-  {
-    id: '6',
+    id: 'growth',
     Icon: Megaphone,
-    title: 'Digital Marketing',
-    description: 'Growth-focused SEO, performance ads, and content strategy that brings the right audience to your product.',
-    tags: ['SEO', 'Performance Ads', 'Growth Strategy'],
+    accent: 'orange',
+    title: 'Growth Marketing',
+    description: 'Marketing systems built to drive measurable revenue — performance, SEO, social, email, and branding connected to outcomes.',
+    tags: ['Performance', 'SEO', 'Social', 'Email', 'Branding'],
   },
   {
-    id: '7',
-    Icon: Database,
-    title: 'Backend Development',
-    description: 'Robust APIs, databases, and cloud infrastructure designed for scale, security, and seamless integrations.',
-    tags: ['Node.js', 'PostgreSQL', 'AWS / GCP'],
-  },
-  {
-    id: '8',
-    Icon: Lightbulb,
-    title: 'Brand & Product Strategy',
-    description: 'Positioning, product roadmaps, and go-to-market planning that align your vision with what the market actually needs.',
-    tags: ['Product Roadmap', 'Brand Positioning', 'GTM Planning'],
+    id: 'ai',
+    Icon: Bot,
+    accent: 'green',
+    title: 'AI & Automation',
+    description: 'AI chatbots, workflow automations, CRM systems, and intelligent tools that reduce cost, qualify leads, and multiply output.',
+    tags: ['AI Chatbots', 'Workflow', 'CRM Auto', 'Lead Qual.'],
   },
 ]
 
 export default function Services() {
   return (
-    <section id="services" className="services-section">
-      <p className="section-eyebrow">What We Build</p>
-      <h2 className="section-title">AI-First Products for Startups and Growing Businesses</h2>
-      <p className="section-sub">We combine speed, design, automation, and engineering precision to help businesses launch faster and scale smarter.</p>
+    <section id="services" className="wwd-section">
+      <p className="wwd-eyebrow">What We Do</p>
+      <h2 className="wwd-title">Three Disciplines. One Partner. Everything to Scale.</h2>
 
-      <div className="services-grid">
-        {services.map(service => {
-          const Icon = service.Icon
+      <div className="wwd-grid">
+        {disciplines.map(d => {
+          const Icon = d.Icon
           return (
-            <div key={service.id} className="service-card">
-              <div className="service-icon-wrap">
-                <Icon className="service-icon" aria-hidden="true" />
+            <div key={d.id} className="wwd-card">
+              <div className={`wwd-icon-wrap wwd-icon-${d.accent}`}>
+                <Icon className="wwd-icon" aria-hidden="true" />
               </div>
-              <div className="service-name">{service.title}</div>
-              <div className="service-desc">{service.description}</div>
-              <div className="service-tags">
-                {service.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
+              <h3>{d.title}</h3>
+              <p>{d.description}</p>
+              <div className="wwd-tags">
+                {d.tags.map(tag => <span key={tag} className="wwd-tag">{tag}</span>)}
               </div>
             </div>
           )
         })}
+      </div>
+
+      <div className="wwd-cta-strip">
+        <p>Not sure what you need? Book a free 30-minute strategy call — we&apos;ll map it out.</p>
+        <Link to="/contact" className="btn-primary">Get a Quote</Link>
       </div>
     </section>
   )

@@ -1,49 +1,24 @@
-import { BrainCircuit, Rocket, Layers, Network } from 'lucide-react'
+import { TrendingUp, Code2, Bot } from 'lucide-react'
 import './WhyUs.css'
 
-const reasons = [
+const pillars = [
   {
     num: '01',
-    title: 'Fixed-scope, fixed-price projects',
-    desc: 'No surprise invoices. We scope your project in detail upfront, agree on a price, and stick to it. Every time.',
+    title: 'Grow',
+    Icon: TrendingUp,
+    desc: 'Marketing systems that generate revenue, not impressions.',
   },
   {
     num: '02',
-    title: 'You own everything, always',
-    desc: 'Full source code, IP, and asset ownership transferred to you on day one of payment. No lock-in, ever.',
+    title: 'Build',
+    Icon: Code2,
+    desc: 'Technology engineered for your business model.',
   },
   {
     num: '03',
-    title: 'Weekly demos, not monthly surprises',
-    desc: "Every Friday you see exactly what's been built. Async Loom updates + a live demo call — your choice.",
-  },
-  {
-    num: '04',
-    title: 'Timezone-friendly communication',
-    desc: 'Dedicated Slack channel with 4-hour response SLA. We overlap with US/UK/AU business hours every day.',
-  },
-]
-
-const differentiators = [
-  {
-    Icon: BrainCircuit,
-    title: 'AI-first thinking',
-    desc: 'We look for automation opportunities from day one, not after the product is already built.',
-  },
-  {
-    Icon: Rocket,
-    title: 'Speed with structure',
-    desc: 'Fast delivery does not mean random execution. We work with clear scope, milestones, and approval points.',
-  },
-  {
-    Icon: Layers,
-    title: 'Product-level precision',
-    desc: 'We focus on user flows, scalable architecture, clean UI, and business outcomes — not just screens.',
-  },
-  {
-    Icon: Network,
-    title: 'Built for growth',
-    desc: 'Every product is planned with future features, integrations, analytics, and scale in mind.',
+    title: 'Automate',
+    Icon: Bot,
+    desc: 'AI systems that remove friction and multiply output.',
   },
 ]
 
@@ -51,36 +26,29 @@ export default function WhyUs() {
   return (
     <section className="why-section" id="why">
       <p className="why-eyebrow">Why MidwayTech</p>
-      <h2 className="why-title">Why Growing Businesses Choose MidwayTech</h2>
-      <p className="why-sub">We work like a product partner — combining strategy, design, engineering, AI automation, and execution speed to help businesses build systems that can actually scale.</p>
+      <blockquote className="why-quote">
+        Most businesses waste months coordinating between a marketing agency, a development agency,
+        and an AI consultant. We built MidwayTech so you never have to.
+      </blockquote>
+      <p className="why-sub">
+        One team. One relationship. One invoice. Marketing, technology, and AI — all connected toward
+        the same goal: growing your business.
+      </p>
 
       <div className="why-grid">
-        <div className="why-list">
-          {reasons.map(r => (
-            <div key={r.num} className="why-item">
-              <div className="why-num">{r.num}</div>
-              <div className="why-content">
-                <h3>{r.title}</h3>
-                <p>{r.desc}</p>
+        {pillars.map(p => {
+          const Icon = p.Icon
+          return (
+            <div key={p.num} className="why-card">
+              <div className="why-card-top">
+                <span className="why-card-num">{p.num}</span>
+                <span className="why-card-icon-wrap"><Icon className="why-card-icon" aria-hidden="true" /></span>
               </div>
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
             </div>
-          ))}
-        </div>
-
-        <div className="why-diff-grid">
-          {differentiators.map(d => {
-            const Icon = d.Icon
-            return (
-              <div key={d.title} className="why-diff-card">
-                <div className="why-diff-icon-wrap">
-                  <Icon className="why-diff-icon" aria-hidden="true" />
-                </div>
-                <h3>{d.title}</h3>
-                <p>{d.desc}</p>
-              </div>
-            )
-          })}
-        </div>
+          )
+        })}
       </div>
     </section>
   )

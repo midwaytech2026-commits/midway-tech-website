@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { PenTool, Zap, Link2, Bell, CreditCard, CheckCircle2, ShieldCheck, Bot, Atom } from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceIosPage.css'
 
 const included = [
-  { icon: '🎨', title: 'Custom UI/UX Design', desc: 'Figma designs following Apple HIG, tailored to your brand.' },
-  { icon: '⚡', title: 'Swift & SwiftUI', desc: 'Modern, performant code using Apple\'s latest frameworks.' },
-  { icon: '🔗', title: 'API & Backend Integration', desc: 'REST, GraphQL, WebSocket — we connect to any backend.' },
-  { icon: '🔔', title: 'Push Notifications', desc: 'APNs integration for transactional and marketing messages.' },
-  { icon: '💳', title: 'In-App Purchases', desc: 'Subscriptions, consumables, and StoreKit 2 setup.' },
-  { icon: '✅', title: 'App Store Submission', desc: 'Full App Store review handling and TestFlight QA setup.' },
-  { icon: '🛡', title: '3-Month Support', desc: 'Bug fixes and minor updates after launch, included.' },
+  { Icon: PenTool, title: 'Custom UI/UX Design', desc: 'Figma designs following Apple HIG, tailored to your brand.' },
+  { Icon: Zap, title: 'Swift & SwiftUI', desc: 'Modern, performant code using Apple\'s latest frameworks.' },
+  { Icon: Link2, title: 'API & Backend Integration', desc: 'REST, GraphQL, WebSocket — we connect to any backend.' },
+  { Icon: Bell, title: 'Push Notifications', desc: 'APNs integration for transactional and marketing messages.' },
+  { Icon: CreditCard, title: 'In-App Purchases', desc: 'Subscriptions, consumables, and StoreKit 2 setup.' },
+  { Icon: CheckCircle2, title: 'App Store Submission', desc: 'Full App Store review handling and TestFlight QA setup.' },
+  { Icon: ShieldCheck, title: '3-Month Support', desc: 'Bug fixes and minor updates after launch, included.' },
 ]
 
 const techStack = {
@@ -52,9 +53,9 @@ const faqItems = [
 ]
 
 const relatedServices = [
-  { title: 'Android Development', slug: '/services/android',      icon: '🤖' },
-  { title: 'React Native',        slug: '/services/react-native', icon: '⚛️' },
-  { title: 'UI/UX Design',        slug: '/services/ui-ux',        icon: '🎨' },
+  { title: 'Android Development', slug: '/services/android',      Icon: Bot },
+  { title: 'React Native',        slug: '/services/react-native', Icon: Atom },
+  { title: 'UI/UX Design',        slug: '/services/ui-ux',        Icon: PenTool },
 ]
 
 export default function ServiceIosPage() {
@@ -92,7 +93,7 @@ export default function ServiceIosPage() {
           <div className="ios-included-grid">
             {included.map(item => (
               <div key={item.title} className="ios-included-card">
-                <div className="ios-included-icon">{item.icon}</div>
+                <div className="ios-included-icon"><item.Icon aria-hidden="true" /></div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -165,7 +166,7 @@ export default function ServiceIosPage() {
           <div className="ios-related-grid">
             {relatedServices.map(s => (
               <Link key={s.title} to={s.slug} className="ios-related-card">
-                <span>{s.icon}</span>
+                <s.Icon className="ios-related-icon" aria-hidden="true" />
                 <p>{s.title}</p>
                 <span className="ios-related-arrow">→</span>
               </Link>

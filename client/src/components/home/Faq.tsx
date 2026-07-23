@@ -4,28 +4,20 @@ import './Faq.css'
 
 const faqs = [
   {
-    q: 'Can you really deliver an MVP in 15 days?',
-    a: 'Yes, when requirements, content, accounts, assets, and approvals are finalized before the sprint begins.',
+    q: 'Are you a marketing agency or a tech agency?',
+    a: 'Neither, and both. MidwayTech is a growth and technology partner. One team handles your website, apps, marketing systems, and AI automation because they are all connected to the same business outcome.',
   },
   {
-    q: 'Do you work with international clients?',
-    a: 'Yes. MidwayTech works remotely with startups and businesses across different regions and time zones.',
+    q: 'Do you work internationally?',
+    a: 'Yes. We can work remotely with businesses across different regions and time zones.',
   },
   {
-    q: 'What technologies do you use?',
-    a: 'We use modern technologies including React Native, React, Node.js, PostgreSQL, Firebase, AWS, AI workflows, and scalable backend systems depending on project requirements.',
+    q: 'What is the typical engagement structure?',
+    a: 'We begin with discovery, define scope, provide a written quote, and then work in milestones with weekly updates.',
   },
   {
-    q: 'Do you provide UI/UX design?',
-    a: 'Yes. Product strategy and UI/UX design are included in our delivery process where required.',
-  },
-  {
-    q: 'Do you help after launch?',
-    a: 'Yes. Ongoing improvements, maintenance, and feature expansion can be discussed based on project needs.',
-  },
-  {
-    q: 'How is pricing decided?',
-    a: 'Final pricing depends on scope, integrations, AI workflows, backend complexity, number of screens, and delivery requirements.',
+    q: 'How do we get started?',
+    a: 'Book a free strategy call. We’ll understand your business, goals, and current systems, then recommend the right next step.',
   },
 ]
 
@@ -35,8 +27,8 @@ export default function Faq() {
   return (
     <section className="faq-section">
       <div className="faq-container">
-        <p className="section-eyebrow">FAQ</p>
-        <h2 className="section-title">Frequently Asked Questions</h2>
+        <p className="faq-eyebrow">Common Questions</p>
+        <h2 className="faq-title">Honest Answers to Questions Every Founder Asks</h2>
 
         <div className="faq-list">
           {faqs.map((item, i) => {

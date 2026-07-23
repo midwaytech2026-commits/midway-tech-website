@@ -1,0 +1,61 @@
+.ind-section {
+  background: var(--theme-bg-soft);
+  padding: 7rem 4rem;
+  text-align: center;
+}
+
+.ind-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  color: var(--theme-accent-orange);
+  margin-bottom: 1rem;
+}
+
+.ind-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--theme-text-main);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ind-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 3.5rem;
+}
+
+.ind-card {
+  background: var(--theme-bg-white);
+  border: 1px solid var(--theme-border-light);
+  border-radius: 16px;
+  padding: 1.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.ind-card:hover {
+  border-color: rgba(233, 90, 42, 0.35);
+  transform: translateY(-2px);
+}
+
+.ind-icon { width: 26px; height: 26px; stroke-width: 1.7; color: var(--theme-accent-orange); }
+
+.ind-card span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--theme-text-main);
+}
+
+@media (max-width: 900px) {
+  .ind-section { padding: 5rem 1.5rem; }
+  .ind-grid { grid-template-columns: 1fr 1fr; }
+}

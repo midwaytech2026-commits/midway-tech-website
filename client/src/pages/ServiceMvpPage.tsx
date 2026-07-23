@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Compass, PenTool, Zap, Link2, Rocket, FileText, ShieldCheck, Smartphone, Bot } from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceDetailPage.css'
 
 const included = [
-  { icon: '🔭', title: 'Scope Workshop',            desc: 'Half-day session to define features, cut scope to the essential, and align on success metrics.' },
-  { icon: '🎨', title: 'UI/UX Design Sprint',       desc: 'Wireframes, high-fidelity screens, and a clickable prototype — completed in 2 weeks.' },
-  { icon: '⚡', title: 'Core Feature Development',   desc: 'Lean, focused build with only the features your MVP hypothesis needs to validate.' },
-  { icon: '🔗', title: 'Backend API',               desc: 'Node.js REST API with authentication, database, and core endpoints — built to scale.' },
-  { icon: '🚀', title: 'App Store / Play Store Launch', desc: 'Full submission process handled by our team — screenshots, metadata, review management.' },
-  { icon: '📄', title: 'Investor-Ready Handover',   desc: 'Source code, architecture documentation, and a project summary slide deck for your investors.' },
-  { icon: '🛡', title: '60-Day Post-Launch Support', desc: 'Bug fixes and monitoring for 60 days after launch — because most issues appear in week one.' },
+  { Icon: Compass, title: 'Scope Workshop',            desc: 'Half-day session to define features, cut scope to the essential, and align on success metrics.' },
+  { Icon: PenTool, title: 'UI/UX Design Sprint',       desc: 'Wireframes, high-fidelity screens, and a clickable prototype — completed in 2 weeks.' },
+  { Icon: Zap, title: 'Core Feature Development',   desc: 'Lean, focused build with only the features your MVP hypothesis needs to validate.' },
+  { Icon: Link2, title: 'Backend API',               desc: 'Node.js REST API with authentication, database, and core endpoints — built to scale.' },
+  { Icon: Rocket, title: 'App Store / Play Store Launch', desc: 'Full submission process handled by our team — screenshots, metadata, review management.' },
+  { Icon: FileText, title: 'Investor-Ready Handover',   desc: 'Source code, architecture documentation, and a project summary slide deck for your investors.' },
+  { Icon: ShieldCheck, title: '60-Day Post-Launch Support', desc: 'Bug fixes and monitoring for 60 days after launch — because most issues appear in week one.' },
 ]
 
 const techStack = {
@@ -52,9 +53,9 @@ const faqItems = [
 ]
 
 const relatedServices = [
-  { title: 'iOS Development',     slug: '/services/ios',          icon: '📱' },
-  { title: 'Android Development', slug: '/services/android',      icon: '🤖' },
-  { title: 'UI/UX Design',        slug: '/services/ui-ux',        icon: '🎨' },
+  { title: 'iOS Development',     slug: '/services/ios',          Icon: Smartphone },
+  { title: 'Android Development', slug: '/services/android',      Icon: Bot },
+  { title: 'UI/UX Design',        slug: '/services/ui-ux',        Icon: PenTool },
 ]
 
 export default function ServiceMvpPage() {
@@ -92,7 +93,7 @@ export default function ServiceMvpPage() {
           <div className="svc-included-grid">
             {included.map(item => (
               <div key={item.title} className="svc-included-card">
-                <div className="svc-included-icon">{item.icon}</div>
+                <div className="svc-included-icon"><item.Icon aria-hidden="true" /></div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -165,7 +166,7 @@ export default function ServiceMvpPage() {
           <div className="svc-related-grid">
             {relatedServices.map(s => (
               <Link key={s.title} to={s.slug} className="svc-related-card">
-                <span>{s.icon}</span>
+                <s.Icon className="svc-related-icon" aria-hidden="true" />
                 <p>{s.title}</p>
                 <span className="svc-related-arrow">→</span>
               </Link>

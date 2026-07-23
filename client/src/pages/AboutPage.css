@@ -1,245 +1,220 @@
-.about-page { padding-top: 80px; background: var(--black); }
+.about-page { padding-top: 80px; background: var(--theme-bg-main); }
 .ap-container { max-width: 1200px; margin: 0 auto; }
 
+.about-page .section-eyebrow {
+  color: var(--theme-accent-orange);
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.about-page .section-eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background: var(--theme-accent-orange);
+  border-radius: 2px;
+}
+.about-page .ap-why .section-eyebrow,
+.about-page .ap-why .section-eyebrow::before {
+  color: var(--theme-accent-orange);
+}
+
+/* Hero */
 .ap-hero {
-  padding: 6rem 4rem 4rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 7rem 4rem 5rem;
+  background: var(--theme-bg-main);
 }
-.ap-hero-inner { max-width: 700px; margin-bottom: 4rem; }
+.ap-hero-inner { max-width: 700px; }
 .ap-hero h1 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
-  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.6vw, 3.75rem);
+  font-weight: 700;
+  color: var(--theme-text-main);
   line-height: 1.1;
-  margin: 0.75rem 0 1rem;
+  letter-spacing: -0.03em;
+  margin: 1rem 0 1.25rem;
 }
-.ap-hero h1 em { font-style: italic; color: var(--accent); }
-.ap-hero > .ap-hero-inner > p { font-size: 1.1rem; color: var(--gray); font-weight: 300; }
-.ap-hero-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  max-width: 900px;
+.ap-hero-sub {
+  font-size: 1.05rem;
+  color: var(--theme-text-muted);
+  line-height: 1.75;
+  max-width: 560px;
+  margin-bottom: 2.25rem;
 }
-.ap-stat {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 14px;
-  padding: 1.5rem;
-}
-.ap-stat strong {
-  display: block;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--white);
-  margin-bottom: 0.25rem;
-}
-.ap-stat span { font-size: 0.8rem; color: var(--gray); }
+.ap-hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-.ap-story {
-  padding: 5rem 4rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.ap-story-inner {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 5rem;
-  align-items: start;
-}
-.ap-story-text h2 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 800;
-  color: var(--white);
-  margin: 0.75rem 0 1.5rem;
-  line-height: 1.2;
-}
-.ap-story-text p {
+.ap-btn-primary,
+.ap-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 26px;
+  border-radius: 999px;
+  font-family: var(--font-body);
   font-size: 0.95rem;
-  color: var(--gray);
-  font-weight: 300;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-.ap-aside-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 12px;
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 0.75rem;
-}
-.ap-aside-card h4 { font-size: 0.7rem; font-weight: 700; color: rgba(250,250,247,0.3); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
-.ap-aside-card p { font-size: 0.875rem; color: var(--white); font-weight: 400; margin: 0; line-height: 1.5; }
-
-.ap-values {
-  padding: 5rem 4rem;
-  background: rgba(255,255,255,0.02);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.ap-values h2 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
-  color: var(--white);
-  margin: 0.75rem 0 3rem;
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
-.ap-values-grid {
+.ap-btn-primary {
+  background: var(--theme-accent-orange);
+  color: #fff;
+  border: 1px solid var(--theme-accent-orange);
+}
+.ap-btn-primary:hover {
+  background: var(--theme-accent-orange-dark);
+  border-color: var(--theme-accent-orange-dark);
+  transform: translateY(-1px);
+}
+.ap-btn-secondary {
+  background: var(--theme-bg-white);
+  color: var(--theme-text-main);
+  border: 1px solid var(--theme-border-light);
+}
+.ap-btn-secondary:hover {
+  color: var(--theme-accent-orange-dark);
+  border-color: rgba(233, 90, 42, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Why We Exist — dark contrast section */
+.ap-why {
+  background: var(--theme-bg-dark);
+  padding: 6rem 4rem;
+  text-align: center;
+}
+.ap-why .ap-container { max-width: 800px; }
+.ap-why .section-eyebrow { justify-content: center; }
+.ap-why h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+  font-weight: 700;
+  color: var(--theme-text-light);
+  letter-spacing: -0.02em;
+  margin: 1rem 0 1.25rem;
+}
+.ap-why-copy {
+  font-size: 1.02rem;
+  color: var(--theme-text-light-muted);
+  line-height: 1.75;
+}
+
+/* What We Believe */
+.ap-beliefs {
+  background: var(--theme-bg-main);
+  padding: 6rem 4rem;
+}
+.ap-beliefs h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+  font-weight: 700;
+  color: var(--theme-text-main);
+  letter-spacing: -0.02em;
+  margin: 1rem 0 3rem;
+}
+.ap-beliefs-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
-.ap-value-card {
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 16px;
-  padding: 2rem;
-  transition: border-color 0.25s;
+.ap-belief-card {
+  background: var(--theme-bg-white);
+  border: 1px solid var(--theme-border-light);
+  border-radius: 18px;
+  padding: 1.75rem;
+  box-shadow: var(--theme-shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-.ap-value-card:hover { border-color: rgba(54,231,192,0.3); }
-.ap-value-icon { font-size: 1.75rem; margin-bottom: 1rem; }
-.ap-value-card h3 { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
-.ap-value-card p { font-size: 0.85rem; color: var(--gray); font-weight: 300; line-height: 1.7; margin: 0; }
-
-.ap-team {
-  padding: 5rem 4rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+.ap-belief-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--theme-shadow-soft);
 }
-.ap-team h2 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 800;
-  color: var(--white);
-  margin: 0.75rem 0 3rem;
-}
-.ap-team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-.ap-team-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 16px;
-  padding: 2rem;
-  transition: border-color 0.25s;
-}
-.ap-team-card:hover { border-color: rgba(54,231,192,0.3); }
-.ap-team-avatar {
+.ap-belief-icon {
   width: 52px;
   height: 52px;
-  background: rgba(54,231,192,0.1);
-  border-radius: 50%;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  background: rgba(233, 90, 42, 0.1);
+  color: var(--theme-accent-orange);
+  margin-bottom: 1.25rem;
 }
-.ap-hiring .ap-team-avatar {
-  background: rgba(255,255,255,0.06);
-  font-size: 1.25rem;
+.ap-belief-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--theme-text-main);
+  margin-bottom: 0.6rem;
 }
-.ap-team-card h3 { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.25rem; }
-.ap-team-role { font-size: 0.75rem; color: var(--accent); font-weight: 500; margin-bottom: 0.75rem; }
-.ap-team-card p { font-size: 0.82rem; color: var(--gray); font-weight: 300; line-height: 1.6; margin: 0; }
-.ap-hiring-link {
-  display: inline-block;
-  margin-top: 1rem;
-  font-size: 0.82rem;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
+.ap-belief-card p {
+  font-size: 0.85rem;
+  color: var(--theme-text-muted);
+  line-height: 1.65;
 }
-.ap-hiring-link:hover { text-decoration: underline; }
 
-.ap-how {
-  padding: 5rem 4rem;
-  background: rgba(255,255,255,0.02);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+/* How We Work */
+.ap-process {
+  background: var(--theme-bg-soft);
+  padding: 6rem 4rem;
 }
-.ap-how h2 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 800;
-  color: var(--white);
-  margin: 0.75rem 0 3rem;
+.ap-process h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+  font-weight: 700;
+  color: var(--theme-text-main);
+  letter-spacing: -0.02em;
+  margin: 1rem 0 3rem;
 }
-.ap-how-grid {
+.ap-process-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
 }
-.ap-how-item {
-  border-top: 2px solid rgba(255,255,255,0.08);
-  padding-top: 1.5rem;
+.ap-process-card {
+  background: var(--theme-bg-white);
+  border: 1px solid var(--theme-border-light);
+  border-radius: 18px;
+  padding: 1.75rem;
 }
-.ap-how-item:nth-child(-n+3) { border-top-color: var(--accent); }
-.ap-how-num {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.1em;
-  margin-bottom: 0.75rem;
-}
-.ap-how-item h3 { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
-.ap-how-item p { font-size: 0.85rem; color: var(--gray); font-weight: 300; line-height: 1.7; margin: 0; }
-
-.ap-milestones { padding: 5rem 4rem; }
-.ap-milestones h2 {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+.ap-process-num {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
   font-weight: 800;
-  color: var(--white);
-  margin: 0.75rem 0 3rem;
+  color: var(--theme-accent-orange);
+  margin-bottom: 0.9rem;
 }
-.ap-timeline {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  max-width: 700px;
-  padding-left: 2rem;
-  border-left: 2px solid rgba(255,255,255,0.1);
-}
-.ap-milestone {
-  padding: 0 0 2.5rem 2rem;
-  position: relative;
-}
-.ap-milestone-dot {
-  position: absolute;
-  left: -0.55rem;
-  top: 0.35rem;
-  width: 10px;
-  height: 10px;
-  background: var(--accent);
-  border-radius: 50%;
-  border: 2px solid var(--black);
-}
-.ap-milestone-year {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 0.75rem;
+.ap-process-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 0.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  color: var(--theme-text-main);
+  margin-bottom: 0.6rem;
 }
-.ap-milestone-event { font-size: 0.95rem; color: var(--white); font-weight: 400; }
+.ap-process-card p {
+  font-size: 0.85rem;
+  color: var(--theme-text-muted);
+  line-height: 1.65;
+}
+.ap-trust-line {
+  font-size: 0.88rem;
+  color: var(--theme-text-muted);
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
 
 @media (max-width: 1024px) {
-  .ap-values-grid { grid-template-columns: repeat(2, 1fr); }
-  .ap-team-grid { grid-template-columns: repeat(2, 1fr); }
-  .ap-how-grid { grid-template-columns: repeat(2, 1fr); }
+  .ap-beliefs-grid { grid-template-columns: repeat(2, 1fr); }
+  .ap-process-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-  .ap-hero, .ap-story, .ap-values, .ap-team, .ap-how, .ap-milestones { padding: 3rem 1.5rem; }
-  .ap-hero-stats { grid-template-columns: repeat(2, 1fr); }
-  .ap-story-inner { grid-template-columns: 1fr; gap: 2rem; }
-  .ap-values-grid { grid-template-columns: 1fr; }
-  .ap-team-grid { grid-template-columns: 1fr; }
-  .ap-how-grid { grid-template-columns: 1fr; }
+  .ap-hero, .ap-why, .ap-beliefs, .ap-process { padding: 3.5rem 1.5rem; }
+  .ap-beliefs-grid { grid-template-columns: 1fr; }
+  .ap-process-grid { grid-template-columns: 1fr; }
 }
