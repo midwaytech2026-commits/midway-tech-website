@@ -1,6 +1,6 @@
 .cta-section {
   background: var(--theme-bg-soft);
-  padding: 7rem 4rem;
+  padding: 5.5rem 4rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -72,10 +72,10 @@
 .cta-email-button {
   width: 100%;
   min-height: 54px;
-  border: 1px solid var(--theme-accent-orange);
+  border: 1px solid var(--theme-accent-green);
   border-radius: 999px;
   cursor: pointer;
-  background: var(--theme-accent-orange);
+  background: var(--theme-accent-green);
   color: #fff;
   font-family: var(--font-body);
   font-size: 0.98rem;
@@ -90,8 +90,9 @@
 
 .cta-email-button:hover {
   transform: translateY(-1px);
-  background: var(--theme-accent-orange-dark);
-  border-color: var(--theme-accent-orange-dark);
+  background: var(--theme-accent-green-dark);
+  border-color: var(--theme-accent-green-dark);
+  box-shadow: 0 14px 34px rgba(47, 143, 91, 0.22);
 }
 
 .cta-email-button:active { transform: translateY(0); }
@@ -109,7 +110,7 @@
 }
 
 @media (max-width: 900px) {
-  .cta-section { padding: 5rem 1.5rem; }
+  .cta-section { padding: 3.5rem 1.5rem; }
 }
 
 @media (max-width: 640px) {

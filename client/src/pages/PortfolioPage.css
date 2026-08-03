@@ -26,10 +26,11 @@
 
 /* Hero */
 .pp-hero {
-  padding: 7rem 4rem 4rem;
+  padding: 6rem 4rem 4rem;
   background: var(--theme-bg-main);
+  text-align: center;
 }
-.pp-hero-inner { max-width: 700px; }
+.pp-hero-inner { max-width: 700px; margin: 0 auto; }
 
 .pp-hero h1 {
   font-family: var(--font-display);
@@ -46,11 +47,12 @@
   font-weight: 400;
   line-height: 1.75;
   max-width: 520px;
+  margin: 0 auto;
 }
 
 /* Work section */
 .pp-work {
-  padding: 3rem 4rem 6rem;
+  padding: 2rem 4rem 5rem;
   background: var(--theme-bg-main);
 }
 
@@ -104,7 +106,7 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .pp-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--theme-shadow-soft);
 }
 
@@ -167,7 +169,7 @@
 }
 
 .pp-card-desc {
-  font-size: 0.858rem;
+  font-size: 0.9rem;
   color: var(--theme-text-muted);
   font-weight: 400;
   line-height: 1.65;
@@ -219,8 +221,9 @@
 
 /* CTA section */
 .pp-cta-section {
-  padding: 6rem 4rem;
+  padding: 5.5rem 4rem;
   background: var(--theme-bg-dark);
+  text-align: center;
 }
 .pp-cta-section h2 {
   font-family: var(--font-display);
@@ -240,6 +243,7 @@
   gap: 1rem;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 .pp-cta-actions .btn-ghost {
   background: transparent;

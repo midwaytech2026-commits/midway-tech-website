@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Mail, MapPin } from 'lucide-react'
 import logo from '../../assets/icons/logo.svg'
 import ComingSoonModal from '../common/ComingSoonModal'
 import './Footer.css'
@@ -81,6 +82,10 @@ export default function Footer() {
         <div className="footer-brand">
           <Link to="/"><img src={logo} alt="MidwayTech" className="site-logo footer-logo" /></Link>
           <p>Growth and technology partner for modern businesses. Marketing, technology, and AI — one team, one invoice.</p>
+          <ul className="footer-contact-list">
+            <li><a href="mailto:hello@midwaytech.co"><Mail aria-hidden="true" /> hello@midwaytech.co</a></li>
+            <li><span><MapPin aria-hidden="true" /> Jaipur, Rajasthan, India</span></li>
+          </ul>
         </div>
 
         <div className="footer-col">

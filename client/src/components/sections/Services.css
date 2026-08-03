@@ -1,6 +1,7 @@
 .wwd-section {
   background: var(--theme-bg-main);
-  padding: 7rem 4rem;
+  padding: 5.5rem 4rem;
+  text-align: center;
 }
 
 .wwd-eyebrow {
@@ -10,7 +11,8 @@
   text-transform: uppercase;
   font-family: var(--font-body);
   color: var(--theme-accent-orange);
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
+  width: fit-content;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -32,6 +34,7 @@
   letter-spacing: -0.03em;
   color: var(--theme-text-main);
   max-width: 700px;
+  margin: 0 auto;
 }
 
 .wwd-grid {
@@ -39,6 +42,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 3.5rem;
+  text-align: left;
 }
 
 .wwd-card {
@@ -47,11 +51,12 @@
   border-radius: 20px;
   padding: 2.25rem;
   box-shadow: var(--theme-shadow-card);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .wwd-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--theme-shadow-soft);
+  border-color: rgba(233, 90, 42, 0.3);
 }
 
 .wwd-icon-wrap {
@@ -76,9 +81,9 @@
   margin-bottom: 0.65rem;
 }
 .wwd-card p {
-  font-size: 0.9rem;
+  font-size: 0.94rem;
   color: var(--theme-text-muted);
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 .wwd-tags {
@@ -98,30 +103,10 @@
   background: var(--theme-bg-soft);
 }
 
-.wwd-cta-strip {
-  margin-top: 3rem;
-  background: var(--theme-bg-soft);
-  border: 1px solid var(--theme-border-light);
-  border-radius: 20px;
-  padding: 2rem 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-.wwd-cta-strip p {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--theme-text-main);
-  max-width: 480px;
-}
-
 @media (max-width: 1100px) {
   .wwd-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 900px) {
-  .wwd-section { padding: 5rem 1.5rem; }
+  .wwd-section { padding: 3.5rem 1.5rem; }
   .wwd-grid { grid-template-columns: 1fr; }
-  .wwd-cta-strip { flex-direction: column; align-items: flex-start; }
 }

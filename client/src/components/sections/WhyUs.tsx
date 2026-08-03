@@ -36,16 +36,21 @@ export default function WhyUs() {
       </p>
 
       <div className="why-grid">
-        {pillars.map(p => {
+        {pillars.map((p, i) => {
           const Icon = p.Icon
           return (
             <div key={p.num} className="why-card">
               <div className="why-card-top">
-                <span className="why-card-num">{p.num}</span>
                 <span className="why-card-icon-wrap"><Icon className="why-card-icon" aria-hidden="true" /></span>
+                <span className="why-card-num">{p.num}</span>
               </div>
               <h3>{p.title}</h3>
               <p>{p.desc}</p>
+              <div className="why-card-flow" aria-hidden="true">
+                {pillars.map((_, dotIndex) => (
+                  <span key={dotIndex} className={`why-flow-dot ${dotIndex === i ? 'active' : ''}`} />
+                ))}
+              </div>
             </div>
           )
         })}

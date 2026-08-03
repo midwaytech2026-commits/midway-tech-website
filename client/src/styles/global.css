@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -35,7 +35,7 @@
   /* Fonts */
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
-  --font-kicker:  'Orbitron', system-ui, sans-serif;
+  --font-kicker:  'Inter', system-ui, sans-serif;
 
   /* New brand direction (rolling out phase by phase — see theme-* tokens).
      Kept separate from the legacy tokens above so pages not yet migrated
@@ -43,8 +43,8 @@
   --theme-bg-main:            #FAF7F2;
   --theme-bg-soft:       #F4EFE8;
   --theme-bg-white:            #FFFFFF;
-  --theme-bg-dark:             #18130F;
-  --theme-bg-dark-panel:       #241E1A;
+  --theme-bg-dark:             #1F1F1F;
+  --theme-bg-dark-panel:       #2A2A2A;
 
   --theme-text-main:              #17120E;
   --theme-text-muted:        #746D66;
@@ -54,6 +54,7 @@
   --theme-accent-orange:           #E95A2A;
   --theme-accent-orange-dark:      #C9471F;
   --theme-accent-green:            #2F8F5B;
+  --theme-accent-green-dark:       #237348;
   --theme-accent-green-soft:       #E8F6ED;
 
   --theme-border-light:     rgba(23, 18, 14, 0.12);
@@ -63,7 +64,7 @@
   --theme-shadow-card:      0 14px 40px rgba(23, 18, 14, 0.06);
 
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   scroll-behavior: smooth;
 }
 
@@ -117,8 +118,9 @@ p { margin: 0; }
 
 main { flex: 1; }
 
-/* Shared buttons — new orange brand direction. Centralized here (rather than
-   left duplicated per-section) so every page picks up the same primary/
+/* Shared buttons — green primary per BA direction (orange is reserved for
+   eyebrows/heading highlights only). Centralized here (rather than left
+   duplicated per-section) so every page picks up the same primary/
    secondary button regardless of which component CSS happens to load. */
 .btn-primary {
   display: inline-flex;
@@ -128,8 +130,8 @@ main { flex: 1; }
   min-height: 54px;
   padding: 0 30px;
   border-radius: 999px;
-  border: 1px solid var(--theme-accent-orange);
-  background: var(--theme-accent-orange);
+  border: 1px solid var(--theme-accent-green);
+  background: var(--theme-accent-green);
   color: #fff;
   font-family: var(--font-body);
   font-size: 0.98rem;
@@ -140,10 +142,10 @@ main { flex: 1; }
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 .btn-primary:hover {
-  background: var(--theme-accent-orange-dark);
-  border-color: var(--theme-accent-orange-dark);
+  background: var(--theme-accent-green-dark);
+  border-color: var(--theme-accent-green-dark);
   transform: translateY(-1px);
-  box-shadow: 0 14px 34px rgba(233, 90, 42, 0.22);
+  box-shadow: 0 14px 34px rgba(47, 143, 91, 0.22);
 }
 .btn-primary:active { transform: translateY(0); }
 .btn-primary svg { transition: transform 0.2s; }
@@ -170,7 +172,7 @@ main { flex: 1; }
 }
 .btn-ghost:hover {
   transform: translateY(-1px);
-  color: var(--theme-accent-orange-dark);
-  border-color: rgba(233, 90, 42, 0.4);
+  color: var(--theme-accent-green-dark);
+  border-color: rgba(47, 143, 91, 0.4);
   background: var(--theme-bg-soft);
 }

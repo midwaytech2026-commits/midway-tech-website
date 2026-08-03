@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Plus, Minus } from 'lucide-react'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 import './Faq.css'
 
 const faqs = [
@@ -42,8 +42,8 @@ export default function Faq() {
                 >
                   <span>{item.q}</span>
                   {isOpen
-                    ? <Minus className="faq-toggle-icon" aria-hidden="true" />
-                    : <Plus className="faq-toggle-icon" aria-hidden="true" />
+                    ? <ChevronUp className="faq-toggle-icon" aria-hidden="true" />
+                    : <ChevronDown className="faq-toggle-icon" aria-hidden="true" />
                   }
                 </button>
                 <div className="faq-body" aria-hidden={!isOpen}>

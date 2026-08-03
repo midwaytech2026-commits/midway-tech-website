@@ -1,6 +1,6 @@
 .faq-section {
   background: var(--theme-bg-main);
-  padding: 110px 24px;
+  padding: 80px 24px;
 }
 
 .faq-container {
@@ -71,7 +71,7 @@
 .faq-trigger:hover { color: var(--theme-accent-orange); }
 .faq-item-open .faq-trigger { color: var(--theme-accent-orange); }
 
-/* Plus / Minus toggle icon */
+/* Chevron toggle icon */
 .faq-toggle-icon {
   width: 18px;
   height: 18px;
@@ -104,7 +104,7 @@
 
 /* Responsive */
 @media (max-width: 900px) {
-  .faq-section { padding: 72px 20px; }
+  .faq-section { padding: 56px 20px; }
 }
 
 @media (max-width: 600px) {

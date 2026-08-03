@@ -89,7 +89,7 @@
 }
 
 .csm-cta {
-  background: var(--theme-accent-orange);
+  background: var(--theme-accent-green);
   color: #fff;
   font-family: var(--font-body);
   font-weight: 800;
@@ -98,7 +98,7 @@
   min-height: 54px;
   padding: 0 30px;
   border-radius: 999px;
-  border: 1px solid var(--theme-accent-orange);
+  border: 1px solid var(--theme-accent-green);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -107,8 +107,8 @@
 }
 .csm-cta:hover {
   transform: translateY(-1px);
-  background: var(--theme-accent-orange-dark);
-  border-color: var(--theme-accent-orange-dark);
+  background: var(--theme-accent-green-dark);
+  border-color: var(--theme-accent-green-dark);
 }
 .csm-cta:active { transform: translateY(0); }
 

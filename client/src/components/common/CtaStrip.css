@@ -52,8 +52,8 @@
   display: inline-block;
 }
 .cta-strip .btn-outline:hover {
-  border-color: var(--theme-accent-orange);
-  color: var(--theme-accent-orange);
+  border-color: var(--theme-accent-green);
+  color: var(--theme-accent-green);
   transform: translateY(-1px);
 }
 

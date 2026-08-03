@@ -1,6 +1,6 @@
 .ai-section {
   background: var(--theme-bg-dark);
-  padding: 7rem 4rem;
+  padding: 5.5rem 4rem;
   text-align: center;
 }
 
@@ -56,9 +56,13 @@
   border: 1px solid var(--theme-border-dark);
   border-radius: 16px;
   padding: 1.75rem 1.25rem;
-  transition: border-color 0.25s ease;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
-.ai-card:hover { border-color: rgba(47, 143, 91, 0.4); }
+.ai-card:hover {
+  border-color: rgba(47, 143, 91, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.3);
+}
 
 .ai-card-icon-wrap {
   width: 46px;
@@ -82,7 +86,7 @@
 }
 
 @media (max-width: 900px) {
-  .ai-section { padding: 5rem 1.5rem; }
+  .ai-section { padding: 3.5rem 1.5rem; }
   .ai-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 480px) {

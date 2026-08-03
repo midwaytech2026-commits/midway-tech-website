@@ -1,24 +1,14 @@
-import {
-  ShoppingCart,
-  Shirt,
-  Gem,
-  Hotel,
-  Package,
-  Ship,
-  Rocket,
-  Briefcase,
-} from 'lucide-react'
+import retailImg from '../../assets/images/retail.jpg'
+import financialImg from '../../assets/images/financial.jpg'
+import manufacturingImg from '../../assets/images/manufacture.jpg'
+import healthImg from '../../assets/images/health.jpg'
 import './Industries.css'
 
 const industries = [
-  { Icon: ShoppingCart, name: 'D2C & Ecommerce' },
-  { Icon: Shirt,        name: 'Fashion & Apparel' },
-  { Icon: Gem,          name: 'Jewellery Brands' },
-  { Icon: Hotel,        name: 'Hospitality' },
-  { Icon: Package,      name: 'FMCG Brands' },
-  { Icon: Ship,         name: 'Export Businesses' },
-  { Icon: Rocket,       name: 'SaaS Startups' },
-  { Icon: Briefcase,    name: 'Service Businesses' },
+  { image: retailImg,       name: 'Retail & Consumer Goods' },
+  { image: financialImg,    name: 'Financial Services' },
+  { image: manufacturingImg, name: 'Manufacturing' },
+  { image: healthImg,       name: 'Healthcare' },
 ]
 
 export default function Industries() {
@@ -28,15 +18,12 @@ export default function Industries() {
       <h2 className="ind-title">We Work With Businesses That Want to Scale.</h2>
 
       <div className="ind-grid">
-        {industries.map(i => {
-          const Icon = i.Icon
-          return (
-            <div key={i.name} className="ind-card">
-              <Icon className="ind-icon" aria-hidden="true" />
-              <span>{i.name}</span>
-            </div>
-          )
-        })}
+        {industries.map(i => (
+          <div key={i.name} className="ind-card">
+            {/* Title + dark gradient overlay are already composited into the source image */}
+            <img src={i.image} alt={i.name} className="ind-card-img" loading="lazy" />
+          </div>
+        ))}
       </div>
     </section>
   )

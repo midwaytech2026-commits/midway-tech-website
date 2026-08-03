@@ -1,6 +1,6 @@
 .proc-section {
   background: var(--theme-bg-main);
-  padding: 7rem 4rem;
+  padding: 5.5rem 4rem;
   text-align: center;
 }
 
@@ -83,13 +83,13 @@
   margin-bottom: 0.4rem;
 }
 .proc-step-desc {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--theme-text-muted);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 @media (max-width: 900px) {
-  .proc-section { padding: 5rem 1.5rem; }
+  .proc-section { padding: 3.5rem 1.5rem; }
   .proc-steps { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   .proc-steps::before { display: none; }
 }

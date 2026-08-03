@@ -27,10 +27,11 @@
 
 /* Hero */
 .sp-hero {
-  padding: 7rem 4rem 4rem;
+  padding: 6rem 4rem 4rem;
   background: var(--theme-bg-main);
+  text-align: center;
 }
-.sp-hero-inner { max-width: 720px; }
+.sp-hero-inner { max-width: 720px; margin: 0 auto; }
 
 .sp-hero h1 {
   font-family: var(--font-display);
@@ -47,9 +48,9 @@
   font-weight: 400;
   line-height: 1.75;
   max-width: 560px;
-  margin-bottom: 2.25rem;
+  margin: 0 auto 2.25rem;
 }
-.sp-hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.sp-hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
 
 /* Disciplines intro */
 .sp-disciplines { padding: 1rem 4rem 5rem; }
@@ -64,6 +65,11 @@
   border-radius: 20px;
   padding: 2rem;
   box-shadow: var(--theme-shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.sp-discipline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--theme-shadow-soft);
 }
 .sp-discipline-icon-wrap {
   width: 52px;
@@ -85,7 +91,7 @@
   margin-bottom: 0.6rem;
 }
 .sp-discipline-card p {
-  font-size: 0.87rem;
+  font-size: 0.92rem;
   color: var(--theme-text-muted);
   line-height: 1.65;
 }
@@ -94,6 +100,7 @@
 .sp-services {
   padding: 5rem 4rem;
   background: var(--theme-bg-soft);
+  text-align: center;
 }
 .sp-services h2 {
   font-family: var(--font-display);
@@ -101,13 +108,13 @@
   font-weight: 700;
   color: var(--theme-text-main);
   letter-spacing: -0.02em;
-  margin-bottom: 2.5rem;
+  margin: 0 0 2.5rem;
 }
-
 .sp-services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
+  text-align: left;
 }
 
 .sp-service-card {
@@ -120,7 +127,7 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .sp-service-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--theme-shadow-card);
 }
 
@@ -149,7 +156,7 @@
 }
 
 .sp-service-card > p {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--theme-text-muted);
   font-weight: 400;
   line-height: 1.65;
@@ -176,8 +183,9 @@
 
 /* Engagement models */
 .sp-engagement {
-  padding: 6rem 4rem;
+  padding: 5.5rem 4rem;
   background: var(--theme-bg-main);
+  text-align: center;
 }
 
 .sp-engagement h2 {
@@ -193,6 +201,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  text-align: left;
 }
 
 .sp-engagement-card {
@@ -203,7 +212,7 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .sp-engagement-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--theme-shadow-card);
 }
 
@@ -241,7 +250,7 @@
 }
 
 .sp-engagement-card p {
-  font-size: 0.875rem;
+  font-size: 0.92rem;
   color: var(--theme-text-muted);
   font-weight: 400;
   line-height: 1.65;
@@ -250,8 +259,9 @@
 
 /* Bottom CTA */
 .sp-cta-section {
-  padding: 6rem 4rem;
+  padding: 5.5rem 4rem;
   background: var(--theme-bg-dark);
+  text-align: center;
 }
 
 .sp-cta-section h2 {
@@ -275,6 +285,7 @@
   gap: 1rem;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 .sp-cta-actions .btn-ghost {
   background: transparent;

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { Layers, Megaphone, Bot } from 'lucide-react'
 import './Services.css'
 
@@ -51,11 +50,6 @@ export default function Services() {
             </div>
           )
         })}
-      </div>
-
-      <div className="wwd-cta-strip">
-        <p>Not sure what you need? Book a free 30-minute strategy call — we&apos;ll map it out.</p>
-        <Link to="/contact" className="btn-primary">Get a Quote</Link>
       </div>
     </section>
   )

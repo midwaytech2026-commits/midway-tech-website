@@ -23,7 +23,7 @@
 
 /* ── Hero ─────────────────────────────────────────────────────── */
 .svc-hero {
-  padding: 7rem 4rem 5rem;
+  padding: 6rem 4rem 5rem;
   display: grid;
   grid-template-columns: 1fr 380px;
   gap: 4rem;
@@ -84,8 +84,8 @@
   min-height: 54px;
   padding: 0 24px;
   border-radius: 999px;
-  border: 1px solid var(--theme-accent-orange);
-  background: var(--theme-accent-orange);
+  border: 1px solid var(--theme-accent-green);
+  background: var(--theme-accent-green);
   color: #fff;
   text-decoration: none;
   font-family: var(--font-body);
@@ -97,13 +97,14 @@
 }
 .svc-snapshot-cta:hover {
   transform: translateY(-1px);
-  background: var(--theme-accent-orange-dark);
-  border-color: var(--theme-accent-orange-dark);
+  background: var(--theme-accent-green-dark);
+  border-color: var(--theme-accent-green-dark);
+  box-shadow: 0 14px 34px rgba(47, 143, 91, 0.22);
 }
 .svc-snapshot-cta:active { transform: translateY(0); }
 
 /* ── What's included ──────────────────────────────────────────── */
-.svc-included { padding: 5rem 4rem; background: var(--theme-bg-soft); }
+.svc-included { padding: 5rem 4rem; background: var(--theme-bg-soft); text-align: center; }
 .svc-included h2 {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 2.8vw, 2.3rem);
@@ -116,6 +117,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
+  text-align: left;
 }
 .svc-included-card {
   background: var(--theme-bg-white);
@@ -123,9 +125,9 @@
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: var(--theme-shadow-card);
-  transition: transform 0.25s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-.svc-included-card:hover { transform: translateY(-3px); }
+.svc-included-card:hover { transform: translateY(-4px); box-shadow: var(--theme-shadow-soft); }
 .svc-included-icon {
   width: 40px;
   height: 40px;
@@ -146,7 +148,7 @@
   margin-bottom: 0.5rem;
 }
 .svc-included-card p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--theme-text-muted);
   font-weight: 400;
   line-height: 1.6;
@@ -157,6 +159,7 @@
 .svc-tech {
   padding: 5rem 4rem;
   background: var(--theme-bg-main);
+  text-align: center;
 }
 .svc-tech h2 {
   font-family: var(--font-display);
@@ -165,7 +168,7 @@
   color: var(--theme-text-main);
   margin: 0.75rem 0 3rem;
 }
-.svc-tech-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+.svc-tech-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: left; }
 .svc-tech-group h4 {
   font-size: 0.7rem;
   font-weight: 700;
@@ -185,7 +188,7 @@
 }
 
 /* ── Process ──────────────────────────────────────────────────── */
-.svc-process { padding: 5rem 4rem; background: var(--theme-bg-dark); }
+.svc-process { padding: 5rem 4rem; background: var(--theme-bg-dark); text-align: center; }
 .svc-process h2 {
   font-family: var(--font-display);
   font-size: 1.9rem;
@@ -193,7 +196,7 @@
   color: var(--theme-text-light);
   margin: 0.75rem 0 3rem;
 }
-.svc-process-list { display: flex; flex-direction: column; gap: 0; }
+.svc-process-list { display: flex; flex-direction: column; gap: 0; text-align: left; }
 .svc-process-item {
   display: flex;
   gap: 2rem;
@@ -239,6 +242,7 @@
 .svc-faq {
   padding: 5rem 4rem;
   background: var(--theme-bg-main);
+  text-align: center;
 }
 .svc-faq h2 {
   font-family: var(--font-display);
@@ -247,7 +251,7 @@
   color: var(--theme-text-main);
   margin: 0.75rem 0 2.5rem;
 }
-.svc-faq-list { max-width: 800px; }
+.svc-faq-list { max-width: 800px; margin: 0 auto; text-align: left; }
 .svc-faq-item { border-bottom: 1px solid var(--theme-border-light); }
 .svc-faq-item button {
   width: 100%;
@@ -282,6 +286,7 @@
 .svc-related {
   padding: 4rem 4rem 5rem;
   background: var(--theme-bg-soft);
+  text-align: center;
 }
 .svc-related h3 {
   font-family: var(--font-display);
