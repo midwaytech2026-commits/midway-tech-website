@@ -31,7 +31,7 @@ const disciplines = [
   },
   {
     Icon: BrainCircuit,
-    accent: 'green',
+    accent: 'orange',
     title: 'AI & Automation',
     desc: 'AI chatbots, workflow automation, CRM automation, lead qualification, and content systems that reduce manual work.',
   },

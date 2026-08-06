@@ -56,7 +56,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="hero-visual-row">
-              <span className="hero-visual-icon-wrap hvi-green"><Bot className="hero-visual-icon" /></span>
+              <span className="hero-visual-icon-wrap hvi-orange"><Bot className="hero-visual-icon" /></span>
               <div>
                 <strong>AI &amp; Automation</strong>
                 <span>Leverage, not headcount</span>

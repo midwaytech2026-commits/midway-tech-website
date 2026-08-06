@@ -1,7 +1,7 @@
-.contact-page { padding-top: 80px; background: var(--theme-bg-main); }
+.contact-page { padding-top: 80px; background: var(--color-bg-main); }
 
 .contact-page .section-eyebrow {
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   font-size: 0.7rem;
   font-weight: 700;
   display: inline-flex;
@@ -12,13 +12,13 @@
   content: '';
   width: 20px;
   height: 2px;
-  background: var(--theme-accent-orange);
+  background: var(--color-brand-orange);
   border-radius: 2px;
 }
 
 .cp-hero {
   padding: 6rem 4rem 3.5rem;
-  background: var(--theme-bg-main);
+  background: var(--color-bg-main);
   text-align: center;
 }
 .cp-hero-inner { max-width: 700px; margin: 0 auto; }
@@ -26,14 +26,14 @@
   font-family: var(--font-display);
   font-size: clamp(2.3rem, 4.4vw, 3.5rem);
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   line-height: 1.12;
   letter-spacing: -0.03em;
   margin: 1rem 0 1rem;
 }
-.cp-hero p { font-size: 1.05rem; color: var(--theme-text-muted); font-weight: 400; line-height: 1.7; max-width: 560px; margin: 0 auto; }
+.cp-hero p { font-size: 1.05rem; color: var(--color-text-muted); font-weight: 400; line-height: 1.7; max-width: 560px; margin: 0 auto; }
 
-.cp-body { padding: 3rem 4rem 5rem; background: var(--theme-bg-main); }
+.cp-body { padding: 3rem 4rem 5rem; background: var(--color-bg-main); }
 .cp-body-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -49,7 +49,7 @@
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   margin-bottom: 1.5rem;
 }
 
@@ -62,7 +62,7 @@
 .cp-steps li span {
   width: 28px;
   height: 28px;
-  background: var(--theme-accent-orange);
+  background: var(--color-brand-orange);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -73,8 +73,8 @@
   flex-shrink: 0;
   margin-top: 2px;
 }
-.cp-steps li div strong { display: block; font-size: 0.875rem; color: var(--theme-text-main); margin-bottom: 0.2rem; }
-.cp-steps li div p { font-size: 0.86rem; color: var(--theme-text-muted); margin: 0; font-weight: 400; }
+.cp-steps li div strong { display: block; font-size: 0.875rem; color: var(--color-text-main); margin-bottom: 0.2rem; }
+.cp-steps li div p { font-size: 0.86rem; color: var(--color-text-muted); margin: 0; font-weight: 400; }
 
 .cp-contact-links { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem; }
 .cp-contact-item {
@@ -82,11 +82,11 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: var(--theme-bg-white);
+  background: var(--color-bg-card);
   border-radius: 14px;
   text-decoration: none;
-  border: 1px solid var(--theme-border-light);
-  box-shadow: var(--theme-shadow-card);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-card);
   transition: border-color 0.2s, transform 0.2s;
   cursor: pointer;
   width: 100%;
@@ -98,18 +98,18 @@
   width: 38px;
   height: 38px;
   background: rgba(233, 90, 42, 0.1);
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
-.cp-contact-item strong { display: block; font-size: 0.85rem; color: var(--theme-text-main); }
-.cp-contact-item span { font-size: 0.8rem; color: var(--theme-text-muted); font-weight: 400; }
+.cp-contact-item strong { display: block; font-size: 0.85rem; color: var(--color-text-main); }
+.cp-contact-item span { font-size: 0.8rem; color: var(--color-text-muted); font-weight: 400; }
 
 .cp-faq { margin-top: 0.5rem; }
-.cp-faq-item { border-bottom: 1px solid var(--theme-border-light); }
+.cp-faq-item { border-bottom: 1px solid var(--color-border-light); }
 .cp-faq-item button {
   width: 100%;
   background: none;
@@ -120,53 +120,53 @@
   justify-content: space-between;
   gap: 1rem;
   cursor: pointer;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   font-size: 0.85rem;
   font-weight: 600;
   text-align: left;
 }
 .cp-faq-item button svg {
   flex-shrink: 0;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   transition: transform 0.25s;
 }
-.cp-faq-item.open button svg { transform: rotate(180deg); color: var(--theme-accent-orange); }
+.cp-faq-item.open button svg { transform: rotate(180deg); color: var(--color-brand-orange); }
 .cp-faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
 .cp-faq-item.open .cp-faq-answer { max-height: 120px; }
-.cp-faq-answer p { padding-bottom: 1rem; font-size: 0.88rem; color: var(--theme-text-muted); font-weight: 400; line-height: 1.7; margin: 0; }
+.cp-faq-answer p { padding-bottom: 1rem; font-size: 0.88rem; color: var(--color-text-muted); font-weight: 400; line-height: 1.7; margin: 0; }
 
 .cp-form-wrap {
-  background: var(--theme-bg-white);
-  border: 1px solid var(--theme-border-light);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
   border-radius: 22px;
   padding: 2.5rem;
-  box-shadow: var(--theme-shadow-soft);
+  box-shadow: var(--shadow-soft);
 }
 .cp-form h2 {
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   margin-bottom: 2rem;
 }
 
 .cp-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .cp-field { margin-bottom: 1.5rem; }
-.cp-field label { display: block; font-size: 0.78rem; color: var(--theme-text-muted); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
-.cp-field label strong { color: var(--theme-text-main); }
+.cp-field label { display: block; font-size: 0.78rem; color: var(--color-text-muted); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.cp-field label strong { color: var(--color-text-main); }
 .cp-field input,
 .cp-field textarea,
 .cp-field select {
   width: 100%;
-  background: var(--theme-bg-soft);
-  border: 1px solid var(--theme-border-light);
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border-light);
   border-radius: 10px;
   padding: 0.8rem 1rem;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   font-size: 0.875rem;
   font-family: var(--font-body);
   transition: border-color 0.2s;
@@ -176,49 +176,49 @@
 .cp-field textarea:focus,
 .cp-field select:focus {
   outline: none;
-  border-color: var(--theme-accent-orange);
+  border-color: var(--color-brand-orange);
 }
 .cp-field select { appearance: none; cursor: pointer; }
 .cp-field input::placeholder,
-.cp-field textarea::placeholder { color: var(--theme-text-light-muted); }
+.cp-field textarea::placeholder { color: var(--color-text-light-muted); }
 
 .cp-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .cp-chip {
   padding: 0.5rem 1rem;
   border-radius: 100px;
-  border: 1.5px solid var(--theme-border-light);
-  background: var(--theme-bg-white);
-  color: var(--theme-text-muted);
+  border: 1.5px solid var(--color-border-light);
+  background: var(--color-bg-card);
+  color: var(--color-text-muted);
   font-size: 0.8rem;
   cursor: pointer;
   transition: all 0.2s;
   font-family: var(--font-body);
 }
-.cp-chip:hover { border-color: rgba(233, 90, 42, 0.4); color: var(--theme-text-main); }
-.cp-chip.selected { border-color: var(--theme-accent-orange); background: rgba(233, 90, 42, 0.1); color: var(--theme-accent-orange-dark); }
+.cp-chip:hover { border-color: rgba(233, 90, 42, 0.4); color: var(--color-text-main); }
+.cp-chip.selected { border-color: var(--color-brand-orange); background: rgba(233, 90, 42, 0.1); color: var(--color-brand-orange-dark); }
 
 .cp-slider {
   width: 100%;
   margin: 0.75rem 0 0.5rem;
-  accent-color: var(--theme-accent-orange);
+  accent-color: var(--color-brand-orange);
   cursor: pointer;
 }
 .cp-slider-labels {
   display: flex;
   justify-content: space-between;
   font-size: 0.72rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
 }
 
 .cp-submit {
   width: 100%;
-  background: var(--theme-accent-green);
+  background: var(--color-brand-orange);
   color: #fff;
-  border: 1px solid var(--theme-accent-green);
-  min-height: 54px;
-  padding: 0 30px;
-  border-radius: 999px;
-  font-size: 0.98rem;
+  border: 1px solid var(--color-brand-orange);
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 12px;
+  font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: -0.01em;
   cursor: pointer;
@@ -228,18 +228,18 @@
   gap: 8px;
   font-family: var(--font-body);
   margin-top: 0.5rem;
-  transition: transform 0.25s ease, background 0.25s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 .cp-submit:hover:not(:disabled) {
   transform: translateY(-1px);
-  background: var(--theme-accent-green-dark);
-  border-color: var(--theme-accent-green-dark);
-  box-shadow: 0 14px 34px rgba(47, 143, 91, 0.22);
+  background: var(--color-brand-orange-dark);
+  border-color: var(--color-brand-orange-dark);
+  box-shadow: 0 14px 34px rgba(233, 90, 42, 0.24);
 }
 .cp-submit:active { transform: translateY(0); }
 .cp-submit:disabled { opacity: 0.5; cursor: not-allowed; }
 
-.cp-disclaimer { font-size: 0.75rem; color: var(--theme-text-muted); text-align: center; margin-top: 1rem; }
+.cp-disclaimer { font-size: 0.75rem; color: var(--color-text-muted); text-align: center; margin-top: 1rem; }
 
 .cp-success {
   text-align: center;
@@ -248,16 +248,16 @@
 .cp-success-icon {
   width: 64px;
   height: 64px;
-  background: var(--theme-accent-green-soft);
+  background: var(--color-brand-orange-soft);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--theme-accent-green);
+  color: var(--color-brand-orange);
   margin: 0 auto 1.5rem;
 }
-.cp-success h2 { font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--theme-text-main); margin-bottom: 0.75rem; }
-.cp-success p { color: var(--theme-text-muted); font-size: 0.95rem; font-weight: 400; }
+.cp-success h2 { font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.75rem; }
+.cp-success p { color: var(--color-text-muted); font-size: 0.95rem; font-weight: 400; }
 
 @media (max-width: 900px) {
   .cp-hero { padding: 3.5rem 1.5rem 2rem; }

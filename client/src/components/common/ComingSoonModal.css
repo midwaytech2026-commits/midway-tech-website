@@ -13,14 +13,14 @@
 
 .csm-modal {
   position: relative;
-  background: var(--theme-bg-dark-panel);
-  border: 1px solid var(--theme-border-dark);
+  background: var(--color-bg-dark-card);
+  border: 1px solid var(--color-border-dark);
   border-radius: 24px;
   padding: 2.5rem 2.25rem 2rem;
   max-width: 420px;
   width: 100%;
   text-align: center;
-  box-shadow: var(--theme-shadow-soft);
+  box-shadow: var(--shadow-soft);
   overflow: hidden;
 }
 
@@ -32,7 +32,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(47, 143, 91, 0.16) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(233, 90, 42, 0.16) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -44,8 +44,8 @@
   height: 30px;
   border-radius: 50%;
   background: rgba(247, 242, 236, 0.06);
-  border: 1px solid var(--theme-border-dark);
-  color: var(--theme-text-light-muted);
+  border: 1px solid var(--color-border-dark);
+  color: var(--color-text-light-muted);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -54,16 +54,16 @@
 }
 .csm-close:hover {
   background: rgba(233, 90, 42, 0.12);
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
 }
 
 .csm-icon-wrap {
   width: 60px;
   height: 60px;
   border-radius: 18px;
-  background: var(--theme-accent-green-soft);
-  border: 1px solid rgba(47, 143, 91, 0.25);
-  color: var(--theme-accent-green);
+  background: var(--color-brand-orange-soft);
+  border: 1px solid rgba(233, 90, 42, 0.25);
+  color: var(--color-brand-orange);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +74,7 @@
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--theme-text-light);
+  color: var(--color-text-light);
   letter-spacing: -0.03em;
   margin-bottom: 0.75rem;
 }
@@ -82,33 +82,34 @@
 .csm-message {
   font-family: var(--font-body);
   font-size: 0.925rem;
-  color: var(--theme-text-light-muted);
+  color: var(--color-text-light-muted);
   font-weight: 400;
   line-height: 1.65;
   margin-bottom: 1.75rem;
 }
 
 .csm-cta {
-  background: var(--theme-accent-green);
+  background: var(--color-brand-orange);
   color: #fff;
   font-family: var(--font-body);
   font-weight: 800;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   letter-spacing: -0.01em;
-  min-height: 54px;
-  padding: 0 30px;
-  border-radius: 999px;
-  border: 1px solid var(--theme-accent-green);
+  min-height: 44px;
+  padding: 0 26px;
+  border-radius: 12px;
+  border: 1px solid var(--color-brand-orange);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.25s ease, background 0.25s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 .csm-cta:hover {
   transform: translateY(-1px);
-  background: var(--theme-accent-green-dark);
-  border-color: var(--theme-accent-green-dark);
+  background: var(--color-brand-orange-dark);
+  border-color: var(--color-brand-orange-dark);
+  box-shadow: 0 14px 34px rgba(233, 90, 42, 0.24);
 }
 .csm-cta:active { transform: translateY(0); }
 

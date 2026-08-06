@@ -21,7 +21,7 @@ const disciplines = [
   {
     id: 'ai',
     Icon: Bot,
-    accent: 'green',
+    accent: 'orange',
     title: 'AI & Automation',
     description: 'AI chatbots, workflow automations, CRM systems, and intelligent tools that reduce cost, qualify leads, and multiply output.',
     tags: ['AI Chatbots', 'Workflow', 'CRM Auto', 'Lead Qual.'],

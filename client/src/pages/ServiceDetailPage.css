@@ -2,11 +2,11 @@
    Mirrors ServiceIosPage.css structure with .svc-* prefix.
    iOS page keeps its own .ios-* CSS — this file does NOT affect it. */
 
-.svc-page { padding-top: 80px; background: var(--theme-bg-main); }
+.svc-page { padding-top: 80px; background: var(--color-bg-main); }
 .svc-container { max-width: 1100px; margin: 0 auto; }
 
 .svc-page .section-eyebrow {
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   font-size: 0.7rem;
   font-weight: 700;
   display: inline-flex;
@@ -17,7 +17,7 @@
   content: '';
   width: 20px;
   height: 2px;
-  background: var(--theme-accent-orange);
+  background: var(--color-brand-orange);
   border-radius: 2px;
 }
 
@@ -28,21 +28,21 @@
   grid-template-columns: 1fr 380px;
   gap: 4rem;
   align-items: center;
-  background: var(--theme-bg-main);
+  background: var(--color-bg-main);
 }
 .svc-hero h1 {
   font-family: var(--font-display);
   font-size: clamp(2.1rem, 4.2vw, 3.2rem);
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   line-height: 1.15;
   letter-spacing: -0.02em;
   margin: 0.75rem 0 1rem;
 }
-.svc-hero h1 em { font-style: normal; color: var(--theme-accent-orange); }
+.svc-hero h1 em { font-style: normal; color: var(--color-brand-orange); }
 .svc-hero-content > p {
   font-size: 1.05rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   font-weight: 400;
   margin-bottom: 2rem;
   max-width: 480px;
@@ -52,16 +52,16 @@
 
 /* ── Snapshot panel ───────────────────────────────────────────── */
 .svc-snapshot {
-  background: var(--theme-bg-white);
-  border: 1px solid var(--theme-border-light);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: var(--theme-shadow-soft);
+  box-shadow: var(--shadow-soft);
 }
 .svc-snapshot-header {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1.5rem;
@@ -71,21 +71,21 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0;
-  border-bottom: 1px solid var(--theme-border-light);
+  border-bottom: 1px solid var(--color-border-light);
   font-size: 0.875rem;
 }
-.svc-snapshot-row span { color: var(--theme-text-muted); }
-.svc-snapshot-row strong { color: var(--theme-text-main); font-weight: 600; }
+.svc-snapshot-row span { color: var(--color-text-muted); }
+.svc-snapshot-row strong { color: var(--color-text-main); font-weight: 600; }
 .svc-snapshot-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 54px;
-  padding: 0 24px;
-  border-radius: 999px;
-  border: 1px solid var(--theme-accent-green);
-  background: var(--theme-accent-green);
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 12px;
+  border: 1px solid var(--color-brand-orange);
+  background: var(--color-brand-orange);
   color: #fff;
   text-decoration: none;
   font-family: var(--font-body);
@@ -93,26 +93,26 @@
   font-size: 0.95rem;
   letter-spacing: -0.01em;
   margin-top: 1.5rem;
-  transition: transform 0.25s ease, background 0.25s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 .svc-snapshot-cta:hover {
   transform: translateY(-1px);
-  background: var(--theme-accent-green-dark);
-  border-color: var(--theme-accent-green-dark);
-  box-shadow: 0 14px 34px rgba(47, 143, 91, 0.22);
+  background: var(--color-brand-orange-dark);
+  border-color: var(--color-brand-orange-dark);
+  box-shadow: 0 14px 34px rgba(233, 90, 42, 0.24);
 }
 .svc-snapshot-cta:active { transform: translateY(0); }
 
 /* ── What's included ──────────────────────────────────────────── */
-.svc-included { padding: 5rem 4rem; background: var(--theme-bg-soft); text-align: center; }
+.svc-included { padding: 5rem 4rem; background: var(--color-bg-soft); text-align: center; }
 .svc-included h2 {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 2.8vw, 2.3rem);
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   margin: 0.75rem 0 3rem;
 }
-.svc-included h2 em { font-style: normal; color: var(--theme-accent-orange); }
+.svc-included h2 em { font-style: normal; color: var(--color-brand-orange); }
 .svc-included-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -120,14 +120,14 @@
   text-align: left;
 }
 .svc-included-card {
-  background: var(--theme-bg-white);
-  border: 1px solid var(--theme-border-light);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
   border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: var(--theme-shadow-card);
+  box-shadow: var(--shadow-card);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-.svc-included-card:hover { transform: translateY(-4px); box-shadow: var(--theme-shadow-soft); }
+.svc-included-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-soft); }
 .svc-included-icon {
   width: 40px;
   height: 40px;
@@ -136,7 +136,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(233, 90, 42, 0.1);
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   margin-bottom: 0.9rem;
 }
 .svc-included-icon svg { width: 20px; height: 20px; stroke-width: 1.8; }
@@ -144,12 +144,12 @@
   font-family: var(--font-display);
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   margin-bottom: 0.5rem;
 }
 .svc-included-card p {
   font-size: 0.85rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   font-weight: 400;
   line-height: 1.6;
   margin: 0;
@@ -158,42 +158,42 @@
 /* ── Tech stack ───────────────────────────────────────────────── */
 .svc-tech {
   padding: 5rem 4rem;
-  background: var(--theme-bg-main);
+  background: var(--color-bg-main);
   text-align: center;
 }
 .svc-tech h2 {
   font-family: var(--font-display);
   font-size: 1.9rem;
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   margin: 0.75rem 0 3rem;
 }
 .svc-tech-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: left; }
 .svc-tech-group h4 {
   font-size: 0.7rem;
   font-weight: 700;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
 }
 .svc-tech-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .svc-tech-pill {
-  background: var(--theme-bg-soft);
-  border: 1px solid var(--theme-border-light);
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border-light);
   border-radius: 100px;
   padding: 0.35rem 0.85rem;
   font-size: 0.78rem;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
 }
 
 /* ── Process ──────────────────────────────────────────────────── */
-.svc-process { padding: 5rem 4rem; background: var(--theme-bg-dark); text-align: center; }
+.svc-process { padding: 5rem 4rem; background: var(--color-bg-dark); text-align: center; }
 .svc-process h2 {
   font-family: var(--font-display);
   font-size: 1.9rem;
   font-weight: 700;
-  color: var(--theme-text-light);
+  color: var(--color-text-light);
   margin: 0.75rem 0 3rem;
 }
 .svc-process-list { display: flex; flex-direction: column; gap: 0; text-align: left; }
@@ -202,7 +202,7 @@
   gap: 2rem;
   align-items: flex-start;
   padding: 2rem 0;
-  border-bottom: 1px solid var(--theme-border-dark);
+  border-bottom: 1px solid var(--color-border-dark);
 }
 .svc-process-item:last-child { border-bottom: none; }
 .svc-process-step {
@@ -219,12 +219,12 @@
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--theme-text-light);
+  color: var(--color-text-light);
   margin: 0;
 }
 .svc-process-meta span {
   font-size: 0.72rem;
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   background: rgba(233, 90, 42, 0.14);
   padding: 0.2rem 0.6rem;
   border-radius: 100px;
@@ -232,7 +232,7 @@
 }
 .svc-process-body p {
   font-size: 0.875rem;
-  color: var(--theme-text-light-muted);
+  color: var(--color-text-light-muted);
   font-weight: 400;
   line-height: 1.6;
   margin: 0;
@@ -241,18 +241,18 @@
 /* ── FAQ ──────────────────────────────────────────────────────── */
 .svc-faq {
   padding: 5rem 4rem;
-  background: var(--theme-bg-main);
+  background: var(--color-bg-main);
   text-align: center;
 }
 .svc-faq h2 {
   font-family: var(--font-display);
   font-size: 1.9rem;
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   margin: 0.75rem 0 2.5rem;
 }
 .svc-faq-list { max-width: 800px; margin: 0 auto; text-align: left; }
-.svc-faq-item { border-bottom: 1px solid var(--theme-border-light); }
+.svc-faq-item { border-bottom: 1px solid var(--color-border-light); }
 .svc-faq-item button {
   width: 100%;
   background: none;
@@ -263,19 +263,19 @@
   align-items: center;
   gap: 1rem;
   cursor: pointer;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   font-size: 0.95rem;
   font-weight: 600;
   text-align: left;
   font-family: var(--font-body);
 }
-.svc-faq-item button svg { flex-shrink: 0; color: var(--theme-text-muted); transition: transform 0.25s; }
-.svc-faq-item.open button svg { transform: rotate(180deg); color: var(--theme-accent-orange); }
+.svc-faq-item button svg { flex-shrink: 0; color: var(--color-text-muted); transition: transform 0.25s; }
+.svc-faq-item.open button svg { transform: rotate(180deg); color: var(--color-brand-orange); }
 .svc-faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
 .svc-faq-item.open .svc-faq-answer { max-height: 200px; }
 .svc-faq-answer p {
   padding-bottom: 1.25rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.7;
@@ -285,14 +285,14 @@
 /* ── Related services ─────────────────────────────────────────── */
 .svc-related {
   padding: 4rem 4rem 5rem;
-  background: var(--theme-bg-soft);
+  background: var(--color-bg-soft);
   text-align: center;
 }
 .svc-related h3 {
   font-family: var(--font-display);
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1.5rem;
@@ -304,16 +304,16 @@
   align-items: center;
   gap: 0.75rem;
   padding: 1.25rem 1.5rem;
-  background: var(--theme-bg-white);
-  border: 1px solid var(--theme-border-light);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
   border-radius: 14px;
   text-decoration: none;
   transition: border-color 0.2s, transform 0.2s;
 }
 .svc-related-card:hover { border-color: rgba(233, 90, 42, 0.35); transform: translateY(-2px); }
-.svc-related-icon { width: 20px; height: 20px; color: var(--theme-accent-orange); stroke-width: 1.8; flex-shrink: 0; }
-.svc-related-card p { flex: 1; color: var(--theme-text-main); font-size: 0.875rem; font-weight: 600; margin: 0; }
-.svc-related-arrow { color: var(--theme-accent-orange); font-size: 1rem; }
+.svc-related-icon { width: 20px; height: 20px; color: var(--color-brand-orange); stroke-width: 1.8; flex-shrink: 0; }
+.svc-related-card p { flex: 1; color: var(--color-text-main); font-size: 0.875rem; font-weight: 600; margin: 0; }
+.svc-related-arrow { color: var(--color-brand-orange); font-size: 1rem; }
 
 /* ── Responsive ───────────────────────────────────────────────── */
 @media (max-width: 1024px) {

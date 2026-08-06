@@ -1,6 +1,6 @@
 .services-page {
   padding-top: 80px;
-  background: var(--theme-bg-main);
+  background: var(--color-bg-main);
 }
 
 .sp-container {
@@ -9,7 +9,7 @@
 }
 
 .services-page .section-eyebrow {
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   font-size: 0.7rem;
   font-weight: 700;
   display: inline-flex;
@@ -21,14 +21,14 @@
   content: '';
   width: 20px;
   height: 2px;
-  background: var(--theme-accent-orange);
+  background: var(--color-brand-orange);
   border-radius: 2px;
 }
 
 /* Hero */
 .sp-hero {
   padding: 6rem 4rem 4rem;
-  background: var(--theme-bg-main);
+  background: var(--color-bg-main);
   text-align: center;
 }
 .sp-hero-inner { max-width: 720px; margin: 0 auto; }
@@ -37,14 +37,14 @@
   font-family: var(--font-display);
   font-size: clamp(2.3rem, 4.4vw, 3.5rem);
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   line-height: 1.12;
   letter-spacing: -0.03em;
   margin: 0.5rem 0 1.25rem;
 }
 .sp-hero-inner > p {
   font-size: 1.05rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   font-weight: 400;
   line-height: 1.75;
   max-width: 560px;
@@ -60,16 +60,16 @@
   gap: 1.25rem;
 }
 .sp-discipline-card {
-  background: var(--theme-bg-white);
-  border: 1px solid var(--theme-border-light);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: var(--theme-shadow-card);
+  box-shadow: var(--shadow-card);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .sp-discipline-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--theme-shadow-soft);
+  box-shadow: var(--shadow-soft);
 }
 .sp-discipline-icon-wrap {
   width: 52px;
@@ -80,33 +80,32 @@
   justify-content: center;
   margin-bottom: 1.25rem;
 }
-.sp-discipline-orange { background: rgba(233, 90, 42, 0.1); color: var(--theme-accent-orange); }
-.sp-discipline-green { background: var(--theme-accent-green-soft); color: var(--theme-accent-green); }
+.sp-discipline-orange { background: rgba(233, 90, 42, 0.1); color: var(--color-brand-orange); }
 .sp-discipline-icon { width: 26px; height: 26px; stroke-width: 1.8; }
 .sp-discipline-card h3 {
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   margin-bottom: 0.6rem;
 }
 .sp-discipline-card p {
   font-size: 0.92rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   line-height: 1.65;
 }
 
 /* Detailed services grid */
 .sp-services {
   padding: 5rem 4rem;
-  background: var(--theme-bg-soft);
+  background: var(--color-bg-soft);
   text-align: center;
 }
 .sp-services h2 {
   font-family: var(--font-display);
   font-size: clamp(1.7rem, 3vw, 2.4rem);
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   letter-spacing: -0.02em;
   margin: 0 0 2.5rem;
 }
@@ -118,8 +117,8 @@
 }
 
 .sp-service-card {
-  background: var(--theme-bg-white);
-  border: 1px solid var(--theme-border-light);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
   border-radius: 18px;
   padding: 2rem;
   display: flex;
@@ -128,7 +127,7 @@
 }
 .sp-service-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--theme-shadow-card);
+  box-shadow: var(--shadow-card);
 }
 
 .sp-service-icon-wrap {
@@ -139,7 +138,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(233, 90, 42, 0.1);
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   margin-bottom: 18px;
   flex-shrink: 0;
 }
@@ -150,14 +149,14 @@
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   letter-spacing: -0.01em;
   margin-bottom: 0.6rem;
 }
 
 .sp-service-card > p {
   font-size: 0.9rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   font-weight: 400;
   line-height: 1.65;
   margin-bottom: 1.25rem;
@@ -176,15 +175,15 @@
   letter-spacing: 0.02em;
   padding: 3px 9px;
   border-radius: 100px;
-  border: 1px solid var(--theme-border-light);
-  color: var(--theme-text-muted);
-  background: var(--theme-bg-soft);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-muted);
+  background: var(--color-bg-soft);
 }
 
 /* Engagement models */
 .sp-engagement {
   padding: 5.5rem 4rem;
-  background: var(--theme-bg-main);
+  background: var(--color-bg-main);
   text-align: center;
 }
 
@@ -192,7 +191,7 @@
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 2.8vw, 2.4rem);
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   letter-spacing: -0.02em;
   margin: 0 0 3rem;
 }
@@ -205,15 +204,15 @@
 }
 
 .sp-engagement-card {
-  background: var(--theme-bg-white);
-  border: 1px solid var(--theme-border-light);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
   border-radius: 20px;
   padding: 2rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .sp-engagement-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--theme-shadow-card);
+  box-shadow: var(--shadow-card);
 }
 
 .sp-engagement-icon-wrap {
@@ -223,8 +222,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--theme-bg-soft);
-  color: var(--theme-accent-orange);
+  background: var(--color-bg-soft);
+  color: var(--color-brand-orange);
   margin-bottom: 1.25rem;
 }
 
@@ -234,7 +233,7 @@
   font-family: var(--font-body);
   font-size: 0.65rem;
   font-weight: 700;
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 0.6rem;
@@ -244,14 +243,14 @@
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   letter-spacing: -0.02em;
   margin-bottom: 0.65rem;
 }
 
 .sp-engagement-card p {
   font-size: 0.92rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   font-weight: 400;
   line-height: 1.65;
   margin: 0;
@@ -260,7 +259,7 @@
 /* Bottom CTA */
 .sp-cta-section {
   padding: 5.5rem 4rem;
-  background: var(--theme-bg-dark);
+  background: var(--color-bg-dark);
   text-align: center;
 }
 
@@ -268,14 +267,14 @@
   font-family: var(--font-display);
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
-  color: var(--theme-text-light);
+  color: var(--color-text-light);
   letter-spacing: -0.03em;
   margin-bottom: 0.75rem;
 }
 
 .sp-cta-section > .sp-container > p {
   font-size: 1rem;
-  color: var(--theme-text-light-muted);
+  color: var(--color-text-light-muted);
   font-weight: 400;
   margin-bottom: 2rem;
 }
@@ -289,12 +288,12 @@
 }
 .sp-cta-actions .btn-ghost {
   background: transparent;
-  color: var(--theme-text-light);
-  border-color: var(--theme-border-dark);
+  color: var(--color-text-light);
+  border-color: var(--color-border-dark);
 }
 .sp-cta-actions .btn-ghost:hover {
-  background: var(--theme-bg-dark-panel);
-  color: var(--theme-accent-orange);
+  background: var(--color-bg-dark-card);
+  color: var(--color-brand-orange);
 }
 .sp-cta-icon { width: 16px; height: 16px; stroke-width: 2; }
 

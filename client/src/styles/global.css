@@ -37,31 +37,50 @@
   --font-body:    'Inter', system-ui, sans-serif;
   --font-kicker:  'Inter', system-ui, sans-serif;
 
-  /* New brand direction (rolling out phase by phase — see theme-* tokens).
-     Kept separate from the legacy tokens above so pages not yet migrated
-     don't break; each phase migrates its own files onto these. */
-  --theme-bg-main:            #FAF7F2;
-  --theme-bg-soft:       #F4EFE8;
-  --theme-bg-white:            #FFFFFF;
-  --theme-bg-dark:             #1F1F1F;
-  --theme-bg-dark-panel:       #2A2A2A;
+  /* Final color system — warm premium palette, orange only (no green). */
+  --color-bg-main:            #FAF7F2;
+  --color-bg-soft:            #F4EFE8;
+  --color-bg-card:            #FFFFFF;
+  --color-bg-dark:            #1F1F1F;
+  --color-bg-dark-card:       #2A2A2A;
 
-  --theme-text-main:              #17120E;
-  --theme-text-muted:        #746D66;
-  --theme-text-light:        #F7F2EC;
-  --theme-text-light-muted:  #A9A09A;
+  --color-text-main:          #17120E;
+  --color-text-muted:         #746D66;
+  --color-text-light:         #F7F2EC;
+  --color-text-light-muted:   #B8B0A8;
 
-  --theme-accent-orange:           #E95A2A;
-  --theme-accent-orange-dark:      #C9471F;
-  --theme-accent-green:            #2F8F5B;
-  --theme-accent-green-dark:       #237348;
-  --theme-accent-green-soft:       #E8F6ED;
+  --color-brand-orange:       #E95A2A;
+  --color-brand-orange-dark:  #C9471F;
+  --color-brand-orange-soft:  #FFF0E8;
 
-  --theme-border-light:     rgba(23, 18, 14, 0.12);
-  --theme-border-dark:      rgba(247, 242, 236, 0.14);
+  --color-border-light:       rgba(23, 18, 14, 0.12);
+  --color-border-dark:        rgba(247, 242, 236, 0.14);
 
-  --theme-shadow-soft:      0 24px 70px rgba(23, 18, 14, 0.08);
-  --theme-shadow-card:      0 14px 40px rgba(23, 18, 14, 0.06);
+  --color-error:              #C0392B;
+
+  --shadow-soft:              0 24px 70px rgba(23, 18, 14, 0.08);
+  --shadow-card:               0 14px 40px rgba(23, 18, 14, 0.06);
+
+  /* Compatibility aliases — kept only so dead/unused components
+     (DeliveryFramework, MvpOffer, Ticker, Technologies, Testimonials,
+     sections/About) don't hard-break. No green alias: nothing active
+     or dead should be styled green going forward. Active files use
+     the color and shadow tokens above directly, not these. */
+  --theme-bg-main:            var(--color-bg-main);
+  --theme-bg-soft:            var(--color-bg-soft);
+  --theme-bg-white:           var(--color-bg-card);
+  --theme-bg-dark:            var(--color-bg-dark);
+  --theme-bg-dark-panel:      var(--color-bg-dark-card);
+  --theme-text-main:          var(--color-text-main);
+  --theme-text-muted:         var(--color-text-muted);
+  --theme-text-light:         var(--color-text-light);
+  --theme-text-light-muted:   var(--color-text-light-muted);
+  --theme-accent-orange:      var(--color-brand-orange);
+  --theme-accent-orange-dark: var(--color-brand-orange-dark);
+  --theme-border-light:       var(--color-border-light);
+  --theme-border-dark:        var(--color-border-dark);
+  --theme-shadow-soft:        var(--shadow-soft);
+  --theme-shadow-card:        var(--shadow-card);
 
   font-size: 16px;
   line-height: 1.65;
@@ -118,34 +137,33 @@ p { margin: 0; }
 
 main { flex: 1; }
 
-/* Shared buttons — green primary per BA direction (orange is reserved for
-   eyebrows/heading highlights only). Centralized here (rather than left
-   duplicated per-section) so every page picks up the same primary/
-   secondary button regardless of which component CSS happens to load. */
+/* Shared buttons — orange primary, everywhere. Centralized here (rather
+   than left duplicated per-section) so every page picks up the same
+   primary/secondary button regardless of which component CSS loads. */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-height: 54px;
-  padding: 0 30px;
-  border-radius: 999px;
-  border: 1px solid var(--theme-accent-green);
-  background: var(--theme-accent-green);
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 12px;
+  border: 1px solid var(--color-brand-orange);
+  background: var(--color-brand-orange);
   color: #fff;
   font-family: var(--font-body);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: -0.01em;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 .btn-primary:hover {
-  background: var(--theme-accent-green-dark);
-  border-color: var(--theme-accent-green-dark);
+  background: var(--color-brand-orange-dark);
+  border-color: var(--color-brand-orange-dark);
   transform: translateY(-1px);
-  box-shadow: 0 14px 34px rgba(47, 143, 91, 0.22);
+  box-shadow: 0 14px 34px rgba(233, 90, 42, 0.24);
 }
 .btn-primary:active { transform: translateY(0); }
 .btn-primary svg { transition: transform 0.2s; }
@@ -156,23 +174,21 @@ main { flex: 1; }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-height: 54px;
-  padding: 0 30px;
-  border-radius: 999px;
-  background: var(--theme-bg-white);
-  color: var(--theme-text-main);
-  border: 1px solid var(--theme-border-light);
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border-light);
   font-family: var(--font-body);
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease,
-              background 0.25s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 .btn-ghost:hover {
   transform: translateY(-1px);
-  color: var(--theme-accent-green-dark);
-  border-color: rgba(47, 143, 91, 0.4);
-  background: var(--theme-bg-soft);
+  border-color: var(--color-brand-orange);
+  color: var(--color-brand-orange);
 }

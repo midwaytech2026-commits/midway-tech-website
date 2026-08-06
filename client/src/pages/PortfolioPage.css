@@ -1,6 +1,6 @@
 .portfolio-page {
   padding-top: 80px;
-  background: var(--theme-bg-main);
+  background: var(--color-bg-main);
 }
 
 .pp-container {
@@ -9,7 +9,7 @@
 }
 
 .portfolio-page .section-eyebrow {
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   font-size: 0.7rem;
   font-weight: 700;
   display: inline-flex;
@@ -20,14 +20,14 @@
   content: '';
   width: 20px;
   height: 2px;
-  background: var(--theme-accent-orange);
+  background: var(--color-brand-orange);
   border-radius: 2px;
 }
 
 /* Hero */
 .pp-hero {
   padding: 6rem 4rem 4rem;
-  background: var(--theme-bg-main);
+  background: var(--color-bg-main);
   text-align: center;
 }
 .pp-hero-inner { max-width: 700px; margin: 0 auto; }
@@ -36,14 +36,14 @@
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 4.2vw, 3.4rem);
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   line-height: 1.12;
   letter-spacing: -0.03em;
   margin: 1rem 0 1.25rem;
 }
 .pp-hero-inner > p {
   font-size: 1.05rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   font-weight: 400;
   line-height: 1.75;
   max-width: 520px;
@@ -53,7 +53,7 @@
 /* Work section */
 .pp-work {
   padding: 2rem 4rem 5rem;
-  background: var(--theme-bg-main);
+  background: var(--color-bg-main);
 }
 
 /* Filters */
@@ -70,20 +70,20 @@
   font-weight: 600;
   padding: 8px 18px;
   border-radius: 100px;
-  border: 1px solid var(--theme-border-light);
-  background: var(--theme-bg-white);
-  color: var(--theme-text-muted);
+  border: 1px solid var(--color-border-light);
+  background: var(--color-bg-card);
+  color: var(--color-text-muted);
   cursor: pointer;
   transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
   letter-spacing: 0.01em;
 }
 .pp-filter:hover {
   border-color: rgba(233, 90, 42, 0.4);
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
 }
 .pp-filter.active {
-  background: var(--theme-accent-orange);
-  border-color: var(--theme-accent-orange);
+  background: var(--color-brand-orange);
+  border-color: var(--color-brand-orange);
   color: #fff;
 }
 
@@ -96,18 +96,18 @@
 
 /* Card */
 .pp-card {
-  background: var(--theme-bg-white);
-  border: 1px solid var(--theme-border-light);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
   border-radius: 20px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--theme-shadow-card);
+  box-shadow: var(--shadow-card);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .pp-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--theme-shadow-soft);
+  box-shadow: var(--shadow-soft);
 }
 
 .pp-card-icon-wrap {
@@ -118,7 +118,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(233, 90, 42, 0.1);
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   margin-bottom: 1.1rem;
   flex-shrink: 0;
 }
@@ -131,7 +131,7 @@
   font-size: 0.62rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   margin-bottom: 0.6rem;
 }
 
@@ -147,8 +147,8 @@
   letter-spacing: 0.02em;
   padding: 3px 9px;
   border-radius: 100px;
-  border: 1px solid var(--theme-border-light);
-  color: var(--theme-accent-orange-dark);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-brand-orange-dark);
   background: rgba(233, 90, 42, 0.06);
 }
 
@@ -156,7 +156,7 @@
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   letter-spacing: -0.02em;
   margin-bottom: 0.35rem;
 }
@@ -164,13 +164,13 @@
 .pp-card-tagline {
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   margin-bottom: 0.75rem;
 }
 
 .pp-card-desc {
   font-size: 0.9rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   font-weight: 400;
   line-height: 1.65;
   margin-bottom: 1.25rem;
@@ -188,9 +188,9 @@
   font-weight: 500;
   padding: 3px 9px;
   border-radius: 6px;
-  background: var(--theme-bg-soft);
-  border: 1px solid var(--theme-border-light);
-  color: var(--theme-text-muted);
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-muted);
 }
 
 .pp-card-meta {
@@ -198,44 +198,44 @@
   align-items: center;
   gap: 6px;
   padding-top: 1rem;
-  border-top: 1px solid var(--theme-border-light);
+  border-top: 1px solid var(--color-border-light);
   margin-top: auto;
 }
 .pp-timeline-label {
   font-size: 0.72rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
 }
 .pp-timeline-value {
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
 }
 
 /* Empty state */
 .pp-empty {
   text-align: center;
   padding: 4rem 2rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
 }
 .pp-empty p { margin-bottom: 1.25rem; font-size: 0.9rem; }
 
 /* CTA section */
 .pp-cta-section {
   padding: 5.5rem 4rem;
-  background: var(--theme-bg-dark);
+  background: var(--color-bg-dark);
   text-align: center;
 }
 .pp-cta-section h2 {
   font-family: var(--font-display);
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
-  color: var(--theme-text-light);
+  color: var(--color-text-light);
   letter-spacing: -0.03em;
   margin-bottom: 0.75rem;
 }
 .pp-cta-section > .pp-container > p {
   font-size: 1rem;
-  color: var(--theme-text-light-muted);
+  color: var(--color-text-light-muted);
   margin-bottom: 2rem;
 }
 .pp-cta-actions {
@@ -247,12 +247,12 @@
 }
 .pp-cta-actions .btn-ghost {
   background: transparent;
-  color: var(--theme-text-light);
-  border-color: var(--theme-border-dark);
+  color: var(--color-text-light);
+  border-color: var(--color-border-dark);
 }
 .pp-cta-actions .btn-ghost:hover {
-  background: var(--theme-bg-dark-panel);
-  color: var(--theme-accent-orange);
+  background: var(--color-bg-dark-card);
+  color: var(--color-brand-orange);
 }
 .pp-cta-icon { width: 16px; height: 16px; stroke-width: 2; }
 

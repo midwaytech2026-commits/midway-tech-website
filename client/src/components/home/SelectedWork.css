@@ -1,5 +1,5 @@
 .sw-section {
-  background: var(--theme-bg-main);
+  background: var(--color-bg-main);
   padding: 5.5rem 4rem 4rem;
   text-align: center;
 }
@@ -10,7 +10,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-family: var(--font-body);
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   margin-bottom: 1rem;
 }
 
@@ -19,13 +19,13 @@
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   margin-bottom: 0.75rem;
 }
 
 .sw-sub {
   font-size: 1rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   max-width: 480px;
   margin: 0 auto;
 }
@@ -39,16 +39,16 @@
 }
 
 .sw-card {
-  background: var(--theme-bg-white);
-  border: 1px solid var(--theme-border-light);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
   border-radius: 20px;
   padding: 2rem;
-  box-shadow: var(--theme-shadow-card);
+  box-shadow: var(--shadow-card);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .sw-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--theme-shadow-soft);
+  box-shadow: var(--shadow-soft);
   border-color: rgba(233, 90, 42, 0.3);
 }
 
@@ -60,7 +60,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(233, 90, 42, 0.1);
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   margin-bottom: 1.25rem;
 }
 .sw-card-icon { width: 24px; height: 24px; stroke-width: 1.8; }
@@ -70,7 +70,7 @@
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   margin-bottom: 0.6rem;
 }
 
@@ -78,7 +78,7 @@
   font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   letter-spacing: -0.01em;
   line-height: 1.4;
 }

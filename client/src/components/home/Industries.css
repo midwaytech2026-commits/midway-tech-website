@@ -1,5 +1,5 @@
 .ind-section {
-  background: var(--theme-bg-soft);
+  background: var(--color-bg-soft);
   padding: 4rem 4rem 5.5rem;
   text-align: center;
 }
@@ -10,7 +10,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-family: var(--font-body);
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   margin-bottom: 1rem;
 }
 
@@ -19,7 +19,7 @@
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   max-width: 700px;
   margin: 0 auto;
 }
@@ -36,13 +36,13 @@
   aspect-ratio: 4 / 5;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid var(--theme-border-light);
+  border: 1px solid var(--color-border-light);
   cursor: default;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .ind-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--theme-shadow-soft);
+  box-shadow: var(--shadow-soft);
   border-color: rgba(233, 90, 42, 0.4);
 }
 

@@ -1,5 +1,5 @@
 .wwd-section {
-  background: var(--theme-bg-main);
+  background: var(--color-bg-main);
   padding: 5.5rem 4rem;
   text-align: center;
 }
@@ -10,7 +10,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-family: var(--font-body);
-  color: var(--theme-accent-orange);
+  color: var(--color-brand-orange);
   margin: 0 auto 1rem;
   width: fit-content;
   display: flex;
@@ -21,7 +21,7 @@
   content: '';
   width: 20px;
   height: 2px;
-  background: var(--theme-accent-orange);
+  background: var(--color-brand-orange);
   border-radius: 2px;
   flex-shrink: 0;
 }
@@ -32,7 +32,7 @@
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   max-width: 700px;
   margin: 0 auto;
 }
@@ -46,16 +46,16 @@
 }
 
 .wwd-card {
-  background: var(--theme-bg-white);
-  border: 1px solid var(--theme-border-light);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
   border-radius: 20px;
   padding: 2.25rem;
-  box-shadow: var(--theme-shadow-card);
+  box-shadow: var(--shadow-card);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .wwd-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--theme-shadow-soft);
+  box-shadow: var(--shadow-soft);
   border-color: rgba(233, 90, 42, 0.3);
 }
 
@@ -68,21 +68,20 @@
   justify-content: center;
   margin-bottom: 1.5rem;
 }
-.wwd-icon-orange { background: rgba(233, 90, 42, 0.1); color: var(--theme-accent-orange); }
-.wwd-icon-green { background: var(--theme-accent-green-soft); color: var(--theme-accent-green); }
+.wwd-icon-orange { background: rgba(233, 90, 42, 0.1); color: var(--color-brand-orange); }
 .wwd-icon { width: 28px; height: 28px; stroke-width: 1.8; }
 
 .wwd-card h3 {
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--theme-text-main);
+  color: var(--color-text-main);
   letter-spacing: -0.01em;
   margin-bottom: 0.65rem;
 }
 .wwd-card p {
   font-size: 0.94rem;
-  color: var(--theme-text-muted);
+  color: var(--color-text-muted);
   line-height: 1.7;
 }
 
@@ -98,9 +97,9 @@
   letter-spacing: 0.02em;
   padding: 4px 11px;
   border-radius: 100px;
-  border: 1px solid var(--theme-border-light);
-  color: var(--theme-text-muted);
-  background: var(--theme-bg-soft);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-muted);
+  background: var(--color-bg-soft);
 }
 
 @media (max-width: 1100px) {

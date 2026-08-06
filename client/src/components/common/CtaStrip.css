@@ -1,5 +1,5 @@
 .cta-strip {
-  background: var(--theme-bg-dark);
+  background: var(--color-bg-dark);
   padding: 5rem 4rem;
 }
 
@@ -16,13 +16,13 @@
   font-family: var(--font-display);
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 800;
-  color: var(--theme-text-light);
+  color: var(--color-text-light);
   margin-bottom: 0.5rem;
 }
 
 .cta-strip-text p {
   font-size: 1rem;
-  color: var(--theme-text-light-muted);
+  color: var(--color-text-light-muted);
   font-weight: 400;
 }
 
@@ -41,8 +41,8 @@
 }
 
 .cta-strip .btn-outline {
-  color: var(--theme-text-light);
-  border: 1.5px solid var(--theme-border-dark);
+  color: var(--color-text-light);
+  border: 1.5px solid var(--color-border-dark);
   padding: 0.875rem 2rem;
   border-radius: 999px;
   font-weight: 700;
@@ -52,8 +52,8 @@
   display: inline-block;
 }
 .cta-strip .btn-outline:hover {
-  border-color: var(--theme-accent-green);
-  color: var(--theme-accent-green);
+  border-color: var(--color-brand-orange);
+  color: var(--color-brand-orange);
   transform: translateY(-1px);
 }
 
