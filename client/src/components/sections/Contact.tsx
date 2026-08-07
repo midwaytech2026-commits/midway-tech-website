@@ -25,26 +25,29 @@ export default function Contact() {
 
   return (
     <section id="contact" className="cta-section">
-      <h2 className="cta-title">Ready to build<br />your app?</h2>
-      <p className="cta-sub">Drop your email and we'll set up a free 30-minute discovery call. No pitch. Just a conversation.</p>
+      <h2 className="cta-title">Ready to Grow, Build, and Automate?</h2>
+      <p className="cta-sub">Tell us what you are building and where you want to go next. We&apos;ll help you understand the right scope, timeline, and next step.</p>
       {submitted ? (
         <p className="cta-success"><CheckCircle2 size={18} aria-hidden="true" /> Thanks! We'll be in touch shortly</p>
       ) : (
-        <form className="cta-email-form" onSubmit={handleSubmit}>
-          <input
-            type="email"
-            className="cta-email-input"
-            placeholder="your@email.com"
-            aria-label="Email address"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            required
-          />
-          <button type="submit" className="cta-email-button" disabled={loading}>
-            {loading ? 'Sending...' : <><span>Book free call</span><span aria-hidden="true">→</span></>}
-          </button>
-          {error && <p className="cta-error">{error}</p>}
-        </form>
+        <>
+          <form className="cta-email-form" onSubmit={handleSubmit}>
+            <input
+              type="email"
+              className="cta-email-input"
+              placeholder="your@email.com"
+              aria-label="Email address"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
+            />
+            <button type="submit" className="cta-email-button" disabled={loading}>
+              {loading ? 'Sending...' : <><span>Get a Free Quote</span><span aria-hidden="true">→</span></>}
+            </button>
+            {error && <p className="cta-error">{error}</p>}
+          </form>
+          <p className="cta-note">Response within 24 hours. No obligation.</p>
+        </>
       )}
     </section>
   )

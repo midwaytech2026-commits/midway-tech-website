@@ -24,8 +24,8 @@ export default function SelectedWork() {
   return (
     <section className="sw-section">
       <p className="sw-eyebrow">Selected Work</p>
-      <h2 className="sw-title">Work We&apos;re Proud Of.</h2>
-      <p className="sw-sub">Concept projects and product explorations across industries.</p>
+      <h2 className="sw-title">What We&apos;re Built to Ship.</h2>
+      <p className="sw-sub">Concept projects and product explorations that show the kind of systems MidwayTech is built to deliver.</p>
 
       <div className="sw-grid">
         {concepts.map(c => {

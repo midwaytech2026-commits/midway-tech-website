@@ -35,6 +35,13 @@
   position: relative;
 }
 
+.cta-note {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-top: 1rem;
+  position: relative;
+}
+
 .cta-email-form {
   width: min(100%, 640px);
   margin: 0 auto;

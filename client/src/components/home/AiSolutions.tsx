@@ -1,6 +1,4 @@
-import { useState } from 'react'
 import { Sparkles, MessageSquareText, Workflow, PenTool, Database, ArrowRight } from 'lucide-react'
-import ComingSoonModal from '../common/ComingSoonModal'
 import './AiSolutions.css'
 
 const features = [
@@ -11,16 +9,8 @@ const features = [
 ]
 
 export default function AiSolutions() {
-  const [comingSoon, setComingSoon] = useState(false)
-
   return (
     <section className="ai-section">
-      <ComingSoonModal
-        open={comingSoon}
-        message="Our dedicated AI Solutions page is being prepared and will be available soon."
-        onClose={() => setComingSoon(false)}
-      />
-
       <span className="ai-badge">
         <Sparkles className="ai-badge-icon" aria-hidden="true" />
         AI Solutions
@@ -32,10 +22,10 @@ export default function AiSolutions() {
         business operating leverage.
       </p>
 
-      <button type="button" className="btn-primary ai-cta" onClick={() => setComingSoon(true)}>
-        Explore AI Solutions
+      <a href="#contact" className="btn-primary ai-cta">
+        Ask About AI Automation
         <ArrowRight className="ai-cta-icon" aria-hidden="true" />
-      </button>
+      </a>
 
       <div className="ai-grid">
         {features.map(f => {

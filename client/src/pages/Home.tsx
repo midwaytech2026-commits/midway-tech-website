@@ -15,8 +15,8 @@ export default function Home() {
       <Hero />
       <WhyUs />
       <Services />
-      <Industries />
       <TrustGuarantees />
+      <Industries />
       <AiSolutions />
       <SelectedWork />
       <Process />

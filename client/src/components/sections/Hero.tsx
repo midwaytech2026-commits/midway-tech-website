@@ -5,7 +5,7 @@ import './Hero.css'
 const bullets = [
   'Product + Growth + AI in one team',
   'Clear scope and honest timelines',
-  'Built for launch and scale',
+  'Built for real launch conditions',
 ]
 
 export default function Hero() {

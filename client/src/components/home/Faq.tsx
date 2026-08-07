@@ -19,6 +19,14 @@ const faqs = [
     q: 'How do we get started?',
     a: 'Book a free strategy call. We’ll understand your business, goals, and current systems, then recommend the right next step.',
   },
+  {
+    q: 'How much does a typical project cost?',
+    a: 'Pricing depends on scope, features, timeline, and integrations. After a discovery call, we provide a written quote so you know exactly what is included before work begins.',
+  },
+  {
+    q: 'What is the typical project timeline?',
+    a: 'Small websites or focused automation systems can move faster, while custom apps and platforms need more planning, design, development, and testing. We define the timeline clearly before starting and share progress every week.',
+  },
 ]
 
 export default function Faq() {
