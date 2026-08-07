@@ -19,7 +19,7 @@
 .footer-cta-inner h2 {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 2.6vw, 2.1rem);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--color-text-light);
   letter-spacing: -0.02em;
   margin-bottom: 0.4rem;
