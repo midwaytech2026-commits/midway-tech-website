@@ -15,10 +15,10 @@ export default function Home() {
       <Hero />
       <WhyUs />
       <Services />
+      <Industries />
       <TrustGuarantees />
       <AiSolutions />
       <SelectedWork />
-      <Industries />
       <Process />
       <Faq />
       <Contact />

@@ -6,19 +6,22 @@ const pillars = [
     num: '01',
     title: 'Grow',
     Icon: TrendingUp,
-    desc: 'Marketing systems that generate revenue, not impressions.',
+    desc: 'Marketing systems focused on revenue, visibility, and qualified demand — not just impressions.',
+    chips: ['Demand', 'Leads', 'Revenue'],
   },
   {
     num: '02',
     title: 'Build',
     Icon: Code2,
-    desc: 'Technology engineered for your business model.',
+    desc: 'Websites, apps, platforms, and backend systems engineered around your business model.',
+    chips: ['Web', 'Apps', 'Systems'],
   },
   {
     num: '03',
     title: 'Automate',
     Icon: Bot,
-    desc: 'AI systems that remove friction and multiply output.',
+    desc: 'AI workflows that reduce manual work, speed up operations, and help teams scale output.',
+    chips: ['AI', 'CRM', 'Workflows'],
   },
 ]
 
@@ -26,17 +29,14 @@ export default function WhyUs() {
   return (
     <section className="why-section" id="why">
       <p className="why-eyebrow">Why MidwayTech</p>
-      <blockquote className="why-quote">
-        Most businesses waste months coordinating between a marketing agency, a development agency,
-        and an AI consultant. We built MidwayTech so you never have to.
-      </blockquote>
+      <h2 className="why-title">One Partner for Growth, Technology, and AI.</h2>
       <p className="why-sub">
-        One team. One relationship. One invoice. Marketing, technology, and AI — all connected toward
-        the same goal: growing your business.
+        Most businesses waste months coordinating between marketing teams, developers, and automation
+        consultants. MidwayTech brings all three together so execution stays clear, fast, and connected.
       </p>
 
       <div className="why-grid">
-        {pillars.map((p, i) => {
+        {pillars.map(p => {
           const Icon = p.Icon
           return (
             <div key={p.num} className="why-card">
@@ -46,10 +46,8 @@ export default function WhyUs() {
               </div>
               <h3>{p.title}</h3>
               <p>{p.desc}</p>
-              <div className="why-card-flow" aria-hidden="true">
-                {pillars.map((_, dotIndex) => (
-                  <span key={dotIndex} className={`why-flow-dot ${dotIndex === i ? 'active' : ''}`} />
-                ))}
+              <div className="why-card-chips">
+                {p.chips.map(chip => <span key={chip} className="why-chip">{chip}</span>)}
               </div>
             </div>
           )

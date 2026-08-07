@@ -10,7 +10,10 @@
   padding: 1.25rem 4rem;
   border-bottom: 1px solid var(--color-border-light);
   backdrop-filter: blur(12px);
-  background: rgba(250, 247, 242, 0.9);
+  /* Near-solid on purpose: a lightly transparent bar over a dark section
+     (e.g. Why MidwayTech) lets dark content bleed through the blur and
+     reads as a visual glitch/overlap rather than a clean fixed header. */
+  background: rgba(250, 247, 242, 0.97);
 }
 
 .site-logo {

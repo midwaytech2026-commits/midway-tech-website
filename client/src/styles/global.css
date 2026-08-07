@@ -85,6 +85,8 @@
   font-size: 16px;
   line-height: 1.65;
   scroll-behavior: smooth;
+  /* Fixed navbar is ~84px tall; keep anchor-jumped sections clear of it. */
+  scroll-padding-top: 96px;
 }
 
 body,

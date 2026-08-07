@@ -16,6 +16,10 @@ export default function Industries() {
     <section className="ind-section">
       <p className="ind-eyebrow">Industries We Understand</p>
       <h2 className="ind-title">We Work With Businesses That Want to Scale.</h2>
+      <p className="ind-sub">
+        We help growth-focused businesses build better digital products, marketing systems, and
+        automation workflows across practical, real-world industries.
+      </p>
 
       <div className="ind-grid">
         {industries.map(i => (
