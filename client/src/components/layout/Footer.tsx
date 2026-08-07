@@ -71,8 +71,8 @@ export default function Footer() {
       <div className="footer-cta">
         <div className="footer-cta-inner">
           <div>
-            <h2>Ready to grow your business?</h2>
-            <p>Get a free quote — response within 24 hours, no obligation.</p>
+            <h2>Have a Project in Mind?</h2>
+            <p>Tell us what you are building. We&apos;ll help you understand the right next step.</p>
           </div>
           <Link to="/contact" className="btn-primary">Get a Free Quote</Link>
         </div>

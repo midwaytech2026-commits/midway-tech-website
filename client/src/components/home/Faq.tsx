@@ -27,6 +27,14 @@ const faqs = [
     q: 'What is the typical project timeline?',
     a: 'Small websites or focused automation systems can move faster, while custom apps and platforms need more planning, design, development, and testing. We define the timeline clearly before starting and share progress every week.',
   },
+  {
+    q: 'Who owns the code, design, and final product?',
+    a: 'After final payment, the agreed source code, design files, and final deliverables belong to you. We also prefer working in your repository from the start so ownership stays clear.',
+  },
+  {
+    q: 'How do payments work for international clients?',
+    a: 'Payment structure depends on the project scope. For most engagements, we work with milestone-based payments so both sides know what is being delivered before the next stage begins.',
+  },
 ]
 
 export default function Faq() {

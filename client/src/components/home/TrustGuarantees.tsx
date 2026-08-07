@@ -1,55 +1,37 @@
 import {
   ShieldCheck,
-  FileLock2,
+  LockKeyhole,
   CalendarCheck,
-  Clock3,
-  FileText,
-  LifeBuoy,
-  GitBranch,
-  Timer,
+  ReceiptText,
+  Bug,
 } from 'lucide-react'
 import './TrustGuarantees.css'
 
 const guarantees = [
   {
     Icon: ShieldCheck,
-    title: '100% IP Transfer on Final Payment',
-    desc: 'Every line of code and design becomes yours on final payment.',
+    title: 'You Own Everything, From Day One.',
+    desc: 'Your source code, design files, and final product are handed over clearly on final payment, with work committed to your repository from the start.',
   },
   {
-    Icon: FileLock2,
+    Icon: LockKeyhole,
     title: 'NDA Before Sensitive Details Are Shared',
-    desc: 'We sign an NDA before discussing confidential product or business details.',
+    desc: 'We can sign an NDA before discussing confidential product, business, or customer information.',
   },
   {
     Icon: CalendarCheck,
     title: 'Weekly Updates — Never a Big Reveal',
-    desc: 'You see working progress every week.',
+    desc: 'You see progress every week, so feedback happens early and the project never disappears into silence.',
   },
   {
-    Icon: Clock3,
-    title: 'Reply to Every Enquiry Within 24 Hours',
-    desc: 'Sales, support, or questions — first reply within the next business day or sooner.',
+    Icon: ReceiptText,
+    title: 'No Surprise Fees, No Surprise Delays',
+    desc: 'Scope, cost, milestones, and timelines are discussed clearly before work begins. If something is not achievable, we tell you upfront.',
   },
   {
-    Icon: FileText,
-    title: 'Transparent Written Quotes — No Surprise Fees',
-    desc: 'Every invoice is scoped and signed off before work starts.',
-  },
-  {
-    Icon: LifeBuoy,
+    Icon: Bug,
     title: '30-Day Post-Launch Support Included',
-    desc: 'Any bug we shipped is fixed at our cost for 30 days post-launch.',
-  },
-  {
-    Icon: GitBranch,
-    title: 'Source Code on Your Repository From Day 1',
-    desc: 'We commit to your repo from the start.',
-  },
-  {
-    Icon: Timer,
-    title: 'Honest Timelines — We Won’t Overpromise',
-    desc: 'If a deadline is not achievable, we tell you clearly.',
+    desc: 'If something we shipped breaks after launch, we fix it during the included support window.',
   },
 ]
 
