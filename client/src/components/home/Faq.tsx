@@ -57,10 +57,12 @@ export default function Faq() {
                   aria-expanded={isOpen}
                 >
                   <span>{item.q}</span>
-                  {isOpen
-                    ? <ChevronUp className="faq-toggle-icon" aria-hidden="true" />
-                    : <ChevronDown className="faq-toggle-icon" aria-hidden="true" />
-                  }
+                  <span className="faq-toggle-circle">
+                    {isOpen
+                      ? <ChevronUp className="faq-toggle-icon" aria-hidden="true" />
+                      : <ChevronDown className="faq-toggle-icon" aria-hidden="true" />
+                    }
+                  </span>
                 </button>
                 <div className="faq-body" aria-hidden={!isOpen}>
                   <p>{item.a}</p>

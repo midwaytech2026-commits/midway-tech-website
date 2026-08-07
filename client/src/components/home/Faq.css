@@ -71,16 +71,30 @@
 .faq-trigger:hover { color: var(--color-brand-orange); }
 .faq-item-open .faq-trigger { color: var(--color-brand-orange); }
 
-/* Chevron toggle icon */
+/* Circular chevron toggle */
+.faq-toggle-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.faq-item-open .faq-toggle-circle {
+  border-color: var(--color-brand-orange);
+  background: rgba(233, 90, 42, 0.08);
+}
+
 .faq-toggle-icon {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   stroke-width: 2;
   color: var(--color-brand-orange);
   flex-shrink: 0;
-  transition: transform 0.25s ease, opacity 0.2s ease;
 }
-.faq-item-open .faq-toggle-icon { opacity: 1; }
 
 /* Answer body — animated via max-height */
 .faq-body {

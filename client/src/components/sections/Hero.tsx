@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { Layers, TrendingUp, Bot, ShieldCheck, Clock3, ArrowRight } from 'lucide-react'
+import { ShieldCheck, Sparkles, ArrowRight } from 'lucide-react'
+import heroVisual from '../../assets/images/hero-visual.jpg'
 import './Hero.css'
 
 const bullets = [
@@ -38,40 +39,20 @@ export default function Hero() {
         </ul>
       </div>
 
-      <div className="hero-visual" aria-hidden="true">
-        <div className="hero-visual-main">
-          <div className="hero-visual-rows">
-            <div className="hero-visual-row">
-              <span className="hero-visual-icon-wrap hvi-orange"><Layers className="hero-visual-icon" /></span>
-              <div>
-                <strong>Product &amp; Technology</strong>
-                <span>Built to global standards</span>
-              </div>
-            </div>
-            <div className="hero-visual-row">
-              <span className="hero-visual-icon-wrap hvi-orange"><TrendingUp className="hero-visual-icon" /></span>
-              <div>
-                <strong>Growth Marketing</strong>
-                <span>Systems that drive revenue</span>
-              </div>
-            </div>
-            <div className="hero-visual-row">
-              <span className="hero-visual-icon-wrap hvi-orange"><Bot className="hero-visual-icon" /></span>
-              <div>
-                <strong>AI &amp; Automation</strong>
-                <span>Leverage, not headcount</span>
-              </div>
-            </div>
+      <div className="hero-visual">
+        <img
+          src={heroVisual}
+          alt="MidwayTech team planning a product, growth, and AI roadmap together"
+          className="hero-visual-img"
+        />
+        <div className="hero-visual-float-card">
+          <span className="hero-visual-float-icon-wrap">
+            <Sparkles className="hero-visual-float-icon" aria-hidden="true" />
+          </span>
+          <div>
+            <strong>Growth + Tech + AI</strong>
+            <span>One connected execution team</span>
           </div>
-        </div>
-
-        <div className="hero-visual-float hero-visual-float-1">
-          <ShieldCheck className="hero-visual-float-icon" />
-          Fixed Scope
-        </div>
-        <div className="hero-visual-float hero-visual-float-2">
-          <Clock3 className="hero-visual-float-icon" />
-          24h Reply
         </div>
       </div>
     </section>

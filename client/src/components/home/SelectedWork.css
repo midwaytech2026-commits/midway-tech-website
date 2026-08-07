@@ -42,7 +42,7 @@
   background: var(--color-bg-card);
   border: 1px solid var(--color-border-light);
   border-radius: 16px;
-  padding: 1.75rem;
+  overflow: hidden;
   box-shadow: var(--shadow-card);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
@@ -52,25 +52,23 @@
   border-color: rgba(233, 90, 42, 0.3);
 }
 
-.sw-card-icon-wrap {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(233, 90, 42, 0.1);
-  color: var(--color-brand-orange);
-  margin-bottom: 1.25rem;
+.sw-card-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
 }
-.sw-card-icon { width: 24px; height: 24px; stroke-width: 1.8; }
+
+.sw-card-body {
+  padding: 1.5rem 1.75rem 1.75rem;
+}
 
 .sw-card-label {
   display: block;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: var(--color-text-muted);
+  color: var(--color-brand-orange);
   margin-bottom: 0.6rem;
 }
 

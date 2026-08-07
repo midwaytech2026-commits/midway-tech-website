@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Target, Rocket, BrainCircuit, Network } from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
+import aboutTeam from '../assets/images/about-team.jpg'
 import './AboutPage.css'
 
 const beliefs = [
@@ -69,15 +70,20 @@ export default function AboutPage() {
       </section>
 
       <section className="ap-why">
-        <div className="ap-container">
-          <span className="section-eyebrow">Our Purpose</span>
-          <h2>Why MidwayTech Exists</h2>
-          <p className="ap-why-copy">
-            Most businesses do not fail because they lack ideas. They struggle because execution
-            becomes slow, unclear, or disconnected from real business goals. MidwayTech was built to
-            close that gap — helping businesses move from idea to launch and from launch to scale
-            with structured product thinking, clean design, modern engineering, and AI-first execution.
-          </p>
+        <div className="ap-why-inner">
+          <div className="ap-why-text">
+            <span className="section-eyebrow">Our Purpose</span>
+            <h2>Why MidwayTech Exists</h2>
+            <p className="ap-why-copy">
+              Most businesses do not fail because they lack ideas. They struggle because execution
+              becomes slow, unclear, or disconnected from real business goals. MidwayTech was built to
+              close that gap — helping businesses move from idea to launch and from launch to scale
+              with structured product thinking, clean design, modern engineering, and AI-first execution.
+            </p>
+          </div>
+          <div className="ap-why-img">
+            <img src={aboutTeam} alt="Team collaboration and product planning workspace" loading="lazy" />
+          </div>
         </div>
       </section>
 

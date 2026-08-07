@@ -22,9 +22,9 @@ export default function Home() {
         primaryBtn={{ label: 'Get a Free Quote', to: '/contact' }}
       />
       <TrustGuarantees />
-      <Industries />
       <AiSolutions />
       <SelectedWork />
+      <Industries />
       <Process />
       <Faq />
       <Contact />
