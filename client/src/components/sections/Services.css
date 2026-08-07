@@ -1,6 +1,6 @@
 .wwd-section {
   background: var(--color-bg-main);
-  padding: 5.5rem 4rem;
+  padding: 4.5rem 4rem;
   text-align: center;
 }
 
@@ -40,16 +40,16 @@
 .wwd-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 3.5rem;
+  gap: 1.25rem;
+  margin-top: 3rem;
   text-align: left;
 }
 
 .wwd-card {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border-light);
-  border-radius: 20px;
-  padding: 2.25rem;
+  border-radius: 16px;
+  padding: 2rem;
   box-shadow: var(--shadow-card);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }

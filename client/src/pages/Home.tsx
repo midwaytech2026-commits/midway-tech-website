@@ -1,6 +1,7 @@
 import Hero from '../components/sections/Hero'
 import WhyUs from '../components/sections/WhyUs'
 import Services from '../components/sections/Services'
+import CtaStrip from '../components/common/CtaStrip'
 import TrustGuarantees from '../components/home/TrustGuarantees'
 import AiSolutions from '../components/home/AiSolutions'
 import SelectedWork from '../components/home/SelectedWork'
@@ -15,6 +16,11 @@ export default function Home() {
       <Hero />
       <WhyUs />
       <Services />
+      <CtaStrip
+        title="Not Sure What You Need?"
+        subtitle="Tell us your goal — we'll help map the right next step."
+        primaryBtn={{ label: 'Get a Free Quote', to: '/contact' }}
+      />
       <TrustGuarantees />
       <Industries />
       <AiSolutions />

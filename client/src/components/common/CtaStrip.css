@@ -1,6 +1,6 @@
 .cta-strip {
   background: var(--color-bg-dark);
-  padding: 5rem 4rem;
+  padding: 3.25rem 4rem;
 }
 
 .cta-strip-inner {
@@ -34,8 +34,8 @@
 }
 
 .cta-strip .btn-primary {
-  padding: 0.875rem 2rem;
-  font-size: 0.9rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.88rem;
   text-decoration: none;
   display: inline-block;
 }
@@ -43,11 +43,11 @@
 .cta-strip .btn-outline {
   color: var(--color-text-light);
   border: 1.5px solid var(--color-border-dark);
-  padding: 0.875rem 2rem;
+  padding: 0.75rem 1.75rem;
   border-radius: 999px;
   font-weight: 700;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   transition: border-color 0.2s, transform 0.2s, color 0.2s;
   display: inline-block;
 }

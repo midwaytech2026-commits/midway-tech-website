@@ -1,6 +1,6 @@
 .faq-section {
   background: var(--color-bg-main);
-  padding: 80px 24px;
+  padding: 72px 24px;
 }
 
 .faq-container {
@@ -26,7 +26,7 @@
   letter-spacing: -0.03em;
   color: var(--color-text-main);
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 /* List */
@@ -35,7 +35,7 @@
   flex-direction: column;
   gap: 0;
   border: 1px solid var(--color-border-light);
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
 }
 

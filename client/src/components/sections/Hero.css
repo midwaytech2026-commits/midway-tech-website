@@ -5,7 +5,7 @@
   grid-template-columns: 1.1fr 0.9fr;
   align-items: start;
   gap: 3rem;
-  padding: 6rem 4rem 4rem;
+  padding: 5.5rem 4rem 4rem;
   position: relative;
   overflow: hidden;
 }
@@ -166,7 +166,7 @@
 }
 
 @media (max-width: 1000px) {
-  .hero { grid-template-columns: 1fr; min-height: auto; padding: 5.5rem 1.5rem 2.5rem; }
+  .hero { grid-template-columns: 1fr; min-height: auto; padding: 5rem 1.5rem 2.5rem; }
   .hero-visual { min-height: 320px; margin-top: 1rem; }
   .hero-visual-float { display: none; }
 }

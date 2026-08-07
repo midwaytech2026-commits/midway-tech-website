@@ -1,6 +1,6 @@
 .proc-section {
   background: var(--color-bg-main);
-  padding: 5.5rem 4rem;
+  padding: 4.5rem 4rem;
   text-align: center;
 }
 
@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
   position: relative;
 }
 .proc-steps::before {
