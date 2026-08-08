@@ -8,39 +8,38 @@ import './Navbar.css'
 const navLinks = [
   { label: 'Case Studies', to: '/portfolio' },
   { label: 'About Us', to: '/about' },
-  { label: 'Contact Us', to: '/contact' },
 ]
 
 const servicesColumns = [
   {
     title: 'Product & Technology',
     links: [
-      { label: 'Product & Technology Hub', to: '/services/product-technology' },
-      { label: 'Website Development', to: '/services/product-technology' },
-      { label: 'Ecommerce & Shopify', to: '/services/product-technology' },
-      { label: 'Mobile Apps', to: '/services/product-technology' },
-      { label: 'UI/UX Design', to: '/services/ui-ux' },
+      { label: 'Product & Technology Hub', caption: 'All product development services', to: '/services/product-technology' },
+      { label: 'Website Development', caption: 'Credibility, SEO, and conversion', to: '/services/product-technology' },
+      { label: 'Ecommerce & Shopify', caption: 'Stores, checkout, and retention', to: '/services/product-technology' },
+      { label: 'Mobile Apps', caption: 'iOS, Android, React Native, Flutter', to: '/services/product-technology' },
+      { label: 'UI/UX Design', caption: 'Flows, prototypes, and design systems', to: '/services/ui-ux' },
     ],
   },
   {
     title: 'Growth Marketing',
     links: [
-      { label: 'Growth Marketing Hub', to: '/services/growth-marketing' },
-      { label: 'Performance Marketing', to: '/services/growth-marketing' },
-      { label: 'SEO & Content', to: '/services/growth-marketing' },
-      { label: 'Social Media Systems', to: '/services/growth-marketing' },
-      { label: 'Email & Retention', to: '/services/growth-marketing' },
+      { label: 'Growth Marketing Hub', caption: 'Marketing systems built for demand', to: '/services/growth-marketing' },
+      { label: 'Performance Marketing', caption: 'Campaigns, offers, and tracking', to: '/services/growth-marketing' },
+      { label: 'SEO & Content', caption: 'Search structure and helpful content', to: '/services/growth-marketing' },
+      { label: 'Social Media Systems', caption: 'Content planning and visibility', to: '/services/growth-marketing' },
+      { label: 'Email & Retention', caption: 'Flows, follow-up, and repeat sales', to: '/services/growth-marketing' },
     ],
   },
   {
     title: 'AI & Automation',
     accent: 'green',
     links: [
-      { label: 'AI & Automation Hub', to: '/services/ai-automation' },
-      { label: 'AI Sales Assistant', to: '/services/ai-automation' },
-      { label: 'Lead Qualification Workflow', to: '/services/ai-automation' },
-      { label: 'Workflow Automation', to: '/services/ai-automation' },
-      { label: 'CRM Automation', to: '/services/ai-automation' },
+      { label: 'AI & Automation Hub', caption: 'Systems that reduce manual work', to: '/services/ai-automation' },
+      { label: 'AI Sales Assistant', caption: 'Qualify and route enquiries', to: '/services/ai-automation' },
+      { label: 'Lead Qualification Workflow', caption: 'Score and organize opportunities', to: '/services/ai-automation' },
+      { label: 'Workflow Automation', caption: 'Connect tools and remove repetition', to: '/services/ai-automation' },
+      { label: 'CRM Automation', caption: 'Pipelines, reminders, and reporting', to: '/services/ai-automation' },
     ],
   },
 ]
@@ -104,7 +103,8 @@ export default function Navbar() {
                     className={`nav-dropdown-link${i === 0 ? ' nav-dropdown-link-hub' : ''}`}
                     onClick={() => setMenuOpen(false)}
                   >
-                    {l.label}
+                    <span className="nav-dropdown-link-label">{l.label}</span>
+                    <span className="nav-dropdown-link-caption">{l.caption}</span>
                   </Link>
                 ))}
               </div>
@@ -159,6 +159,15 @@ export default function Navbar() {
           >
             Blog
           </button>
+        </li>
+        <li>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => isActive ? 'active' : ''}
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact Us
+          </NavLink>
         </li>
         <li>
           <Link to="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>

@@ -9,10 +9,10 @@ type FooterLink = { label: string; to: string } | { label: string; comingSoon: t
 
 const companyLinks: FooterLink[] = [
   { label: 'About Us', to: '/about' },
+  { label: 'Blog', comingSoon: true },
   { label: 'Contact Us', to: '/contact' },
   { label: 'Get a Free Quote', to: '/contact' },
   { label: 'Case Studies', to: '/portfolio' },
-  { label: 'Blog', comingSoon: true },
 ]
 
 const productLinks: FooterLink[] = [

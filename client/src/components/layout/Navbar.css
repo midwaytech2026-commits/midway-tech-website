@@ -108,11 +108,11 @@
   border: 1px solid var(--color-border-light);
   border-radius: 16px;
   box-shadow: var(--shadow-soft);
-  padding: 1.5rem 1.75rem;
+  padding: 1.3rem 1.6rem;
   margin-top: 14px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  gap: 1.5rem;
   text-align: left;
   opacity: 0;
   visibility: hidden;
@@ -148,38 +148,58 @@
 }
 .nav-dropdown-link {
   display: block;
-  padding: 7px 8px;
+  padding: 6px 8px;
   margin: 0 -8px;
   border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.nav-dropdown-link-label {
+  display: block;
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--color-text-main);
-  text-decoration: none;
-  transition: background 0.15s ease, color 0.15s ease;
+}
+.nav-dropdown-link-caption {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-top: 1px;
 }
 .nav-dropdown-link:hover,
 .nav-dropdown-link:focus-visible {
   background: var(--color-bg-soft);
-  color: var(--color-brand-orange);
   outline: none;
 }
+.nav-dropdown-link:hover .nav-dropdown-link-label,
+.nav-dropdown-link:focus-visible .nav-dropdown-link-label {
+  color: var(--color-brand-orange);
+}
 .nav-dropdown-link-hub {
+  margin-bottom: 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.nav-dropdown-link-hub .nav-dropdown-link-label {
   font-weight: 700;
   color: var(--color-brand-orange);
-  margin-bottom: 6px;
-  padding-bottom: 9px;
-  border-bottom: 1px solid var(--color-border-light);
 }
 
 /* AI & Automation column takes the sample's green accent; Product/Marketing stay default */
 .nav-dropdown-col-green .nav-dropdown-col-title { color: var(--color-brand-green); }
 .nav-dropdown-col-green .nav-dropdown-link-hub {
-  color: var(--color-brand-green);
   border-bottom-color: var(--color-brand-green-border);
+}
+.nav-dropdown-col-green .nav-dropdown-link-hub .nav-dropdown-link-label {
+  color: var(--color-brand-green);
 }
 .nav-dropdown-col-green .nav-dropdown-link:hover,
 .nav-dropdown-col-green .nav-dropdown-link:focus-visible {
   background: var(--color-brand-green-soft);
+}
+.nav-dropdown-col-green .nav-dropdown-link:hover .nav-dropdown-link-label,
+.nav-dropdown-col-green .nav-dropdown-link:focus-visible .nav-dropdown-link-label {
   color: var(--color-brand-green);
 }
 
@@ -242,8 +262,8 @@
   font-size: 0.85rem !important;
   letter-spacing: -0.01em !important;
   min-height: 40px !important;
-  padding: 0 18px !important;
-  border-radius: 10px !important;
+  padding: 0 16px !important;
+  border-radius: 8px !important;
   border: 1px solid var(--color-brand-orange) !important;
   display: inline-flex !important;
   align-items: center !important;
