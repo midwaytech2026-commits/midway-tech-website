@@ -11,7 +11,7 @@ const companyLinks: FooterLink[] = [
   { label: 'About Us', to: '/about' },
   { label: 'Contact Us', to: '/contact' },
   { label: 'Get a Quote', to: '/contact' },
-  { label: 'Case Studies / Portfolio', to: '/portfolio' },
+  { label: 'Case Studies', to: '/portfolio' },
   { label: 'Blog', comingSoon: true },
 ]
 

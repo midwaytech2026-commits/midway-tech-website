@@ -10,7 +10,37 @@ import {
   Megaphone,
   ArrowRight,
 } from 'lucide-react'
+import caseSaas from '../assets/images/case-saas.jpg'
+import caseD2c from '../assets/images/case-d2c.jpg'
+import caseExport from '../assets/images/case-export.jpg'
 import './PortfolioPage.css'
+
+const conceptWork = [
+  {
+    image: caseSaas,
+    alt: 'Concept SaaS website and lead generation system mockup',
+    label: 'CONCEPT PROJECT / SAAS',
+    title: 'SaaS Startup — Website + Lead Generation System',
+    desc: 'A concept system showing how a SaaS company could combine a marketing site, SEO structure, and AI-assisted lead qualification.',
+    tags: ['Next.js', 'SEO', 'AI Lead Flow'],
+  },
+  {
+    image: caseD2c,
+    alt: 'Concept D2C ecommerce storefront mockup',
+    label: 'CONCEPT PROJECT / D2C',
+    title: 'D2C Brand — Ecommerce + Growth Setup',
+    desc: 'A concept build showing how a D2C brand could connect storefront experience, performance campaigns, and retention flows.',
+    tags: ['Ecommerce', 'Paid Ads', 'Email Flow'],
+  },
+  {
+    image: caseExport,
+    alt: 'Concept AI lead qualification workflow mockup for an export business',
+    label: 'CONCEPT PROJECT / EXPORT',
+    title: 'Export Business — AI Lead Qualification System',
+    desc: 'A concept workflow showing how inbound enquiries could be scored, routed, and followed up through a connected CRM process.',
+    tags: ['AI Workflow', 'CRM', 'Lead Scoring'],
+  },
+]
 
 const filters = ['All', 'Websites', 'Mobile Apps', 'AI Automation', 'MVP', 'Growth Systems', 'Backend Systems']
 
@@ -118,14 +148,36 @@ export default function PortfolioPage() {
 
       <section className="pp-hero">
         <div className="pp-hero-inner">
-          <span className="section-eyebrow">Case Studies / Portfolio</span>
-          <h1>Work, Concepts, and Product Systems Built to Scale</h1>
-          <p>A look at the types of websites, apps, AI systems, and growth platforms MidwayTech is built to deliver.</p>
+          <span className="section-eyebrow">Case Studies</span>
+          <h1>Case Studies &amp; Concept Work</h1>
+          <p>A look at the types of systems MidwayTech is built to deliver — clearly labeled as concept work until verified client case studies are ready.</p>
+        </div>
+      </section>
+
+      <section className="pp-concepts">
+        <div className="pp-container">
+          <div className="pp-concepts-grid">
+            {conceptWork.map(c => (
+              <div key={c.title} className="pp-concept-card">
+                <img src={c.image} alt={c.alt} className="pp-concept-img" loading="lazy" />
+                <div className="pp-concept-body">
+                  <span className="pp-concept-label">{c.label}</span>
+                  <h3>{c.title}</h3>
+                  <p>{c.desc}</p>
+                  <div className="pp-concept-tags">
+                    {c.tags.map(t => <span key={t}>{t}</span>)}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="pp-work">
         <div className="pp-container">
+          <span className="section-eyebrow">More Build Capabilities</span>
+          <h2>Additional Systems We&apos;re Set Up to Deliver</h2>
           <div className="pp-filters">
             {filters.map(f => (
               <button
@@ -182,7 +234,7 @@ export default function PortfolioPage() {
           <p>Book a free 30-minute discovery call. We'll give you a scope estimate within 48 hours.</p>
           <div className="pp-cta-actions">
             <Link to="/contact" className="btn-primary">
-              Book Discovery Call
+              Get a Free Quote
               <ArrowRight className="pp-cta-icon" aria-hidden="true" />
             </Link>
             <Link to="/services" className="btn-ghost">View Services</Link>

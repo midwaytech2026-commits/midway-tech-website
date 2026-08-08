@@ -7,7 +7,7 @@ import './Navbar.css'
 const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Services', to: '/services' },
-  { label: 'Portfolio', to: '/portfolio' },
+  { label: 'Case Studies', to: '/portfolio' },
   { label: 'About Us', to: '/about' },
   { label: 'Contact Us', to: '/contact' },
 ]
