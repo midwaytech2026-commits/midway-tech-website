@@ -16,31 +16,31 @@ const companyLinks: FooterLink[] = [
 ]
 
 const productLinks: FooterLink[] = [
-  { label: 'Website Development', to: '/services' },
-  { label: 'Ecommerce / Shopify', comingSoon: true },
-  { label: 'Mobile Apps', to: '/services' },
-  { label: 'Custom Software', to: '/services' },
-  { label: 'SaaS Development', to: '/services' },
+  { label: 'Website Development', to: '/services/product-technology' },
+  { label: 'Ecommerce / Shopify', to: '/services/product-technology' },
+  { label: 'Mobile Apps', to: '/services/product-technology' },
+  { label: 'Custom Software', to: '/services/product-technology' },
+  { label: 'SaaS Development', to: '/services/product-technology' },
   { label: 'UI/UX Design', to: '/services/ui-ux' },
-  { label: 'API Integrations', comingSoon: true },
+  { label: 'API Integrations', to: '/services/product-technology' },
 ]
 
 const marketingLinks: FooterLink[] = [
-  { label: 'Performance Marketing', comingSoon: true },
-  { label: 'SEO', comingSoon: true },
-  { label: 'Social Media', comingSoon: true },
-  { label: 'Email Marketing', comingSoon: true },
-  { label: 'Branding', comingSoon: true },
+  { label: 'Performance Marketing', to: '/services/growth-marketing' },
+  { label: 'SEO', to: '/services/growth-marketing' },
+  { label: 'Social Media', to: '/services/growth-marketing' },
+  { label: 'Email Marketing', to: '/services/growth-marketing' },
+  { label: 'Branding', to: '/services/growth-marketing' },
   { label: 'Lead Generation', comingSoon: true },
   { label: 'LinkedIn Marketing', comingSoon: true },
 ]
 
 const aiLinks: FooterLink[] = [
-  { label: 'AI Chatbots', comingSoon: true },
-  { label: 'Workflow Automation', comingSoon: true },
-  { label: 'CRM Automation', comingSoon: true },
-  { label: 'AI Content Systems', comingSoon: true },
-  { label: 'Lead Qualification AI', comingSoon: true },
+  { label: 'AI Chatbots', to: '/services/ai-automation' },
+  { label: 'Workflow Automation', to: '/services/ai-automation' },
+  { label: 'CRM Automation', to: '/services/ai-automation' },
+  { label: 'AI Content Systems', to: '/services/ai-automation' },
+  { label: 'Lead Qualification AI', to: '/services/ai-automation' },
   { label: 'AI Customer Support', comingSoon: true },
 ]
 

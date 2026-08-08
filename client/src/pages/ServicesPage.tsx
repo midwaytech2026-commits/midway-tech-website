@@ -22,18 +22,21 @@ const disciplines = [
     accent: 'orange',
     title: 'Product & Technology',
     desc: 'Websites, mobile apps, Shopify stores, SaaS platforms, and custom software built with clean design and scalable engineering.',
+    to: '/services/product-technology',
   },
   {
     Icon: Megaphone,
     accent: 'orange',
     title: 'Growth Marketing',
     desc: 'Performance marketing, SEO, content, email, social, and lead systems built to create measurable business growth.',
+    to: '/services/growth-marketing',
   },
   {
     Icon: BrainCircuit,
     accent: 'orange',
     title: 'AI & Automation',
     desc: 'AI chatbots, workflow automation, CRM automation, lead qualification, and content systems that reduce manual work.',
+    to: '/services/ai-automation',
   },
 ]
 
@@ -131,13 +134,17 @@ export default function ServicesPage() {
             {disciplines.map(d => {
               const Icon = d.Icon
               return (
-                <div key={d.title} className="sp-discipline-card">
+                <Link key={d.title} to={d.to} className="sp-discipline-card">
                   <div className={`sp-discipline-icon-wrap sp-discipline-${d.accent}`}>
                     <Icon className="sp-discipline-icon" aria-hidden="true" />
                   </div>
                   <h3>{d.title}</h3>
                   <p>{d.desc}</p>
-                </div>
+                  <span className="sp-discipline-link">
+                    Explore
+                    <ArrowRight className="sp-discipline-link-icon" aria-hidden="true" />
+                  </span>
+                </Link>
               )
             })}
           </div>

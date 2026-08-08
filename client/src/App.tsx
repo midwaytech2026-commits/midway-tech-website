@@ -4,6 +4,9 @@ import Footer from './components/layout/Footer'
 import ScrollToTop from './components/common/ScrollToTop'
 import Home from './pages/Home'
 import ServicesPage from './pages/ServicesPage'
+import ServiceProductTechnologyPage from './pages/ServiceProductTechnologyPage'
+import ServiceGrowthMarketingPage from './pages/ServiceGrowthMarketingPage'
+import ServiceAiAutomationPage from './pages/ServiceAiAutomationPage'
 import ServiceIosPage from './pages/ServiceIosPage'
 import ServiceAndroidPage from './pages/ServiceAndroidPage'
 import ServiceReactNativePage from './pages/ServiceReactNativePage'
@@ -24,6 +27,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/product-technology" element={<ServiceProductTechnologyPage />} />
+          <Route path="/services/growth-marketing" element={<ServiceGrowthMarketingPage />} />
+          <Route path="/services/ai-automation" element={<ServiceAiAutomationPage />} />
           <Route path="/services/ios" element={<ServiceIosPage />} />
           <Route path="/services/android" element={<ServiceAndroidPage />} />
           <Route path="/services/react-native" element={<ServiceReactNativePage />} />
