@@ -16,10 +16,45 @@
   background: rgba(250, 247, 242, 0.97);
 }
 
-.site-logo {
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nav-logo-mark {
+  width: 40px;
   height: 40px;
-  width: auto;
+  border-radius: 12px;
+  object-fit: contain;
   display: block;
+  flex-shrink: 0;
+}
+
+.nav-logo-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.nav-logo-name {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text-main);
+}
+.nav-logo-name span { color: var(--color-brand-orange); }
+
+.nav-logo-tagline {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: 3px;
 }
 
 .nav-links {
@@ -248,7 +283,10 @@
 
 @media (max-width: 900px) {
   .navbar { padding: 0.8rem 1.5rem; }
-  .site-logo { height: 32px; }
+  .nav-logo { gap: 9px; }
+  .nav-logo-mark { width: 34px; height: 34px; border-radius: 10px; }
+  .nav-logo-name { font-size: 16px; }
+  .nav-logo-tagline { font-size: 9px; letter-spacing: 2px; }
   .hamburger { display: flex; }
   .nav-links {
     display: none;
@@ -267,4 +305,8 @@
 
   .nav-services { display: none; }
   .nav-services-mobile { display: block; width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .nav-logo-tagline { display: none; }
 }

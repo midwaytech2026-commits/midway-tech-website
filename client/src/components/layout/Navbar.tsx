@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { ChevronDown } from 'lucide-react'
-import logo from '../../assets/icons/logo.svg'
+import logo from '../../assets/icons/brand-mark.png'
 import ComingSoonModal from '../common/ComingSoonModal'
 import './Navbar.css'
 
@@ -65,7 +65,13 @@ export default function Navbar() {
         onClose={() => setComingSoon(null)}
       />
 
-      <Link to="/"><img src={logo} alt="MidwayTech" className="site-logo" /></Link>
+      <Link to="/" className="nav-logo" aria-label="MidwayTech home">
+        <img src={logo} alt="" className="nav-logo-mark" aria-hidden="true" />
+        <span className="nav-logo-copy">
+          <span className="nav-logo-name">Midway<span>Tech</span></span>
+          <span className="nav-logo-tagline">AI &middot; AUTOMATION &middot; GROWTH</span>
+        </span>
+      </Link>
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <li>

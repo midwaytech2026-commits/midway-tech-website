@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, MapPin } from 'lucide-react'
-import logo from '../../assets/icons/logo.svg'
+import logo from '../../assets/icons/brand-mark.png'
 import ComingSoonModal from '../common/ComingSoonModal'
 import './Footer.css'
 
@@ -80,7 +80,13 @@ export default function Footer() {
 
       <div className="footer-top">
         <div className="footer-brand">
-          <Link to="/"><img src={logo} alt="MidwayTech" className="site-logo footer-logo" /></Link>
+          <Link to="/" className="footer-logo" aria-label="MidwayTech home">
+            <img src={logo} alt="" className="footer-logo-mark" aria-hidden="true" />
+            <span className="footer-logo-copy">
+              <span className="footer-logo-name">Midway<span>Tech</span></span>
+              <span className="footer-logo-tagline">AI &middot; AUTOMATION &middot; GROWTH</span>
+            </span>
+          </Link>
           <p>Growth and technology partner for modern businesses. Marketing, technology, and AI — one team, one invoice.</p>
           <ul className="footer-contact-list">
             <li><a href="mailto:hello@midwaytech.co"><Mail aria-hidden="true" /> hello@midwaytech.co</a></li>
