@@ -58,6 +58,11 @@
   box-shadow: var(--shadow-soft);
   border-color: rgba(233, 90, 42, 0.3);
 }
+/* AI card takes the sample's green accent; Product/Marketing stay orange */
+.wwd-card--ai:hover {
+  border-color: var(--color-brand-green-border);
+  box-shadow: 0 20px 50px rgba(42, 125, 79, 0.12);
+}
 
 .wwd-icon-wrap {
   width: 56px;
@@ -69,6 +74,11 @@
   margin-bottom: 1.5rem;
 }
 .wwd-icon-orange { background: rgba(233, 90, 42, 0.1); color: var(--color-brand-orange); }
+.wwd-icon-green {
+  background: var(--color-brand-green-soft);
+  border: 1px solid var(--color-brand-green-border);
+  color: var(--color-brand-green);
+}
 .wwd-icon { width: 28px; height: 28px; stroke-width: 1.8; }
 
 .wwd-card h3 {

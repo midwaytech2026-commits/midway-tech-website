@@ -72,7 +72,7 @@ const workflow = [
 
 export default function ServiceAiAutomationPage() {
   return (
-    <div className="hub-page">
+    <div className="hub-page hub-page--ai">
       <section className="hub-hero">
         <div className="hub-hero-inner">
           <p className="hub-breadcrumb">
@@ -87,7 +87,7 @@ export default function ServiceAiAutomationPage() {
           <p>AI assistants, workflows, CRM automation, and internal systems that reduce manual work and help teams move faster.</p>
           <div className="hub-hero-actions">
             <Link to="/contact" className="btn-primary">Get a Free Quote</Link>
-            <Link to="/contact" className="btn-ghost">Ask About AI Automation</Link>
+            <Link to="/contact" className="btn-primary hub-cta-green">Ask About AI Automation</Link>
           </div>
         </div>
       </section>
@@ -117,19 +117,26 @@ export default function ServiceAiAutomationPage() {
         <span className="section-eyebrow">How It Works</span>
         <h2>A Typical AI Automation Flow</h2>
         <div className="hub-workflow-row">
-          {workflow.map((step, i) => (
-            <Fragment key={step.label}>
-              <div className="hub-workflow-step">
-                <span className="hub-workflow-icon-wrap">
-                  <step.Icon className="hub-workflow-icon" />
-                </span>
-                <span className="hub-workflow-label">{step.label}</span>
-              </div>
-              {i < workflow.length - 1 && (
-                <ArrowRight className="hub-workflow-arrow" />
-              )}
-            </Fragment>
-          ))}
+          {workflow.map((step, i) => {
+            const isFirst = i === 0
+            const isLast = i === workflow.length - 1
+            return (
+              <Fragment key={step.label}>
+                <div className="hub-workflow-step">
+                  <span className="hub-workflow-icon-wrap">
+                    <step.Icon className="hub-workflow-icon" />
+                  </span>
+                  <span className="hub-workflow-label">{step.label}</span>
+                  {(isFirst || isLast) && (
+                    <span className="hub-workflow-status">{isFirst ? 'Trigger' : 'Done'}</span>
+                  )}
+                </div>
+                {i < workflow.length - 1 && (
+                  <ArrowRight className="hub-workflow-arrow" />
+                )}
+              </Fragment>
+            )
+          })}
         </div>
       </section>
 

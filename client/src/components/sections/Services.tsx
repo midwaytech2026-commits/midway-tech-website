@@ -21,7 +21,7 @@ const disciplines = [
   {
     id: 'ai',
     Icon: Bot,
-    accent: 'orange',
+    accent: 'green',
     title: 'AI & Automation',
     description: 'AI chatbots, workflow automations, CRM systems, and intelligent tools that reduce cost, qualify leads, and multiply output.',
     tags: ['AI Chatbots', 'Workflow', 'CRM Auto', 'Lead Qual.'],
@@ -38,7 +38,7 @@ export default function Services() {
         {disciplines.map(d => {
           const Icon = d.Icon
           return (
-            <div key={d.id} className="wwd-card">
+            <div key={d.id} className={`wwd-card${d.id === 'ai' ? ' wwd-card--ai' : ''}`}>
               <div className={`wwd-icon-wrap wwd-icon-${d.accent}`}>
                 <Icon className="wwd-icon" aria-hidden="true" />
               </div>

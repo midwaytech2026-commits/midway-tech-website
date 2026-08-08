@@ -19,8 +19,8 @@
   gap: 8px;
   padding: 8px 18px;
   border-radius: 100px;
-  background: var(--color-brand-orange-soft);
-  color: var(--color-brand-orange);
+  background: var(--color-brand-green-soft);
+  color: var(--color-brand-green);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -46,7 +46,18 @@
   line-height: 1.7;
 }
 
-.ai-cta { margin: 0; }
+/* AI-specific CTA ("Ask About AI Automation") takes the AI green accent —
+   the universal "Get a Free Quote" CTA elsewhere on the site stays orange */
+.btn-primary.ai-cta {
+  margin: 0;
+  background: var(--color-brand-green);
+  border-color: var(--color-brand-green);
+}
+.btn-primary.ai-cta:hover {
+  background: var(--color-brand-green-dark);
+  border-color: var(--color-brand-green-dark);
+  box-shadow: 0 14px 34px rgba(42, 125, 79, 0.24);
+}
 .ai-cta-icon { width: 16px; height: 16px; }
 
 /* Workflow diagram — CSS/card-based, no image, no fake metrics */
@@ -82,8 +93,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(233, 90, 42, 0.16);
-  color: var(--color-brand-orange);
+  background: rgba(42, 125, 79, 0.16);
+  color: var(--color-brand-green);
   flex-shrink: 0;
   position: relative;
   z-index: 1;
@@ -96,6 +107,17 @@
   font-weight: 700;
   color: var(--color-text-light);
   letter-spacing: -0.01em;
+  flex: 1;
+}
+
+.ai-workflow-status {
+  font-size: 0.66rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 100px;
+  background: rgba(42, 125, 79, 0.2);
+  color: var(--color-brand-green-bright);
+  flex-shrink: 0;
 }
 
 @media (max-width: 900px) {

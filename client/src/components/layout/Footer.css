@@ -28,6 +28,16 @@
   font-size: 0.95rem;
   color: var(--color-text-light-muted);
 }
+/* Sample uses green for this exact CTA in the footer (nav keeps it orange) */
+.btn-primary.footer-cta-btn {
+  background: var(--color-brand-green);
+  border-color: var(--color-brand-green);
+}
+.btn-primary.footer-cta-btn:hover {
+  background: var(--color-brand-green-dark);
+  border-color: var(--color-brand-green-dark);
+  box-shadow: 0 14px 34px rgba(42, 125, 79, 0.24);
+}
 
 .footer-top {
   display: grid;
@@ -112,6 +122,11 @@
 }
 .footer-col a:hover,
 .footer-link-btn:hover { color: var(--color-brand-orange); transform: translateX(3px); }
+
+/* AI & Automation column takes the sample's green accent */
+.footer-col-ai h4 { color: var(--color-brand-green); }
+.footer-col-ai a:hover,
+.footer-col-ai .footer-link-btn:hover { color: var(--color-brand-green-bright); }
 
 .footer-bottom {
   display: flex;

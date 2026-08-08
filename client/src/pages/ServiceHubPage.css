@@ -16,6 +16,10 @@
   border-radius: 2px;
 }
 
+/* AI hub only — Product & Growth Marketing hubs are unaffected by this scoping */
+.hub-page.hub-page--ai .section-eyebrow { color: var(--color-brand-green); }
+.hub-page.hub-page--ai .section-eyebrow::before { background: var(--color-brand-green); }
+
 /* Breadcrumb */
 .hub-breadcrumb {
   display: flex;
@@ -66,6 +70,16 @@
   background: var(--color-bg-dark-card);
   color: var(--color-brand-orange);
 }
+/* AI-specific CTA — the universal "Get a Free Quote" button stays orange */
+.btn-primary.hub-cta-green {
+  background: var(--color-brand-green);
+  border-color: var(--color-brand-green);
+}
+.btn-primary.hub-cta-green:hover {
+  background: var(--color-brand-green-dark);
+  border-color: var(--color-brand-green-dark);
+  box-shadow: 0 14px 34px rgba(42, 125, 79, 0.24);
+}
 
 /* Category chips row — decorative overview, not functional anchors */
 .hub-chips-row {
@@ -85,6 +99,11 @@
   border: 1px solid var(--color-border-light);
   background: var(--color-bg-card);
   color: var(--color-text-muted);
+}
+.hub-page--ai .hub-chip {
+  border-color: var(--color-brand-green-border);
+  background: var(--color-brand-green-soft);
+  color: var(--color-brand-green-dark);
 }
 
 /* Cards section */
@@ -131,6 +150,15 @@
   color: var(--color-brand-orange);
   margin-bottom: 1.1rem;
   flex-shrink: 0;
+}
+.hub-page--ai .hub-card-icon-wrap {
+  background: var(--color-brand-green-soft);
+  border: 1px solid var(--color-brand-green-border);
+  color: var(--color-brand-green);
+}
+.hub-page--ai .hub-card:hover {
+  border-color: var(--color-brand-green-border);
+  box-shadow: 0 20px 50px rgba(42, 125, 79, 0.12);
 }
 .hub-card-icon { width: 22px; height: 22px; stroke-width: 1.8; }
 
@@ -202,8 +230,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(233, 90, 42, 0.16);
-  color: var(--color-brand-orange);
+  /* This section only renders on the AI hub, so it's green unscoped */
+  background: rgba(42, 125, 79, 0.16);
+  color: var(--color-brand-green);
 }
 .hub-workflow-icon { width: 24px; height: 24px; stroke-width: 1.8; }
 .hub-workflow-label {
@@ -212,6 +241,14 @@
   font-weight: 700;
   color: var(--color-text-light);
   text-align: center;
+}
+.hub-workflow-status {
+  font-size: 0.66rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 100px;
+  background: rgba(42, 125, 79, 0.2);
+  color: var(--color-brand-green-bright);
 }
 .hub-workflow-arrow {
   color: var(--color-border-dark);

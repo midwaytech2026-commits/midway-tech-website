@@ -34,6 +34,7 @@ const servicesColumns = [
   },
   {
     title: 'AI & Automation',
+    accent: 'green',
     links: [
       { label: 'AI & Automation Hub', to: '/services/ai-automation' },
       { label: 'AI Sales Assistant', to: '/services/ai-automation' },
@@ -88,7 +89,7 @@ export default function Navbar() {
           </NavLink>
           <div className="nav-dropdown">
             {servicesColumns.map(col => (
-              <div key={col.title} className="nav-dropdown-col">
+              <div key={col.title} className={`nav-dropdown-col${col.accent === 'green' ? ' nav-dropdown-col-green' : ''}`}>
                 <span className="nav-dropdown-col-title">{col.title}</span>
                 {col.links.map((l, i) => (
                   <Link

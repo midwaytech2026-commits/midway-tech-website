@@ -33,6 +33,8 @@ export default function AiSolutions() {
         <div className="ai-workflow" aria-hidden="true">
           {workflow.map((step, i) => {
             const Icon = step.Icon
+            const isFirst = i === 0
+            const isLast = i === workflow.length - 1
             return (
               <div key={step.label} className="ai-workflow-step">
                 {i < workflow.length - 1 && <span className="ai-workflow-connector" />}
@@ -40,6 +42,9 @@ export default function AiSolutions() {
                   <Icon className="ai-workflow-icon" />
                 </span>
                 <span className="ai-workflow-label">{step.label}</span>
+                {(isFirst || isLast) && (
+                  <span className="ai-workflow-status">{isFirst ? 'Trigger' : 'Done'}</span>
+                )}
               </div>
             )
           })}

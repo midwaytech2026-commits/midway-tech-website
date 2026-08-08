@@ -10,7 +10,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-family: var(--font-body);
-  color: var(--color-brand-orange);
+  color: var(--color-brand-green);
   margin: 0 auto 1rem;
   width: fit-content;
   display: flex;
@@ -21,7 +21,7 @@
   content: '';
   width: 20px;
   height: 2px;
-  background: var(--color-brand-orange);
+  background: var(--color-brand-green);
   border-radius: 2px;
   flex-shrink: 0;
 }
@@ -63,8 +63,8 @@
 }
 .tg-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-soft);
-  border-color: rgba(233, 90, 42, 0.3);
+  box-shadow: 0 20px 50px rgba(42, 125, 79, 0.12);
+  border-color: var(--color-brand-green-border);
 }
 
 .tg-icon-wrap {
@@ -74,8 +74,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-border-light);
-  color: var(--color-text-main);
+  background: var(--color-brand-green-soft);
+  border: 1px solid var(--color-brand-green-border);
+  color: var(--color-brand-green);
   margin-bottom: 1.1rem;
 }
 .tg-icon { width: 22px; height: 22px; stroke-width: 1.8; }

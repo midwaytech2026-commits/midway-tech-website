@@ -23,6 +23,7 @@ const concepts = [
     alt: 'Concept AI lead qualification system mockup for an export business',
     label: 'CONCEPT / EXPORT',
     title: 'Export Business — AI Lead Qualification System',
+    accent: 'green',
   },
 ]
 
@@ -38,7 +39,7 @@ export default function SelectedWork() {
           <div key={c.title} className="sw-card">
             <img src={c.image} alt={c.alt} className="sw-card-img" loading="lazy" />
             <div className="sw-card-body">
-              <span className="sw-card-label">{c.label}</span>
+              <span className={`sw-card-label${c.accent === 'green' ? ' sw-card-label-green' : ''}`}>{c.label}</span>
               <h3>{c.title}</h3>
             </div>
           </div>

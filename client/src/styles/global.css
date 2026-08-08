@@ -37,7 +37,9 @@
   --font-body:    'Inter', system-ui, sans-serif;
   --font-kicker:  var(--font-body);
 
-  /* Final color system — warm premium palette, orange only (no green). */
+  /* Final color system — warm premium palette. Orange is the primary
+     brand/action color. Green is used where the client sample uses it:
+     trust, AI, automation, workflow, success, and AI-related accents. */
   --color-bg-main:            #FAF7F2;
   --color-bg-soft:            #F4EFE8;
   --color-bg-card:            #FFFFFF;
@@ -53,6 +55,12 @@
   --color-brand-orange-dark:  #C9471F;
   --color-brand-orange-soft:  #FFF0E8;
 
+  --color-brand-green:        #2A7D4F;
+  --color-brand-green-dark:   #236B43;
+  --color-brand-green-soft:   #EAF5EE;
+  --color-brand-green-border: #C8E6D4;
+  --color-brand-green-bright: #5EC992;
+
   --color-border-light:       rgba(23, 18, 14, 0.12);
   --color-border-dark:        rgba(247, 242, 236, 0.14);
 
@@ -63,9 +71,10 @@
 
   /* Compatibility aliases — kept only so dead/unused components
      (DeliveryFramework, MvpOffer, Ticker, Technologies, Testimonials,
-     sections/About) don't hard-break. No green alias: nothing active
-     or dead should be styled green going forward. Active files use
-     the color and shadow tokens above directly, not these. */
+     sections/About) don't hard-break. These stay orange-only; the new
+     green tokens above are for active files that intentionally match
+     the client sample's green usage (trust, AI, automation). Active
+     files use the color and shadow tokens above directly, not these. */
   --theme-bg-main:            var(--color-bg-main);
   --theme-bg-soft:            var(--color-bg-soft);
   --theme-bg-white:           var(--color-bg-card);

@@ -71,6 +71,8 @@
   color: var(--color-brand-orange);
   margin-bottom: 0.6rem;
 }
+/* Export/AI concept card matches the sample's AI-flavored case label color */
+.sw-card-label-green { color: var(--color-brand-green); }
 
 .sw-card h3 {
   font-family: var(--font-display);

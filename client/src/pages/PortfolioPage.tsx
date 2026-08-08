@@ -39,6 +39,7 @@ const conceptWork = [
     title: 'Export Business — AI Lead Qualification System',
     desc: 'A concept workflow showing how inbound enquiries could be scored, routed, and followed up through a connected CRM process.',
     tags: ['AI Workflow', 'CRM', 'Lead Scoring'],
+    accent: 'green',
   },
 ]
 
@@ -161,10 +162,10 @@ export default function PortfolioPage() {
               <div key={c.title} className="pp-concept-card">
                 <img src={c.image} alt={c.alt} className="pp-concept-img" loading="lazy" />
                 <div className="pp-concept-body">
-                  <span className="pp-concept-label">{c.label}</span>
+                  <span className={`pp-concept-label${c.accent === 'green' ? ' pp-concept-label-green' : ''}`}>{c.label}</span>
                   <h3>{c.title}</h3>
                   <p>{c.desc}</p>
-                  <div className="pp-concept-tags">
+                  <div className={`pp-concept-tags${c.accent === 'green' ? ' pp-concept-tags-green' : ''}`}>
                     {c.tags.map(t => <span key={t}>{t}</span>)}
                   </div>
                 </div>

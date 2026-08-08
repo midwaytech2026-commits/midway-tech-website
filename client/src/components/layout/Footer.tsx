@@ -74,7 +74,7 @@ export default function Footer() {
             <h2>Have a Project in Mind?</h2>
             <p>Tell us what you are building. We&apos;ll help you understand the right next step.</p>
           </div>
-          <Link to="/contact" className="btn-primary">Get a Free Quote</Link>
+          <Link to="/contact" className="btn-primary footer-cta-btn">Get a Free Quote</Link>
         </div>
       </div>
 
@@ -109,7 +109,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="footer-col">
+        <div className="footer-col footer-col-ai">
           <h4>AI &amp; Automation</h4>
           <ul>
             {aiLinks.map(l => <FooterLinkItem key={l.label} link={l} onComingSoon={setComingSoon} />)}
