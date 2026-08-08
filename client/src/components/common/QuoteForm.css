@@ -1,0 +1,125 @@
+.qf-wrap {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: 22px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-soft);
+}
+.qf-form h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 2rem;
+}
+
+.qf-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.qf-field { margin-bottom: 1.5rem; }
+.qf-field label { display: block; font-size: 0.78rem; color: var(--color-text-muted); font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.qf-field label strong { color: var(--color-text-main); }
+.qf-field input,
+.qf-field textarea,
+.qf-field select {
+  width: 100%;
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  color: var(--color-text-main);
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.qf-field input:focus,
+.qf-field textarea:focus,
+.qf-field select:focus {
+  outline: none;
+  border-color: var(--color-brand-orange);
+}
+.qf-field select { appearance: none; cursor: pointer; }
+.qf-field input::placeholder,
+.qf-field textarea::placeholder { color: var(--color-text-light-muted); }
+
+.qf-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.qf-chip {
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: 1.5px solid var(--color-border-light);
+  background: var(--color-bg-card);
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+.qf-chip:hover { border-color: rgba(233, 90, 42, 0.4); color: var(--color-text-main); }
+.qf-chip.selected { border-color: var(--color-brand-orange); background: rgba(233, 90, 42, 0.1); color: var(--color-brand-orange-dark); }
+
+.qf-slider {
+  width: 100%;
+  margin: 0.75rem 0 0.5rem;
+  accent-color: var(--color-brand-orange);
+  cursor: pointer;
+}
+.qf-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.qf-submit {
+  width: 100%;
+  background: var(--color-brand-orange);
+  color: #fff;
+  border: 1px solid var(--color-brand-orange);
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  margin-top: 0.5rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.qf-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: var(--color-brand-orange-dark);
+  border-color: var(--color-brand-orange-dark);
+  box-shadow: 0 14px 34px rgba(233, 90, 42, 0.24);
+}
+.qf-submit:active { transform: translateY(0); }
+.qf-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.qf-error { color: var(--color-error); font-size: 0.85rem; text-align: center; margin-top: 0.5rem; }
+
+.qf-disclaimer { font-size: 0.75rem; color: var(--color-text-muted); text-align: center; margin-top: 1rem; }
+
+.qf-success {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.qf-success-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--color-brand-orange-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand-orange);
+  margin: 0 auto 1.5rem;
+}
+.qf-success h2 { font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--color-text-main); margin-bottom: 0.75rem; }
+.qf-success p { color: var(--color-text-muted); font-size: 0.95rem; font-weight: 400; }
+
+@media (max-width: 900px) {
+  .qf-field-row { grid-template-columns: 1fr; }
+}

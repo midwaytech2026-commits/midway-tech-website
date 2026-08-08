@@ -1,19 +1,16 @@
 import { useState } from 'react'
-import type { ChangeEvent } from 'react'
 import {
   Mail,
   MessageCircle,
   Link2,
-  ArrowRight,
-  CheckCircle2,
   ShieldCheck,
   ClipboardCheck,
   ReceiptText,
   LockKeyhole,
   CalendarCheck,
 } from 'lucide-react'
-import { api } from '../services/api'
 import ComingSoonModal from '../components/common/ComingSoonModal'
+import QuoteForm from '../components/common/QuoteForm'
 import './ContactPage.css'
 
 const trustItems = [
@@ -23,10 +20,6 @@ const trustItems = [
   { Icon: LockKeyhole, label: 'Ownership stays clear' },
   { Icon: CalendarCheck, label: 'Weekly updates during execution' },
 ]
-
-const serviceChips = ['iOS App', 'Android App', 'React Native', 'Flutter', 'MVP Build', 'UI/UX Design']
-const budgetLabels = ['< $5k', '$5k–$15k', '$15k–$50k', '$50k+']
-const timelines = ['ASAP', '1–3 months', '3–6 months', '6+ months']
 
 const faqItems = [
   {
@@ -51,51 +44,9 @@ const faqItems = [
   },
 ]
 
-interface FormData {
-  name: string
-  email: string
-  phone: string
-  company: string
-  brief: string
-  timeline: string
-}
-
 export default function ContactPage() {
-  const [selectedServices, setSelectedServices] = useState<string[]>([])
-  const [budgetIndex, setBudgetIndex] = useState(1)
-  const [form, setForm] = useState<FormData>({ name: '', email: '', phone: '', company: '', brief: '', timeline: '' })
   const [openFaq, setOpenFaq] = useState<number | null>(null)
-  const [submitted, setSubmitted] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
-  const [error, setError] = useState('')
   const [comingSoon, setComingSoon] = useState<string | null>(null)
-
-  function toggleService(s: string) {
-    setSelectedServices(prev => prev.includes(s) ? prev.filter(x => x !== s) : [...prev, s])
-  }
-
-  function handleChange(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-    setForm(f => ({ ...f, [e.target.name]: e.target.value }))
-  }
-
-  async function handleSubmit(e: { preventDefault(): void }) {
-    e.preventDefault()
-    setSubmitting(true)
-    setError('')
-    try {
-      await api.submitContact({
-        name: form.name,
-        email: form.email,
-        phone: form.phone,
-        message: `Services: ${selectedServices.join(', ')} | Budget: ${budgetLabels[budgetIndex]} | Timeline: ${form.timeline} | Company: ${form.company} | Brief: ${form.brief}`,
-      })
-      setSubmitted(true)
-    } catch {
-      setError('Something went wrong. Please try again.')
-    } finally {
-      setSubmitting(false)
-    }
-  }
 
   return (
     <div className="contact-page">
@@ -106,9 +57,9 @@ export default function ContactPage() {
       />
       <section className="cp-hero">
         <div className="cp-hero-inner">
-          <span className="section-eyebrow">Get a Free Quote</span>
-          <h1>Tell Us What You&apos;re Building</h1>
-          <p>Share your project goals, timeline, and the type of support you need. We&apos;ll review it and suggest the right next step.</p>
+          <span className="section-eyebrow">Contact Us</span>
+          <h1>Get in Touch</h1>
+          <p>Whether you have a project in mind, a question about our services, or just want to find out if MidwayTech is the right fit — we&apos;d love to hear from you.</p>
           <p className="cp-hero-microcopy">Response within 24 hours. No obligation.</p>
         </div>
       </section>
@@ -168,97 +119,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="cp-form-wrap">
-            {submitted ? (
-              <div className="cp-success">
-                <div className="cp-success-icon"><CheckCircle2 aria-hidden="true" /></div>
-                <h2>Message received!</h2>
-                <p>We'll review your project details and get back to you within 24 hours.</p>
-              </div>
-            ) : (
-              <form className="cp-form" onSubmit={handleSubmit}>
-                <h2>Tell us about your project</h2>
-
-                <div className="cp-field-row">
-                  <div className="cp-field">
-                    <label>Your name *</label>
-                    <input name="name" value={form.name} onChange={handleChange} placeholder="Alex Johnson" required />
-                  </div>
-                  <div className="cp-field">
-                    <label>Email *</label>
-                    <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="alex@company.com" required />
-                  </div>
-                </div>
-
-                <div className="cp-field-row">
-                  <div className="cp-field">
-                    <label>Phone</label>
-                    <input name="phone" value={form.phone} onChange={handleChange} placeholder="+1 555 000 0000" />
-                  </div>
-                  <div className="cp-field">
-                    <label>Company</label>
-                    <input name="company" value={form.company} onChange={handleChange} placeholder="Acme Inc." />
-                  </div>
-                </div>
-
-                <div className="cp-field">
-                  <label>What are you building?</label>
-                  <div className="cp-chips">
-                    {serviceChips.map(s => (
-                      <button
-                        type="button"
-                        key={s}
-                        className={`cp-chip ${selectedServices.includes(s) ? 'selected' : ''}`}
-                        onClick={() => toggleService(s)}
-                      >{s}</button>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="cp-field">
-                  <label>Budget range — <strong>{budgetLabels[budgetIndex]}</strong></label>
-                  <input
-                    type="range"
-                    min={0}
-                    max={3}
-                    step={1}
-                    value={budgetIndex}
-                    onChange={e => setBudgetIndex(Number(e.target.value))}
-                    className="cp-slider"
-                  />
-                  <div className="cp-slider-labels">
-                    {budgetLabels.map(l => <span key={l}>{l}</span>)}
-                  </div>
-                </div>
-
-                <div className="cp-field">
-                  <label>Timeline</label>
-                  <select name="timeline" value={form.timeline} onChange={handleChange}>
-                    <option value="">Select timeline…</option>
-                    {timelines.map(t => <option key={t} value={t}>{t}</option>)}
-                  </select>
-                </div>
-
-                <div className="cp-field">
-                  <label>Project brief</label>
-                  <textarea
-                    name="brief"
-                    value={form.brief}
-                    onChange={handleChange}
-                    rows={5}
-                    placeholder="Describe your idea, goals, and any specific requirements…"
-                  />
-                </div>
-
-                <button type="submit" className="cp-submit" disabled={submitting}>
-                  {submitting ? 'Sending…' : <>Get a Free Quote <ArrowRight size={16} aria-hidden="true" /></>}
-                </button>
-
-                {error && <p className="cp-error">{error}</p>}
-                <p className="cp-disclaimer">No spam, no obligations. We reply within 24 hours.</p>
-              </form>
-            )}
-          </div>
+          <QuoteForm heading="Send Us a Message" />
         </div>
       </section>
     </div>

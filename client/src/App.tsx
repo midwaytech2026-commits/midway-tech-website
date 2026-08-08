@@ -16,6 +16,7 @@ import ServiceUiUxPage from './pages/ServiceUiUxPage'
 import PortfolioPage from './pages/PortfolioPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
+import GetQuotePage from './pages/GetQuotePage'
 import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/get-quote" element={<GetQuotePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

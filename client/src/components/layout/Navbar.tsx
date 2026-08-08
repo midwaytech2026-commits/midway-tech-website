@@ -170,7 +170,7 @@ export default function Navbar() {
           </NavLink>
         </li>
         <li>
-          <Link to="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
+          <Link to="/get-quote" className="nav-cta" onClick={() => setMenuOpen(false)}>
             Get a Free Quote
           </Link>
         </li>
