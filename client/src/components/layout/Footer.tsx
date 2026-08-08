@@ -10,7 +10,7 @@ type FooterLink = { label: string; to: string } | { label: string; comingSoon: t
 const companyLinks: FooterLink[] = [
   { label: 'About Us', to: '/about' },
   { label: 'Contact Us', to: '/contact' },
-  { label: 'Get a Quote', to: '/contact' },
+  { label: 'Get a Free Quote', to: '/contact' },
   { label: 'Case Studies', to: '/portfolio' },
   { label: 'Blog', comingSoon: true },
 ]
@@ -96,21 +96,21 @@ export default function Footer() {
         </div>
 
         <div className="footer-col">
-          <h4>Product Development</h4>
+          <h4>Product &amp; Technology</h4>
           <ul>
             {productLinks.map(l => <FooterLinkItem key={l.label} link={l} onComingSoon={setComingSoon} />)}
           </ul>
         </div>
 
         <div className="footer-col">
-          <h4>Marketing</h4>
+          <h4>Growth Marketing</h4>
           <ul>
             {marketingLinks.map(l => <FooterLinkItem key={l.label} link={l} onComingSoon={setComingSoon} />)}
           </ul>
         </div>
 
         <div className="footer-col">
-          <h4>AI Solutions</h4>
+          <h4>AI &amp; Automation</h4>
           <ul>
             {aiLinks.map(l => <FooterLinkItem key={l.label} link={l} onComingSoon={setComingSoon} />)}
           </ul>

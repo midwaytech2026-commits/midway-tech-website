@@ -1,9 +1,28 @@
 import { useState } from 'react'
 import type { ChangeEvent } from 'react'
-import { Mail, MessageCircle, Link2, ArrowRight, CheckCircle2 } from 'lucide-react'
+import {
+  Mail,
+  MessageCircle,
+  Link2,
+  ArrowRight,
+  CheckCircle2,
+  ShieldCheck,
+  ClipboardCheck,
+  ReceiptText,
+  LockKeyhole,
+  CalendarCheck,
+} from 'lucide-react'
 import { api } from '../services/api'
 import ComingSoonModal from '../components/common/ComingSoonModal'
 import './ContactPage.css'
+
+const trustItems = [
+  { Icon: ShieldCheck, label: 'NDA-friendly discovery' },
+  { Icon: ClipboardCheck, label: 'Clear scope before work starts' },
+  { Icon: ReceiptText, label: 'No surprise fees' },
+  { Icon: LockKeyhole, label: 'Ownership stays clear' },
+  { Icon: CalendarCheck, label: 'Weekly updates during execution' },
+]
 
 const serviceChips = ['iOS App', 'Android App', 'React Native', 'Flutter', 'MVP Build', 'UI/UX Design']
 const budgetLabels = ['< $5k', '$5k–$15k', '$15k–$50k', '$50k+']
@@ -87,9 +106,10 @@ export default function ContactPage() {
       />
       <section className="cp-hero">
         <div className="cp-hero-inner">
-          <span className="section-eyebrow">Contact</span>
-          <h1>Let&apos;s Build Your Next Growth System</h1>
-          <p>Tell us what you are building. We&apos;ll help you understand the right next step, scope, timeline, and budget.</p>
+          <span className="section-eyebrow">Get a Free Quote</span>
+          <h1>Tell Us What You&apos;re Building</h1>
+          <p>Share your project goals, timeline, and the type of support you need. We&apos;ll review it and suggest the right next step.</p>
+          <p className="cp-hero-microcopy">Response within 24 hours. No obligation.</p>
         </div>
       </section>
 
@@ -99,10 +119,22 @@ export default function ContactPage() {
             <div className="cp-info-block">
               <h3>What happens next?</h3>
               <ol className="cp-steps">
-                <li><span>1</span><div><strong>Discovery call</strong><p>30-min call to understand your goals and constraints.</p></div></li>
-                <li><span>2</span><div><strong>Proposal</strong><p>We send a detailed scope, timeline, and cost breakdown within 48 hours.</p></div></li>
-                <li><span>3</span><div><strong>Kickoff</strong><p>Sign contracts, onboard to tools, and sprint planning starts.</p></div></li>
+                <li><span>1</span><div><strong>We review your project details</strong><p>We read what you&apos;ve shared and understand what you&apos;re trying to build.</p></div></li>
+                <li><span>2</span><div><strong>We reply with the right next step</strong><p>You&apos;ll hear from us within 24 hours with clear next steps or questions.</p></div></li>
+                <li><span>3</span><div><strong>If it makes sense, we scope the work clearly</strong><p>If we&apos;re a fit, we outline scope, timeline, and cost before anything starts.</p></div></li>
               </ol>
+            </div>
+
+            <div className="cp-trust-block">
+              <h3>What You Can Expect</h3>
+              <ul className="cp-trust-list">
+                {trustItems.map(t => (
+                  <li key={t.label}>
+                    <t.Icon aria-hidden="true" />
+                    {t.label}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div className="cp-contact-links">
@@ -219,7 +251,7 @@ export default function ContactPage() {
                 </div>
 
                 <button type="submit" className="cp-submit" disabled={submitting}>
-                  {submitting ? 'Sending…' : <>Send Message <ArrowRight size={16} aria-hidden="true" /></>}
+                  {submitting ? 'Sending…' : <>Get a Free Quote <ArrowRight size={16} aria-hidden="true" /></>}
                 </button>
 
                 {error && <p className="cp-error">{error}</p>}
