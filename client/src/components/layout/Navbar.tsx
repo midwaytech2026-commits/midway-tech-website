@@ -1,19 +1,59 @@
 import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
+import { ChevronDown } from 'lucide-react'
 import logo from '../../assets/icons/logo.svg'
 import ComingSoonModal from '../common/ComingSoonModal'
 import './Navbar.css'
 
 const navLinks = [
-  { label: 'Home', to: '/' },
-  { label: 'Services', to: '/services' },
   { label: 'Case Studies', to: '/portfolio' },
   { label: 'About Us', to: '/about' },
   { label: 'Contact Us', to: '/contact' },
 ]
 
+const servicesColumns = [
+  {
+    title: 'Product & Technology',
+    links: [
+      { label: 'Product & Technology Hub', to: '/services/product-technology' },
+      { label: 'Website Development', to: '/services/product-technology' },
+      { label: 'Ecommerce & Shopify', to: '/services/product-technology' },
+      { label: 'Mobile Apps', to: '/services/product-technology' },
+      { label: 'UI/UX Design', to: '/services/ui-ux' },
+    ],
+  },
+  {
+    title: 'Growth Marketing',
+    links: [
+      { label: 'Growth Marketing Hub', to: '/services/growth-marketing' },
+      { label: 'Performance Marketing', to: '/services/growth-marketing' },
+      { label: 'SEO & Content', to: '/services/growth-marketing' },
+      { label: 'Social Media Systems', to: '/services/growth-marketing' },
+      { label: 'Email & Retention', to: '/services/growth-marketing' },
+    ],
+  },
+  {
+    title: 'AI & Automation',
+    links: [
+      { label: 'AI & Automation Hub', to: '/services/ai-automation' },
+      { label: 'AI Sales Assistant', to: '/services/ai-automation' },
+      { label: 'Lead Qualification Workflow', to: '/services/ai-automation' },
+      { label: 'Workflow Automation', to: '/services/ai-automation' },
+      { label: 'CRM Automation', to: '/services/ai-automation' },
+    ],
+  },
+]
+
+const servicesMobileLinks = [
+  { label: 'Services Overview', to: '/services' },
+  { label: 'Product & Technology', to: '/services/product-technology' },
+  { label: 'Growth Marketing', to: '/services/growth-marketing' },
+  { label: 'AI & Automation', to: '/services/ai-automation' },
+]
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [servicesExpanded, setServicesExpanded] = useState(false)
   const [comingSoon, setComingSoon] = useState<string | null>(null)
 
   return (
@@ -27,6 +67,72 @@ export default function Navbar() {
       <Link to="/"><img src={logo} alt="MidwayTech" className="site-logo" /></Link>
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) => isActive ? 'active' : ''}
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </NavLink>
+        </li>
+
+        {/* Services — desktop mega dropdown (hover / focus-within, no JS state needed) */}
+        <li className="nav-services">
+          <NavLink
+            to="/services"
+            className={({ isActive }) => `nav-services-trigger${isActive ? ' active' : ''}`}
+          >
+            Services
+            <ChevronDown className="nav-services-caret" aria-hidden="true" />
+          </NavLink>
+          <div className="nav-dropdown">
+            {servicesColumns.map(col => (
+              <div key={col.title} className="nav-dropdown-col">
+                <span className="nav-dropdown-col-title">{col.title}</span>
+                {col.links.map((l, i) => (
+                  <Link
+                    key={l.label}
+                    to={l.to}
+                    className={`nav-dropdown-link${i === 0 ? ' nav-dropdown-link-hub' : ''}`}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            ))}
+          </div>
+        </li>
+
+        {/* Services — mobile disclosure (touch has no reliable hover, so this is JS-driven) */}
+        <li className="nav-services-mobile">
+          <button
+            type="button"
+            className="nav-services-mobile-trigger"
+            aria-expanded={servicesExpanded}
+            onClick={() => setServicesExpanded(o => !o)}
+          >
+            Services
+            <ChevronDown className={`nav-services-caret${servicesExpanded ? ' open' : ''}`} aria-hidden="true" />
+          </button>
+          {servicesExpanded && (
+            <ul className="nav-services-mobile-list">
+              {servicesMobileLinks.map(l => (
+                <li key={l.label}>
+                  <NavLink
+                    to={l.to}
+                    className={({ isActive }) => isActive ? 'active' : ''}
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {l.label}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+
         {navLinks.map(link => (
           <li key={link.label}>
             <NavLink
@@ -56,7 +162,7 @@ export default function Navbar() {
 
       <button
         className={`hamburger ${menuOpen ? 'open' : ''}`}
-        onClick={() => setMenuOpen(o => !o)}
+        onClick={() => { setMenuOpen(o => !o); setServicesExpanded(false) }}
         aria-label="Toggle menu"
       >
         <span /><span /><span />
