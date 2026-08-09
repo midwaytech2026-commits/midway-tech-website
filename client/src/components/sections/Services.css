@@ -28,7 +28,7 @@
 
 .wwd-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 3.5vw, 2.7rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;

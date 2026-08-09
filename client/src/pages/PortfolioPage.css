@@ -34,7 +34,7 @@
 
 .pp-hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  font-size: clamp(2.35rem, 4.5vw, 3.35rem);
   font-weight: 700;
   color: var(--color-text-main);
   line-height: 1.12;
