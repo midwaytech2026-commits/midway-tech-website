@@ -19,7 +19,7 @@ export default function Home() {
       <CtaStrip
         title="Not Sure What You Need?"
         subtitle="Tell us your goal — we'll help map the right next step."
-        primaryBtn={{ label: 'Get a Free Quote', to: '/contact' }}
+        primaryBtn={{ label: 'Get a Free Quote', to: '/get-quote' }}
       />
       <TrustGuarantees />
       <AiSolutions />

@@ -4,9 +4,9 @@ import heroVisual from '../../assets/images/hero-visual.jpg'
 import './Hero.css'
 
 const bullets = [
-  'Product + Growth + AI in one team',
-  'Clear scope and honest timelines',
-  'Built for real launch conditions',
+  'International clients — US, UK & Australia',
+  'Marketing + Tech + AI, one team',
+  'No long-term lock-ins',
 ]
 
 export default function Hero() {
@@ -17,15 +17,15 @@ export default function Hero() {
           Your Business Deserves a Partner That <em>Grows It</em>, <em>Builds It</em>, and Automates It.
         </h1>
         <p className="hero-sub">
-          MidwayTech helps startups and growing businesses scale through product strategy, technology
-          development, growth systems, and AI automation — without coordinating three separate agencies.
+          MidwayTech helps D2C brands, startups, and modern businesses scale through marketing strategy,
+          technology development, and AI systems — without coordinating three separate agencies.
         </p>
 
         <div className="hero-actions">
-          <a href="#contact" className="btn-primary">
+          <Link to="/get-quote" className="btn-primary">
             Get a Free Quote
             <ArrowRight className="hero-cta-icon" aria-hidden="true" />
-          </a>
+          </Link>
           <Link to="/portfolio" className="btn-ghost">See Our Work</Link>
         </div>
 

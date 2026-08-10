@@ -234,7 +234,7 @@ export default function PortfolioPage() {
           <h2>Have a project in mind?</h2>
           <p>Book a free 30-minute discovery call. We'll give you a scope estimate within 48 hours.</p>
           <div className="pp-cta-actions">
-            <Link to="/contact" className="btn-primary">
+            <Link to="/get-quote" className="btn-primary">
               Get a Free Quote
               <ArrowRight className="pp-cta-icon" aria-hidden="true" />
             </Link>

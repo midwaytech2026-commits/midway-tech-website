@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Megaphone, Search, Share2, Mail, Target, TrendingUp } from 'lucide-react'
+import { Megaphone, Search, Share2, Mail, Target, TrendingUp, PenLine, Handshake, Repeat, Magnet, Network } from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceHubPage.css'
 
@@ -8,7 +8,11 @@ const categories = [
   'SEO',
   'Social Media',
   'Content Strategy',
+  'Influencer Marketing',
   'Email Marketing',
+  'Marketing Automation',
+  'Lead Generation',
+  'LinkedIn Marketing',
   'Brand Positioning',
   'Conversion Optimization',
 ]
@@ -27,16 +31,46 @@ const services = [
     tags: ['SEO', 'Content', 'Keywords', 'Site Structure'],
   },
   {
+    Icon: PenLine,
+    title: 'Content Marketing',
+    desc: 'SEO-focused content that ranks, educates your audience, and supports conversion.',
+    tags: ['Blog', 'SEO Content', 'Content Strategy', 'Editorial'],
+  },
+  {
     Icon: Share2,
     title: 'Social Media Systems',
     desc: 'Content planning, creative direction, and platform strategy for brands that need consistent visibility.',
     tags: ['LinkedIn', 'Instagram', 'Content Calendar', 'Creative'],
   },
   {
+    Icon: Handshake,
+    title: 'Influencer Marketing',
+    desc: 'Creator partnerships structured around genuine purchase intent, not just reach.',
+    tags: ['Creator Outreach', 'Campaigns', 'UGC', 'Affiliate'],
+  },
+  {
     Icon: Mail,
     title: 'Email & Retention',
     desc: 'Email flows, customer journeys, and follow-up systems that help turn attention into repeat business.',
     tags: ['Email Flows', 'Retention', 'Segments', 'Automation'],
+  },
+  {
+    Icon: Repeat,
+    title: 'Marketing Automation',
+    desc: 'Automated nurture sequences and campaign workflows that run without manual upkeep.',
+    tags: ['Workflows', 'Nurture Sequences', 'Triggers', 'CRM Sync'],
+  },
+  {
+    Icon: Magnet,
+    title: 'Lead Generation',
+    desc: 'Inbound and outbound systems built for a predictable flow of qualified leads.',
+    tags: ['Landing Pages', 'Forms', 'Outbound', 'Qualification'],
+  },
+  {
+    Icon: Network,
+    title: 'LinkedIn Marketing',
+    desc: 'LinkedIn content and outreach systems built to generate business conversations, not just followers.',
+    tags: ['Organic Content', 'Outreach', 'Sales Navigator', 'Personal Branding'],
   },
   {
     Icon: Target,
@@ -68,7 +102,7 @@ export default function ServiceGrowthMarketingPage() {
           <h1>Growth Marketing Systems</h1>
           <p>Marketing strategy, content, SEO, paid campaigns, and retention systems built to create measurable demand — not just activity.</p>
           <div className="hub-hero-actions">
-            <Link to="/contact" className="btn-primary">Get a Free Quote</Link>
+            <Link to="/get-quote" className="btn-primary">Get a Free Quote</Link>
             <Link to="/portfolio" className="btn-ghost">View Case Studies</Link>
           </div>
         </div>
@@ -98,7 +132,7 @@ export default function ServiceGrowthMarketingPage() {
       <CtaStrip
         title="Need growth that connects with your website and systems?"
         subtitle="Tell us your goals. We'll help map the right marketing approach."
-        primaryBtn={{ label: 'Get a Free Quote', to: '/contact' }}
+        primaryBtn={{ label: 'Get a Free Quote', to: '/get-quote' }}
       />
     </div>
   )

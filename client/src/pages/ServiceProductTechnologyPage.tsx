@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Globe2, ShoppingBag, Smartphone, Server, Cloud, PenTool, Link2 } from 'lucide-react'
+import { Globe2, ShoppingBag, Smartphone, Server, Cloud, PenTool, Link2, AppWindow, Contact2 } from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceHubPage.css'
 
@@ -8,8 +8,10 @@ const categories = [
   'Ecommerce / Shopify',
   'Mobile Apps',
   'Custom Software',
+  'Web Applications',
   'SaaS Platforms',
   'UI/UX Design',
+  'CRM Development',
   'API Integrations',
 ]
 
@@ -39,6 +41,12 @@ const services = [
     tags: ['Dashboards', 'CRM', 'Admin Panels', 'Automation'],
   },
   {
+    Icon: AppWindow,
+    title: 'Web Application Development',
+    desc: 'Complex, data-heavy web applications built for speed, reliability, and long-term scale.',
+    tags: ['Dashboards', 'Data Views', 'Performance', 'Scalability'],
+  },
+  {
     Icon: Cloud,
     title: 'SaaS Platforms',
     desc: 'Product architecture, authentication flows, dashboards, and scalable web applications for SaaS ideas.',
@@ -49,6 +57,12 @@ const services = [
     title: 'UI/UX Design',
     desc: 'Interfaces, journeys, wireframes, and prototypes that make complex products easier to understand and use.',
     tags: ['UX', 'Wireframes', 'Design Systems', 'Prototypes'],
+  },
+  {
+    Icon: Contact2,
+    title: 'CRM Development',
+    desc: 'Custom CRM systems built around how your sales and support teams actually work.',
+    tags: ['Pipelines', 'Custom Fields', 'Integrations', 'Reporting'],
   },
   {
     Icon: Link2,
@@ -74,7 +88,7 @@ export default function ServiceProductTechnologyPage() {
           <h1>Product &amp; Technology Development</h1>
           <p>Websites, ecommerce stores, apps, SaaS platforms, and custom systems built for businesses that need reliable technology, not just attractive screens.</p>
           <div className="hub-hero-actions">
-            <Link to="/contact" className="btn-primary">Get a Free Quote</Link>
+            <Link to="/get-quote" className="btn-primary">Get a Free Quote</Link>
             <Link to="/portfolio" className="btn-ghost">View Case Studies</Link>
           </div>
         </div>
@@ -104,7 +118,7 @@ export default function ServiceProductTechnologyPage() {
       <CtaStrip
         title="Have a product or platform idea?"
         subtitle="Tell us what you're building. We'll help you scope the right approach."
-        primaryBtn={{ label: 'Get a Free Quote', to: '/contact' }}
+        primaryBtn={{ label: 'Get a Free Quote', to: '/get-quote' }}
       />
     </div>
   )

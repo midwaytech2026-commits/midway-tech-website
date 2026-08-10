@@ -11,16 +11,20 @@ import {
   BrainCircuit,
   BellRing,
   ArrowRight,
+  Headset,
+  Cpu,
 } from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
 import './ServiceHubPage.css'
 
 const categories = [
   'AI Chatbots',
+  'AI Customer Support',
   'Lead Qualification',
   'Workflow Automation',
   'CRM Automation',
   'AI Content Systems',
+  'Business Process Automation',
   'Internal Assistants',
 ]
 
@@ -30,6 +34,12 @@ const services = [
     title: 'AI Sales Assistant',
     desc: 'AI-assisted chat and enquiry flows that help answer questions, qualify leads, and route conversations.',
     tags: ['Chatbot', 'Lead Capture', 'Qualification', 'Routing'],
+  },
+  {
+    Icon: Headset,
+    title: 'AI Customer Support',
+    desc: 'AI-assisted support that handles common questions instantly and routes the rest to your team.',
+    tags: ['Helpdesk Integration', 'Instant Replies', 'Smart Routing', 'CSAT'],
   },
   {
     Icon: Filter,
@@ -48,6 +58,12 @@ const services = [
     title: 'CRM Automation',
     desc: 'Cleaner lead pipelines, follow-up reminders, status updates, and internal visibility across your sales process.',
     tags: ['CRM', 'Pipeline', 'Follow-Up', 'Reporting'],
+  },
+  {
+    Icon: Cpu,
+    title: 'Business Process Automation',
+    desc: 'End-to-end process redesign with AI embedded at each decision point, not bolted on after.',
+    tags: ['Process Mapping', 'Automation', 'Audit Trail', 'Human Oversight'],
   },
   {
     Icon: FileText,
@@ -86,7 +102,7 @@ export default function ServiceAiAutomationPage() {
           <h1>AI &amp; Automation Systems</h1>
           <p>AI assistants, workflows, CRM automation, and internal systems that reduce manual work and help teams move faster.</p>
           <div className="hub-hero-actions">
-            <Link to="/contact" className="btn-primary">Get a Free Quote</Link>
+            <Link to="/get-quote" className="btn-primary">Get a Free Quote</Link>
             <Link to="/contact" className="btn-primary hub-cta-green">Ask About AI Automation</Link>
           </div>
         </div>
@@ -143,7 +159,7 @@ export default function ServiceAiAutomationPage() {
       <CtaStrip
         title="Want to automate a manual workflow?"
         subtitle="Tell us what's slow or repetitive. We'll help you see what's worth automating."
-        primaryBtn={{ label: 'Get a Free Quote', to: '/contact' }}
+        primaryBtn={{ label: 'Get a Free Quote', to: '/get-quote' }}
       />
     </div>
   )
