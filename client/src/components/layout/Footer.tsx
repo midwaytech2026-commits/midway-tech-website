@@ -68,16 +68,6 @@ export default function Footer() {
         onClose={() => setComingSoon(null)}
       />
 
-      <div className="footer-cta">
-        <div className="footer-cta-inner">
-          <div>
-            <h2>Have a Project in Mind?</h2>
-            <p>Tell us what you are building. We&apos;ll help you understand the right next step.</p>
-          </div>
-          <Link to="/get-quote" className="btn-primary footer-cta-btn">Get a Free Quote</Link>
-        </div>
-      </div>
-
       <div className="footer-top">
         <div className="footer-brand">
           <Link to="/" className="footer-logo" aria-label="MidwayTech home">
