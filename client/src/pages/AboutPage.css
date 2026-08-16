@@ -47,44 +47,6 @@
   max-width: 560px;
   margin: 0 auto 2.25rem;
 }
-.ap-hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-
-.ap-btn-primary,
-.ap-btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 0 22px;
-  border-radius: 12px;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 800;
-  text-decoration: none;
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-.ap-btn-primary {
-  background: var(--color-brand-orange);
-  color: #fff;
-  border: 1px solid var(--color-brand-orange);
-}
-.ap-btn-primary:hover {
-  background: var(--color-brand-orange-dark);
-  border-color: var(--color-brand-orange-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 14px 34px rgba(232, 98, 42, 0.24);
-}
-.ap-btn-secondary {
-  background: #fff;
-  color: var(--color-text-main);
-  border: 1px solid var(--color-border-light);
-}
-.ap-btn-secondary:hover {
-  color: var(--color-brand-orange);
-  border-color: var(--color-brand-orange);
-  transform: translateY(-1px);
-}
-
 /* Why We Exist — dark contrast section */
 .ap-why {
   background: var(--color-bg-dark);
@@ -154,16 +116,16 @@
   box-shadow: var(--shadow-soft);
 }
 .ap-belief-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(232, 98, 42, 0.1);
-  color: var(--color-brand-orange);
   margin-bottom: 1.25rem;
 }
+.ap-belief-icon-orange { background: var(--color-brand-orange-soft); color: var(--color-brand-orange); }
+.ap-belief-icon-green { background: var(--color-brand-green-soft); color: var(--color-brand-green); }
 .ap-belief-card h3 {
   font-family: var(--font-display);
   font-size: 1rem;
@@ -177,74 +139,74 @@
   line-height: 1.65;
 }
 
-/* How We Work */
-.ap-process {
+/* Sample Client Types */
+.ap-clients {
   background: var(--color-bg-soft);
   padding: 5.5rem 4rem;
   text-align: center;
 }
-.ap-process h2 {
+.ap-clients h2 {
   font-family: var(--font-display);
   font-size: clamp(1.9rem, 3.6vw, 2.6rem);
   font-weight: 700;
   color: var(--color-text-main);
   letter-spacing: -0.02em;
-  margin: 1rem 0 3rem;
+  margin: 1rem 0 0.75rem;
 }
-.ap-process-grid {
+.ap-clients-intro {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+}
+.ap-clients-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
-  margin-bottom: 2.5rem;
   text-align: left;
 }
-.ap-process-card {
+.ap-client-card {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border-light);
-  border-radius: 18px;
-  padding: 1.75rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
 }
-.ap-process-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-soft);
-}
-.ap-process-num {
-  font-family: var(--font-display);
-  font-size: 0.8rem;
-  font-weight: 800;
+.ap-client-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--color-brand-orange-soft);
   color: var(--color-brand-orange);
-  margin-bottom: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
-.ap-process-card h3 {
+.ap-client-card h3 {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--color-text-main);
-  margin-bottom: 0.6rem;
+  margin: 0 0 0.4rem;
 }
-.ap-process-card p {
-  font-size: 0.9rem;
+.ap-client-card p {
+  font-size: 0.85rem;
   color: var(--color-text-muted);
-  line-height: 1.65;
-}
-.ap-trust-line {
-  font-size: 0.88rem;
-  color: var(--color-text-muted);
-  text-align: center;
-  max-width: 620px;
-  margin: 0 auto;
-  line-height: 1.7;
+  line-height: 1.6;
+  margin: 0;
 }
 
 @media (max-width: 1024px) {
   .ap-beliefs-grid { grid-template-columns: repeat(2, 1fr); }
-  .ap-process-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-  .ap-hero, .ap-why, .ap-beliefs, .ap-process { padding: 3.5rem 1.5rem; }
+  .ap-hero, .ap-why, .ap-beliefs, .ap-clients { padding: 3.5rem 1.5rem; }
   .ap-beliefs-grid { grid-template-columns: 1fr; }
-  .ap-process-grid { grid-template-columns: 1fr; }
+  .ap-clients-grid { grid-template-columns: 1fr; }
   .ap-why-inner { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
   .about-page .ap-why .section-eyebrow { justify-content: center; }
 }

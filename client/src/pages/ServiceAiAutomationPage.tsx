@@ -5,6 +5,7 @@ import imgChatbot from '../assets/images/sample-ai-chatbot.jpeg'
 import imgSupport from '../assets/images/sample-ai-support.jpeg'
 import imgWorkflow from '../assets/images/sample-ai-workflow.jpeg'
 import imgCrm from '../assets/images/sample-ai-crm.jpeg'
+import imgContent from '../assets/images/sample-ai-content.jpeg'
 import imgAssistants from '../assets/images/sample-ai-assistants.jpeg'
 import imgBpa from '../assets/images/sample-ai-bpa.jpeg'
 import imgLeadq from '../assets/images/sample-ai-leadqua.jpeg'
@@ -95,6 +96,8 @@ const details: ServiceDetailData[] = [
     id: 'ai-content',
     anchorLabel: 'AI Content Systems',
     eyebrow: 'AI Content Systems',
+    image: imgContent,
+    imageAlt: 'AI Content Systems',
     title: 'Content at Scale, in Your Brand Voice',
     paragraphs: [
       "We build AI-powered content production systems that let your team produce far more content without a proportional increase in headcount. This isn't about replacing writers — it's about giving them a system that handles research, first drafts, and formatting so they can focus on editing, strategy, and creative decisions that actually need a human.",

@@ -1,52 +1,54 @@
-import { Link } from 'react-router-dom'
-import { Target, Rocket, BrainCircuit, Network } from 'lucide-react'
-import CtaStrip from '../components/common/CtaStrip'
+import { Target, Handshake, Clock3, TrendingUp, Heart, Shirt, Gem, Smile } from 'lucide-react'
 import aboutTeam from '../assets/images/sample-about-team.jpeg'
 import './AboutPage.css'
 
-const beliefs = [
+const drives = [
   {
     icon: Target,
-    title: 'Clarity before code',
-    desc: 'We define scope, flows, features, integrations, content, and approvals before development begins.',
+    accent: 'orange',
+    title: 'Solving Real Problems With Real Solutions',
+    desc: "We don't sell services for the sake of it. Before we propose anything, we want to understand what's actually broken or missing in your business — and whether what we do is the right fix. If it isn't, we'll tell you.",
   },
   {
-    icon: Rocket,
-    title: 'Speed with structure',
-    desc: 'Fast delivery only works when the process is organized, milestones are clear, and decisions move quickly.',
+    icon: Handshake,
+    accent: 'green',
+    title: "Let's Build the Future Together",
+    desc: 'We treat every client engagement as a partnership, not a transaction. The best outcomes happen when both sides are invested — when you bring domain knowledge and we bring technical depth, and we build the strategy together.',
   },
   {
-    icon: BrainCircuit,
-    title: 'AI-first execution',
-    desc: 'We look for automation opportunities early so the product is built for modern workflows from day one.',
+    icon: Clock3,
+    accent: 'orange',
+    title: 'Honesty Over Comfort',
+    desc: "We'd rather tell you that a timeline is unrealistic in week one than apologise for missing it in week eight. Honest communication is non-negotiable for us — even when it's the harder conversation to have.",
   },
   {
-    icon: Network,
-    title: 'Built for scale',
-    desc: 'We plan products with future features, analytics, integrations, backend growth, and business expansion in mind.',
+    icon: TrendingUp,
+    accent: 'green',
+    title: 'Growth Is a System, Not a Campaign',
+    desc: "One good ad doesn't scale a business. We build the interconnected systems — marketing, tech, and AI — that compound over time. That's why we ask about your 12-month goals before we talk about last month's metrics.",
   },
 ]
 
-const process = [
+const clientTypes = [
   {
-    num: '01',
-    title: 'Understand the business',
-    desc: 'We start by understanding your market, users, revenue model, and what success looks like before any planning begins.',
+    icon: Heart,
+    title: 'Dating App — Indian Gen Z Market',
+    desc: 'Product strategy, UI/UX design, React Native development, and go-to-market planning for a mobile dating app built for the Indian Gen Z market — with safety-first verification as the core differentiator.',
   },
   {
-    num: '02',
-    title: 'Freeze the scope',
-    desc: 'Features, flows, integrations, content, and approvals are locked before development starts. No ambiguity, no scope creep.',
+    icon: Shirt,
+    title: 'D2C Fashion & Clothing Brand',
+    desc: 'Ecommerce build and growth marketing for a D2C clothing brand — Shopify development, performance marketing on Meta and Google, and email automation.',
   },
   {
-    num: '03',
-    title: 'Build with milestones',
-    desc: 'Development runs in structured sprints with clear deliverables, weekly updates, and visible progress at every stage.',
+    icon: Gem,
+    title: 'Gifting Brand — Premium Positioning',
+    desc: 'Brand positioning, ecommerce website, and social media marketing for a premium gifting brand — focused on gifting occasions, premium product presentation, and repeat-purchase retention.',
   },
   {
-    num: '04',
-    title: 'Launch and improve',
-    desc: 'We ship, monitor, and iterate. Post-launch support ensures stability while feedback drives the next round of improvements.',
+    icon: Smile,
+    title: 'Dental Clinic — AI Patient Chatbot',
+    desc: 'A custom AI chatbot for a dental practice that answers common patient questions, explains treatment options, and checks appointment availability via the website and WhatsApp, with staff handling anything clinical.',
   },
 ]
 
@@ -55,30 +57,37 @@ export default function AboutPage() {
     <div className="about-page">
       <section className="ap-hero">
         <div className="ap-hero-inner">
-          <span className="section-eyebrow">About MidwayTech</span>
-          <h1>Built for Businesses Moving<br />From Idea to Scale</h1>
+          <span className="section-eyebrow">About Us</span>
+          <h1>About MidwayTech</h1>
           <p className="ap-hero-sub">
-            MidwayTech is an AI-first product and technology partner helping startups and growing
-            businesses build mobile apps, websites, automation systems, backend platforms, and
-            digital growth systems with speed, clarity, and precision.
+            We&apos;re a growth and technology agency from Jaipur, Rajasthan, India — building for
+            international clients in the US, UK, and EU. One team. Marketing, technology, and AI.
+            No handoffs between vendors.
           </p>
-          <div className="ap-hero-actions">
-            <Link to="/contact" className="ap-btn-primary">Book a Discovery Call</Link>
-            <Link to="/services" className="ap-btn-secondary">View Services</Link>
-          </div>
         </div>
       </section>
 
       <section className="ap-why">
         <div className="ap-why-inner">
           <div className="ap-why-text">
-            <span className="section-eyebrow">Our Purpose</span>
-            <h2>Why MidwayTech Exists</h2>
+            <span className="section-eyebrow">Who We Are</span>
+            <h2>A Growth &amp; Technology Partner Built for the Modern Internet</h2>
             <p className="ap-why-copy">
-              Most businesses do not fail because they lack ideas. They struggle because execution
-              becomes slow, unclear, or disconnected from real business goals. MidwayTech was built to
-              close that gap — helping businesses move from idea to launch and from launch to scale
-              with structured product thinking, clean design, modern engineering, and AI-first execution.
+              MidwayTech started with a simple observation: growing a business online requires
+              marketing that works, technology that doesn&apos;t break, and AI that actually saves
+              time — but most agencies only do one of these well. So we built a team that does all
+              three, and treats them as connected disciplines rather than separate services.
+            </p>
+            <p className="ap-why-copy">
+              We&apos;re based in Jaipur, Rajasthan, India — a city with a growing technology and
+              design community. Our clients are in the US, UK, and EU, and we operate in their time
+              zones. Being based in India means better economics for our clients without any
+              sacrifice on quality, communication, or speed.
+            </p>
+            <p className="ap-why-copy">
+              We&apos;ve worked across clothing, jewellery, exports, manufacturing, and FMCG — so we
+              understand the difference between building for a consumer brand and building for a
+              B2B services company, and we adjust accordingly.
             </p>
           </div>
           <div className="ap-why-img">
@@ -89,48 +98,46 @@ export default function AboutPage() {
 
       <section className="ap-beliefs">
         <div className="ap-container">
-          <span className="section-eyebrow">Our Principles</span>
-          <h2>What We Believe</h2>
+          <span className="section-eyebrow">What Drives Us</span>
+          <h2>Four Reasons We Show Up Differently</h2>
           <div className="ap-beliefs-grid">
-            {beliefs.map(b => (
-              <div key={b.title} className="ap-belief-card">
-                <div className="ap-belief-icon">
-                  <b.icon size={28} strokeWidth={1.5} />
+            {drives.map(d => (
+              <div key={d.title} className="ap-belief-card">
+                <div className={`ap-belief-icon ap-belief-icon-${d.accent}`}>
+                  <d.icon size={18} strokeWidth={1.6} />
                 </div>
-                <h3>{b.title}</h3>
-                <p>{b.desc}</p>
+                <h3>{d.title}</h3>
+                <p>{d.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="ap-process">
+      <section className="ap-clients">
         <div className="ap-container">
-          <span className="section-eyebrow">Our Process</span>
-          <h2>How We Work With Clients</h2>
-          <div className="ap-process-grid">
-            {process.map(p => (
-              <div key={p.num} className="ap-process-card">
-                <div className="ap-process-num">{p.num}</div>
-                <h3>{p.title}</h3>
-                <p>{p.desc}</p>
+          <span className="section-eyebrow">Sample Client Types</span>
+          <h2>Businesses We&apos;re Built to Work With</h2>
+          <p className="ap-clients-intro">
+            We work with a small number of clients at a time — intentionally. It means every client
+            gets our full attention, not a junior account manager checking in once a month. Here are
+            the kinds of businesses our work is built around.
+          </p>
+          <div className="ap-clients-grid">
+            {clientTypes.map(c => (
+              <div key={c.title} className="ap-client-card">
+                <div className="ap-client-icon">
+                  <c.icon size={20} strokeWidth={1.6} aria-hidden="true" />
+                </div>
+                <div>
+                  <h3>{c.title}</h3>
+                  <p>{c.desc}</p>
+                </div>
               </div>
             ))}
           </div>
-          <p className="ap-trust-line">
-            No fake numbers. No empty promises. Just clear scope, practical execution, and
-            product-focused delivery.
-          </p>
         </div>
       </section>
-
-      <CtaStrip
-        title="Let's build something together"
-        subtitle="Discovery calls are free. Let's talk about your project."
-        primaryBtn={{ label: 'Book a Call', to: '/contact' }}
-        secondaryBtn={{ label: 'See Our Work', to: '/portfolio' }}
-      />
     </div>
   )
 }

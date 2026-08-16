@@ -41,34 +41,6 @@
 .qf-field input::placeholder,
 .qf-field textarea::placeholder { color: var(--color-text-light-muted); }
 
-.qf-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.qf-chip {
-  padding: 6px 12px;
-  border-radius: 100px;
-  border: 1.5px solid var(--color-border-light);
-  background: var(--color-bg-card);
-  color: var(--color-text-muted);
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-family: var(--font-body);
-}
-.qf-chip:hover { border-color: rgba(232, 98, 42, 0.4); color: var(--color-text-main); }
-.qf-chip.selected { border-color: var(--color-brand-orange); background: rgba(232, 98, 42, 0.1); color: var(--color-brand-orange-dark); }
-
-.qf-slider {
-  width: 100%;
-  margin: 0.75rem 0 0.5rem;
-  accent-color: var(--color-brand-orange);
-  cursor: pointer;
-}
-.qf-slider-labels {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.72rem;
-  color: var(--color-text-muted);
-}
-
 .qf-submit {
   width: 100%;
   background: var(--color-brand-orange);

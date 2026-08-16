@@ -4,17 +4,38 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { api } from '../../services/api'
 import './QuoteForm.css'
 
-const serviceChips = ['iOS App', 'Android App', 'React Native', 'Flutter', 'MVP Build', 'UI/UX Design']
-const budgetLabels = ['< $5k', '$5k–$15k', '$15k–$50k', '$50k+']
-const timelines = ['ASAP', '1–3 months', '3–6 months', '6+ months']
+const serviceOptions = [
+  'Website Development',
+  'Ecommerce / Shopify',
+  'Mobile App Development',
+  'Custom Software',
+  'SaaS Development',
+  'UI/UX Design',
+  'Performance Marketing (Meta/Google Ads)',
+  'SEO',
+  'Social Media Marketing',
+  'Email Marketing',
+  'Branding & Identity',
+  'Lead Generation',
+  'LinkedIn Marketing',
+  'AI Chatbot',
+  'Workflow Automation',
+  'CRM Automation',
+  'AI Lead Qualification',
+  'Multiple Services',
+]
+const budgetOptions = ['Under $2,000', '$2,000 – $5,000', '$5,000 – $10,000', '$10,000 – $25,000', '$25,000+', 'Monthly retainer — discuss']
+const timelineOptions = ['Urgent — within 4 weeks', '1–3 months', '3–6 months', '6+ months', 'Ongoing / retainer', 'Flexible']
 
 interface FormData {
   name: string
   email: string
   phone: string
   company: string
-  brief: string
+  service: string
+  budget: string
   timeline: string
+  brief: string
 }
 
 interface QuoteFormProps {
@@ -22,17 +43,13 @@ interface QuoteFormProps {
   submitLabel?: string
 }
 
-export default function QuoteForm({ heading, submitLabel = 'Get a Free Quote' }: QuoteFormProps) {
-  const [selectedServices, setSelectedServices] = useState<string[]>([])
-  const [budgetIndex, setBudgetIndex] = useState(1)
-  const [form, setForm] = useState<FormData>({ name: '', email: '', phone: '', company: '', brief: '', timeline: '' })
+export default function QuoteForm({ heading, submitLabel = 'Request My Free Quote' }: QuoteFormProps) {
+  const [form, setForm] = useState<FormData>({
+    name: '', email: '', phone: '', company: '', service: '', budget: '', timeline: '', brief: '',
+  })
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState('')
-
-  function toggleService(s: string) {
-    setSelectedServices(prev => prev.includes(s) ? prev.filter(x => x !== s) : [...prev, s])
-  }
 
   function handleChange(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     setForm(f => ({ ...f, [e.target.name]: e.target.value }))
@@ -47,7 +64,7 @@ export default function QuoteForm({ heading, submitLabel = 'Get a Free Quote' }:
         name: form.name,
         email: form.email,
         phone: form.phone,
-        message: `Services: ${selectedServices.join(', ')} | Budget: ${budgetLabels[budgetIndex]} | Timeline: ${form.timeline} | Company: ${form.company} | Brief: ${form.brief}`,
+        message: `Service: ${form.service} | Budget: ${form.budget} | Timeline: ${form.timeline} | Company: ${form.company} | Brief: ${form.brief}`,
       })
       setSubmitted(true)
     } catch {
@@ -71,72 +88,60 @@ export default function QuoteForm({ heading, submitLabel = 'Get a Free Quote' }:
 
           <div className="qf-field-row">
             <div className="qf-field">
-              <label>Your name *</label>
+              <label>Full Name *</label>
               <input name="name" value={form.name} onChange={handleChange} placeholder="Alex Johnson" required />
             </div>
             <div className="qf-field">
-              <label>Email *</label>
+              <label>Email Address *</label>
               <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="alex@company.com" required />
             </div>
           </div>
 
           <div className="qf-field-row">
             <div className="qf-field">
-              <label>Phone</label>
+              <label>Phone / WhatsApp</label>
               <input name="phone" value={form.phone} onChange={handleChange} placeholder="+1 555 000 0000" />
             </div>
             <div className="qf-field">
-              <label>Company</label>
+              <label>Company Name</label>
               <input name="company" value={form.company} onChange={handleChange} placeholder="Acme Inc." />
             </div>
           </div>
 
           <div className="qf-field">
-            <label>What are you building?</label>
-            <div className="qf-chips">
-              {serviceChips.map(s => (
-                <button
-                  type="button"
-                  key={s}
-                  className={`qf-chip ${selectedServices.includes(s) ? 'selected' : ''}`}
-                  onClick={() => toggleService(s)}
-                >{s}</button>
-              ))}
-            </div>
-          </div>
-
-          <div className="qf-field">
-            <label>Budget range — <strong>{budgetLabels[budgetIndex]}</strong></label>
-            <input
-              type="range"
-              min={0}
-              max={3}
-              step={1}
-              value={budgetIndex}
-              onChange={e => setBudgetIndex(Number(e.target.value))}
-              className="qf-slider"
-            />
-            <div className="qf-slider-labels">
-              {budgetLabels.map(l => <span key={l}>{l}</span>)}
-            </div>
-          </div>
-
-          <div className="qf-field">
-            <label>Timeline</label>
-            <select name="timeline" value={form.timeline} onChange={handleChange}>
-              <option value="">Select timeline…</option>
-              {timelines.map(t => <option key={t} value={t}>{t}</option>)}
+            <label>Service Interested In *</label>
+            <select name="service" value={form.service} onChange={handleChange} required>
+              <option value="">Select a service…</option>
+              {serviceOptions.map(s => <option key={s} value={s}>{s}</option>)}
             </select>
           </div>
 
+          <div className="qf-field-row">
+            <div className="qf-field">
+              <label>Budget Range</label>
+              <select name="budget" value={form.budget} onChange={handleChange}>
+                <option value="">Select a range…</option>
+                {budgetOptions.map(b => <option key={b} value={b}>{b}</option>)}
+              </select>
+            </div>
+            <div className="qf-field">
+              <label>Project Timeline</label>
+              <select name="timeline" value={form.timeline} onChange={handleChange}>
+                <option value="">Select timeline…</option>
+                {timelineOptions.map(t => <option key={t} value={t}>{t}</option>)}
+              </select>
+            </div>
+          </div>
+
           <div className="qf-field">
-            <label>Project brief</label>
+            <label>Project Details *</label>
             <textarea
               name="brief"
               value={form.brief}
               onChange={handleChange}
               rows={5}
-              placeholder="Describe your idea, goals, and any specific requirements…"
+              placeholder="Describe your project: what you're building, who it's for, what problem it solves, and any specific requirements…"
+              required
             />
           </div>
 
@@ -145,7 +150,7 @@ export default function QuoteForm({ heading, submitLabel = 'Get a Free Quote' }:
           </button>
 
           {error && <p className="qf-error">{error}</p>}
-          <p className="qf-disclaimer">No spam, no obligations. We reply within 24 hours.</p>
+          <p className="qf-disclaimer">We respond within 24 hours. No obligation, no spam.</p>
         </form>
       )}
     </div>
