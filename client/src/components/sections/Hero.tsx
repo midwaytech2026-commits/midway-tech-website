@@ -4,7 +4,7 @@ import heroBg from '../../assets/images/home-hero-office.jpeg'
 import './Hero.css'
 
 const bullets = [
-  'International clients — US, UK & EU',
+  'International clients — US, UK, EU',
   'Marketing + Tech + AI, one team',
   'No long-term lock-ins',
 ]
