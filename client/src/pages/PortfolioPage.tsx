@@ -10,9 +10,11 @@ import {
   Megaphone,
   ArrowRight,
 } from 'lucide-react'
-import caseSaas from '../assets/images/case-saas.jpg'
-import caseD2c from '../assets/images/case-d2c.jpg'
-import caseExport from '../assets/images/case-export.jpg'
+import caseSaas from '../assets/images/sample-case-saas.jpeg'
+import caseFashion from '../assets/images/sample-case-fashion.jpeg'
+import caseExport from '../assets/images/sample-case-export.jpeg'
+import caseJewellery from '../assets/images/sample-case-jewellery.jpeg'
+import caseDental from '../assets/images/sample-case-dental.jpeg'
 import './PortfolioPage.css'
 
 const conceptWork = [
@@ -25,11 +27,11 @@ const conceptWork = [
     tags: ['Next.js', 'SEO', 'AI Lead Flow'],
   },
   {
-    image: caseD2c,
-    alt: 'Concept D2C ecommerce storefront mockup',
+    image: caseFashion,
+    alt: 'Concept D2C fashion ecommerce storefront mockup',
     label: 'CONCEPT PROJECT / D2C',
-    title: 'D2C Brand — Ecommerce + Growth Setup',
-    desc: 'A concept build showing how a D2C brand could connect storefront experience, performance campaigns, and retention flows.',
+    title: 'D2C Fashion Brand — Ecommerce + Growth Setup',
+    desc: 'A concept build showing how a D2C fashion brand could connect storefront experience, performance campaigns, and retention flows.',
     tags: ['Ecommerce', 'Paid Ads', 'Email Flow'],
   },
   {
@@ -39,6 +41,23 @@ const conceptWork = [
     title: 'Export Business — AI Lead Qualification System',
     desc: 'A concept workflow showing how inbound enquiries could be scored, routed, and followed up through a connected CRM process.',
     tags: ['AI Workflow', 'CRM', 'Lead Scoring'],
+    accent: 'green',
+  },
+  {
+    image: caseJewellery,
+    alt: 'Concept jewellery brand identity and Shopify storefront mockup',
+    label: 'CONCEPT PROJECT / JEWELLERY',
+    title: 'Jewellery Brand — Identity + Ecommerce Concept',
+    desc: 'A concept build showing how a jewellery brand could pair a premium brand identity with a Shopify storefront built for considered purchases.',
+    tags: ['Branding', 'Shopify', 'SEO'],
+  },
+  {
+    image: caseDental,
+    alt: 'Concept AI appointment chatbot mockup for a healthcare practice',
+    label: 'CONCEPT PROJECT / HEALTHCARE',
+    title: 'Healthcare Practice — AI Appointment Chatbot Concept',
+    desc: 'A concept workflow showing how a healthcare practice could use an AI chatbot to answer common questions and check appointment availability, with staff handling anything clinical.',
+    tags: ['AI Chatbot', 'Booking Flow'],
     accent: 'green',
   },
 ]

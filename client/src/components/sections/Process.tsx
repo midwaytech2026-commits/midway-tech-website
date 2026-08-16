@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {
   PhoneCall,
   Search,
@@ -9,10 +10,10 @@ import './Process.css'
 
 const steps = [
   { Icon: PhoneCall,  num: '01', title: 'Strategy Call',  desc: '30 min. No pitch. Honest advice.' },
-  { Icon: Search,     num: '02', title: 'Growth Audit',   desc: 'We audit your marketing, tech, and operations.' },
-  { Icon: Map,        num: '03', title: 'Custom Roadmap', desc: 'A 30–90 day plan scoped to your goals.' },
+  { Icon: Search,     num: '02', title: 'Growth Audit',   desc: 'We audit your marketing, tech & ops.' },
+  { Icon: Map,        num: '03', title: 'Custom Roadmap', desc: '90-day plan scoped to your goals.' },
   { Icon: Hammer,     num: '04', title: 'Execution',      desc: 'Build, run, optimise. Weekly updates.' },
-  { Icon: TrendingUp, num: '05', title: 'Optimize',       desc: 'Double down on what works.' },
+  { Icon: TrendingUp, num: '05', title: 'Scale',          desc: 'Double down on what works.' },
 ]
 
 export default function Process() {
@@ -36,6 +37,10 @@ export default function Process() {
           )
         })}
       </div>
+
+      <Link to="/get-quote" className="btn-primary process-cta">
+        Start with a Free Strategy Call →
+      </Link>
     </section>
   )
 }

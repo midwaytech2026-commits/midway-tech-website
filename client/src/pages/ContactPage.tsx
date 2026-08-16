@@ -35,12 +35,12 @@ const faqItems = [
     a: 'Just a basic idea of what you want to build. We help you structure the scope, define features, and plan the build.'
   },
   {
-    q: 'Do you work with US/UK/Australian clients?',
-    a: 'Yes — most of our clients are in the US, UK, and Australia. We overlap with US EST mornings and UK afternoons.'
+    q: 'Do you work with international clients?',
+    a: 'Yes — our clients are across the US, UK, EU, and Australia. We overlap with US EST mornings and UK/EU afternoons.'
   },
   {
     q: 'What happens after the app is launched?',
-    a: 'We offer 3-month post-launch support on all projects, plus optional retainer packages for ongoing feature work.'
+    a: 'We offer 30-day post-launch support on all projects, plus optional retainer packages for ongoing feature work.'
   },
 ]
 
@@ -119,7 +119,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <QuoteForm heading="Send Us a Message" />
+          <QuoteForm heading="Send Us a Message" submitLabel="Send Message" />
         </div>
       </section>
     </div>

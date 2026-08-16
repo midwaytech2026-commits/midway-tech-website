@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -32,28 +32,35 @@
   --gray-light:#E8E8EA;
   --gray-mid:  #020812;
 
-  /* Fonts */
-  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-body:    'Inter', system-ui, sans-serif;
+  /* Fonts — Plus Jakarta Sans is the sample's only UI font (body, buttons,
+     forms, and headings). Inter has been removed from the active stack. */
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body:    'Plus Jakarta Sans', sans-serif;
   --font-kicker:  var(--font-body);
 
-  /* Final color system — warm premium palette. Orange is the primary
-     brand/action color. Green is used where the client sample uses it:
-     trust, AI, automation, workflow, success, and AI-related accents. */
-  --color-bg-main:            #FAF7F2;
-  --color-bg-soft:            #F4EFE8;
+  /* Final color system — exact tokens from the client sample (--bg, --ink,
+     --orange, --green family). Orange is the primary brand/action color.
+     Green is used where the client sample uses it: trust, AI, automation,
+     workflow, success, and AI-related accents. */
+  --color-bg-main:            #FAF8F5;
+  --color-bg-soft:            #F4F1EC;
+  --color-bg-tertiary:        #EEEAE4;
   --color-bg-card:            #FFFFFF;
   --color-bg-dark:            #0F0D0A;
   --color-bg-dark-card:       #181410;
+  --color-bg-dark-card-alt:   #221E18;
 
-  --color-text-main:          #17120E;
-  --color-text-muted:         #746D66;
-  --color-text-light:         #F7F2EC;
+  --color-text-main:          #1A1209;
+  --color-text-secondary:     #3D3529;
+  --color-text-muted:         #7A6E62;
+  --color-text-faint:         #B0A89E;
+  --color-text-light:         #FFFFFF;
   --color-text-light-muted:   #B8B0A8;
 
-  --color-brand-orange:       #E95A2A;
-  --color-brand-orange-dark:  #C9471F;
-  --color-brand-orange-soft:  #FFF0E8;
+  --color-brand-orange:       #E8622A;
+  --color-brand-orange-dark:  #D45520;
+  --color-brand-orange-soft:  #FFF3EE;
+  --color-brand-orange-border: #FDE8DC;
 
   --color-brand-green:        #2A7D4F;
   --color-brand-green-dark:   #236B43;
@@ -61,13 +68,13 @@
   --color-brand-green-border: #C8E6D4;
   --color-brand-green-bright: #5EC992;
 
-  --color-border-light:       rgba(23, 18, 14, 0.12);
+  --color-border-light:       #E8E3DC;
   --color-border-dark:        rgba(247, 242, 236, 0.14);
 
   --color-error:              #C0392B;
 
-  --shadow-soft:              0 24px 70px rgba(23, 18, 14, 0.08);
-  --shadow-card:               0 14px 40px rgba(23, 18, 14, 0.06);
+  --shadow-soft:              0 24px 70px rgba(26, 18, 9, 0.08);
+  --shadow-card:               0 14px 40px rgba(26, 18, 9, 0.06);
 
   /* Compatibility aliases — kept only so dead/unused components
      (DeliveryFramework, MvpOffer, Ticker, Technologies, Testimonials,
@@ -110,8 +117,8 @@ a {
 }
 
 body {
-  background: var(--bg-main);
-  color: var(--text-main);
+  background: var(--color-bg-main);
+  color: var(--color-text-main);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -150,21 +157,27 @@ main { flex: 1; }
 
 /* Shared buttons — orange primary, everywhere. Centralized here (rather
    than left duplicated per-section) so every page picks up the same
-   primary/secondary button regardless of which component CSS loads. */
+   primary/secondary button regardless of which component CSS loads.
+   Sample spec: font-size 12.5px, weight 600, padding 8px 16px, radius 8px,
+   line-height 1. min-height:44px is kept as an accessibility floor beyond
+   the sample's literal padding — it only affects short single-line labels
+   and never shrinks below the sample's visual size, so it's a safe addition
+   rather than a deviation. */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
+  gap: 6px;
   min-height: 44px;
-  padding: 0 18px;
+  padding: 8px 16px;
   border-radius: 8px;
   border: 1px solid var(--color-brand-orange);
   background: var(--color-brand-orange);
   color: #fff;
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 800;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1;
   letter-spacing: -0.01em;
   text-decoration: none;
   cursor: pointer;
@@ -174,26 +187,27 @@ main { flex: 1; }
   background: var(--color-brand-orange-dark);
   border-color: var(--color-brand-orange-dark);
   transform: translateY(-1px);
-  box-shadow: 0 14px 34px rgba(233, 90, 42, 0.24);
+  box-shadow: 0 14px 34px rgba(232, 98, 42, 0.24);
 }
 .btn-primary:active { transform: translateY(0); }
-.btn-primary svg { transition: transform 0.2s; }
+.btn-primary svg { width: 12px; height: 12px; transition: transform 0.2s; }
 .btn-primary:hover svg { transform: translateX(3px); }
 
 .btn-ghost {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
+  gap: 6px;
   min-height: 44px;
-  padding: 0 18px;
+  padding: 8px 16px;
   border-radius: 8px;
   background: #fff;
   color: var(--color-text-main);
   border: 1px solid var(--color-border-light);
   font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1;
   text-decoration: none;
   cursor: pointer;
   transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
@@ -203,3 +217,4 @@ main { flex: 1; }
   border-color: var(--color-brand-orange);
   color: var(--color-brand-orange);
 }
+.btn-ghost svg { width: 12px; height: 12px; }

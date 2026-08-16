@@ -122,7 +122,7 @@ export default function ServicesPage() {
           <h1>Growth, Technology, and AI Services Under One Roof</h1>
           <p>From websites and mobile apps to marketing systems and AI automation, MidwayTech helps modern businesses launch, grow, and scale without managing separate agencies.</p>
           <div className="sp-hero-actions">
-            <Link to="/contact" className="btn-primary">Get a Free Quote</Link>
+            <Link to="/get-quote" className="btn-primary">Get a Free Quote</Link>
             <Link to="/portfolio" className="btn-ghost">See Our Work</Link>
           </div>
         </div>

@@ -11,7 +11,7 @@ const included = [
   { Icon: Bell, title: 'Push Notifications', desc: 'APNs integration for transactional and marketing messages.' },
   { Icon: CreditCard, title: 'In-App Purchases', desc: 'Subscriptions, consumables, and StoreKit 2 setup.' },
   { Icon: CheckCircle2, title: 'App Store Submission', desc: 'Full App Store review handling and TestFlight QA setup.' },
-  { Icon: ShieldCheck, title: '3-Month Support', desc: 'Bug fixes and minor updates after launch, included.' },
+  { Icon: ShieldCheck, title: '30-Day Support', desc: 'Bug fixes and minor updates for 30 days after launch, included.' },
 ]
 
 const techStack = {
@@ -69,7 +69,7 @@ export default function ServiceIosPage() {
           <h1>Native iOS apps built<br />to <em>App Store standards</em></h1>
           <p>We build Swift & SwiftUI apps that feel at home on Apple devices — fast, polished, and ready for the App Store.</p>
           <div className="ios-hero-actions">
-            <Link to="/contact" className="btn-primary">Start Your iOS Project</Link>
+            <Link to="/get-quote" className="btn-primary">Start Your iOS Project</Link>
             <Link to="/portfolio" className="btn-ghost">See iOS Work</Link>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function ServiceIosPage() {
             <div className="ios-snapshot-row"><span>Platform</span><strong>iOS 16+</strong></div>
             <div className="ios-snapshot-row"><span>Language</span><strong>Swift + SwiftUI</strong></div>
             <div className="ios-snapshot-row"><span>Delivery</span><strong>Fixed price or T&M</strong></div>
-            <Link to="/contact" className="ios-snapshot-cta">Get a Quote →</Link>
+            <Link to="/get-quote" className="ios-snapshot-cta">Get a Quote →</Link>
           </div>
         </div>
       </section>

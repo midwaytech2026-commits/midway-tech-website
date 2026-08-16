@@ -72,7 +72,7 @@
 .sp-discipline-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-soft);
-  border-color: rgba(233, 90, 42, 0.3);
+  border-color: rgba(232, 98, 42, 0.3);
 }
 .sp-discipline-link {
   display: inline-flex;
@@ -98,7 +98,7 @@
   justify-content: center;
   margin-bottom: 1.25rem;
 }
-.sp-discipline-orange { background: rgba(233, 90, 42, 0.1); color: var(--color-brand-orange); }
+.sp-discipline-orange { background: rgba(232, 98, 42, 0.1); color: var(--color-brand-orange); }
 .sp-discipline-icon { width: 26px; height: 26px; stroke-width: 1.8; }
 .sp-discipline-card h3 {
   font-family: var(--font-display);
@@ -155,7 +155,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(233, 90, 42, 0.1);
+  background: rgba(232, 98, 42, 0.1);
   color: var(--color-brand-orange);
   margin-bottom: 18px;
   flex-shrink: 0;

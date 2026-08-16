@@ -31,8 +31,8 @@ const marketingLinks: FooterLink[] = [
   { label: 'Social Media', to: '/services/growth-marketing' },
   { label: 'Email Marketing', to: '/services/growth-marketing' },
   { label: 'Branding', to: '/services/growth-marketing' },
-  { label: 'Lead Generation', comingSoon: true },
-  { label: 'LinkedIn Marketing', comingSoon: true },
+  { label: 'Lead Generation', to: '/services/growth-marketing' },
+  { label: 'LinkedIn Marketing', to: '/services/growth-marketing' },
 ]
 
 const aiLinks: FooterLink[] = [
@@ -41,7 +41,7 @@ const aiLinks: FooterLink[] = [
   { label: 'CRM Automation', to: '/services/ai-automation' },
   { label: 'AI Content Systems', to: '/services/ai-automation' },
   { label: 'Lead Qualification AI', to: '/services/ai-automation' },
-  { label: 'AI Customer Support', comingSoon: true },
+  { label: 'AI Customer Support', to: '/services/ai-automation' },
 ]
 
 function FooterLinkItem({ link, onComingSoon }: { link: FooterLink; onComingSoon: (label: string) => void }) {
@@ -67,6 +67,16 @@ export default function Footer() {
         message={`${comingSoon} is being prepared and will be available soon.`}
         onClose={() => setComingSoon(null)}
       />
+
+      <div className="footer-cta">
+        <div className="footer-cta-inner">
+          <div>
+            <h2>Ready to grow your business?</h2>
+            <p>Book a free 30-minute consultation. No obligation, just clarity.</p>
+          </div>
+          <Link to="/contact" className="btn-primary footer-cta-btn">Book a Free Consultation</Link>
+        </div>
+      </div>
 
       <div className="footer-top">
         <div className="footer-brand">
@@ -106,12 +116,14 @@ export default function Footer() {
         </div>
 
         <div className="footer-col footer-col-ai">
-          <h4>AI &amp; Automation</h4>
+          <h4>AI &amp; Automation <span className="footer-badge-new">New</span></h4>
           <ul>
             {aiLinks.map(l => <FooterLinkItem key={l.label} link={l} onComingSoon={setComingSoon} />)}
           </ul>
         </div>
       </div>
+
+      <p className="footer-tagline">From Idea to Scale — In Between There Is Midway.</p>
 
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} MidwayTech. All rights reserved.</span>

@@ -1,4 +1,5 @@
-import { Layers, Megaphone, Bot } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Layers, Megaphone, Bot, ArrowRight } from 'lucide-react'
 import './Services.css'
 
 const disciplines = [
@@ -8,7 +9,9 @@ const disciplines = [
     accent: 'orange',
     title: 'Product & Technology',
     description: 'Websites, apps, Shopify stores, and custom software built to global standards — engineered for scale from the start.',
-    tags: ['Web Apps', 'Mobile', 'SaaS', 'UI/UX', 'Shopify'],
+    tags: ['Shopify', 'Web Apps', 'Mobile', 'SaaS', 'UI/UX'],
+    exploreLabel: 'Explore Technology',
+    to: '/services/product-technology',
   },
   {
     id: 'growth',
@@ -17,14 +20,18 @@ const disciplines = [
     title: 'Growth Marketing',
     description: 'Marketing systems built to drive measurable revenue — performance, SEO, social, email, and branding connected to outcomes.',
     tags: ['Performance', 'SEO', 'Social', 'Email', 'Branding'],
+    exploreLabel: 'Explore Marketing',
+    to: '/services/growth-marketing',
   },
   {
     id: 'ai',
     Icon: Bot,
     accent: 'green',
     title: 'AI & Automation',
-    description: 'AI chatbots, workflow automations, CRM systems, and intelligent tools that reduce cost, qualify leads, and multiply output.',
+    description: 'AI chatbots, workflow automations, and intelligent systems that reduce cost, qualify leads, and multiply output.',
     tags: ['AI Chatbots', 'Workflow', 'CRM Auto', 'Lead Qual.'],
+    exploreLabel: 'Explore AI Solutions',
+    to: '/services/ai-automation',
   },
 ]
 
@@ -38,7 +45,12 @@ export default function Services() {
         {disciplines.map(d => {
           const Icon = d.Icon
           return (
-            <div key={d.id} className={`wwd-card${d.id === 'ai' ? ' wwd-card--ai' : ''}`}>
+            <Link
+              key={d.id}
+              to={d.to}
+              className={`wwd-card${d.id === 'ai' ? ' wwd-card--ai' : ''}`}
+              aria-label={`Explore ${d.title}`}
+            >
               <div className={`wwd-icon-wrap wwd-icon-${d.accent}`}>
                 <Icon className="wwd-icon" aria-hidden="true" />
               </div>
@@ -47,9 +59,20 @@ export default function Services() {
               <div className="wwd-tags">
                 {d.tags.map(tag => <span key={tag} className="wwd-tag">{tag}</span>)}
               </div>
-            </div>
+              <span className="wwd-explore">
+                {d.exploreLabel}
+                <ArrowRight className="wwd-explore-icon" aria-hidden="true" />
+              </span>
+            </Link>
           )
         })}
+      </div>
+
+      <div className="wwd-notsure">
+        <span className="wwd-notsure-text">
+          Not sure what you need? <Link to="/contact">Book a free 30-min strategy call — we&apos;ll map it out.</Link>
+        </span>
+        <Link to="/get-quote" className="btn-primary wwd-notsure-cta">Get a Quote</Link>
       </div>
     </section>
   )

@@ -19,9 +19,10 @@ interface FormData {
 
 interface QuoteFormProps {
   heading: string
+  submitLabel?: string
 }
 
-export default function QuoteForm({ heading }: QuoteFormProps) {
+export default function QuoteForm({ heading, submitLabel = 'Get a Free Quote' }: QuoteFormProps) {
   const [selectedServices, setSelectedServices] = useState<string[]>([])
   const [budgetIndex, setBudgetIndex] = useState(1)
   const [form, setForm] = useState<FormData>({ name: '', email: '', phone: '', company: '', brief: '', timeline: '' })
@@ -140,7 +141,7 @@ export default function QuoteForm({ heading }: QuoteFormProps) {
           </div>
 
           <button type="submit" className="qf-submit" disabled={submitting}>
-            {submitting ? 'Sending…' : <>Get a Free Quote <ArrowRight size={16} aria-hidden="true" /></>}
+            {submitting ? 'Sending…' : <>{submitLabel} <ArrowRight size={16} aria-hidden="true" /></>}
           </button>
 
           {error && <p className="qf-error">{error}</p>}

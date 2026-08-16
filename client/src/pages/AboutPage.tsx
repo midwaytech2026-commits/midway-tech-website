@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Target, Rocket, BrainCircuit, Network } from 'lucide-react'
 import CtaStrip from '../components/common/CtaStrip'
-import aboutTeam from '../assets/images/about-team.jpg'
+import aboutTeam from '../assets/images/sample-about-team.jpeg'
 import './AboutPage.css'
 
 const beliefs = [
@@ -82,7 +82,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="ap-why-img">
-            <img src={aboutTeam} alt="Team collaboration and product planning workspace" loading="lazy" />
+            <img src={aboutTeam} alt="MidwayTech team at work" loading="lazy" />
           </div>
         </div>
       </section>

@@ -99,7 +99,7 @@
   transform: translateY(-1px);
   background: var(--color-brand-orange-dark);
   border-color: var(--color-brand-orange-dark);
-  box-shadow: 0 14px 34px rgba(233, 90, 42, 0.24);
+  box-shadow: 0 14px 34px rgba(232, 98, 42, 0.24);
 }
 .svc-snapshot-cta:active { transform: translateY(0); }
 
@@ -135,7 +135,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(233, 90, 42, 0.1);
+  background: rgba(232, 98, 42, 0.1);
   color: var(--color-brand-orange);
   margin-bottom: 0.9rem;
 }
@@ -209,7 +209,7 @@
   font-family: var(--font-display);
   font-size: 2.5rem;
   font-weight: 800;
-  color: rgba(233, 90, 42, 0.28);
+  color: rgba(232, 98, 42, 0.28);
   width: 80px;
   flex-shrink: 0;
   line-height: 1;
@@ -225,7 +225,7 @@
 .svc-process-meta span {
   font-size: 0.72rem;
   color: var(--color-brand-orange);
-  background: rgba(233, 90, 42, 0.14);
+  background: rgba(232, 98, 42, 0.14);
   padding: 0.2rem 0.6rem;
   border-radius: 100px;
   font-weight: 700;
@@ -310,7 +310,7 @@
   text-decoration: none;
   transition: border-color 0.2s, transform 0.2s;
 }
-.svc-related-card:hover { border-color: rgba(233, 90, 42, 0.35); transform: translateY(-2px); }
+.svc-related-card:hover { border-color: rgba(232, 98, 42, 0.35); transform: translateY(-2px); }
 .svc-related-icon { width: 20px; height: 20px; color: var(--color-brand-orange); stroke-width: 1.8; flex-shrink: 0; }
 .svc-related-card p { flex: 1; color: var(--color-text-main); font-size: 0.875rem; font-weight: 600; margin: 0; }
 .svc-related-arrow { color: var(--color-brand-orange); font-size: 1rem; }

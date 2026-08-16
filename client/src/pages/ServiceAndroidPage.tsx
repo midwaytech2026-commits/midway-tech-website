@@ -11,7 +11,7 @@ const included = [
   { Icon: Bell, title: 'Push Notifications',        desc: 'Firebase Cloud Messaging (FCM) for transactional and marketing push messages.' },
   { Icon: CreditCard, title: 'In-App Purchases',          desc: 'Google Play Billing Library for subscriptions, consumables, and one-time purchases.' },
   { Icon: CheckCircle2, title: 'Google Play Submission',    desc: 'Full Play Store review handling, release track setup, and internal testing.' },
-  { Icon: ShieldCheck, title: '3-Month Support',            desc: 'Bug fixes and minor updates after launch, included in every engagement.' },
+  { Icon: ShieldCheck, title: '30-Day Support', desc: 'Bug fixes and minor updates for 30 days after launch, included in every engagement.' },
 ]
 
 const techStack = {
@@ -69,7 +69,7 @@ export default function ServiceAndroidPage() {
           <h1>Native Android apps built<br />for <em>Google Play success</em></h1>
           <p>We build Kotlin & Jetpack Compose apps that feel at home on every Android device — performant, polished, and ready to ship.</p>
           <div className="svc-hero-actions">
-            <Link to="/contact" className="btn-primary">Start Your Android Project</Link>
+            <Link to="/get-quote" className="btn-primary">Start Your Android Project</Link>
             <Link to="/portfolio" className="btn-ghost">See Our Work</Link>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function ServiceAndroidPage() {
             <div className="svc-snapshot-row"><span>Platform</span><strong>Android 8.0+</strong></div>
             <div className="svc-snapshot-row"><span>Language</span><strong>Kotlin + Jetpack</strong></div>
             <div className="svc-snapshot-row"><span>Delivery</span><strong>Fixed price or T&M</strong></div>
-            <Link to="/contact" className="svc-snapshot-cta">Get a Quote →</Link>
+            <Link to="/get-quote" className="svc-snapshot-cta">Get a Quote →</Link>
           </div>
         </div>
       </section>

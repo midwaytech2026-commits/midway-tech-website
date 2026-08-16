@@ -3,6 +3,42 @@
   border-top: 1px solid var(--color-border-dark);
 }
 
+.footer-cta {
+  border-bottom: 1px solid var(--color-border-dark);
+  padding: 2.5rem 4rem;
+}
+.footer-cta-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.footer-cta-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  font-weight: 700;
+  color: var(--color-text-light);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+.footer-cta-inner p {
+  font-size: 0.95rem;
+  color: var(--color-text-light-muted);
+}
+/* Sample uses green for this exact CTA slot in the footer (nav CTA stays orange) */
+.btn-primary.footer-cta-btn {
+  background: var(--color-brand-green);
+  border-color: var(--color-brand-green);
+}
+.btn-primary.footer-cta-btn:hover {
+  background: var(--color-brand-green-dark);
+  border-color: var(--color-brand-green-dark);
+  box-shadow: 0 14px 34px rgba(42, 125, 79, 0.24);
+}
+
 .footer-top {
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
@@ -121,10 +157,32 @@
 .footer-col a:hover,
 .footer-link-btn:hover { color: var(--color-brand-orange); transform: translateX(3px); }
 
-/* AI & Automation column takes the sample's green accent */
-.footer-col-ai h4 { color: var(--color-brand-green); }
+.footer-col-ai h4 { display: flex; align-items: center; gap: 7px; }
 .footer-col-ai a:hover,
 .footer-col-ai .footer-link-btn:hover { color: var(--color-brand-green-bright); }
+
+.footer-badge-new {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--color-brand-green);
+  padding: 2px 7px;
+  border-radius: 100px;
+}
+
+.footer-tagline {
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: -0.01em;
+  color: var(--color-text-light-muted);
+  padding: 1.5rem 4rem 0;
+}
 
 .footer-bottom {
   display: flex;
@@ -161,7 +219,10 @@
 }
 
 @media (max-width: 900px) {
+  .footer-cta { padding: 2.5rem 1.5rem; }
+  .footer-cta-inner { flex-direction: column; align-items: flex-start; }
   .footer-top { padding: 3rem 1.5rem 1.5rem; grid-template-columns: 1fr 1fr; }
+  .footer-tagline { padding: 1.5rem 1.5rem 0; }
   .footer-bottom { padding: 1.5rem; flex-direction: column; gap: 1rem; text-align: center; }
 }
 

@@ -88,8 +88,17 @@
   line-height: 1.65;
 }
 
+.process-cta {
+  margin-top: 3rem;
+}
+.process-cta:focus-visible {
+  outline: 2px solid var(--color-brand-orange-dark);
+  outline-offset: 2px;
+}
+
 @media (max-width: 900px) {
   .proc-section { padding: 3.5rem 1.5rem; }
   .proc-steps { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   .proc-steps::before { display: none; }
+  .process-cta { margin-top: 2.5rem; }
 }

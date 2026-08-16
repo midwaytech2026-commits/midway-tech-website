@@ -42,7 +42,7 @@ export default function GetQuotePage() {
             </p>
           </div>
 
-          <QuoteForm heading="Tell Us About Your Project" />
+          <QuoteForm heading="Tell Us About Your Project" submitLabel="Request My Free Quote" />
         </div>
       </section>
     </div>

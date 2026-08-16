@@ -69,7 +69,7 @@ export default function ServiceUiUxPage() {
           <h1>Designs that convert users<br />into <em>loyal customers</em></h1>
           <p>We create research-backed mobile app designs that feel intuitive, look premium, and give your development team everything they need to build with confidence.</p>
           <div className="svc-hero-actions">
-            <Link to="/contact" className="btn-primary">Start Your Design Project</Link>
+            <Link to="/get-quote" className="btn-primary">Start Your Design Project</Link>
             <Link to="/portfolio" className="btn-ghost">See Our Work</Link>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function ServiceUiUxPage() {
             <div className="svc-snapshot-row"><span>Deliverable</span><strong>Figma + system</strong></div>
             <div className="svc-snapshot-row"><span>Handoff</span><strong>Dev-ready specs</strong></div>
             <div className="svc-snapshot-row"><span>Delivery</span><strong>Fixed price</strong></div>
-            <Link to="/contact" className="svc-snapshot-cta">Get a Quote →</Link>
+            <Link to="/get-quote" className="svc-snapshot-cta">Get a Quote →</Link>
           </div>
         </div>
       </section>

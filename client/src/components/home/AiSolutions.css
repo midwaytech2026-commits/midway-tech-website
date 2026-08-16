@@ -119,10 +119,62 @@
   color: var(--color-brand-green-bright);
   flex-shrink: 0;
 }
+.ai-workflow-status-orange {
+  background: rgba(232, 98, 42, 0.18);
+  color: var(--color-brand-orange);
+}
+.ai-workflow-status-blue {
+  background: rgba(96, 165, 250, 0.16);
+  color: #60A5FA;
+}
+
+.ai-cards {
+  max-width: 1100px;
+  margin: 3rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: left;
+}
+.ai-card {
+  background: var(--color-bg-dark-card);
+  border: 1px solid var(--color-border-dark);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+}
+.ai-card-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(42, 125, 79, 0.16);
+  color: var(--color-brand-green);
+  margin-bottom: 1rem;
+}
+.ai-card-icon { width: 19px; height: 19px; stroke-width: 1.8; }
+.ai-card-t {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+}
+.ai-card-d {
+  font-size: 0.85rem;
+  color: var(--color-text-light-muted);
+  line-height: 1.6;
+}
 
 @media (max-width: 900px) {
   .ai-section { padding: 3.5rem 1.5rem; }
   .ai-layout { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
   .ai-title, .ai-sub { margin-left: auto; margin-right: auto; }
   .ai-workflow { max-width: 340px; margin: 0 auto; text-align: left; }
+  .ai-cards { grid-template-columns: 1fr 1fr; margin-top: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .ai-cards { grid-template-columns: 1fr; }
 }

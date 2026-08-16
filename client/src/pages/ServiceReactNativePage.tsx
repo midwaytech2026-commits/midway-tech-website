@@ -11,7 +11,7 @@ const included = [
   { Icon: Bell, title: 'Push Notifications',          desc: 'APNs + FCM setup for both platforms in a single codebase, with rich notification support.' },
   { Icon: Rocket, title: 'OTA Updates',                 desc: 'Expo EAS Update for instant bug fixes and content changes without an App Store review cycle.' },
   { Icon: CheckCircle2, title: 'Dual Store Submission',        desc: 'App Store + Google Play submission handled end-to-end, including screenshots and metadata.' },
-  { Icon: ShieldCheck, title: '3-Month Support',              desc: 'Bug fixes and minor updates after launch, included in every engagement.' },
+  { Icon: ShieldCheck, title: '30-Day Support', desc: 'Bug fixes and minor updates for 30 days after launch, included in every engagement.' },
 ]
 
 const techStack = {
@@ -69,7 +69,7 @@ export default function ServiceReactNativePage() {
           <h1>One codebase.<br /><em>Both stores. Full quality.</em></h1>
           <p>We build React Native apps that feel and perform like native — without paying twice for two separate codebases.</p>
           <div className="svc-hero-actions">
-            <Link to="/contact" className="btn-primary">Start Your React Native Project</Link>
+            <Link to="/get-quote" className="btn-primary">Start Your React Native Project</Link>
             <Link to="/portfolio" className="btn-ghost">See Our Work</Link>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function ServiceReactNativePage() {
             <div className="svc-snapshot-row"><span>Platform</span><strong>iOS + Android</strong></div>
             <div className="svc-snapshot-row"><span>Language</span><strong>React Native + TS</strong></div>
             <div className="svc-snapshot-row"><span>Delivery</span><strong>Fixed price or T&M</strong></div>
-            <Link to="/contact" className="svc-snapshot-cta">Get a Quote →</Link>
+            <Link to="/get-quote" className="svc-snapshot-cta">Get a Quote →</Link>
           </div>
         </div>
       </section>

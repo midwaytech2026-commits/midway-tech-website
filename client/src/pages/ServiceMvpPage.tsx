@@ -11,7 +11,7 @@ const included = [
   { Icon: Link2, title: 'Backend API',               desc: 'Node.js REST API with authentication, database, and core endpoints — built to scale.' },
   { Icon: Rocket, title: 'App Store / Play Store Launch', desc: 'Full submission process handled by our team — screenshots, metadata, review management.' },
   { Icon: FileText, title: 'Investor-Ready Handover',   desc: 'Source code, architecture documentation, and a project summary slide deck for your investors.' },
-  { Icon: ShieldCheck, title: '60-Day Post-Launch Support', desc: 'Bug fixes and monitoring for 60 days after launch — because most issues appear in week one.' },
+  { Icon: ShieldCheck, title: '30-Day Post-Launch Support', desc: 'Bug fixes and monitoring for 30 days after launch — because most issues appear in week one.' },
 ]
 
 const techStack = {
@@ -48,7 +48,7 @@ const faqItems = [
   },
   {
     q: 'What happens after the MVP is live?',
-    a: 'You get 60 days of free bug-fix support. After that, we offer monthly retainer packages for feature development, or you can take the code to any team you choose — you own it entirely.',
+    a: 'You get 30 days of free bug-fix support. After that, we offer monthly retainer packages for feature development, or you can take the code to any team you choose — you own it entirely.',
   },
 ]
 
@@ -69,7 +69,7 @@ export default function ServiceMvpPage() {
           <h1>From idea to App Store<br />in <em>8–12 weeks</em></h1>
           <p>We help startups validate their product hypothesis with a lean, investor-ready MVP — built fast, built right, built to grow.</p>
           <div className="svc-hero-actions">
-            <Link to="/contact" className="btn-primary">Start Your MVP</Link>
+            <Link to="/get-quote" className="btn-primary">Start Your MVP</Link>
             <Link to="/portfolio" className="btn-ghost">See MVPs We've Built</Link>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function ServiceMvpPage() {
             <div className="svc-snapshot-row"><span>Platform</span><strong>iOS or Android</strong></div>
             <div className="svc-snapshot-row"><span>Deliverable</span><strong>Live app + docs</strong></div>
             <div className="svc-snapshot-row"><span>Delivery</span><strong>Fixed price</strong></div>
-            <Link to="/contact" className="svc-snapshot-cta">Get a Quote →</Link>
+            <Link to="/get-quote" className="svc-snapshot-cta">Get a Quote →</Link>
           </div>
         </div>
       </section>
