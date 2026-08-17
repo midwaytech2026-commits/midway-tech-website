@@ -45,38 +45,6 @@ export default function Hero() {
             </li>
           ))}
         </ul>
-
-        <div className="hero-stats">
-          <div className="hero-stat">
-            <div className="hero-stat-n">7<span>+</span></div>
-            <div className="hero-stat-l">Years building<br />marketing systems</div>
-          </div>
-          <div className="hero-stat">
-            <div className="hero-stat-n">3</div>
-            <div className="hero-stat-l">Services in<br />one team</div>
-          </div>
-          <div className="hero-stat">
-            <div className="hero-stat-n">24<span>h</span></div>
-            <div className="hero-stat-l">Quote response<br />turnaround</div>
-          </div>
-        </div>
-
-        <div className="hero-float-bar">
-          <div className="hero-badge">
-            <div className="hb-dot hb-dot--green" aria-hidden="true" />
-            <div>
-              <div className="hb-t">AI Systems Active</div>
-              <div className="hb-s">Running 24/7 — no manual input</div>
-            </div>
-          </div>
-          <div className="hero-badge">
-            <div className="hb-dot hb-dot--orange" aria-hidden="true" />
-            <div>
-              <div className="hb-t">International Ready</div>
-              <div className="hb-s">US · UK · EU time zones</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

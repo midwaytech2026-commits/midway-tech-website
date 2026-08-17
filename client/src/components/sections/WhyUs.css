@@ -20,11 +20,9 @@
   margin: 0 0 10px;
 }
 
-/* Mimics the sample's decorative italic quote using the approved font
-   (Plus Jakarta Sans italic) instead of adding Instrument Serif. */
 .why-quote {
   font-family: var(--font-display);
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
   font-size: clamp(1.2rem, 2.2vw, 1.8rem);
   color: #fff;
