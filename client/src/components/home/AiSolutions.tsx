@@ -29,10 +29,10 @@ export default function AiSolutions() {
             AI Solutions
           </span>
 
-          <h2 className="ai-title">Your Competitors Are Doing Manually What Our Clients Do Automatically.</h2>
+          <h2 className="ai-title">Automate the Work That Slows Your Business Down</h2>
           <p className="ai-sub">
-            From qualifying leads at midnight to generating content at scale — we build AI systems that give
-            your business the operating leverage of a team twice its size.
+            We build AI systems that handle repetitive tasks like lead follow-ups, customer questions,
+            content creation, and CRM updates — so your team can focus on growing the business.
           </p>
 
           <Link to="/services/ai-automation" className="btn-primary ai-cta">
