@@ -69,6 +69,10 @@
   box-shadow: var(--shadow-card);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
+/* Alternate card background so the row doesn't read as one uniform block */
+.sw-card:nth-child(2) {
+  background: var(--color-bg-soft);
+}
 .sw-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-soft);
@@ -149,6 +153,10 @@
   border: 1px solid var(--color-border-light);
   color: var(--color-text-muted);
   background: var(--color-bg-soft);
+}
+/* Card 2's own background is bg-soft, so its pills need the lighter tone to stay visible */
+.sw-card:nth-child(2) .sw-card-tag {
+  background: var(--color-bg-card);
 }
 
 .sw-cta {
