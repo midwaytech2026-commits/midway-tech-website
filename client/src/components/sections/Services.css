@@ -47,7 +47,7 @@
 
 .wwd-card {
   display: block;
-  background: var(--color-bg-card);
+  background: var(--color-bg-soft);
   border: 1px solid var(--color-border-light);
   border-radius: 16px;
   padding: 2rem;
@@ -82,7 +82,11 @@
   justify-content: center;
   margin-bottom: 1.5rem;
 }
-.wwd-icon-orange { background: rgba(232, 98, 42, 0.1); color: var(--color-brand-orange); }
+.wwd-icon-orange {
+  background: var(--color-brand-orange-soft);
+  border: 1px solid var(--color-brand-orange-border);
+  color: var(--color-brand-orange);
+}
 .wwd-icon-green {
   background: var(--color-brand-green-soft);
   border: 1px solid var(--color-brand-green-border);
