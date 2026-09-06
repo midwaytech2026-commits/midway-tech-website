@@ -12,6 +12,7 @@ export interface ContactForm {
   email: string
   phone?: string
   message: string
+  source?: 'home' | 'contact' | 'get-quote'
 }
 
 export interface ApiResponse<T> {

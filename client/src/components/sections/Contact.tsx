@@ -53,6 +53,7 @@ export default function Contact() {
         name: form.name,
         email: form.email,
         message: `Business: ${form.business || 'N/A'} | Website: ${form.website || 'N/A'} | Looking for: ${form.lookingFor || 'N/A'} | Budget: ${form.budget || 'N/A'} | Details: ${form.details || 'N/A'}`,
+        source: 'home',
       })
       setSubmitted(true)
     } catch {

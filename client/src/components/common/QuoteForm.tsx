@@ -41,9 +41,10 @@ interface FormData {
 interface QuoteFormProps {
   heading: string
   submitLabel?: string
+  source?: 'home' | 'contact' | 'get-quote'
 }
 
-export default function QuoteForm({ heading, submitLabel = 'Request My Free Quote' }: QuoteFormProps) {
+export default function QuoteForm({ heading, submitLabel = 'Request My Free Quote', source = 'get-quote' }: QuoteFormProps) {
   const [form, setForm] = useState<FormData>({
     name: '', email: '', phone: '', company: '', service: '', budget: '', timeline: '', brief: '',
   })
@@ -65,6 +66,7 @@ export default function QuoteForm({ heading, submitLabel = 'Request My Free Quot
         email: form.email,
         phone: form.phone,
         message: `Service: ${form.service} | Budget: ${form.budget} | Timeline: ${form.timeline} | Company: ${form.company} | Brief: ${form.brief}`,
+        source,
       })
       setSubmitted(true)
     } catch {

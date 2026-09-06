@@ -33,6 +33,7 @@ export default function ContactPage() {
         name: form.name,
         email: form.email,
         message: `Company: ${form.company || 'N/A'} | Subject: ${form.subject} | Message: ${form.message}`,
+        source: 'contact',
       })
       setSubmitted(true)
     } catch {
